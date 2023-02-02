@@ -1,0 +1,76 @@
+site_name: Reinforcement Learning
+repo_url: https://github.com/Insper/rl/
+repo_name: Reinforcement Learning
+site_url: https://insper.github.io/rl/
+
+theme:
+    name: 'material'
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - 'Home': 'index.md'
+  - 'Goals': 'goals.md'
+  - 'Plan': 'plan.md'
+  - 'Student Assessment': 'assessment.md'
+  - 'Classes':
+    - 'classes/01_introduction/index.md'
+    - 'classes/02_problem_solving/index.md'
+    - 'classes/03_games/index.md'
+    - 'classes/04_toolings_envs/index.md'
+    - 'classes/05_q_learning/index.md'
+    - 'classes/07_sarsa/index.md'
+    - 'classes/08_evaluation/index.md'
+    - 'classes/09_non_determ/index.md'
+    - 'classes/10_game_env/index.md'
+    - 'classes/11_game_env_random/index.md'
+    - 'classes/12_more_complex/index.md'
+    - 'classes/13_nn_review/index.md'
+    - 'classes/14_nn_policies/index.md'
+    - 'classes/15_deep_q_learning/index.md'
+    - 'classes/16_double_deep_q_learning/index.md'
+    - 'classes/17_ppo/index.md'
+    - 'classes/18_tf_agents/index.md'
+    - 'classes/19_final_project/index.md'
+
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+  - js/markdown-enhancer.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - markdown.extensions.admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: "docs/_snippets"
+      check_paths: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - footnotes
+
+plugins: 
+  - git-revision-date-localized
+
+
+
