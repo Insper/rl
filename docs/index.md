@@ -6,12 +6,12 @@
 
 ## Class Schedule
 
-Tuesday and Thursday from 3:45 PM until 5:45 PM. 
+Tuesday and Thursday from 3:45 pm to 5:45 pm. 
 
-## Extra period
+## Student support hours
 
-Thursday from 12 AM until 1:30 PM.
+Thursday from 12 to 1:30 pm.
 
 ## Contact information
 
-If you have any questions or comments, please, send an e-mail to fabriciojb at insper dot edu dot br. 
+If you have any questions or comments, please, send an e-mail to [fabriciojb@insper.edu.br](mailto:fabriciojb@insper.edu.br). 
