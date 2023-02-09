@@ -293,9 +293,82 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Problem-solving searching review
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Problem-solving searching review
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-taxi-driver-agent-without-reinforcement-learning" class="md-nav__link">
+    A Taxi Driver Agent without Reinforcement Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting-the-implementation" class="md-nav__link">
+    Before starting the implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -552,6 +625,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-taxi-driver-agent-without-reinforcement-learning" class="md-nav__link">
+    A Taxi Driver Agent without Reinforcement Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting-the-implementation" class="md-nav__link">
+    Before starting the implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    Hints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -570,17 +700,114 @@
 
 
 <h1 id="problem-solving-searching-review">Problem-solving searching review</h1>
-<ol>
-<li>Problem-solving searching review</li>
-<li>Exercise: the implementation of a taxi driver agent</li>
-</ol>
+<p>Problem-solving search is a process of finding a solution to a problem by systematically exploring possible solutions and eliminating those that don't meet the requirements. It is used in artificial intelligence to solve complex problems that require a combination of data, and reasoning. The goal of a problem-solving search is to find the optimal solution, which is the solution that best meets the desired criteria. </p>
+<p>The search process involves representing the problem as a <strong>state space</strong>, defining the <strong>initial state</strong> and the <strong>goal state</strong>, and then using algorithms to explore possible solutions by moving from one state to another until the goal state is reached. The choice of algorithm depends on the specific problem, the size of the state space, and the desired time and memory complexity of the solution.</p>
+<h2 id="algorithms">Algorithms</h2>
+<p>There are several types of algorithms used in a problem-solving search:</p>
+<ul>
+<li>
+<p><strong>Uninformed Search Algorithms</strong>: These algorithms do not use any information about the problem and search blindly through the state space. Examples include Breadth-First Search (BFS), Depth-First Search (DFS), and Depth-Limited Search.</p>
+</li>
+<li>
+<p><strong>Informed Search Algorithms</strong>: These algorithms use information about the problem, such as heuristics, to guide the search process and make it more efficient. Examples include A* Search, and Greedy Search.</p>
+</li>
+<li>
+<p><strong>Local Search Algorithms</strong>: These algorithms are used to find a local optimum solution, rather than a globally optimum solution. They are often used in optimization problems where finding the global optimum is too time-consuming or computationally expensive. Examples include Hill Climbing, Simulated Annealing, and Genetic Algorithms.</p>
+</li>
+</ul>
+<p>Each of these algorithms has its own strengths and weaknesses, and the choice of algorithm depends on the specific problem, the size of the state space, and the desired time and memory complexity of the solution.</p>
+<h2 id="references">References</h2>
+<p>Some references that maybe be useful:</p>
+<ul>
+<li>
+<p><a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-4-search-depth-first-hill-climbing-beam/">Lecture 4: Search: Depth-First, Hill Climbing, Beam from MIT Open Courseware</a></p>
+</li>
+<li>
+<p><a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-5-search-optimal-branch-and-bound-a/">Lecture 5: Search: Optimal, Branch and Bound, A*</a></p>
+</li>
+</ul>
+<h2 id="a-taxi-driver-agent-without-reinforcement-learning">A Taxi Driver Agent without Reinforcement Learning</h2>
+<p>In this exercise, you must implement a <em>taxi driver</em> agent that can pick up a passenger at one point and leave this passenger at another point considering a specific map. An example of a map is presented below: </p>
+<p><img src="img/mapa_00.png"></p>
+<p>This map is a very simple one. This map has only 3 columns and 3 rows, without any barrier. The taxi is in position [0,0], the passenger is in position [1,2], and the passenger must be taken at [2,0].</p>
+<p>We know that the taxi agent can execute the following actions:</p>
+<ul>
+<li><strong>go down</strong>: The result of executing this action is to move the taxi to one row down;</li>
+<li><strong>go up</strong>: The result of this action is to move the taxi one row up;</li>
+<li><strong>go right</strong>: The result of this action is to move the taxi one column right;</li>
+<li><strong>go left</strong>: The result of this action is to move the taxi onde column left;</li>
+<li><strong>pick up passenger</strong>: The taxi only can perform this action if it is at the same position as the passenger and the passenger is not inside the taxi. After the execution of this action, the passenger will be inside the taxi;</li>
+<li><strong>leave passenger</strong>: The agent only can perform this action if the passenger is inside the taxi. The result of performing this action is to leave the passenger at the same position as the taxi. </li>
+</ul>
+<p>A sub-set of space state for this problem can be represented as follow: </p>
+<p><img src="img/spaces.png"></p>
+<p>A possible solution for this problem is: </p>
+<div class="highlight"><pre><span></span><code>right; down; right; right; pick_up; down; left; left; leave
+</code></pre></div>
+<p><strong>How can we implement a piece of software which finds an optimal solution for this problem considering any initial state?</strong> </p>
+<p>This software must be able to handle different configurations with different dimensions. For example, the images below show different initial states:</p>
+<p>This image has barriers:</p>
+<p><img src="img/mapa_01.png"></p>
+<p>This state represents a situation where the passenger is inside the taxi:</p>
+<p><img src="img/mapa_02.png"> </p>
+<p>This state has a bigger number of barriers: </p>
+<p><img src="img/mapa_03.png"></p>
+<h2 id="before-starting-the-implementation">Before starting the implementation</h2>
+<p>Before starting the implementation, you must answer some questions:</p>
+<ul>
+<li>
+<p>What is relevant to represent in each state in the world? Which data structures are good to represent these states? Which is the meaning of each variable? </p>
+</li>
+<li>
+<p>Which are the actions that the agent can perform? How do those actions change the states? </p>
+</li>
+<li>
+<p>Which search algorithm is good to solve this problem? Is any heuristics necessary? </p>
+</li>
+<li>
+<p>Which are the limits of your solution? Is this solution able to solve any map? </p>
+</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>
+<p>Each group must deliver an implementation, the test files using <code>pytest</code> and a README.md file that explains how this implementation works.</p>
+</li>
+<li>
+<p>Your implementation must receive the map configuration as a text file.</p>
+</li>
+<li>
+<p>The test files must consider the scenarios described above and also the maps illustrated below:  </p>
+</li>
+</ul>
+<p><img src="img/mapa_04.png"></p>
+<p><img src="img/mapa_05.png"></p>
+<h2 id="hints">Hints</h2>
+<ul>
+<li>You must define the data structure to represent each state. Use only variables that are relevant to solve this problem. If you use unnecessary attributes this will increase the search space.</li>
+<li>You must define how the actions will change the state representation. Try to avoid generating useless states - this also may increase the search space.</li>
+<li>Start your implementation with the simplest configurations. </li>
+<li>There are a lot of implementations of uninformed and informed search algorithms available on the Internet. Try to reuse one of them.</li>
+</ul>
+<h2 id="delivery">Delivery</h2>
+<ul>
+<li>
+<p>This exercise must be done by a group of maximum 3 students. </p>
+</li>
+<li>
+<p>The deadline is 02/14/2023 20:00 -0300.</p>
+</li>
+<li>
+<p>The implementation must be delivered through <em>Github classroom</em>. This is the link <a href="https://classroom.github.com/a/bFRDDmcO">https://classroom.github.com/a/bFRDDmcO</a>. </p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2023</span>
       
     
   </small>
