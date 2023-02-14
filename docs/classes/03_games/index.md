@@ -2,7 +2,7 @@
 
 ## Tic-tac-toe environment and agents
 
-Tic-tac-toe is a very simple game. It is a very simple game because it has a very small search space and when we have a very small search space we usually can solve those types of problems in a manual way. Besides that, this is a very good game to test very simple adversarial search algorithms. For this reason, some environments simulate this game, like [PettingZoo from Farama project](https://pettingzoo.farama.org/environments/classic/tictactoe/) or [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
+Tic-tac-toe is a very simple game because it has a very small search space and in this case we usually can solve those types of problems in a manual way. Besides, this is a very good game to test very simple adversarial search algorithms. For this reason, some environments simulate this game, as [PettingZoo from Farama project](https://pettingzoo.farama.org/environments/classic/tictactoe/) or [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 
 In the code below we are using the PettingZoo project to simulate a tic-tac-toe game: 
 
@@ -44,7 +44,7 @@ while not_finish:
 print(env.rewards)
 ```
 
-In order to run this code you must install those packages: 
+In order to run the code above you must install those packages: 
 
 ```bash
 gymnasium
@@ -53,20 +53,22 @@ matplotlib
 pettingzoo
 ```
 
+Please, prepare a project, with all the setup, to run the code presented above. You will see two random players playing tic-tac-toe. You must understand what is happening with the code and if you have any question, please, access the documentantion [here](https://pettingzoo.farama.org/environments/classic/tictactoe/). 
+
 ## Environments
 
-In [class 01](../01_introduction/index.md) I asked which are the main environment dimensions. The correct answer was:
+In [class 01](../01_introduction/index.md) I asked which the main environment dimensions are. One possible answer for this question is: 
 
 * in terms of **observations** and **actions**, there are two alternatives: **discrete** or **continuous**. The two problems (i.e., Taxi Driver and tic-tac-toe) that we saw so far are discrete in terms of observation and actions because we do not have continuous values for observations or actions.
 
-* in terms of **dynamics**, there are two alternatives: **deterministic** or **stochastic**. In both cases, the environment is deterministic. Is deterministic because we know the result of each action with 100% of confidence. 
+* in terms of **dynamics**, there are two alternatives: **deterministic** or **stochastic**. In both cases, the environment is deterministic because we know the result of each action with 100% of confidence. 
 
 * in terms of **observability**, there are also two alternatives: **full** and **partial**. We have partial observability when the agent does not have all the information necessary in each state to achieve the final goal. According to this definition, both cases are full in terms of observability. 
 
 * in terms of **agency**, there are two alternatives: **single-agent** and **multi-agent**. If we have only our agent running in the environment then we have a single-agent environment, otherwise, we have a multi-agent environment. In terms of a multi-agent environment, we could have a competitive environment (like, tic-tac-toe, chess, go) or a collaborative environment - where the agents try to reach the same goal together. 
 
 
-## Adversarial search and games review
+## Adversarial search algorithms
 
 Adversarial search algorithms are used in competitive multi-agent environments and deterministic ones. Examples of those types of games are chess, go, shogi, tic-tac-toe and connect-4. Those games are deterministic because they do not have a stochastic movement or action. They are examples of a competitive multi-agent, deterministic, discrete and full environments. Examples of games with stochastic movements are blackjack and roulette.
 
