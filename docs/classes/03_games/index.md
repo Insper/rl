@@ -93,6 +93,6 @@ of the code below and implement an agent that can win or draw at all times.
 
 * The **deadline is 02/16/2023 20:00 -0300.**
 
-* The implementation must be delivered through *Github classroom*. This is the link [](https://classroom.github.com/a/bFRDDmcO).
+* The implementation must be delivered through *Github classroom*. This is the link [https://classroom.github.com/a/W9p4Riif](https://classroom.github.com/a/W9p4Riif).
 
 * You must add everything necessary to run this project in the repository, like the README file, requirements file and code.
