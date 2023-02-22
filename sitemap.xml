@@ -2,127 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://insper.github.io/rl/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/assessment/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/goals/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/plan/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plan/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/introduction_rl/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/subject_rules/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/02_problem_solving/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/03_games/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://insper.github.io/rl/classes/03_review/</loc>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/04_toolings_envs/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/05_q_learning/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/07_sarsa/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/08_evaluation/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/09_non_determ/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/10_game_env/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/11_game_env_random/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/12_more_complex/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/13_nn_review/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/14_nn_policies/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/15_deep_q_learning/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/16_double_deep_q_learning/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/17_ppo/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/18_tf_agents/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/19_final_project/</loc>
-         <lastmod>2023-02-14</lastmod>
+         <lastmod>2023-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
