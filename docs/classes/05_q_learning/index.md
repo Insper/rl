@@ -1,5 +1,8 @@
 # Q-Learning Algorithm
     
-1. Definition and key concepts
-1. Implementation
+## Definition and key concepts
+
+<embed src="reinforcementLearning.pdf" type="application/pdf" width="600" height="300">
+
+## Implementation
 

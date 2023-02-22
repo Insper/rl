@@ -1,3 +1,9 @@
 .vscode
 students.xlsx
-
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.gz
+*.toc

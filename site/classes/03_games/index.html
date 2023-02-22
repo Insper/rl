@@ -307,9 +307,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Adversarial search and games review
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Adversarial search and games review
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic-tac-toe-environment-and-agents" class="md-nav__link">
+    Tic-tac-toe environment and agents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adversarial-search-algorithms" class="md-nav__link">
+    Adversarial search algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max" class="md-nav__link">
+    Exercise: the implementation of a tic-tac-toe player using Min-Max.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -552,6 +611,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic-tac-toe-environment-and-agents" class="md-nav__link">
+    Tic-tac-toe environment and agents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adversarial-search-algorithms" class="md-nav__link">
+    Adversarial search algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max" class="md-nav__link">
+    Exercise: the implementation of a tic-tac-toe player using Min-Max.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -570,17 +672,100 @@
 
 
 <h1 id="adversarial-search-and-games-review">Adversarial search and games review</h1>
-<ol>
-<li>Adversarial search and games review</li>
-<li>Exercise: the implementation of a tic-tac-toe player. </li>
-</ol>
+<h2 id="tic-tac-toe-environment-and-agents">Tic-tac-toe environment and agents</h2>
+<p>Tic-tac-toe is a very simple game because it has a very small search space and in this case we usually can solve those types of problems in a manual way. Besides, this is a very good game to test very simple adversarial search algorithms. For this reason, some environments simulate this game, as <a href="https://pettingzoo.farama.org/environments/classic/tictactoe/">PettingZoo from Farama project</a> or <a href="https://github.com/Kaggle/kaggle-environments">Kaggle Environments Project</a>.</p>
+<p>In the code below we are using the PettingZoo project to simulate a tic-tac-toe game: </p>
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1"># Reference: https://pettingzoo.farama.org/environments/classic/tictactoe/</span>
+<span class="c1">#</span>
+
+<span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">from</span> <span class="nn">pettingzoo.classic</span> <span class="kn">import</span> <span class="n">tictactoe_v3</span>
+
+<span class="k">def</span> <span class="nf">play_random_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">obs</span><span class="p">[</span><span class="s1">&#39;action_mask&#39;</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">play_min_max_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+    <span class="c1"># TODO you must implement your code here</span>
+    <span class="k">pass</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">tictactoe_v3</span><span class="o">.</span><span class="n">env</span><span class="p">(</span><span class="n">render_mode</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="n">not_finish</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">not_finish</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;player_1&#39;</span><span class="p">,</span><span class="s1">&#39;player_2&#39;</span><span class="p">]:</span>
+        <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">termination</span><span class="p">,</span> <span class="n">truncation</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">last</span><span class="p">()</span> 
+        <span class="k">if</span> <span class="n">termination</span> <span class="ow">or</span> <span class="n">truncation</span><span class="p">:</span>
+            <span class="n">not_finish</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">agent</span> <span class="o">==</span> <span class="s1">&#39;player_1&#39;</span><span class="p">:</span>
+                <span class="n">action</span> <span class="o">=</span> <span class="n">play_random_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span><span class="n">observation</span><span class="p">)</span>  <span class="c1"># this is where you would insert your policy/algorithm</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">action</span> <span class="o">=</span> <span class="n">play_random_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span><span class="n">observation</span><span class="p">)</span> <span class="c1"># TODO change</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;play: &#39;</span><span class="p">,</span><span class="n">action</span><span class="p">)</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">rewards</span><span class="p">)</span>
+</code></pre></div>
+<p>In order to run the code above you must install those packages: </p>
+<div class="highlight"><pre><span></span><code>gymnasium
+IPython
+matplotlib
+pettingzoo
+</code></pre></div>
+<p>Please, prepare a project, with all the setup, to run the code presented above. You will see two random players playing tic-tac-toe. You must understand what is happening with the code and if you have any question, please, access the documentantion <a href="https://pettingzoo.farama.org/environments/classic/tictactoe/">here</a>. </p>
+<h2 id="environments">Environments</h2>
+<p>In <a href="../01_introduction/">class 01</a> I asked which the main environment dimensions are. One possible answer for this question is: </p>
+<ul>
+<li>
+<p>in terms of <strong>observations</strong> and <strong>actions</strong>, there are two alternatives: <strong>discrete</strong> or <strong>continuous</strong>. The two problems (i.e., Taxi Driver and tic-tac-toe) that we saw so far are discrete in terms of observation and actions because we do not have continuous values for observations or actions.</p>
+</li>
+<li>
+<p>in terms of <strong>dynamics</strong>, there are two alternatives: <strong>deterministic</strong> or <strong>stochastic</strong>. In both cases, the environment is deterministic because we know the result of each action with 100% of confidence. </p>
+</li>
+<li>
+<p>in terms of <strong>observability</strong>, there are also two alternatives: <strong>full</strong> and <strong>partial</strong>. We have partial observability when the agent does not have all the information necessary in each state to achieve the final goal. According to this definition, both cases are full in terms of observability. </p>
+</li>
+<li>
+<p>in terms of <strong>agency</strong>, there are two alternatives: <strong>single-agent</strong> and <strong>multi-agent</strong>. If we have only our agent running in the environment then we have a single-agent environment, otherwise, we have a multi-agent environment. In terms of a multi-agent environment, we could have a competitive environment (like, tic-tac-toe, chess, go) or a collaborative environment - where the agents try to reach the same goal together. </p>
+</li>
+</ul>
+<h2 id="adversarial-search-algorithms">Adversarial search algorithms</h2>
+<p>Adversarial search algorithms are used in competitive multi-agent environments and deterministic ones. Examples of those types of games are chess, go, shogi, tic-tac-toe and connect-4. Those games are deterministic because they do not have a stochastic movement or action. They are examples of a competitive multi-agent, deterministic, discrete and full environments. Examples of games with stochastic movements are blackjack and roulette.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Minimax">Min-Max algorithm</a> is one example of an adversarial search algorithm. We can use a Min-Max algorithm to develop agents able to play Connect-4 and Chess, for example. On <a href="http://fbarth.net.br/Connect4-Python/">this website,</a> it is possible to see a full tutorial about how to create an agent able to play Connect-4 using the Min-Max algorithm.  </p>
+<h2 id="exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max">Exercise: the implementation of a tic-tac-toe player using Min-Max.</h2>
+<p>Now that we know how to implement a Min-Max algorithm, let's complete the function: </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">play_min_max_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+    <span class="c1"># TODO you must implement your code here</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p>of the code below and implement an agent that can win or draw at all times. </p>
+<h2 id="delivery">Delivery</h2>
+<ul>
+<li>
+<p>This exercise must be done by a group of maximum 3 students. </p>
+</li>
+<li>
+<p>The <strong>deadline is 02/16/2023 20:00 -0300.</strong></p>
+</li>
+<li>
+<p>The implementation must be delivered through <em>Github classroom</em>. This is the link <a href="https://classroom.github.com/a/W9p4Riif">https://classroom.github.com/a/W9p4Riif</a>.</p>
+</li>
+<li>
+<p>You must add everything necessary to run this project in the repository, like the README file, requirements file and code.</p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 14, 2023</span>
       
     
   </small>

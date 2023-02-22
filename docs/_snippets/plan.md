@@ -2,10 +2,10 @@
 |:-------|:------------------------------------------------------------------------|
 | 02/07  | Introduction to Reinforcement Learning                                  |
 | 02/09  | Problem-solving searching review                                        |
-| 02/14  | Adversarial search and games review                                     |
-| 02/16  | Reinforcement Learning Tooling and Environments                         |
+| 02/14  | Problem-solving, Adversarial search and games review                    |
+| 02/16  | Problem-solving, Adversarial search and games review                    |
 | 02/23  | Q-Learning Algorithm                                                    |
-| 02/28  | Q-Learning Algorithm                                                    |
+| 02/28  | Q-Learning Algorithm, Reinforcement Learning Tooling and Environments   |
 | 03/02  | SARSA Algorithm                                                         |
 | 03/07  | How to evaluate the performance of an agent                             |
 | 03/09  | Using RL in non-deterministic environments                              |

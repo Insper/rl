@@ -15,11 +15,15 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## How to compile slides
+## How to compile slides using Markdown with beamer
 
 ```bash
 pandoc -t beamer slides.md -o slides.pdf
 ```
+
+## How to compile slides using only LaTeX
+
+There are some slides in this project that I made using only LaTeX with Beamer. In this case, I use the TexStudio editor to edit and compile it. 
 
 ## How to deploy the web page
 

@@ -104,7 +104,7 @@ Before starting the implementation, you must answer some questions:
 
 * This exercise must be done by a group of maximum 3 students. 
 
-* The **deadline is 02/14/2023 20:00 -0300.**
+* The **deadline is 02/21/2023 20:00 -0300.**
 
 * The implementation must be delivered through *Github classroom*. This is the link [https://classroom.github.com/a/bFRDDmcO](https://classroom.github.com/a/bFRDDmcO). 
  
