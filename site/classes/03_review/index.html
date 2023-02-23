@@ -660,13 +660,13 @@
 <h1 id="implementations-review">Implementations review</h1>
 <h2 id="taxi-driver-review">Taxi driver review</h2>
 <p>The goal of this exercise was to implement a taxi-driver agent. A <em>taxi driver</em> agent can pick up a passenger at one point and leave this passenger at another point considering a specific map.</p>
-<p>The most two common solutions were: </p>
+<p>The two most common solutions were: </p>
 <ul>
 <li>
-<p>a <strong>breadth search algorithm</strong>. This algorithm is <strong>complete</strong> and <strong>optimal</strong>. However, this algorithm has a high memory requirement compared to other algorithms, and the time complexity can be high.</p>
+<p>a <strong>breadth-first search algorithm</strong>. This algorithm is <strong>complete</strong> and <strong>optimal</strong>. However, this algorithm has a high memory requirement compared to other algorithms, and the time complexity may be high.</p>
 </li>
 <li>
-<p>an <strong>A* algorithm</strong> using the package <code>AStar</code> or from scratch. This algorithm uses the concept of <strong>heuristics</strong> to reduce memory and time. It is also <strong>complete</strong> and <strong>optimal</strong> since the heuristic used is <strong>admissible</strong>. The typical heuristics for this type of problem are <strong>manhattan distance</strong> and <strong>euclidean distance</strong>. Above there is a snapshot of the code using <code>AStar</code> package: </p>
+<p>an <strong>A start algorithm</strong> using the package <code>AStar</code> or implemented from scratch. This algorithm uses the concept of <strong>heuristics</strong> to reduce memory and time. It is also <strong>complete</strong> and <strong>optimal</strong> since the heuristics used is <strong>admissible</strong>. The typical heuristics for this type of problem are <strong>manhattan distance</strong> and <strong>euclidean distance</strong>. Above there is a snapshot of the code using <code>AStar</code> package: </p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
@@ -685,7 +685,7 @@
 </code></pre></div>
 <h2 id="tic-tac-toe-review">Tic-tac-toe review</h2>
 <p>The goal of this exercise was to implement a tic-tac-toe agent that never loses the game - an agent able to play and win or draw the tic-tac-toe game against another agent, human or artificial.</p>
-<p>In other to simulate the environment, each group used a specific environment from the <a href="https://pettingzoo.farama.org/environments/classic/tictactoe/">pettingzoo</a> project. </p>
+<p>In order to simulate the environment, each group used a specific environment from the <a href="https://pettingzoo.farama.org/environments/classic/tictactoe/">pettingzoo</a> project. </p>
 <p>All groups used a <strong>Min-Max</strong> algorithm that is broadly used in competitive situations. According to one of the groups (Carlos Dip, Lucas Fukada and Breatriz Bernardinho), <em>"the minimax algorithm has a time complexity of <span class="arithmatex">\(O(b^d)\)</span>, where <span class="arithmatex">\(b\)</span> is the number of branches to be evaluated at each state, and <span class="arithmatex">\(d\)</span> is the depth of the search. Since tic-tac-toe is a very simple, brief game, this is still possible to implement and run without any optimizations, however for a game like chess, the depth would need to be severely restricted to allow for real-time play. The space complexity is <span class="arithmatex">\(O(bd)\)</span> because of the recursive implementation of the move tree search"</em>.</p>
 <p><em>"...tic-tac-toe is very simple"</em> because <span class="arithmatex">\(b\)</span> and <span class="arithmatex">\(d\)</span> are equal to <span class="arithmatex">\(9\)</span>. </p>
 <p>A few groups used the concept of the <em>utility function</em> to evaluate intermediated situations and other groups did not use a <em>utility function</em> because they rich the end of the game in each <strong>Min-Max</strong> search. </p>

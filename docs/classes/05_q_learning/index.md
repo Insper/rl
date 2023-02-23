@@ -12,7 +12,7 @@ After a brief explanation of definitions and key concepts, we will implement the
 
 ### Clone the project and configure your machine
 
-All the code necessary for this subject will be at [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code). Faça o clone ou fork do projeto na sua máquina. Para esta atividade vamos utilizar os códigos que estão em `src/part_01`.
+All the code necessary for this subject will be on [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code). Faça o fork do projeto na sua máquina. Para esta atividade vamos utilizar os códigos que estão em `src/part_01`.
 
 O processo recomendado é criar um ambiente virtual (*virtualenv*). Na pasta `src/part_01/`, digite: 
 
