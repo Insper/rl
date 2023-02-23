@@ -21,6 +21,7 @@ nav:
     - 'classes/03_review/index.md'
     - 'classes/04_toolings_envs/index.md'
     - 'classes/05_q_learning/index.md'
+    - 'classes/05_x_hyperparameters/index.md'
     - 'classes/07_sarsa/index.md'
     - 'classes/08_evaluation/index.md'
     - 'classes/09_non_determ/index.md'
