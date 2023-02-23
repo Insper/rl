@@ -12,6 +12,10 @@ Tuesday and Thursday from 3:45 pm to 5:45 pm.
 
 Thursday from 12 to 1:30 pm.
 
+## Code repository
+
+* [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code)
+
 ## Contact information
 
 If you have any questions or comments, please, send an e-mail to [fabriciojb@insper.edu.br](mailto:fabriciojb@insper.edu.br). 
