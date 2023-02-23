@@ -641,104 +641,109 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 	\end{alertblock}
 	
 	\begin{block}{Atividades}
-		Siga o roteiro descrito em src/parte2/parte2.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte2/parte2.md}
+		Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_x\_hyperparameters/ \href{https://insper.github.io/rl/classes/05_x_hyperparameters/}
 		{\beamergotobutton{Link}}
 	\end{block}
 
 \end{frame}
 
-\begin{frame}{Ambientes não-determinísticos}
-	
-	\begin{alertblock}{Ambientes não-determinísticos}
-		O objetivo desta atividade é desenvolver agentes capazes de atuar em ambientes não-determinísticos.
-	\end{alertblock}
-	
-	\begin{block}{Atividades}
-		Siga o roteiro descrito em src/parte3/parte3.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte3/parte3.md}
-		{\beamergotobutton{Link}}
-	\end{block}
-\end{frame}
+%
+% ################################ VERSAO 2023 REVISADA ATEH AQUI ########################
+%
 
-
-\begin{frame}{Ambiente competitivo com variável aleatória}
-	\begin{alertblock}{Jogos}
-		O objetivo desta atividade é utilizar e analisar o comportamento de agentes em ambientes competitivos com variável aleatória.
-	\end{alertblock}
-	
-	\begin{block}{Atividades}
-		Siga o roteiro descrito em src/parte4/parte4.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte4/parte4.md}
-		{\beamergotobutton{Link}}
-	\end{block}
-\end{frame}
-
-\begin{frame}{Ambiente contínuo}
-	
-	\begin{alertblock}{Espaço de estados contínuo}
-		O objetivo desta atividade é fazer uso de aprendizagem de reforço em ambientes com um espaço de estados contínuo.
-	\end{alertblock}
-	
-	\begin{block}{Atividades}
-		Siga o roteiro descrito em src/parte5/parte5.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte5/parte5.md}
-		{\beamergotobutton{Link}}
-	\end{block}
-\end{frame}
-
-
-%%\begin{frame}{Q-Learning com GridSearch}
-%%Faz sentido usar GridSearch para encontrar os melhores valores de $\alpha$ e $\gamma$? 
-%%\end{frame}
-
-
-
-\begin{frame}{Considerações Finais}
-\begin{itemize}
-	\item O algoritmo \textit{Q-Learning} pode ser utilizado por agentes que 
-	não tem conhecimento prévio sobre o problema.
-	
-	%\item Diversos autores já provaram que o algoritmo \textit{Q-Learning} converge 
-	%para a função correta $Q$ dentro de certas condições. Por exemplo, uma 
-	%delas é garantir que o agente avalie um par $Q(s,a)$ diversas vezes.  
-	
-	%\newpage
-	
-	\item \textit{Q-Learning} converge em ambientes 
-	\textbf{determinísticos} e \textbf{não-determinísticos}.
-	
-	\item Na prática, o algoritmo \textit{Q-Learning} necessita de muitas iterações de 
-	treinamento até convergir, inclusive para problemas que não tem um espaço de busca 
-	tão grande.   
-
-\pause 
-
-	\item \textbf{E quando o espaço de busca for muito grande?} 
-
-	%\item Usar \textit{Deep Learning} com \textit{Reinforcement Learning}! \emph{Assunto do 
-	%nosso próximo encontro!}
-
-	%\item Ler o capítulo \textit{18. Reinforcement Learning} até a seção 
-	%\textit{Implementing Deep Q-Learning} do livro \textbf{Hands-On Machine Learning 
-	%with Scikit-Learn, Keras, and TensorFlow, 2nd Edition} do Aurélien Géron.
-
-	%\item Referência adicional: https://deepmind.com/research/case-studies/alphago-the-story-so-far
-
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{O que vimos até o momento?}
-\begin{itemize}
-	\item o que é \textbf{Aprendizagem por Reforço} e os seus principais conceitos;
-	\item como desenvolver um agente autônomo usando o algoritmo \textbf{Q-Learning};
-	\item quais os aspectos positivos e negativos do algoritmo \textbf{Q-Learning}, e;
-	\item funcionamento da biblioteca \textbf{Gym}. 
-\end{itemize}
-\end{frame}
+%\begin{frame}{Ambientes não-determinísticos}
+%	
+%	\begin{alertblock}{Ambientes não-determinísticos}
+%		O objetivo desta atividade é desenvolver agentes capazes de atuar em ambientes não-determinísticos.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte3/parte3.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte3/parte3.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%
+%\begin{frame}{Ambiente competitivo com variável aleatória}
+%	\begin{alertblock}{Jogos}
+%		O objetivo desta atividade é utilizar e analisar o comportamento de agentes em ambientes competitivos com variável aleatória.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte4/parte4.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte4/parte4.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}{Ambiente contínuo}
+%	
+%	\begin{alertblock}{Espaço de estados contínuo}
+%		O objetivo desta atividade é fazer uso de aprendizagem de reforço em ambientes com um espaço de estados contínuo.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte5/parte5.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte5/parte5.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%
+%%%\begin{frame}{Q-Learning com GridSearch}
+%%%Faz sentido usar GridSearch para encontrar os melhores valores de $\alpha$ e $\gamma$? 
+%%%\end{frame}
+%
+%
+%
+%\begin{frame}{Considerações Finais}
+%\begin{itemize}
+%	\item O algoritmo \textit{Q-Learning} pode ser utilizado por agentes que 
+%	não tem conhecimento prévio sobre o problema.
+%	
+%	%\item Diversos autores já provaram que o algoritmo \textit{Q-Learning} converge 
+%	%para a função correta $Q$ dentro de certas condições. Por exemplo, uma 
+%	%delas é garantir que o agente avalie um par $Q(s,a)$ diversas vezes.  
+%	
+%	%\newpage
+%	
+%	\item \textit{Q-Learning} converge em ambientes 
+%	\textbf{determinísticos} e \textbf{não-determinísticos}.
+%	
+%	\item Na prática, o algoritmo \textit{Q-Learning} necessita de muitas iterações de 
+%	treinamento até convergir, inclusive para problemas que não tem um espaço de busca 
+%	tão grande.   
+%
+%\pause 
+%
+%	\item \textbf{E quando o espaço de busca for muito grande?} 
+%
+%	%\item Usar \textit{Deep Learning} com \textit{Reinforcement Learning}! \emph{Assunto do 
+%	%nosso próximo encontro!}
+%
+%	%\item Ler o capítulo \textit{18. Reinforcement Learning} até a seção 
+%	%\textit{Implementing Deep Q-Learning} do livro \textbf{Hands-On Machine Learning 
+%	%with Scikit-Learn, Keras, and TensorFlow, 2nd Edition} do Aurélien Géron.
+%
+%	%\item Referência adicional: https://deepmind.com/research/case-studies/alphago-the-story-so-far
+%
+%\end{itemize}
+%\end{frame}
+%
+%
+%\begin{frame}{O que vimos até o momento?}
+%\begin{itemize}
+%	\item o que é \textbf{Aprendizagem por Reforço} e os seus principais conceitos;
+%	\item como desenvolver um agente autônomo usando o algoritmo \textbf{Q-Learning};
+%	\item quais os aspectos positivos e negativos do algoritmo \textbf{Q-Learning}, e;
+%	\item funcionamento da biblioteca \textbf{Gym}. 
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{Material de \textbf{consulta}}
 \begin{itemize}
   \item Tom Mitchell. Machine Learning. McGraw-Hill, 1997.
   \item Richard Sutton and Andrew Barto. Reinforcement Learning: An Introduction. Second Edition, in progress. The MIT Press, 2015.
-  \item Projeto Gym: \href{https://gym.openai.com/}{https://gym.openai.com/} e \href{https://www.gymlibrary.ml/}{https://www.gymlibrary.ml/}
+  \item Projeto Gymnasium \href{https://gymnasium.farama.org/}{\beamergotobutton{Link}}
+  \item Projeto PettingZoo \href{https://pettingzoo.farama.org/}{\beamergotobutton{Link}}
   %\item https://deepmind.com/research/case-studies/alphago-the-story-so-far
   %\item Aurélien Géron. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition, 2019. 
 \end{itemize}
