@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_hyperparameters/">
       
       
-        <link rel="prev" href="../14_nn_policies/">
+        <link rel="prev" href="../05_q_learning/">
       
       
-        <link rel="next" href="../16_double_deep_q_learning/">
+        <link rel="next" href="../07_sarsa/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Deep Q-Learning - Reinforcement Learning</title>
+        <title>Hyperparameters in Q-Learning - Reinforcement Learning</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deep-q-learning" class="md-skip">
+        <a href="#hyperparameters-in-q-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deep Q-Learning
+              Hyperparameters in Q-Learning
             
           </span>
         </div>
@@ -352,11 +352,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../05_x_hyperparameters/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hyperparameters in Q-Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hyperparameters in Q-Learning
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulando-alpha-e-gamma" class="md-nav__link">
+    Manipulando \(\alpha\) e \(\gamma\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-uma-escolha-de-acao-sempre-aletatoria" class="md-nav__link">
+    Considerando uma escolha de ação sempre aletatória
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-um-agente-que-nunca-explora-novas-acoes" class="md-nav__link">
+    Considerando um agente que nunca explora novas ações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumarizando-os-resultados-atraves-de-imagens" class="md-nav__link">
+    Sumarizando os resultados através de imagens
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -478,21 +540,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../15_deep_q_learning/" class="md-nav__link">
         Deep Q-Learning
       </a>
-      
     </li>
   
 
@@ -580,6 +632,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulando-alpha-e-gamma" class="md-nav__link">
+    Manipulando \(\alpha\) e \(\gamma\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-uma-escolha-de-acao-sempre-aletatoria" class="md-nav__link">
+    Considerando uma escolha de ação sempre aletatória
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-um-agente-que-nunca-explora-novas-acoes" class="md-nav__link">
+    Considerando um agente que nunca explora novas ações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumarizando-os-resultados-atraves-de-imagens" class="md-nav__link">
+    Sumarizando os resultados através de imagens
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -597,19 +685,58 @@
 
 
 
-<h1 id="deep-q-learning">Deep Q-Learning</h1>
-<ol>
-<li>Definitions and key concepts</li>
-<li>Deep Q-Learning implementation</li>
-<li>Exercise: implement a Lunar Lander agent using DDQ</li>
-</ol>
+<h1 id="hyperparameters-in-q-learning">Hyperparameters in Q-Learning</h1>
+<p>Ainda considerando o exemplo a implementação do <code>TaxiDriver</code>, responda as perguntas abaixo.</p>
+<p>Para responder as questões abaixo utilize as implementações do <code>TaxiDriverGym.py</code>, que está no diretório <code>src/part_02</code> e o arquivo <code>QLearning.py</code> que você implementou na atividade anterior.</p>
+<h2 id="manipulando-alpha-e-gamma">Manipulando <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span></h2>
+<ul>
+<li>
+<p>Se <span class="arithmatex">\(\alpha\)</span> for um valor muito próximo de zero? Explique o comportamento encontrado.</p>
+</li>
+<li>
+<p>Se <span class="arithmatex">\(\gamma\)</span> for zero? Explique o comportamento encontrado. </p>
+</li>
+</ul>
+<p>Para fundamentar a sua resposta, use os plots gerados na pasta <code>results</code> depois do treinamento. </p>
+<h2 id="considerando-uma-escolha-de-acao-sempre-aletatoria">Considerando uma escolha de ação sempre aletatória</h2>
+<p>O que acontece se a escolha das ações em cada estado for sempre aleatória? Ou seja, se a função <code>select_action</code> ao invés de ser definida como abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rv</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="c1"># Explore action space</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="c1"># Exploit learned values</span>
+</code></pre></div>
+<p>É definida assim:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="c1"># Explore action space</span>
+</code></pre></div>
+<p>Qual o comportamento do agente? <strong>Novamente</strong>: use os plots gerados na pasta <code>results</code> depois do treinamento para fundamentar a sua resposta. </p>
+<h2 id="considerando-um-agente-que-nunca-explora-novas-acoes">Considerando um agente que nunca explora novas ações</h2>
+<p>O que acontece se a escolha das ações em cada estado for sempre buscando a melhor ação? Ou seja:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="c1"># Exploit learned values</span>
+</code></pre></div>
+<h2 id="sumarizando-os-resultados-atraves-de-imagens">Sumarizando os resultados através de imagens</h2>
+<p>Como podemos sumarizar os diferentes resultados através de imagens?</p>
+<p>Neste momento, você já deve ter percebido que uma ferramenta muito útil para visualizar e sumarizar o aprendizado do agente são gráficos que mostram a evolução de alguma métrica ao longo dos diversos episódios.</p>
+<ul>
+<li>
+<p>Quais são foram as métricas utilizadas no caso do <code>TaxiDriver</code>?</p>
+</li>
+<li>
+<p>O aprendizado dos agentes implementados para este caso <strong>convergem</strong> rapidamente? </p>
+</li>
+<li>
+<p>O <strong>desempenho</strong> do agente se mantem ao longo dos episódios? </p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
       
     
   </small>

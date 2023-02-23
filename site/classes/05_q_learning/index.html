@@ -14,7 +14,7 @@
         <link rel="prev" href="../04_toolings_envs/">
       
       
-        <link rel="next" href="../07_sarsa/">
+        <link rel="next" href="../05_x_hyperparameters/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -436,6 +436,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../05_x_hyperparameters/" class="md-nav__link">
+        Hyperparameters in Q-Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../07_sarsa/" class="md-nav__link">
         SARSA Algorithm
       </a>
@@ -815,13 +829,16 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 </ol>
 <p>Considerando os valores informados nos parâmetros do método <code>train</code>, se a sua implementação do <code>Q-learning</code> estiver correta então o agente <code>TaxiDriverGym.py</code> deve encontrar a solução para todos os casos apresentados. Se por algum motivo a sua solução não estiver convergindo então significa que tem algum <em>bug</em> na atualização da q-table. </p>
 <p>Uma vez que você confirmou que a sua implementação não tem <em>bugs</em> então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. </p>
+<ol>
+<li>O arquivo <code>src/part_01/results/action_taxidriver.jpg</code> é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos <code>rewards</code> ao invés da quantidade de atividades? A visualização fica melhor? </li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 22, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
       
     
   </small>
