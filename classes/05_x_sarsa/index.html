@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/10_sarsa/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_sarsa/">
       
       
-        <link rel="prev" href="../09_more_complex/">
+        <link rel="prev" href="../05_x_hyperparameters/">
       
       
-        <link rel="next" href="../11_evaluation/">
+        <link rel="next" href="../06_non_determ/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>SARSA Algorithm - Reinforcement Learning</title>
+        <title>SARSA Algorithm: on-policy approach - Reinforcement Learning</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sarsa-algorithm" class="md-skip">
+        <a href="#sarsa-algorithm-on-policy-approach" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SARSA Algorithm
+              SARSA Algorithm: on-policy approach
             
           </span>
         </div>
@@ -366,6 +366,68 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SARSA Algorithm: on-policy approach
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SARSA Algorithm: on-policy approach
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-and-key-concepts" class="md-nav__link">
+    Definition and key concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="../06_non_determ/" class="md-nav__link">
@@ -413,30 +475,6 @@
       <a href="../09_more_complex/" class="md-nav__link">
         Implementing an agent to deal with an environment a little more complex
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        SARSA Algorithm
-      </a>
-      
     </li>
   
 
@@ -580,6 +618,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-and-key-concepts" class="md-nav__link">
+    Definition and key concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -597,19 +657,32 @@
 
 
 
-<h1 id="sarsa-algorithm">SARSA Algorithm</h1>
-<ol>
-<li>Definition and key concepts</li>
-<li>The main difference between Q-Learning and SARSA</li>
-<li>Implementation</li>
-</ol>
+<h1 id="sarsa-algorithm-on-policy-approach">SARSA Algorithm: on-policy approach</h1>
+<h2 id="definition-and-key-concepts">Definition and key concepts</h2>
+<p>The updating rule in <strong>Q-Learning</strong> is as follows:</p>
+<div class="arithmatex">\[
+Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
+\]</div>
+<p>The difference between the new sample and the old estimation is used to update the old estimation. The <strong>Q-Learning</strong> algorithm considers the value of the new sample as the maximum <span class="arithmatex">\(Q\)</span> possible value in state <span class="arithmatex">\(s'\)</span>: </p>
+<div class="arithmatex">\[
+\max_{A'}{Q(s', A')}
+\]</div>
+<p>However, the action with maximum <span class="arithmatex">\(Q\)</span> possible value may not be the actual action the agent will take in the future because with <span class="arithmatex">\(\epsilon\)</span> probability the agent will take a random action. In other words, the action used to update policy in <strong>Q-Learning</strong> is different from the true action the agent will take. This is the reason why <strong>Q-Learning</strong> is called a <strong>off-policy</strong> algorithm. </p>
+<p>On the other hand, the State-Action-Reward-State-Action (<strong>SARSA</strong>) algorithm is <strong>on-policy</strong> because it updates the Q-table with:</p>
+<div class="arithmatex">\[
+Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
+\]</div>
+<p>it updates <span class="arithmatex">\(Q(s,a)\)</span> considering the real action executed by the agent. </p>
+<p>The Sarsa algorithm is very similar to the Q-Learning algorithm. The only statement that is different is the update line: </p>
+<p><img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/></p>
+<h2 id="implementation">Implementation</h2>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
       
     
   </small>

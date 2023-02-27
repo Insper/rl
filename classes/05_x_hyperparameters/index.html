@@ -14,7 +14,7 @@
         <link rel="prev" href="../05_q_learning/">
       
       
-        <link rel="next" href="../06_non_determ/">
+        <link rel="next" href="../05_x_sarsa/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -415,10 +415,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#atividade" class="md-nav__link">
+    Atividade
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_x_sarsa/" class="md-nav__link">
+        SARSA Algorithm: on-policy approach
+      </a>
     </li>
   
 
@@ -474,20 +495,6 @@
     <li class="md-nav__item">
       <a href="../09_more_complex/" class="md-nav__link">
         Implementing an agent to deal with an environment a little more complex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10_sarsa/" class="md-nav__link">
-        SARSA Algorithm
       </a>
     </li>
   
@@ -666,6 +673,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#atividade" class="md-nav__link">
+    Atividade
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -721,7 +735,10 @@
 <p>Neste momento, você já deve ter percebido que uma ferramenta muito útil para visualizar e sumarizar o aprendizado do agente são gráficos que mostram a evolução de alguma métrica ao longo dos diversos episódios.</p>
 <ul>
 <li>
-<p>Quais são foram as métricas utilizadas no caso do <code>TaxiDriver</code>?</p>
+<p>Quais foram as métricas utilizadas no caso do <code>TaxiDriver</code>?</p>
+</li>
+<li>
+<p>Quais foram os hiperparâmetros utilizados? </p>
 </li>
 <li>
 <p>O aprendizado dos agentes implementados para este caso <strong>convergem</strong> rapidamente? </p>
@@ -730,6 +747,14 @@
 <p>O <strong>desempenho</strong> do agente se mantem ao longo dos episódios? </p>
 </li>
 </ul>
+<h2 id="atividade">Atividade</h2>
+<p>Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo <span class="arithmatex">\(y\)</span> do gráfico. O eixo <span class="arithmatex">\(x\)</span> deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor <em>zoom</em> (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.</p>
+<p>Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. </p>
+<p>O gráfico deve possuir 3 linhas distintas. Cada uma destas linhas deve apresentar uma variação possível considerando os hiperparâmetros <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\gamma\)</span> e <span class="arithmatex">\(\epsilon\)</span>. Deverá ficar a critério do estudante quais valores utilizar. </p>
+<p>Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: </p>
+<p><img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/></p>
+<p>Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. </p>
+<p>Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia 02/03/2023. A atividade já foi criada no Blackboard e o nome dela é <em>Q-Learning with hyperparameters</em>. </p>
 
   <hr>
 <div class="md-source-file">

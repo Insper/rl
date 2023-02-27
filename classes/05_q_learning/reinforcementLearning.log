@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.28)  23 FEB 2023 08:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.28)  27 FEB 2023 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1271,11 +1271,49 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 [42
 
 ]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 664.
+
+
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [43
+
+]
+Overfull \hbox (22.63634pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[44
+
+]
+Overfull \hbox (22.63634pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[45
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 709.
+
+
+Overfull \hbox (22.63634pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[46
+
+]
+Overfull \hbox (22.63634pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[47
 
 ]
 \tf@nav=\write6
@@ -1295,11 +1333,11 @@ Package rerunfilecheck Info: File `reinforcementLearning.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22473 strings out of 480247
- 439725 string characters out of 5896151
- 683365 words of memory out of 5000000
- 39850 multiletter control sequences out of 15000+600000
- 484014 words of font info for 80 fonts, out of 8000000 for 9000
+ 22493 strings out of 480247
+ 439920 string characters out of 5896151
+ 682365 words of memory out of 5000000
+ 39862 multiletter control sequences out of 15000+600000
+ 484315 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,16n,122p,428b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
@@ -1316,10 +1354,10 @@ onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on reinforcementLearning.pdf (43 pages, 1043699 bytes).
+Output written on reinforcementLearning.pdf (47 pages, 1053263 bytes).
 PDF statistics:
- 1373 PDF objects out of 1440 (max. 8388607)
- 1215 compressed objects within 13 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 1479 PDF objects out of 1728 (max. 8388607)
+ 1316 compressed objects within 14 object streams
+ 95 named destinations out of 1000 (max. 500000)
  373 words of extra memory for PDF output out of 10000 (max. 10000000)
 

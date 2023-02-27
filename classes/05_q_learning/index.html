@@ -450,6 +450,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../05_x_sarsa/" class="md-nav__link">
+        SARSA Algorithm: on-policy approach
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../06_non_determ/" class="md-nav__link">
         Using RL in non-deterministic environments
       </a>
@@ -494,20 +508,6 @@
     <li class="md-nav__item">
       <a href="../09_more_complex/" class="md-nav__link">
         Implementing an agent to deal with an environment a little more complex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10_sarsa/" class="md-nav__link">
-        SARSA Algorithm
       </a>
     </li>
   
@@ -805,18 +805,18 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <span class="c1">#q_table = loadtxt(&#39;data/q-table-taxi-driver.csv&#39;, delimiter=&#39;,&#39;)</span>
 </code></pre></div>
 <p>Atividades: </p>
-<ol>
+<ul>
 <li>
 <p>Complete o código do método <code>train</code> em <code>QLearning.py</code>. </p>
 </li>
 <li>
 <p>Execute o arquivo <code>TaxiDriverGym.py</code> com o comando:</p>
 </li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>TaxiDriverGym.py
 </code></pre></div>
 <p>Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo data/q-table-taxi-driver.csv. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. </p>
-<ol>
+<ul>
 <li>
 <p>Abra o arquivo <code>src/part_01/results/action_taxidriver.jpg</code> e faça uma análise do mesmo. O que este gráfico representa?</p>
 </li>
@@ -826,12 +826,12 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <li>
 <p>Qual é o comportamento do agente? Ele sempre consegue encontrar uma solução? As soluções parecem ser ótimas?  </p>
 </li>
-</ol>
+</ul>
 <p>Considerando os valores informados nos parâmetros do método <code>train</code>, se a sua implementação do <code>Q-learning</code> estiver correta então o agente <code>TaxiDriverGym.py</code> deve encontrar a solução para todos os casos apresentados. Se por algum motivo a sua solução não estiver convergindo então significa que tem algum <em>bug</em> na atualização da q-table. </p>
 <p>Uma vez que você confirmou que a sua implementação não tem <em>bugs</em> então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. </p>
-<ol>
+<ul>
 <li>O arquivo <code>src/part_01/results/action_taxidriver.jpg</code> é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos <code>rewards</code> ao invés da quantidade de atividades? A visualização fica melhor? </li>
-</ol>
+</ul>
 
   <hr>
 <div class="md-source-file">
