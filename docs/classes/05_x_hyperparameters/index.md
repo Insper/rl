@@ -48,8 +48,27 @@ Como podemos sumarizar os diferentes resultados através de imagens?
 
 Neste momento, você já deve ter percebido que uma ferramenta muito útil para visualizar e sumarizar o aprendizado do agente são gráficos que mostram a evolução de alguma métrica ao longo dos diversos episódios.
 
-* Quais são foram as métricas utilizadas no caso do `TaxiDriver`?
+* Quais foram as métricas utilizadas no caso do `TaxiDriver`?
+
+* Quais foram os hiperparâmetros utilizados? 
 
 * O aprendizado dos agentes implementados para este caso **convergem** rapidamente? 
 
 * O **desempenho** do agente se mantem ao longo dos episódios? 
+
+## Atividade
+
+Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo $y$ do gráfico. O eixo $x$ deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor *zoom* (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.
+
+Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. 
+
+O gráfico deve possuir 3 linhas distintas. Cada uma destas linhas deve apresentar uma variação possível considerando os hiperparâmetros $\alpha$, $\gamma$ e $\epsilon$. Deverá ficar a critério do estudante quais valores utilizar. 
+
+Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: 
+
+<img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/>
+
+Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. 
+
+Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia **02/03/2023**. A atividade já foi criada no Blackboard e o nome dela é *Q-Learning with hyperparameters*. Esta atividade é individual.
+

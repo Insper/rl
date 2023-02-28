@@ -468,7 +468,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 		\STATE escolher uma ação $a$ para um estado $s$
 		\STATE executar a ação $a$
 		\STATE observar a recompensa $r$ e o novo estado $s'$ 
-		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{a'}{Q(s', a')} - Q(s,a)]$
+		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
@@ -505,7 +505,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 %%	\STATE escolher uma ação $a$ para um estado $s$
 %%	\STATE executar a ação $a$
 %%	\STATE observar a recompensa $r$ e o novo estado $s'$ 
-%%	\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{a'}{Q(s', a')} - Q(s,a)]$
+%%	\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
 %%	\STATE$s  \leftarrow s'$
 %%	\UNTIL {$s$ ser um estado final}
 %%	\ENDFOR
@@ -525,7 +525,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 %	\STATE escolher uma ação $a$ para um estado $s$
 %	\STATE executar a ação $a$
 %	\STATE observar a recompensa $r$ e o novo estado $s'$ 
-%	\STATE \emph{$Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{a'}{Q(s', a')} - Q(s,a)]$}
+%	\STATE \emph{$Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$}
 %	\STATE$s  \leftarrow s'$
 %	\UNTIL {$s$ ser um estado final}
 %	\ENDFOR
@@ -552,7 +552,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 		\STATE \emph{escolher uma ação $a$ para um estado $s$}
 		\STATE executar a ação $a$
 		\STATE observar a recompensa $r$ e o novo estado $s'$ 
-		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{a'}{Q(s', a')} - Q(s,a)]$
+		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
@@ -625,7 +625,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 	\REPEAT
 	\STATE $a \leftarrow escolha(s, \epsilon)$
 	\STATE $s', r \leftarrow$ executar a ação $a$ no $env$
-	\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{a'}{Q(s', a')} - Q(s,a)]$
+	\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
 	\STATE$s  \leftarrow s'$
 	\UNTIL {$s$ ser um estado final}
 	\STATE \textbf{if} $\epsilon > \epsilon_{min}$ \textbf{then} $\epsilon \leftarrow \epsilon \times \epsilon_{dec}$
@@ -646,6 +646,68 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 	\end{block}
 
 \end{frame}
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	A regra para update da \textbf{Q-table} no algoritmo \textbf{Q-Learning} é: 
+	
+	\begin{equation}
+	Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
+	\end{equation}
+
+	A diferença entre o novo valor e a estimativa antiga é utilizada para atualizar a estimativa antiga. O algoritmo \textbf{Q-Learning} considera como o novo valor o valor máximo das possibilidades no novo estado $s'$: 
+	
+	\begin{equation}
+	\max_{A'}{Q(s', A')}
+	\end{equation}
+	
+\end{frame}
+
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	\begin{itemize}
+		
+	\item No entanto, a ação realmente executada pelo agente pode não ser a ação que tem o valor máximo em $s'$ devido a função de escolha da ação ser baseada no valor de $\epsilon$ e ter características aleatórias.
+	
+	\item Por isso que o algoritmo \textbf{Q-Learning} é chamado de \textbf{off-policy}.   
+\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	O algoritmo \textsc{Sarsa} é chamado de  \textbf{on-policy} porque ele atualiza a \textbf{Q-table} da seguinte forma: 
+	
+	\begin{equation}
+		Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
+	\end{equation}
+	
+	o algoritmo \textsc{Sarsa} atualiza $Q(s,a)$ considerando a real ação $a$ executada pelo agente em $s'$.
+	
+\end{frame}
+
+\def\HiLi{\leavevmode\rlap{\hbox to \hsize{\color{yellow!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+\begin{algorithmic} 
+	\STATE \emph{\textbf{function} Sarsa(env, $\alpha$, $\gamma$, $\epsilon$, $\epsilon_{min}$, $\epsilon_{dec}$, episódios)}
+	\STATE inicializar os valores de $Q(s, a)$ arbitrariamente
+	\FOR {todos os episódios}
+	\STATE inicializar $s$ a partir de $env$
+	\REPEAT
+	\STATE $a \leftarrow escolha(s, \epsilon)$
+	\STATE $s', r \leftarrow$ executar a ação $a$ no $env$
+	\STATE \HiLi $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]$
+	\STATE$s  \leftarrow s'$
+	\UNTIL {$s$ ser um estado final}
+	\STATE \textbf{if} $\epsilon > \epsilon_{min}$ \textbf{then} $\epsilon \leftarrow \epsilon \times \epsilon_{dec}$
+	\ENDFOR
+	\STATE \textbf{return} Q
+\end{algorithmic}	
+\end{frame}
+
 
 %
 % ################################ VERSAO 2023 REVISADA ATEH AQUI ########################

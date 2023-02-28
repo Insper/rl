@@ -87,9 +87,9 @@ q_table = qlearn.train('data/q-table-taxi-driver.csv', 'results/actions_taxidriv
 
 Atividades: 
 
-1. Complete o código do método `train` em `QLearning.py`. 
+* Complete o código do método `train` em `QLearning.py`. 
 
-2. Execute o arquivo `TaxiDriverGym.py` com o comando:
+* Execute o arquivo `TaxiDriverGym.py` com o comando:
 
 ````bash
 python TaxiDriverGym.py
@@ -97,14 +97,14 @@ python TaxiDriverGym.py
 
 Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo data/q-table-taxi-driver.csv. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. 
 
-3. Abra o arquivo `src/part_01/results/action_taxidriver.jpg` e faça uma análise do mesmo. O que este gráfico representa?
+* Abra o arquivo `src/part_01/results/action_taxidriver.jpg` e faça uma análise do mesmo. O que este gráfico representa?
 
-4. Agora faça o algoritmo `TaxiDriverGym.py` ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes.
+* Agora faça o algoritmo `TaxiDriverGym.py` ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes.
 
-5. Qual é o comportamento do agente? Ele sempre consegue encontrar uma solução? As soluções parecem ser ótimas?  
+* Qual é o comportamento do agente? Ele sempre consegue encontrar uma solução? As soluções parecem ser ótimas?  
 
 Considerando os valores informados nos parâmetros do método `train`, se a sua implementação do `Q-learning` estiver correta então o agente `TaxiDriverGym.py` deve encontrar a solução para todos os casos apresentados. Se por algum motivo a sua solução não estiver convergindo então significa que tem algum *bug* na atualização da q-table. 
 
 Uma vez que você confirmou que a sua implementação não tem *bugs* então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. 
 
-6. O arquivo `src/part_01/results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
+* O arquivo `src/part_01/results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
