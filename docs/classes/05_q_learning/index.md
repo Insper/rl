@@ -108,3 +108,19 @@ Considerando os valores informados nos parâmetros do método `train`, se a sua 
 Uma vez que você confirmou que a sua implementação não tem *bugs* então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. 
 
 * O arquivo `src/part_01/results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
+
+## Q-table ready
+
+As a result of the training phase, the agent will have a *Q-table* that shows the best action it can take in each state. The way to use this information is very simple: 
+
+```python
+(state, _) = env.reset()
+done = False
+    
+while not done:
+    print(state)
+    action = np.argmax(q_table[state])
+    state, reward, done, truncated, info = env.step(action)
+```
+
+Here we do not have any random choice. The agent selects the action with the highest value in each state. 
