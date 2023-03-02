@@ -67,7 +67,7 @@ print("Actions taken: {}".format(actions))
 print("Rewards: {}".format(rewards))
 ```
 
-Setting the `render_mode` equals to `human` will allow you to see an animation.
+Setting the `render_mode` equal to `human` will allow you to see an animation.
 
 The final activity of this implementation is to create a `README.md` file and answer the following questions: 
 
@@ -81,5 +81,5 @@ The final activity of this implementation is to create a `README.md` file and an
 
 ## Delivery
 
-Put all those files in the same project and then submit to [xxxx](xxxxx). This activity is individual and the deadline is: 
+Put all those files in the same project and then submit to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/17/2023 20:00 -0300.**
 
