@@ -415,6 +415,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -638,6 +645,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -667,27 +681,67 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
 <div class="arithmatex">\[
 \max_{A'}{Q(s', A')}
 \]</div>
-<p>However, the action with maximum <span class="arithmatex">\(Q\)</span> possible value may not be the actual action the agent will take in the future because with <span class="arithmatex">\(\epsilon\)</span> probability the agent will take a random action. In other words, the action used to update policy in <strong>Q-Learning</strong> is different from the true action the agent will take. This is the reason why <strong>Q-Learning</strong> is called a <strong>off-policy</strong> algorithm. </p>
+<p>However, the action with maximum <span class="arithmatex">\(Q\)</span> possible value may not be the actual action the agent will take in the future because with <span class="arithmatex">\(\epsilon\)</span> probability the agent will take a random action. In other words, the action used to update policy in <strong>Q-Learning</strong> is different from the true action the agent will take. This is the reason why <strong>Q-Learning</strong> is called an <strong>off-policy</strong> algorithm. </p>
 <p>On the other hand, the State-Action-Reward-State-Action (<strong>SARSA</strong>) algorithm is <strong>on-policy</strong> because it updates the Q-table with:</p>
 <div class="arithmatex">\[
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
 \]</div>
 <p>it updates <span class="arithmatex">\(Q(s,a)\)</span> considering the real action executed by the agent. </p>
-<p>The Sarsa algorithm is very similar to the Q-Learning algorithm. The only statement that is different is the update line: </p>
+<p>Sarsa algorithm is very similar to Q-Learning algorithm. The only statement that is different is the update line: </p>
 <p><img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/></p>
 <h2 id="implementation">Implementation</h2>
+<p>The goal of this activity is to verify if we understood how to implement the <strong>Sarsa</strong> algorithm and grasp the practical differences between <strong>Sarsa</strong> and <strong>Q-Learning</strong>.</p>
+<p>First, you must <strong>implement the Sarsa algorithm</strong>. You can start from the <code>QLearning.py</code> file, make a copy, change the name <img alt="😃" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f603.svg" title=":smiley:" />, and change what is necessary.  </p>
+<p>Then, you must <strong>apply the Sarsa implementation to solve the taxi-driver problem</strong>. Compare the Sarsa results with the Q-Learning results. Compare the training curve and the agent's behavior after the training. You can use the same file <code>TaxiDriverGym.py</code>, but remember to change the output file names (*.csv and plot).  </p>
+<p>The third activity of this implementation is <strong>applying Q-Learning and Sarsa algorithms in a different environment</strong>: the <a href="https://gymnasium.farama.org/environments/toy_text/cliff_walking/">Cliff Walking</a>. This is still a very simple environment. However, when you apply those algorithms in this type of environment you can see the differences between those algorithms and identify any bug in your implementation if exists.</p>
+<p>In order to train your agent for the Cliff Walking problem you must setup the environment like this: </p>
+<div class="highlight"><pre><span></span><code><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CliffWalking-v0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+</code></pre></div>
+<p>After the training phase, to see the behavior, you must code something like this: </p>
+<div class="highlight"><pre><span></span><code><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CliffWalking-v0&quot;</span><span class="p">,</span> <span class="n">render_mode</span><span class="o">=</span><span class="s2">&quot;human&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+
+<span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">rewards</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">actions</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+    <span class="n">state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+    <span class="n">rewards</span> <span class="o">=</span> <span class="n">rewards</span> <span class="o">+</span> <span class="n">reward</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="n">actions</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Actions taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rewards: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rewards</span><span class="p">))</span>
+</code></pre></div>
+<p>Setting the <code>render_mode</code> equals to <code>human</code> will allow you to see an animation.</p>
+<p>The final activity of this implementation is to create a <code>README.md</code> file and answer the following questions: </p>
 <ul>
-<li>Implement the Sarsa algorithm.</li>
-<li>Solve the taxi-driver problem using Sarsa and compare results with Q-Learning solution.</li>
-<li><span class="arithmatex">\(\cdots\)</span> </li>
+<li>
+<p>Which algorithm has the best results for the taxi-driver environment? </p>
+</li>
+<li>
+<p>Which algorithm has the best results for the Cliff Walking environment? </p>
+</li>
+<li>
+<p>Try to explain the results. Why one algorithm is better than another? </p>
+</li>
+<li>
+<p>Do a small research about <strong>Sarsa</strong> algorithm to understand its cons and pros. </p>
+</li>
 </ul>
+<h2 id="delivery">Delivery</h2>
+<p>Put all those files in the same project and then submit to <a href="xxxxx">xxxx</a>. This activity is individual and the deadline is: </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 2, 2023</span>
       
     
   </small>
