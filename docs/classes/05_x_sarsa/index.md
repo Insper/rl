@@ -22,7 +22,7 @@ $$
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
 $$
 
-it updates $Q(s,a)$ considering the real action executed by the agent. 
+it updates $Q(s,a)$ considering the real action executed by the agent.
 
 Sarsa algorithm is very similar to Q-Learning algorithm. The only statement that is different is the update line: 
 
@@ -81,5 +81,5 @@ The final activity of this implementation is to create a `README.md` file and an
 
 ## Delivery
 
-Put all those files in the same project and then submit to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/17/2023 20:00 -0300.**
+Put all those files in the same project and then submit them to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/07/2023 20:00 -0300.**
 
