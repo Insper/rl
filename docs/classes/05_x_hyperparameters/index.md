@@ -78,3 +78,10 @@ Um documento com esta imagem e legenda deve ser entregue via Blackboard até o d
 | A+       | Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos |
 | C        | Não entregou uma única imagem |
 
+## Um exemplo de gráfico muito bem feito :new: 
+
+Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfico foi feito pela Letícia. 
+
+<center>
+<img src="figures/leticia.png" alt="Exemplo de gráfico" style="height: 500px;"/>
+</center>
