@@ -72,3 +72,9 @@ Todas as informações relevantes para entender o resultado do treinamento preci
 
 Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia **02/03/2023**. A atividade já foi criada no Blackboard e o nome dela é *Q-Learning with hyperparameters*. Esta atividade é individual.
 
+## Rubrica de avaliação
+
+| Conceito | Descrição |
+| A+       | Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos |
+| C        | Não entregou uma única imagem |
+
