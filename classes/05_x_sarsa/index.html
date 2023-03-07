@@ -445,160 +445,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07_game_env/" class="md-nav__link">
-        Using RL in a competitive environment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08_game_env_random/" class="md-nav__link">
-        Using RL in a competitive environment with random behavior
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09_more_complex/" class="md-nav__link">
-        Implementing an agent to deal with an environment a little more complex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../11_evaluation/" class="md-nav__link">
-        How to evaluate the performance of an agent?
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../13_nn_review/" class="md-nav__link">
-        Deep Neural Networks review
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../14_nn_policies/" class="md-nav__link">
-        Neural Network Policies
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15_deep_q_learning/" class="md-nav__link">
-        Deep Q-Learning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../16_double_deep_q_learning/" class="md-nav__link">
-        Double Deep Q-Learning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../17_ppo/" class="md-nav__link">
-        Policy Optimization Algorithms (PPO)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../18_tf_agents/" class="md-nav__link">
-        Implementation of RL using TF-Agents
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../19_final_project/" class="md-nav__link">
-        Final Project
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -684,10 +530,10 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
 <p>However, the action with maximum <span class="arithmatex">\(Q\)</span> possible value may not be the actual action the agent will take in the future because with <span class="arithmatex">\(\epsilon\)</span> probability the agent will take a random action. In other words, the action used to update policy in <strong>Q-Learning</strong> is different from the true action the agent will take. This is the reason why <strong>Q-Learning</strong> is called an <strong>off-policy</strong> algorithm. </p>
 <p>On the other hand, the State-Action-Reward-State-Action (<strong>SARSA</strong>) algorithm is <strong>on-policy</strong> because it updates the Q-table with:</p>
 <div class="arithmatex">\[
-Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
+Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 \]</div>
 <p>it updates <span class="arithmatex">\(Q(s,a)\)</span> considering the real action executed by the agent.</p>
-<p>Sarsa algorithm is very similar to Q-Learning algorithm. The only statement that is different is the update line: </p>
+<p>Sarsa algorithm is very similar to Q-Learning algorithm:</p>
 <p><img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/></p>
 <h2 id="implementation">Implementation</h2>
 <p>The goal of this activity is to verify if we understood how to implement the <strong>Sarsa</strong> algorithm and grasp the practical differences between <strong>Sarsa</strong> and <strong>Q-Learning</strong>.</p>
@@ -735,13 +581,14 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
 </ul>
 <h2 id="delivery">Delivery</h2>
 <p>Put all those files in the same project and then submit them to <a href="https://classroom.github.com/a/gTxejAeH">https://classroom.github.com/a/gTxejAeH</a>. This activity is individual and the <strong>deadline is 03/07/2023 20:00 -0300.</strong></p>
+<!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 7, 2023</span>
       
     
   </small>
