@@ -19,12 +19,12 @@ However, the action with maximum $Q$ possible value may not be the actual action
 On the other hand, the State-Action-Reward-State-Action (**SARSA**) algorithm is **on-policy** because it updates the Q-table with:
 
 $$
-Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a) - Q(s,a)]
+Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 $$
 
 it updates $Q(s,a)$ considering the real action executed by the agent.
 
-Sarsa algorithm is very similar to Q-Learning algorithm. The only statement that is different is the update line: 
+Sarsa algorithm is very similar to Q-Learning algorithm:
 
 <img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/>
 
@@ -82,4 +82,7 @@ The final activity of this implementation is to create a `README.md` file and an
 ## Delivery
 
 Put all those files in the same project and then submit them to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/07/2023 20:00 -0300.**
+
+
+<!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
 
