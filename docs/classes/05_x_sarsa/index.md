@@ -79,6 +79,13 @@ The final activity of this implementation is to create a `README.md` file and an
 
 * Do a small research about **Sarsa** algorithm to understand its cons and pros. 
 
+<!-- para a proxima versao eu preciso definir melhor a rubrica de avaliacao
+A+ ou A = somente para os trabalhos que apresentam as curvas de aprendizagem e o resultado final do agente para dar base as suas respostas.
+B = para aqueles que implementaram tudo e responderam as perguntas sem utilizar as curvas de aprendizagem como base para a resposta. 
+C = para aqueles que só implementaram
+D = para aqueles que implementaram parcialmente
+-->
+
 ## Delivery
 
 Put all those files in the same project and then submit them to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/07/2023 20:00 -0300.**

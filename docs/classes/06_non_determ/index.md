@@ -103,4 +103,4 @@ Considere o seguinte objetivo: *desenvolver um agente capaz de chegar ao ponto f
 
 ### Deadline
 
-O deadline para a entrega desta atividade é 12 de março de 2023 às 20 horas. 
+O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. 
