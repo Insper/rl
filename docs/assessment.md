@@ -14,7 +14,7 @@ The grade for this subject is calculated as follows:
 | [Tic-tac-toe agent: adversarial search and games review](./classes/03_games/index.md#exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max)                  | 02/16/2023          |
 | [Q-Learning and hyperparameters](./classes/05_x_hyperparameters/index.md#atividade)                        | 03/02/2023          |
 | [Q-Learning and Sarsa](./classes/05_x_sarsa/index.md#implementation)                                       | 03/07/2023          |
-| [FrozenLake 8x8](./classes/06_non_determ/index.md#outro-mapa)                                              | 09/07/2023          |
+| [FrozenLake 8x8](./classes/06_non_determ/index.md#outro-mapa)                                              | 03/12/2023          |
 
 ## Conversão de conceito para valor numérico
 
