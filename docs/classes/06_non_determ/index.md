@@ -93,8 +93,8 @@ Considere o seguinte objetivo: *desenvolver um agente capaz de chegar ao ponto f
 
 * Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a **Insuficiente (I)** - nota 2. 
 
-* Entregou todos os artefatos mencionados acima então a nota é calculada de acordo com o número de testes aprovados: 1
-    * teste aprovado = 2.5, 
+* Entregou todos os artefatos mencionados acima então a nota é calculada de acordo com o número de testes aprovados: 
+    * 1 teste aprovado = 2.5, 
     * 2 testes aprovados = 5.0, 
     * 3 testes aprovados = 7.5, 
     * 4 testes aprovados = 9.0
@@ -103,4 +103,4 @@ Considere o seguinte objetivo: *desenvolver um agente capaz de chegar ao ponto f
 
 ### Deadline
 
-O deadline para a entrega desta atividade é 09 de março de 2023 às 20 horas. 
+O deadline para a entrega desta atividade é 12 de março de 2023 às 20 horas. 
