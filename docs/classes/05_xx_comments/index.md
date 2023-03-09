@@ -44,5 +44,17 @@ $$Q(S_t, A_t) = Q(S_t, A_t) + \alpha[R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_
 
 Como é possível observar pela formula, o algorítimo SARSA aprende com uma política "quase ótima". Um agente treinado com o algorítimo SARSA interage com o ambiente atualizando **q_table** com base nas ações efetivamente tomadas. Quando o problema envolve achar a solução ótima ou quando o número mínimo de ações deve ser tomada na resolução do problema, o algorítimo SARSA pode não se apresentar como a melhor escolha.
 
+## Valores utilizados com mais frequência
 
+```python
+sarsa = Sarsa(env, alpha=0.1, gamma=0.99, epsilon=0.7, epsilon_min=0.1, epsilon_dec=0.99999, episodes=10000)
+```
+
+Alguém testou?
+
+```python
+sarsa = Sarsa(env, alpha=0.1, gamma=0.99, epsilon=0, epsilon_min=0, epsilon_dec=0.99999, episodes=10000)
+```
+
+o que acontece? 
 

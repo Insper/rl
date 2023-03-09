@@ -422,6 +422,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#valores-utilizados-com-mais-frequencia" class="md-nav__link">
+    Valores utilizados com mais frequência
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -484,6 +491,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#valores-utilizados-com-mais-frequencia" class="md-nav__link">
+    Valores utilizados com mais frequência
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -538,6 +552,13 @@
 </ul>
 <div class="arithmatex">\[Q(S_t, A_t) = Q(S_t, A_t) + \alpha[R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t) ]\]</div>
 <p>Como é possível observar pela formula, o algorítimo SARSA aprende com uma política "quase ótima". Um agente treinado com o algorítimo SARSA interage com o ambiente atualizando <strong>q_table</strong> com base nas ações efetivamente tomadas. Quando o problema envolve achar a solução ótima ou quando o número mínimo de ações deve ser tomada na resolução do problema, o algorítimo SARSA pode não se apresentar como a melhor escolha.</p>
+<h2 id="valores-utilizados-com-mais-frequencia">Valores utilizados com mais frequência</h2>
+<div class="highlight"><pre><span></span><code><span class="n">sarsa</span> <span class="o">=</span> <span class="n">Sarsa</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.99999</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</code></pre></div>
+<p>Alguém testou?</p>
+<div class="highlight"><pre><span></span><code><span class="n">sarsa</span> <span class="o">=</span> <span class="n">Sarsa</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.99999</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</code></pre></div>
+<p>o que acontece? </p>
 
   <hr>
 <div class="md-source-file">

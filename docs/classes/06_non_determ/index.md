@@ -64,7 +64,7 @@ env = gym.make("FrozenLake-v1", map_name="8x8", is_slippery=True).env
 
 * O que muda? O problema se torna mais complexo? É necessário mudar algum dos hiperparâmetros? Qual é o melhor algoritmo? *Sarsa* ou *Q-Learning*? 
 
-Considere o seguinte objetivo: *desenvolver um agente capaz de chegar ao ponto final em mais de 80% das vezes". Faça o *clone* do projeto [https://classroom.github.com/a/eiDVq_IS](https://classroom.github.com/a/eiDVq_IS). Você deve adicionar neste projeto e fazer o commit dos seguintes artefatos: 
+Considere o seguinte objetivo: *desenvolver um agente capaz de chegar ao ponto final em mais de 80% das vezes". Faça o *clone* do projeto [https://classroom.github.com/a/Ag-dCmlJ](https://classroom.github.com/a/Ag-dCmlJ). Você deve adicionar neste projeto e fazer o commit dos seguintes artefatos: 
 
 * o arquivo `q-table.csv` dentro do diretório `data`. Já existe um arquivo q-table neste projeto, mas ele é para a versão do ambiente 4x4. Quando você executar o arquivo `test_frozenlake.py` usando o comando `pytest` irá ocorrer um erro de `IndexError`. Você deve substituir este arquivo pelo arquivo gerado pelo seu agente durante o período de treinamento; 
 
