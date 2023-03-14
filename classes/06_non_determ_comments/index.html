@@ -8,16 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/09_more_complex/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/06_non_determ_comments/">
       
       
+        <link rel="prev" href="../06_non_determ/">
+      
+      
+        <link rel="next" href="../07_game_env/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Implementing an agent to deal with an environment a little more complex - Reinforcement Learning</title>
+        <title>Comments about the Frozen Lake implementations - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementing-an-agent-to-deal-with-an-environment-a-little-more-complex" class="md-skip">
+        <a href="#comments-about-the-frozen-lake-implementations" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementing an agent to deal with an environment a little more complex
+              Comments about the Frozen Lake implementations
             
           </span>
         </div>
@@ -235,14 +239,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -251,7 +257,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -402,11 +408,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../06_non_determ_comments/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Comments about the Frozen Lake implementations
       </a>
+      
     </li>
   
 
@@ -469,18 +485,153 @@
 
 
 
-<h1 id="implementing-an-agent-to-deal-with-an-environment-a-little-more-complex">Implementing an agent to deal with an environment a little more complex</h1>
-<ol>
-<li>Exercise: implement an agent to run a mountain car. </li>
-<li>Discussion: how we can implement agents using RL for environments like LunarLander, Atari, and others?</li>
-</ol>
+<h1 id="comments-about-the-frozen-lake-implementations">Comments about the Frozen Lake implementations</h1>
+<p>In the table below there are some results from the Frozen Lake implementations done last week. </p>
+<table>
+<thead>
+<tr>
+<th align="left">Feature</th>
+<th align="center">André</th>
+<th align="center">Beatriz</th>
+<th align="center">Carlos Dip</th>
+<th align="center">Diogo</th>
+<th align="center">Eduardo</th>
+<th align="center">Felipe</th>
+<th align="center">Henrique</th>
+<th align="center">Letícia</th>
+<th align="center">Lucas</th>
+<th align="center">Matheus</th>
+<th align="center">Nívea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>algorithm</strong></td>
+<td align="center">Sarsa</td>
+<td align="center">Sarsa</td>
+<td align="center">Sarsa</td>
+<td align="center">Q-Learning</td>
+<td align="center">Q-Learning</td>
+<td align="center">Q-Learning</td>
+<td align="center">Q Learning</td>
+<td align="center">Sarsa</td>
+<td align="center">Sarsa</td>
+<td align="center">Sarsa</td>
+<td align="center">Sarsa</td>
+</tr>
+<tr>
+<td align="left"><strong>alpha</strong></td>
+<td align="center">0.1</td>
+<td align="center">0.098</td>
+<td align="center">0.09</td>
+<td align="center">0.1</td>
+<td align="center">0.2</td>
+<td align="center">0.1</td>
+<td align="center">0.1</td>
+<td align="center">0.03</td>
+<td align="center">0.2</td>
+<td align="center">0.05</td>
+<td align="center">0.12</td>
+</tr>
+<tr>
+<td align="left"><strong>gamma</strong></td>
+<td align="center">0.99</td>
+<td align="center">0.98</td>
+<td align="center">0.9</td>
+<td align="center">0.99</td>
+<td align="center">0.999</td>
+<td align="center">0.99</td>
+<td align="center">0.9</td>
+<td align="center">0.98</td>
+<td align="center">1</td>
+<td align="center">0.95</td>
+<td align="center">0.99</td>
+</tr>
+<tr>
+<td align="left"><strong>epsilon</strong></td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0.75</td>
+<td align="center">0.999</td>
+<td align="center">0.9</td>
+<td align="center">0.9999</td>
+<td align="center">1</td>
+<td align="center">0.98</td>
+<td align="center">1</td>
+<td align="center">0.95</td>
+<td align="center">0.9</td>
+</tr>
+<tr>
+<td align="left"><strong>epsilon_dec</strong></td>
+<td align="center">0.9999</td>
+<td align="center">0.9999</td>
+<td align="center">0.05</td>
+<td align="center">0.9999</td>
+<td align="center">0.9999</td>
+<td align="center">0.99996</td>
+<td align="center">0.9999</td>
+<td align="center">0.9999</td>
+<td align="center">0.99</td>
+<td align="center">0.9999</td>
+<td align="center">0.9999</td>
+</tr>
+<tr>
+<td align="left"><strong>epsilon_min</strong></td>
+<td align="center">0.05</td>
+<td align="center">0.05</td>
+<td align="center">0.99</td>
+<td align="center">0.0001</td>
+<td align="center">0.001</td>
+<td align="center">0.0001</td>
+<td align="center">0.1</td>
+<td align="center">0.0001</td>
+<td align="center">0.5</td>
+<td align="center">0.0001</td>
+<td align="center">0.0001</td>
+</tr>
+<tr>
+<td align="left"><strong># episodes</strong></td>
+<td align="center">50000</td>
+<td align="center">35000</td>
+<td align="center">10000</td>
+<td align="center">30000</td>
+<td align="center">30000</td>
+<td align="center">100000</td>
+<td align="center">10000</td>
+<td align="center">18000</td>
+<td align="center">500000</td>
+<td align="center">20000</td>
+<td align="center">30000</td>
+</tr>
+<tr>
+<td align="left"><strong>% of sucess</strong></td>
+<td align="center">91%</td>
+<td align="center">89%</td>
+<td align="center">99%</td>
+<td align="center">96%</td>
+<td align="center">100%</td>
+<td align="center">99%</td>
+<td align="center">91%</td>
+<td align="center">86%</td>
+<td align="center">97%</td>
+<td align="center">81%</td>
+<td align="center">94%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Important notes</em>: </p>
+<ul>
+<li>Carlos Dip changed the reward values to emphasize negative rewards and speed up the training using Sarsa.</li>
+<li>Felipe did a very good evaluation of the epsilon decay impact. This evaluation is available <a href="https://github.com/insper-classroom/frozen-lake-felipeschiavinato/blob/main/README.md">here</a>.</li>
+<li>How did Eduardo's implementations get a 100% rate of success?   </li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2023</span>
       
     
   </small>
