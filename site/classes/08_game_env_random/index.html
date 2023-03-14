@@ -398,6 +398,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_non_determ_comments/" class="md-nav__link">
+        Comments about the Frozen Lake implementations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_game_env/" class="md-nav__link">
+        Using RL in a competitive environment
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -424,6 +452,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jogador-de-blackjack" class="md-nav__link">
+    Jogador de BlackJack
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -442,9 +485,26 @@
 
 
 <h1 id="using-rl-in-a-competitive-environment-with-random-behavior">Using RL in a competitive environment with random behavior</h1>
-<ol>
-<li>Exercise: implement an agent to play Blackjack using Q-Learning or Sarsa algorithms and show the results.</li>
-</ol>
+<p>The goal of this activity is to implement an agent to play Blackjack using Q-Learning or Sarsa algorithms and show the results.</p>
+<h2 id="jogador-de-blackjack">Jogador de BlackJack</h2>
+<p>A biblioteca Gym possui um ambiente que simula um jogo de <a href="https://www.gymlibrary.dev/environments/toy_text/blackjack/">BlackJack (<em>Blackjack-v1</em>)</a>. A documentação deste ambiente está disponível neste link <a href="https://www.gymlibrary.dev/environments/toy_text/blackjack/">https://www.gymlibrary.dev/environments/toy_text/blackjack/</a>. </p>
+<p>Além da documentação, você tem acesso a duas implementações:</p>
+<ul>
+<li><a href="./BlackJack_Manual.py">BlackJack_Manual.py</a>: onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente, e;</li>
+<li><a href="./BlackJack_Agent.py">BlackJack_Agent.py</a>: que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço. </li>
+</ul>
+<p>Atividades propostas: </p>
+<ul>
+<li>
+<p>Execute diversas vezes o arquivo <a href="./BlackJack_Manual.py">BlackJack_Manual.py</a> para entender como o ambiente funciona. Principalmente como a representação do espaço de estados funciona. </p>
+</li>
+<li>
+<p>Execute o arquivo <a href="./BlackJack_Agent.py">BlackJack_Agent.py</a> com o objetivo de criar uma nova q-table. Qual o desempenho do agente? </p>
+</li>
+<li>
+<p>Como podemos obter um agente com o melhor desempenho possível? É possível criar um agente que ganha ou empata em no mínimo 85% dos jogos? Se sim, quais são os hiperparâmetros para este agente? Se não, qual é o melhor resultado encontrado? </p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">

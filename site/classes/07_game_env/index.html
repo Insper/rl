@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/07_game_env/">
       
       
+        <link rel="prev" href="../06_non_determ_comments/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -235,14 +237,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -251,7 +255,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -398,6 +402,82 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_non_determ_comments/" class="md-nav__link">
+        Comments about the Frozen Lake implementations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using RL in a competitive environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Using RL in a competitive environment
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic-tac-toe-player" class="md-nav__link">
+    Tic-tac-toe player
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliver" class="md-nav__link">
+    Deliver
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -424,6 +504,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic-tac-toe-player" class="md-nav__link">
+    Tic-tac-toe player
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliver" class="md-nav__link">
+    Deliver
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -442,9 +544,62 @@
 
 
 <h1 id="using-rl-in-a-competitive-environment">Using RL in a competitive environment</h1>
-<ol>
-<li>Exercise: implement an agent to play tic-tac-toe using Q-Learning or Sarsa algorithms and show the results.</li>
-</ol>
+<p>The goal of this activity is to implement an agent to play tic-tac-toe using Q-Learning or Sarsa algorithms and show the results.</p>
+<h2 id="tic-tac-toe-player">Tic-tac-toe player</h2>
+<p>Do you remember this code? </p>
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1"># Reference: https://pettingzoo.farama.org/environments/classic/tictactoe/</span>
+<span class="c1">#</span>
+
+<span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">from</span> <span class="nn">pettingzoo.classic</span> <span class="kn">import</span> <span class="n">tictactoe_v3</span>
+
+<span class="k">def</span> <span class="nf">play_random_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">obs</span><span class="p">[</span><span class="s1">&#39;action_mask&#39;</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">play_my_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+    <span class="c1"># TODO you must implement your code here</span>
+    <span class="k">pass</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">tictactoe_v3</span><span class="o">.</span><span class="n">env</span><span class="p">(</span><span class="n">render_mode</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="n">not_finish</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">not_finish</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;player_1&#39;</span><span class="p">,</span><span class="s1">&#39;player_2&#39;</span><span class="p">]:</span>
+        <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">termination</span><span class="p">,</span> <span class="n">truncation</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">last</span><span class="p">()</span> 
+        <span class="k">if</span> <span class="n">termination</span> <span class="ow">or</span> <span class="n">truncation</span><span class="p">:</span>
+            <span class="n">not_finish</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">agent</span> <span class="o">==</span> <span class="s1">&#39;player_1&#39;</span><span class="p">:</span>
+                <span class="n">action</span> <span class="o">=</span> <span class="n">play_random_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span><span class="n">observation</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">action</span> <span class="o">=</span> <span class="n">play_my_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span><span class="n">observation</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;play: &#39;</span><span class="p">,</span><span class="n">action</span><span class="p">)</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">rewards</span><span class="p">)</span>
+</code></pre></div>
+<p>The exercise today is to <strong>implement an agent using reinforcement learning able to play tic-tac-toe and win or draw and never lose</strong>. </p>
+<p>In this case, the states (<em>obs</em>) are represented by a matrix. How to transform each possible matrix configuration into a <em>state id</em>? How many states are possible? Is it possible to define a function that has a matrix as an input and generate an <em>id</em> for each state?</p>
+<h2 id="deliver">Deliver</h2>
+<ul>
+<li>
+<p>This exercise must be done by a group of 3 students. </p>
+</li>
+<li>
+<p>The <strong>deadline is 03/15/2023 23:30 -0300.</strong></p>
+</li>
+<li>
+<p>The implementation must be delivered through <em>Github classroom</em>. This is the link <a href="https://classroom.github.com/a/5MNmW_QO">https://classroom.github.com/a/5MNmW_QO</a>.</p>
+</li>
+<li>
+<p>You must add everything necessary to run this project in the repository, like the README file, requirements file and code.</p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
