@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/08_game_env_random/">
       
       
+        <link rel="prev" href="../07_game_env/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -235,14 +237,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -251,7 +255,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -426,6 +430,82 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using RL in a competitive environment with random behavior
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Using RL in a competitive environment with random behavior
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jogador-de-blackjack" class="md-nav__link">
+    Jogador de BlackJack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
+    Algoritmo e hiperparâmetros utilizados para o treinamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    Deadline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -465,6 +545,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
+    Algoritmo e hiperparâmetros utilizados para o treinamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    Deadline
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -487,31 +588,105 @@
 <h1 id="using-rl-in-a-competitive-environment-with-random-behavior">Using RL in a competitive environment with random behavior</h1>
 <p>The goal of this activity is to implement an agent to play Blackjack using Q-Learning or Sarsa algorithms and show the results.</p>
 <h2 id="jogador-de-blackjack">Jogador de BlackJack</h2>
-<p>A biblioteca Gym possui um ambiente que simula um jogo de <a href="https://www.gymlibrary.dev/environments/toy_text/blackjack/">BlackJack (<em>Blackjack-v1</em>)</a>. A documentação deste ambiente está disponível neste link <a href="https://www.gymlibrary.dev/environments/toy_text/blackjack/">https://www.gymlibrary.dev/environments/toy_text/blackjack/</a>. </p>
+<p>A biblioteca Gymnasium possui um ambiente que simula um jogo de <a href="https://gymnasium.farama.org/environments/toy_text/blackjack/">BlackJack (<em>Blackjack-v1</em>)</a>. A documentação deste ambiente está disponível neste link <a href="https://gymnasium.farama.org/environments/toy_text/blackjack/">https://gymnasium.farama.org/environments/toy_text/blackjack/</a>. </p>
 <p>Além da documentação, você tem acesso a duas implementações:</p>
 <ul>
-<li><a href="./BlackJack_Manual.py">BlackJack_Manual.py</a>: onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente, e;</li>
-<li><a href="./BlackJack_Agent.py">BlackJack_Agent.py</a>: que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço. </li>
+<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py">BlackJack_Manual.py</a>: onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente, e;</li>
+<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py">BlackJack_Agent.py</a>: que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço. </li>
 </ul>
 <p>Atividades propostas: </p>
 <ul>
 <li>
-<p>Execute diversas vezes o arquivo <a href="./BlackJack_Manual.py">BlackJack_Manual.py</a> para entender como o ambiente funciona. Principalmente como a representação do espaço de estados funciona. </p>
+<p>Execute diversas vezes o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py">BlackJack_Manual.py</a> para entender como o ambiente funciona. Principalmente como a representação do espaço de estados funciona. </p>
 </li>
 <li>
-<p>Execute o arquivo <a href="./BlackJack_Agent.py">BlackJack_Agent.py</a> com o objetivo de criar uma nova q-table. Qual o desempenho do agente? </p>
+<p>Execute o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py">BlackJack_Agent.py</a> com o objetivo de criar uma nova q-table.</p>
 </li>
+</ul>
+<p>Perguntas: </p>
+<ul>
 <li>
 <p>Como podemos obter um agente com o melhor desempenho possível? É possível criar um agente que ganha ou empata em no mínimo 85% dos jogos? Se sim, quais são os hiperparâmetros para este agente? Se não, qual é o melhor resultado encontrado? </p>
 </li>
+<li>
+<p>É possível plotar a q-table? Este plot de q-table seria útil para um jogador de BlackJack real? Justifique a sua resposta. </p>
+</li>
 </ul>
+<p>Entrega: </p>
+<ul>
+<li>
+<p>você também deve adicionar a sua implementação no diretório raiz do projeto no Github Classroom: <a href="https://classroom.github.com/a/Qe2Tawio">https://classroom.github.com/a/Qe2Tawio</a>.</p>
+</li>
+<li>
+<p>para a sua implementação estar completa você deve adicionar um script para validação na q-table no ambiente. </p>
+</li>
+<li>
+<p>criar um arquivo README.md informando os hiperparâmetros utilizados para o treinamento. </p>
+</li>
+<li>
+<p>(critério para A+) apresentar um gráfico que resume a q-table, ou seja, que resume o que fazer em cada jogada. Comente também se é possível utilizar esta q-table em uma situação real ou não.   </p>
+</li>
+</ul>
+<h2 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Atributo</th>
+<th align="center">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Algoritmo</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">alpha</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">gamma</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">epsilon</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">epsilon_dec</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">epsilon_min</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">qtd_episodios</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="rubrica-de-avaliacao">Rubrica de avaliação</h2>
+<ul>
+<li>
+<p>Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a <strong>Insuficiente (I)</strong> - nota 2. </p>
+</li>
+<li>
+<p>Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a <strong>8.0</strong>. </p>
+</li>
+<li>
+<p>Entregou o gráfico que resume a q-table e explicou se é possível utilizar tal informação em uma situação real ou não então nota igual a <strong>10.00</strong>.</p>
+</li>
+</ul>
+<h2 id="deadline">Deadline</h2>
+<p>O deadline para a entrega desta atividade é 19 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo - o mesmo grupo da implementação do tic-tac-toe usando reinforcement learning. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2023</span>
       
     
   </small>

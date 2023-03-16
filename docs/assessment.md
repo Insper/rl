@@ -15,7 +15,8 @@ The grade for this subject is calculated as follows:
 | [Q-Learning and hyperparameters](./classes/05_x_hyperparameters/index.md#atividade)                        | 03/02/2023          |
 | [Q-Learning and Sarsa](./classes/05_x_sarsa/index.md#implementation)                                       | 03/07/2023          |
 | [FrozenLake 8x8](./classes/06_non_determ/index.md#outro-mapa)                                              | 03/12/2023          |
-| [Tic-tac-toe agent with RL](./classes/07_game_env/index.md#tic-tac-toe-player)                             | 03/15/2023          |
+| [Tic-tac-toe agent with RL](./classes/07_game_env/index.md#tic-tac-toe-player)                             | 03/19/2023          |
+| [Blackjack agent](./classes/08_game_env_random/index.md#jogador-de-blackjack)                              | 03/19/2023          |
 
 ## Conversão de conceito para valor numérico
 

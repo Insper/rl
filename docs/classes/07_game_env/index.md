@@ -52,7 +52,7 @@ In this case, the states (*obs*) are represented by a matrix. How to transform e
 
 * This exercise must be done by a group of 3 students. 
 
-* The **deadline is 03/15/2023 23:30 -0300.**
+* The **deadline is 03/19/2023 23:30 -0300.**
 
 * The implementation must be delivered through *Github classroom*. This is the link [https://classroom.github.com/a/5MNmW_QO](https://classroom.github.com/a/5MNmW_QO).
 
