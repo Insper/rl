@@ -17,7 +17,7 @@
     
     
       
-        <title>Deep Q-Learning - Reinforcement Learning</title>
+        <title>Deep Reinforcement Learning - Reinforcement Learning</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deep-q-learning" class="md-skip">
+        <a href="#deep-reinforcement-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deep Q-Learning
+              Deep Reinforcement Learning
             
           </span>
         </div>
@@ -466,6 +466,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q-learning" class="md-nav__link">
+    Q-Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-reinforcement-learning_1" class="md-nav__link">
+    Deep Reinforcement Learning
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Reinforcement Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experience-replay" class="md-nav__link">
+    Experience replay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso-cartpole" class="md-nav__link">
+    Exemplo de uso: CartPole
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso-lunarlander" class="md-nav__link">
+    Exemplo de uso: LunarLander
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -483,12 +532,192 @@
 
 
 
-<h1 id="deep-q-learning">Deep Q-Learning</h1>
-<ol>
-<li>Definitions and key concepts</li>
-<li>Deep Q-Learning implementation</li>
-<li>Exercise: implement a Lunar Lander agent using DDQ</li>
-</ol>
+<h1 id="deep-reinforcement-learning">Deep Reinforcement Learning</h1>
+<p>Segundo <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>, desenvolver agentes que aprendem a atuar em um ambiente de alta dimensionalidade sempre foi um desafio para soluções baseadas em aprendizagem por reforço. Até 2013, a maioria das aplicações de aprendizagem por reforço operavam nestes domínios com base em atributos determinados manualmente pelo projetista.</p>
+<p>Em <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> os autores do artigo propõe uma variante do algoritmo Q-Learning (<a href="https://doi.org/10.1007/BF00992698">Watkins,1992</a>) onde os pesos de uma rede neural são treinados no lugar de uma Q-table.</p>
+<h2 id="q-learning">Q-Learning</h2>
+<p>Na figura abaixo é apresentado o pseudo-código do algoritmo Q-Learning. Neste pseudo-código é possível ver como os pares <em>Q(s,a)</em> são atualizados repetidas vezes através nas inúmeras interações do agente com o ambiente.</p>
+<p><img src="./figuras/qlearning.png" alt="Algoritmo Q-Learning" style="width:600px;"/></p>
+<p>A versão em Python para este pseudo-código é bem direta: </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">episodes</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+            <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span> 
+
+            <span class="c1"># ajustando os valores da q-table</span>
+            <span class="n">old_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">]</span>
+            <span class="n">next_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">next_state</span><span class="p">])</span>
+            <span class="n">new_value</span> <span class="o">=</span> <span class="n">old_value</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">reward</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">*</span> <span class="n">next_max</span> <span class="o">-</span> <span class="n">old_value</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_value</span>
+
+            <span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon_min</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon_dec</span>
+
+    <span class="c1"># persistindo a q-table</span>
+    <span class="n">savetxt</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_table</span>
+</code></pre></div>
+<p>Incluindo o método para seleção (<em>e-greedy</em>) da ação durante a etapa de treinamento: </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rv</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="c1"># explorando o espaco</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="c1"># utilizando os valores aprendidos</span>
+</code></pre></div>
+<p>Quando <em>S</em> e <em>A</em> são conjuntos finitos e não tão grandes então é fácil a utilização do algoritmo Q-Learning para determinar os valores de uma tabela 2D. Por exemplo, considere os ambientes do <em>TaxiDriver</em> e <em>BlackJack</em>: </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">gym</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;Taxi-v3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span>
+<span class="n">Discrete</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span>
+<span class="n">Discrete</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;Blackjack-v1&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span>
+<span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span>
+<span class="n">Tuple</span><span class="p">(</span><span class="n">Discrete</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<p>No caso do <em>TaxiDriver</em>, teremos uma tabela de 500 estados versus 6 ações. E no caso do <em>BlackJack</em>, teremos uma tabela de 704 (32 * 11 * 2) estados versus 2 ações. </p>
+<p>Em algumas situações a descrição dos estados é contínua. Por exemplo, no caso do <em>MountainCar</em> o estado é representado pela posição do carro no eixo <em>X</em> e a sua velocidade. Ambos os valores são contínuos, como pode ser visto abaixo: </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MountainCar-v0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span>
+<span class="n">Box</span><span class="p">([</span><span class="o">-</span><span class="mf">1.2</span>  <span class="o">-</span><span class="mf">0.07</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.6</span>  <span class="mf">0.07</span><span class="p">],</span> <span class="p">(</span><span class="mi">2</span><span class="p">,),</span> <span class="n">float32</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span>
+<span class="n">Discrete</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>Neste caso, uma abordagem possível é discretizar estes valores como feito abaixo: </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">num_states</span> <span class="o">=</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">num_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">num_states</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">num_states</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">19</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
+</code></pre></div>
+<p>Assim, para este caso temos uma tabela 3D com as seguintes dimensões 19 x 15 x 3. Claro que neste caso a implementação terá que sofrer alguns ajustes. </p>
+<p>No entanto, outros ambientes podem ter um espaço de estados ainda mais complexo, como por exemplo: <em>CartPole</em>, <em>LunarLander</em> e os ambientes do <em>Atari</em>. </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;CartPole-v0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span>
+<span class="n">Box</span><span class="p">([</span><span class="o">-</span><span class="mf">4.8000002e+00</span> <span class="o">-</span><span class="mf">3.4028235e+38</span> <span class="o">-</span><span class="mf">4.1887903e-01</span> <span class="o">-</span><span class="mf">3.4028235e+38</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.8000002e+00</span> <span class="mf">3.4028235e+38</span> <span class="mf">4.1887903e-01</span> <span class="mf">3.4028235e+38</span><span class="p">],</span> <span class="p">(</span><span class="mi">4</span><span class="p">,),</span> <span class="n">float32</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;LunarLander-v2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span>
+<span class="n">Box</span><span class="p">(</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,),</span> <span class="n">float32</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span>
+<span class="n">Discrete</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+<p>No caso dos ambientes do <em>Atari</em> tem-se uma representação correspondente a imagens RGB. Quanto mais complexa a representação dos estados, mais difícil é a identificação correta e codificação dos atributos para gerar a Q-table. Então, por que não deixar esta tarefa a cargo de uma rede neural? </p>
+<h2 id="deep-reinforcement-learning_1">Deep Reinforcement Learning</h2>
+<p>Para implementar a versão proposta por <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> podemos usar uma rede neural qualquer, como a definida abaixo: </p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">linear</span><span class="p">))</span>
+</code></pre></div>
+<p>No entanto, dois itens são importantes: </p>
+<ul>
+<li>o número de entradas é o tamanho do espaço de observação, e;</li>
+<li>o número de saídas é igual ao número de ações. </li>
+</ul>
+<p>Porque o objetivo desta rede neural é identificar a melhor ação para um determinado estado. A seleção da melhor ação acontece desta maneira: </p>
+<p><div class="highlight"><pre><span></span><code><span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o agente sabe executar. </p>
+<p>Desta forma, a função <em>e-greedy</em> é definida de tal forma: </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+<h3 id="experience-replay">Experience replay</h3>
+<p><a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> propõe o uso de uma técnica chamada <em>experience replay</em>, que consiste em armazenar as experiências do agente em cada momento <span class="arithmatex">\(e_{t} = (s_{t}, a_{t}, r_{t}, s_{t+1})\)</span> em um dataset <span class="arithmatex">\(D = e_{1}, \cdots, e_{N}\)</span>. </p>
+<p>Aprender diretamente a partir de exemplos consecutivos é ineficiente devido a alta correlação entre os exemplos. Desta forma, o treinamento do modelo considera uma amostra aleatória retirada de <span class="arithmatex">\(D\)</span>. </p>
+<p>A criação do dataset <span class="arithmatex">\(D\)</span> pode ser feita desta forma:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">experience</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">terminal</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">terminal</span><span class="p">))</span> 
+</code></pre></div>
+<p>E o <em>experience replay</em> desta forma:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">experience_replay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># soh inicia o processo antes de ter uma memoria minima</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">memory</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span><span class="p">:</span>
+        <span class="c1"># faz a escolha aleatoria dos exemplos</span>
+        <span class="n">batch</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">memory</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span> 
+        <span class="n">states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">])</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">])</span>
+        <span class="n">rewards</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">])</span>
+        <span class="n">next_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">])</span>
+        <span class="n">terminals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">])</span>
+
+        <span class="c1"># np.squeeze(): Remove single-dimensional entries from the shape of an array.</span>
+        <span class="c1"># Para se adequar ao input</span>
+        <span class="n">states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">states</span><span class="p">)</span>
+        <span class="n">next_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">next_states</span><span class="p">)</span>
+
+        <span class="c1"># usando o modelo para selecionar o valor das melhores acoes</span>
+        <span class="n">next_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict_on_batch</span><span class="p">(</span><span class="n">next_states</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">targets</span> <span class="o">=</span> <span class="n">rewards</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">*</span> <span class="p">(</span><span class="n">next_max</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">terminals</span><span class="p">)</span>
+        <span class="n">targets_full</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict_on_batch</span><span class="p">(</span><span class="n">states</span><span class="p">)</span>
+        <span class="n">indexes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)])</span>
+        <span class="n">targets_full</span><span class="p">[[</span><span class="n">indexes</span><span class="p">],</span> <span class="p">[</span><span class="n">actions</span><span class="p">]]</span> <span class="o">=</span> <span class="n">targets</span>
+
+        <span class="c1"># recalculando os pesos da rede</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">targets_full</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon_min</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon_dec</span>
+</code></pre></div>
+<p>E o loop principal de treinamento tem este comportamento:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_steps</span><span class="p">):</span>
+    <span class="n">rewards</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">episodes</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_steps</span><span class="p">):</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+            <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminal</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="n">reward</span>
+            <span class="n">next_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">next_state</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">experience</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">terminal</span><span class="p">)</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">experience_replay</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">terminal</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Episódio: </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">episodes</span><span class="si">}</span><span class="s1">. Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>    
+    <span class="k">return</span> <span class="n">rewards</span>
+</code></pre></div>
+<h2 id="exemplo-de-uso-cartpole">Exemplo de uso: CartPole</h2>
+<p>Podemos verificar o funcionamento deste algoritmo com o ambiente <code>CartPole</code> da biblioteca <code>Gym</code> executando: </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/parte6/
+python<span class="w"> </span>CarPole.py
+</code></pre></div>
+<p>Para a execução deste arquivo serão necessários os arquivos: 
+* <a href="../src/parte6/CartPole.py">CartPole.py</a>
+* <a href="../src/parte6/DeepQLearning.py">DeepQLearning.py</a></p>
+<p>O resultado desta execução irá gerar o arquivo <code>cartpole_DeepQLearning.jpg</code> dentro da pasta <code>results</code>. Espera-se que o 
+resultado encontrado seja similar a este: </p>
+<p><img src="../src/parte6/results/cartpole_DeepQLearning_copy.jpg" alt="Resultado da execução do Deep Q-Learning no ambiente CartPole" style="width:600px;"/></p>
+<p><strong>Será que este agente conseguiu aprender a controlar o CartPole?</strong></p>
+<p>Uma forma de testar isto é executando um script que faz uso da rede neural treinada: </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/parte6/
+python<span class="w"> </span>CartPole_trained.py
+</code></pre></div>
+<h2 id="exemplo-de-uso-lunarlander">Exemplo de uso: LunarLander</h2>
+<p>Sugestão de atividade: </p>
+<ul>
+<li>Criar um arquivo <code>LunarLander.py</code> que treina um agente para atuar no ambiente <code>env = gym.make('LunarLander-v2')</code> usando o algoritmo implementado em <code>DeepQLearning.py</code>. </li>
+</ul>
 
   <hr>
 <div class="md-source-file">
