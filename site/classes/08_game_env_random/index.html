@@ -591,8 +591,9 @@
 <p>A biblioteca Gymnasium possui um ambiente que simula um jogo de <a href="https://gymnasium.farama.org/environments/toy_text/blackjack/">BlackJack (<em>Blackjack-v1</em>)</a>. A documentação deste ambiente está disponível neste link <a href="https://gymnasium.farama.org/environments/toy_text/blackjack/">https://gymnasium.farama.org/environments/toy_text/blackjack/</a>. </p>
 <p>Além da documentação, você tem acesso a duas implementações:</p>
 <ul>
-<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py">BlackJack_Manual.py</a>: onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente, e;</li>
-<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py">BlackJack_Agent.py</a>: que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço. </li>
+<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py">BlackJack_Manual.py</a>: onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente;</li>
+<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py">BlackJack_Agent.py</a>: que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço, e;</li>
+<li><a href="https://github.com/Insper/rl_code/blob/main/src/part_04/QLearning_BlackJack.py">QLearning_Blackjack.py</a>: uma versão do algoritmo QLearning com adição de um método para tratamento dos estados do ambiente BlackJack. </li>
 </ul>
 <p>Atividades propostas: </p>
 <ul>
@@ -624,7 +625,10 @@
 <p>criar um arquivo README.md informando os hiperparâmetros utilizados para o treinamento. </p>
 </li>
 <li>
-<p>(critério para A+) apresentar um gráfico que resume a q-table, ou seja, que resume o que fazer em cada jogada. Comente também se é possível utilizar esta q-table em uma situação real ou não.   </p>
+<p>(critério para A) usar o algoritmo Sarsa para este problema. Neste caso você deve fazer algo similar ao que está implementado no arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_04/QLearning_BlackJack.py">QLearning_Blackjack.py</a>.   </p>
+</li>
+<li>
+<p>(critério para A+) apresentar um gráfico que resume a q-table, ou seja, que resume o que fazer em cada jogada. Comente também se é possível utilizar esta q-table em uma situação real ou não. </p>
 </li>
 </ul>
 <h2 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h2>
@@ -672,21 +676,24 @@
 <p>Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a <strong>Insuficiente (I)</strong> - nota 2. </p>
 </li>
 <li>
-<p>Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a <strong>8.0</strong>. </p>
+<p>Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a <strong>8.0</strong>.</p>
+</li>
+<li>
+<p>Entregou a implementação do algoritmo Sarsa com adição de um método para tratamento dos estados do ambiente BlackJack <span class="arithmatex">\(\rightarrow\)</span> <strong>nota = 9.0</strong>. </p>
 </li>
 <li>
 <p>Entregou o gráfico que resume a q-table e explicou se é possível utilizar tal informação em uma situação real ou não então nota igual a <strong>10.00</strong>.</p>
 </li>
 </ul>
 <h2 id="deadline">Deadline</h2>
-<p>O deadline para a entrega desta atividade é 19 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo - o mesmo grupo da implementação do tic-tac-toe usando reinforcement learning. </p>
+<p>O deadline para a entrega desta atividade é 21 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo - o mesmo grupo da implementação do tic-tac-toe usando reinforcement learning. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 17, 2023</span>
       
     
   </small>

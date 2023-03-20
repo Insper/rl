@@ -8,8 +8,9 @@ A biblioteca Gymnasium possui um ambiente que simula um jogo de [BlackJack (*Bla
 
 Além da documentação, você tem acesso a duas implementações:
 
-* [BlackJack_Manual.py](https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py): onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente, e;
-* [BlackJack_Agent.py](https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py): que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço. 
+* [BlackJack_Manual.py](https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Manual.py): onde você pode jogar várias partidas de BlackJack e entender a representação de estado adotada pelo ambiente;
+* [BlackJack_Agent.py](https://github.com/Insper/rl_code/blob/main/src/part_04/BlackJack_Agent.py): que tem uma implementação de agente que aprende a jogar BlackJack usando aprendizagem por reforço, e;
+* [QLearning_Blackjack.py](https://github.com/Insper/rl_code/blob/main/src/part_04/QLearning_BlackJack.py): uma versão do algoritmo QLearning com adição de um método para tratamento dos estados do ambiente BlackJack. 
 
 Atividades propostas: 
 
@@ -31,7 +32,9 @@ Entrega:
 
 * criar um arquivo README.md informando os hiperparâmetros utilizados para o treinamento. 
 
-* (critério para A+) apresentar um gráfico que resume a q-table, ou seja, que resume o que fazer em cada jogada. Comente também se é possível utilizar esta q-table em uma situação real ou não.   
+* (critério para A) usar o algoritmo Sarsa para este problema. Neste caso você deve fazer algo similar ao que está implementado no arquivo [QLearning_Blackjack.py](https://github.com/Insper/rl_code/blob/main/src/part_04/QLearning_BlackJack.py).   
+
+* (critério para A+) apresentar um gráfico que resume a q-table, ou seja, que resume o que fazer em cada jogada. Comente também se é possível utilizar esta q-table em uma situação real ou não. 
 
 ## Algoritmo e hiperparâmetros utilizados para o treinamento
 
@@ -50,7 +53,9 @@ Entrega:
 
 * Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a **Insuficiente (I)** - nota 2. 
 
-* Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a **8.0**. 
+* Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a **8.0**.
+
+* Entregou a implementação do algoritmo Sarsa com adição de um método para tratamento dos estados do ambiente BlackJack $\rightarrow$ **nota = 9.0**. 
 
 * Entregou o gráfico que resume a q-table e explicou se é possível utilizar tal informação em uma situação real ou não então nota igual a **10.00**.
 
