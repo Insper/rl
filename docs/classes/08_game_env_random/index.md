@@ -62,3 +62,7 @@ Entrega:
 ## Deadline
 
 O deadline para a entrega desta atividade é 21 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo - o mesmo grupo da implementação do tic-tac-toe usando reinforcement learning. 
+
+## Referências 
+
+* https://gymnasium.farama.org/tutorials/training_agents/blackjack_tutorial/
