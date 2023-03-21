@@ -53,7 +53,7 @@ Entrega:
 
 * Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a **Insuficiente (I)** - nota 2. 
 
-* Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a **8.0**.
+* ~~Entregou todos os artefatos mencionados acima e o desempenho do agente passou de 85% então nota igual a **8.0**.~~ O desempenho do agente pode ser algo próximo de 50%. Não esqueça de descrever os hiperparâmetros utiizados. 
 
 * Entregou a implementação do algoritmo Sarsa com adição de um método para tratamento dos estados do ambiente BlackJack $\rightarrow$ **nota = 9.0**. 
 
