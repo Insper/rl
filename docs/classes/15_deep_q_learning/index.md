@@ -8,7 +8,7 @@ Em [Mnih,2013](http://arxiv.org/abs/1312.5602) os autores do artigo propõe uma 
 
 Na figura abaixo é apresentado o pseudo-código do algoritmo Q-Learning. Neste pseudo-código é possível ver como os pares *Q(s,a)* são atualizados repetidas vezes através nas inúmeras interações do agente com o ambiente.
 
-<img src="./figuras/qlearning.png" alt="Algoritmo Q-Learning" style="width:600px;"/>
+<img src="./figures/qlearning.png" alt="Algoritmo Q-Learning" style="width:600px;"/>
 
 A versão em Python para este pseudo-código é bem direta: 
 
