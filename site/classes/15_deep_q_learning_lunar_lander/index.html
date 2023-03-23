@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/06_non_determ/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning_lunar_lander/">
       
       
-        <link rel="prev" href="../05_xx_comments/">
+        <link rel="prev" href="../15_deep_q_learning/">
       
-      
-        <link rel="next" href="../06_non_determ_comments/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Using RL in non-deterministic environments - Reinforcement Learning</title>
+        <title>Lunar Lander Project - Reinforcement Learning</title>
       
     
     
@@ -71,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-rl-in-non-deterministic-environments" class="md-skip">
+        <a href="#lunar-lander-project" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using RL in non-deterministic environments
+              Lunar Lander Project
             
           </span>
         </div>
@@ -394,100 +392,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Using RL in non-deterministic environments
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../06_non_determ/" class="md-nav__link">
         Using RL in non-deterministic environments
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlake_introductionpy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake_introduction.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlakepy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-o-algoritmo-sarsa" class="md-nav__link">
-    E o algoritmo Sarsa?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outro-mapa" class="md-nav__link">
-    Outro mapa
-  </a>
-  
-    <nav class="md-nav" aria-label="Outro mapa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
-    Algoritmo e hiperparâmetros utilizados para o treinamento
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rubrica-de-avaliacao" class="md-nav__link">
-    Rubrica de avaliação
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deadline" class="md-nav__link">
-    Deadline
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -567,11 +476,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lunar Lander Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Lunar Lander Project
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    Deadline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -610,57 +560,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlake_introductionpy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake_introduction.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlakepy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-o-algoritmo-sarsa" class="md-nav__link">
-    E o algoritmo Sarsa?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outro-mapa" class="md-nav__link">
-    Outro mapa
-  </a>
-  
-    <nav class="md-nav" aria-label="Outro mapa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
-    Algoritmo e hiperparâmetros utilizados para o treinamento
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rubrica-de-avaliacao" class="md-nav__link">
-    Rubrica de avaliação
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#deadline" class="md-nav__link">
     Deadline
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -683,165 +585,53 @@
 
 
 
-<h1 id="using-rl-in-non-deterministic-environments">Using RL in non-deterministic environments</h1>
-<p>O ambiente <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">Frozen Lake</a> é um ambiente não determinístico onde um agente deve encontrar um caminho do lugar onde ele está para outro lugar passando por buracos. Se ele chegar no objetivo sem cair no buraco então ele termina a tarefa e tem 1 ponto de reward. Se ele cair em um dos buracos então ele termina a tarefa com 0 pontos de reward. Cada ação que não leva para um estado terminal tem reward igual a 0.  </p>
-<p>Neste ambiente o agente consegue executar 4 ações: ir para cima, ir para baixo, ir para esquerda e ir para direita. <strong>Como o chão é de gelo, não necessariamente a ação de ir para baixo vai levar o agente para baixo</strong>, por exemplo. Isto acontece com todas as quatro ações. Por isso que este ambiente é não determinístico.</p>
-<h2 id="trabalhe-com-o-arquivo-frozenlake_introductionpy">Trabalhe com o arquivo <code>FrozenLake_introduction.py</code></h2>
-<ol>
-<li>
-<p>Este arquivo está disponível em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a>.</p>
-</li>
-<li>
-<p>Leia a documentação do código fonte disponível em <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">https://gymnasium.farama.org/environments/toy_text/frozen_lake/</a></p>
-</li>
-<li>
-<p>Veja o que está codificado no arquivo <code>FrozenLake_introduction.py</code> e execute o mesmo.</p>
-</li>
-<li>
-<p>Quantos estados e quantas ações o ambiente FrozenLake-v1 tem?</p>
-</li>
-<li>
-<p>O que aconteceu com a execução das ações? O resultado foi o esperado? Descreva o que aconteceu.</p>
-</li>
-</ol>
-<h2 id="trabalhe-com-o-arquivo-frozenlakepy">Trabalhe com o arquivo <code>FrozenLake.py</code></h2>
+<h1 id="lunar-lander-project">Lunar Lander Project</h1>
+<p>Objetivo da atividade: implementar um agente capaz de controlar o <em>lunar lander</em> do ambiente <code>env = gym.make('LunarLander-v2')</code>. </p>
+<p>Sugestão de atividades: </p>
 <ul>
 <li>
-<p>Este arquivo também está em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a></p>
+<p>Leia a documentação existente <a href="https://gymnasium.farama.org/environments/box2d/lunar_lander/">neste link</a>. </p>
 </li>
 <li>
-<p>Abra em um editor de texto e descomente as linhas 12 e 13 e comente a linha 14. O código deve ficar como abaixo:</p>
+<p>Implemente um agente capaz de controlar o <em>lunar lander</em> usando o algoritmo <strong>Deep Q-Learning</strong>. </p>
 </li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># only execute the following lines if you want to create a new q-table</span>
-<span class="n">qlearn</span> <span class="o">=</span> <span class="n">QLearning</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.9999</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">500000</span><span class="p">)</span>
-<span class="n">q_table</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="s1">&#39;data/q-table-frozen-lake.csv&#39;</span><span class="p">,</span><span class="s1">&#39;results/actions_frozen_lake&#39;</span><span class="p">)</span>
-<span class="c1">#q_table = loadtxt(&#39;data/q-table-frozen-lake.csv&#39;, delimiter=&#39;,&#39;)</span>
-</code></pre></div>
+<li>
+<p>Faça a persistência da rede neural para que depois a mesma possa ser utilizada por um outro script para pousar o <em>lunar lander</em> de forma correta. Ou seja, no seu projeto, além do script para treinamento, você também deverá entregar o script que faz uso do modelo treinado. </p>
+</li>
+<li>
+<p>Para estes dois últimos itens você pode reutilizar o código existente em <code>DeepQLearning.py</code>. Apenas preste atenção na estrutura da rede neural e nos hiperparâmetros.</p>
+</li>
+<li>
+<p>Na documentação do projeto você precisa:</p>
 <ul>
-<li>Execute o arquivo <code>FrozenLake.py</code> com o comando:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>FrozenLake.py
-</code></pre></div>
-<ul>
-<li>
-<p>Agora faça o algoritmo <code>FrozenLake.py</code> ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes. Ele consegue chegar ao objetivo sempre? Ele consegue chegar ao objetivo na maioria das vezes? </p>
-</li>
-<li>
-<p>E se executarmos 100 vezes? Quantas vezes o agente consegue atingir o objetivo? Execute o comando abaixo:</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>FrozenLake100times.py
-</code></pre></div>
-<ul>
-<li>
-<p>Como podemos melhorar o desempenho deste agente?</p>
-</li>
-<li>
-<p>Teste diferentes configurações de hiperparâmetros. Qual é o comportamento visto no gráfico de episódios versus rewards? </p>
-</li>
-</ul>
-<h2 id="e-o-algoritmo-sarsa">E o algoritmo Sarsa?</h2>
-<ul>
-<li>
-<p>Será que o algoritmo Sarsa tem um desempenho melhor para problemas não-determinísticos? </p>
-</li>
-<li>
-<p>Em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a> tem um arquivo chamado <code>FrozenLakeSarsa.py</code> que você pode utilizar para responder esta pergunta. </p>
-</li>
-</ul>
-<h2 id="outro-mapa">Outro mapa</h2>
-<p>Existem dois mapas pré-configurados em <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">https://gymnasium.farama.org/environments/toy_text/frozen_lake/</a>. O mapa 4x4 e um mapa 8x8. E se mudarmos o mapa para 8x8? </p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;FrozenLake-v1&quot;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s2">&quot;8x8&quot;</span><span class="p">,</span> <span class="n">is_slippery</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
-</code></pre></div>
-<ul>
-<li>O que muda? O problema se torna mais complexo? É necessário mudar algum dos hiperparâmetros? Qual é o melhor algoritmo? <em>Sarsa</em> ou <em>Q-Learning</em>? </li>
-</ul>
-<p>Considere o seguinte objetivo: <em>desenvolver um agente capaz de chegar ao ponto final em mais de 80% das vezes". Faça o *clone</em> do projeto <a href="https://classroom.github.com/a/Ag-dCmlJ">https://classroom.github.com/a/Ag-dCmlJ</a>. Você deve adicionar neste projeto e fazer o commit dos seguintes artefatos: </p>
-<ul>
-<li>
-<p>o arquivo <code>q-table.csv</code> dentro do diretório <code>data</code>. Já existe um arquivo q-table neste projeto, mas ele é para a versão do ambiente 4x4. Quando você executar o arquivo <code>test_frozenlake.py</code> usando o comando <code>pytest</code> irá ocorrer um erro de <code>IndexError</code>. Você deve substituir este arquivo pelo arquivo gerado pelo seu agente durante o período de treinamento; </p>
-</li>
-<li>
-<p>depois de substituir o arquivo <code>data/q-table.csv</code>, você poderá executar os testes e verificar se o mesmo é aprovado em todos os testes. São quatro testes: o primeiro executa o ambiente 1000 vezes e verifica se o agente conseguiu chegar ao final em no mínimo 700 vezes. Os outros 3 testes fazem exatamente a mesma coisa: executam o agente no ambiente 1000 vezes e verificam se o agente conseguiu chegar ao final em no mínimo 800 vezes;</p>
-</li>
-<li>
-<p>você também deve adicionar a sua implementação no diretório raiz deste projeto, e;</p>
-</li>
-<li>
-<p>alterar o arquivo README.md informando os hiperparâmetros utilizados para o treinamento. </p>
-</li>
-<li>
-<p>(critério para A+) apresentar um gráfico comparando a curva de aprendizagem de diversas abordagens utilizadas durante o treinamento. A imagem deste gráfico deve ser adicionada ao projeto e o texto explicando os resultados ao arquivo README.md.  </p>
-</li>
-</ul>
-<h3 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h3>
-<table>
-<thead>
-<tr>
-<th align="left">Atributo</th>
-<th align="center">Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Algoritmo</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">alpha</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">gamma</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon_dec</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon_min</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">qtd_episodios</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="rubrica-de-avaliacao">Rubrica de avaliação</h3>
-<ul>
-<li>
-<p>Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a <strong>Insuficiente (I)</strong> - nota 2. </p>
-</li>
-<li>
-<p>Entregou todos os artefatos mencionados acima então a nota é calculada de acordo com o número de testes aprovados: </p>
-<ul>
-<li>1 teste aprovado = 2.5, </li>
-<li>2 testes aprovados = 5.0, </li>
-<li>3 testes aprovados = 7.5, </li>
-<li>4 testes aprovados = 9.0</li>
+<li>descrever brevemente qual é o problema, qual é o <em>action space</em> e <em>observation space</em>;</li>
+<li>apresentar a curva de aprendizado na forma de uma gráfico, e;</li>
+<li>apresentar dois gifs animados: o primeiro com o comportamento do agente em uma situação intermediária do treinamento (ou seja, o agente em uma situação onde não sabe executar direito a tarefa) e o segundo com o comportamento do agente na situação final.</li>
 </ul>
 </li>
 <li>
-<p>Foi aprovado em todos os testes e entregou o gráfico comparando a curva de aprendizagem de diversas abordagens utilizadas ao longo do treinamento então nota igual a <strong>10 (dez)</strong>. </p>
+<p>Não esqueça de adicionar ao projeto o arquivo de <code>requirements.txt</code> com todas as bibliotecas necessárias para a execução do projeto. </p>
 </li>
 </ul>
-<h3 id="deadline">Deadline</h3>
-<p>O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. </p>
+<p>Ao entregar estes itens você tem garantido um <strong>B</strong>. </p>
+<p>Para ter uma nota <strong>A+</strong> neste projeto você precisa: </p>
+<ul>
+<li>Pesquisar por alguma biblioteca que implementa o algoritmo Deep Q-Learning e fazer uso desta biblioteca.</li>
+<li>Comparar os resultados alcançados com o uso desta biblioteca versus a implementação de Deep Q-Learning que já temos disponível em termos de aprendizado do agente e também considerando o tempo de treinamento e recurso computacional demandado. </li>
+<li>Na documentação do projeto você precisa adicionar esta análise.</li>
+<li>No projeto você precisa adicionar o script que você implementou e que faz uso desta biblioteca. </li>
+<li>Não esqueça de atualizar o arquivo de <code>requirements.txt</code>. </li>
+</ul>
+<p>Você deve submeter o seu projeto neste link: <a href="https://classroom.github.com/a/Dzs78isA">https://classroom.github.com/a/Dzs78isA</a> do Github Classroom. </p>
+<h2 id="deadline">Deadline</h2>
+<p>O deadline para a entrega desta atividade é 28 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo com até 3 integrantes.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2023</span>
       
     
   </small>

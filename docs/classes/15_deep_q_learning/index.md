@@ -16,13 +16,13 @@ A versão em Python para este pseudo-código é bem direta:
 def train(self):
         
     for i in range(1, self.episodes+1):
-        state = self.env.reset()
+        (state,_) = self.env.reset()
         reward = 0
         done = False
 
         while not done:
             action = self.select_action(state)
-            next_state, reward, done, _ = self.env.step(action) 
+            next_state, reward, done, _, _ = self.env.step(action) 
         
             # ajustando os valores da q-table
             old_value = self.q_table[state, action]
@@ -187,7 +187,15 @@ def experience_replay(self):
             self.epsilon *= self.epsilon_dec
 ````
 
-E o loop principal de treinamento tem este comportamento:
+Preste atenção neste update da rede neural: 
+
+```python
+targets = rewards + self.gamma * (next_max) * (1 - terminals)
+```
+
+O pseudo-código que define esta forma de atualização está na página 5 em [Mnih,2013](http://arxiv.org/abs/1312.5602). 
+
+O loop principal de treinamento tem este comportamento:
 
 ````python
 def train(self, max_steps):
@@ -214,33 +222,27 @@ def train(self, max_steps):
 
 ## Exemplo de uso: CartPole
 
-Podemos verificar o funcionamento deste algoritmo com o ambiente `CartPole` da biblioteca `Gym` executando: 
+Podemos verificar o funcionamento deste algoritmo com o ambiente `CartPole` da biblioteca `Gymnasium` executando: 
 
 ````bash
-cd src/parte6/
 python CarPole.py
 ````
 
 Para a execução deste arquivo serão necessários os arquivos: 
-* [CartPole.py](../src/parte6/CartPole.py)
-* [DeepQLearning.py](../src/parte6/DeepQLearning.py)
+* [CartPole.py](https://github.com/Insper/rl_code/blob/main/src/part_06/CartPole.py)
+* [DeepQLearning.py](https://github.com/Insper/rl_code/blob/main/src/part_06/DeepQLearning.py)
 
 O resultado desta execução irá gerar o arquivo `cartpole_DeepQLearning.jpg` dentro da pasta `results`. Espera-se que o 
 resultado encontrado seja similar a este: 
 
-<img src="../src/parte6/results/cartpole_DeepQLearning_copy.jpg" alt="Resultado da execução do Deep Q-Learning no ambiente CartPole" style="width:600px;"/>
+<img src="./figures/cartpole_DeepQLearning_copy.jpg" alt="Resultado da execução do Deep Q-Learning no ambiente CartPole" style="width:600px;"/>
+
+**Importante**: Antes de executar o arquivo `CarPole.py` você vai ter que instalar o pacote `tensorflow` visto que agora a implementação está usando `tensorflow` e `keras`. 
 
 **Será que este agente conseguiu aprender a controlar o CartPole?**
 
 Uma forma de testar isto é executando um script que faz uso da rede neural treinada: 
 
 ````bash
-cd src/parte6/
 python CartPole_trained.py
 ````
-
-## Exemplo de uso: LunarLander
-
-Sugestão de atividade: 
-
-* Criar um arquivo `LunarLander.py` que treina um agente para atuar no ambiente `env = gym.make('LunarLander-v2')` usando o algoritmo implementado em `DeepQLearning.py`. 

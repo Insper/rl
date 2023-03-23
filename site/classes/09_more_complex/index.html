@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/09_more_complex/">
       
       
+        <link rel="prev" href="../08_game_env_random/">
+      
+      
+        <link rel="next" href="../15_deep_q_learning/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -235,14 +239,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -251,7 +257,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Classes
@@ -440,6 +446,110 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Implementing an agent to deal with an environment a little more complex
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Implementing an agent to deal with an environment a little more complex
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-1" class="md-nav__link">
+    Atividades propostas: parte 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-2" class="md-nav__link">
+    Atividades propostas: parte 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-3" class="md-nav__link">
+    Atividades propostas: parte 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade-complementar-e-opcional" class="md-nav__link">
+    Atividade complementar e opcional
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_deep_q_learning/" class="md-nav__link">
+        Deep Reinforcement Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
+        Lunar Lander Project
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -466,6 +576,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-1" class="md-nav__link">
+    Atividades propostas: parte 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-2" class="md-nav__link">
+    Atividades propostas: parte 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas-parte-3" class="md-nav__link">
+    Atividades propostas: parte 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade-complementar-e-opcional" class="md-nav__link">
+    Atividade complementar e opcional
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -484,10 +630,87 @@
 
 
 <h1 id="implementing-an-agent-to-deal-with-an-environment-a-little-more-complex">Implementing an agent to deal with an environment a little more complex</h1>
-<ol>
-<li>Exercise: implement an agent to run a mountain car. </li>
-<li>Discussion: how we can implement agents using RL for environments like LunarLander, Atari, and others?</li>
-</ol>
+<p>Até este momento, trabalhamos com diversos ambientes que tem uma quantidade razoavelmente pequena de estados e ações discretas. O objetivo deste exercício é mostrar o uso do Q-Learning em um cenário onde é necessário discretizar o espaço de estados. </p>
+<p>Para isto, vamos utilizar o ambiente <a href="https://gymnasium.farama.org/environments/classic_control/mountain_car/">MountainCar-v0</a> da bibliote Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.</p>
+<p><img src="mountain_car.gif" alt="Mountain car environment" width="300"/></p>
+<p>As ações são discretas: </p>
+<ul>
+<li>0: acelera para a esquerda.</li>
+<li>1: não acelera.</li>
+<li>2: acelera para a direita. </li>
+</ul>
+<p>Dado uma ação, o carro se move segundo esta dinâmica: </p>
+<p><span class="arithmatex">\(velocity_{t+1} = velocity_{t} + (action - 1) * force - cos(3 * position_{t}) * gravity\)</span></p>
+<p><span class="arithmatex">\(position_{t+1} = position_{t} + velocity_{t+1}\)</span></p>
+<p>onde <span class="arithmatex">\(force = 0.001\)</span> e <span class="arithmatex">\(gravity = 0.0025\)</span>. </p>
+<h2 id="atividades-propostas-parte-1">Atividades propostas: parte 1</h2>
+<ul>
+<li>
+<p>Abra e execute o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar_introduction.py">MountainCar_introduction.py</a> para entender melhor o ambiente. </p>
+</li>
+<li>
+<p>Que estrutura de dados o <code>(state, _) = env.reset()</code> retorna neste caso? O que significa <code>state</code>?</p>
+</li>
+<li>
+<p>Depois de executar:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;State space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Action space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">)</span>
+</code></pre></div>
+<p>O que você pode afirmar sobre o espaço de estados e as ações? </p>
+<ul>
+<li>O que a sequência de ações abaixo faz?</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">num_states</span> <span class="o">=</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">num_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">num_states</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<ul>
+<li>O que <code>state_adj</code> representa depois de executarmos as seguintes linhas de comando: </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">state_adj</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">state_adj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">state_adj</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="atividades-propostas-parte-2">Atividades propostas: parte 2</h2>
+<ul>
+<li>
+<p>Abra o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/QLearningBox.py">QLearningBox.py</a> e veja quais são as diferenças desta implementação com a implementação do <code>QLearning.py</code> vista até agora. </p>
+</li>
+<li>
+<p>Execute o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar.py">MountainCar.py</a>. O veículo consegue chegar no topo da montanha? O que está acontecendo? O que precisa ser alterado?</p>
+</li>
+<li>
+<p>Considere o código abaixo: </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="n">state_adj</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">qtable</span><span class="p">[</span><span class="n">state_adj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state_adj</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="n">state2</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">state2</span>
+</code></pre></div>
+<p>Explique o que acontece nestas duas linhas: </p>
+<div class="highlight"><pre><span></span><code>    <span class="n">state_adj</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">qtable</span><span class="p">[</span><span class="n">state_adj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state_adj</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+</code></pre></div>
+<h2 id="atividades-propostas-parte-3">Atividades propostas: parte 3</h2>
+<ul>
+<li>
+<p>Analise o gráfico gerado na pasta <code>results</code>. O aprendizado do agente converge rapidamente? Fica estável? </p>
+</li>
+<li>
+<p>Depois de treinado, o agente consegue chegar ao topo em todas as vezes? Quantas ações em média são necessárias? </p>
+</li>
+</ul>
+<h2 id="atividade-complementar-e-opcional">Atividade complementar e opcional</h2>
+<ul>
+<li>Esta implementação não tem como usar a função <code>savetxt</code> do <code>numpy</code> para gravar a <em>Q-table</em> porque a Q-table neste caso é 3D. Implemente uma função que permita armazenar e ler uma <em>Q-table</em> 3D. </li>
+</ul>
 
   <hr>
 <div class="md-source-file">
