@@ -33,7 +33,7 @@ Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/Dz
 
 ## Deadline
 
-O deadline para a entrega desta atividade é 28 de março de 2023 às 23:30 horas. Este trabalho deve ser feito em grupo com até 3 integrantes.
+O deadline para a entrega desta atividade é **13 de abril de 2023** às 23:30 horas. Este trabalho deve ser feito em grupo com até 3 integrantes.
 
 
 

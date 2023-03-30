@@ -15,30 +15,40 @@ nav:
   - 'Plan': 'plan.md'
   - 'Student Assessment': 'assessment.md'
   - 'Classes':
-    - 'classes/01_introduction/index.md'
-    - 'classes/02_problem_solving/index.md'
-    - 'classes/03_games/index.md'
-    - 'classes/03_review/index.md'
-    - 'classes/04_toolings_envs/index.md'
-    - 'classes/05_q_learning/index.md'
-    - 'classes/05_x_hyperparameters/index.md'
-    - 'classes/05_x_sarsa/index.md'
-    - 'classes/05_xx_comments/index.md'
-    - 'classes/06_non_determ/index.md'
-    - 'classes/06_non_determ_comments/index.md'
-    - 'classes/07_game_env/index.md'
-    - 'classes/08_game_env_random/index.md'
-    - 'classes/09_more_complex/index.md'
+    - 'Introduction and review':
+      - 'classes/01_introduction/index.md'
+      - 'classes/02_problem_solving/index.md'
+      - 'classes/03_games/index.md'
+      - 'classes/03_review/index.md'
+    - 'Q-Learning and Sarsa':
+      - 'classes/04_toolings_envs/index.md'
+      - 'classes/05_q_learning/index.md'
+      - 'classes/05_x_hyperparameters/index.md'
+      - 'classes/05_x_sarsa/index.md'
+      - 'classes/05_xx_comments/index.md'
+    - 'Environments':
+      - 'classes/06_non_determ/index.md'
+      - 'classes/06_non_determ_comments/index.md'
+      - 'classes/07_game_env/index.md'
+      - 'classes/08_game_env_random/index.md'
+      - 'classes/09_more_complex/index.md'
 #    - 'classes/11_evaluation/index.md'
 #    - 'classes/13_nn_review/index.md'
 #    - 'classes/14_nn_policies/index.md'
-    - 'classes/15_deep_q_learning/index.md'
-    - 'classes/15_deep_q_learning_lunar_lander/index.md'
+    - 'Deep Q-Learning':
+      - 'classes/15_deep_q_learning/index.md'
+      - 'classes/15_deep_q_learning_lunar_lander/index.md'
+      - 'classes/15_xx_comments/index.md'
+
+
 #    - 'classes/16_double_deep_q_learning/index.md'
 #    - 'classes/17_ppo/index.md'
 #    - 'classes/18_tf_agents/index.md'
 #    - 'classes/19_final_project/index.md'
 
+  - 'Projects':
+    - 'projects/project_01.md'
+    - 'projects/project_02.md'
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js

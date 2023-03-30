@@ -108,6 +108,8 @@ No caso dos ambientes do *Atari* tem-se uma representação correspondente a ima
 
 ## Deep Reinforcement Learning
 
+<img src="./figures/deepqlearning.jpg" alt="Q-Learning and Deep Q-Learning" style="width:600px;"/>
+
 Para implementar a versão proposta por [Mnih,2013](http://arxiv.org/abs/1312.5602) podemos usar uma rede neural qualquer, como a definida abaixo: 
 
 ````python
