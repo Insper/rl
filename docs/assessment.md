@@ -10,6 +10,7 @@ The grade for this subject is calculated as follows:
 
 | Description                                                                                            | Deadline            |
 |:-------------------------------------------------------------------------------------------------------|:-------------------:|
+| [Introduction questions](./classes/01_introduction/index.md)                                           | 02/14/2023          |
 | [Taxi driver agent: a problem-solving searching review](./classes/02_problem_solving/index.md#a-taxi-driver-agent-without-reinforcement-learning)         | 02/21/2023          |
 | [Tic-tac-toe agent: adversarial search and games review](./classes/03_games/index.md#exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max)                  | 02/16/2023          |
 | [Q-Learning and hyperparameters](./classes/05_x_hyperparameters/index.md#atividade)                        | 03/02/2023          |
@@ -18,6 +19,15 @@ The grade for this subject is calculated as follows:
 | [Tic-tac-toe agent with RL](./classes/07_game_env/index.md#tic-tac-toe-player)                             | 03/19/2023          |
 | [Blackjack agent](./classes/08_game_env_random/index.md#jogador-de-blackjack)                              | 03/21/2023          |
 | [Lunar Lander agent with Deep RL](./classes/15_deep_q_learning_lunar_lander/index.md)                      | 04/13/2023          |
+| [PPO](.)                                                                                                   | TBD                 |
+
+## Major projects
+
+| Description                                                                                            | Deadline            |
+|:-------------------------------------------------------------------------------------------------------|:-------------------:|
+| [Double Deep Q-Learning](./projects/project_01.md)                                                     | 04/27/2023          |
+| [Appling reinforcement learning](./projects/project_02.md)                                             | TBD                 |
+
 
 ## Conversão de conceito para valor numérico
 
