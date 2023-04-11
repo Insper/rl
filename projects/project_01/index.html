@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://insper.github.io/rl/projects/project_01/">
       
       
-        <link rel="prev" href="../../classes/15_xx_comments/">
+        <link rel="prev" href="../../classes/16_double_deep_q_learning/">
       
       
         <link rel="next" href="../project_02/">
@@ -629,6 +629,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes/16_double_deep_q_learning/" class="md-nav__link">
+        Double Deep Q-Learning
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -688,9 +702,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Project 01
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Project 01
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -737,6 +789,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -755,14 +829,35 @@
 
 
 <h1 id="project-01">Project 01</h1>
-<p>TBD</p>
+<p>Considerando o artigo publicado por van Hasselt, Guez e Silver [^1], responda as seguintes perguntas:</p>
+<ol>
+<li>Qual é a característica do Q-Learning e Deep Q-Learning destacada pelos autores do artigo? </li>
+<li>Qual é a principal ideia do Double Deep Q-Learning e como esta ideia deve ser implementada? Mostre a ideia através de um pseudo-código. </li>
+<li>Como os testes empíricos foram implementados neste artigo? </li>
+<li>Quais foram as principais contribuições do artigo? </li>
+<li>Como é que podemos verificar que o Double Deep Q-Learning tem um aprendizado mais estável e consegue encontrar políticas melhores? </li>
+<li>Implemente o algoritmo Double Deep Q-Learning e valide nos seguintes ambientes: Cart Pole e Lunar Lander.</li>
+<li>Você conseguiu o comportamento esperado? Justifique a sua resposta. Em caso negativo, na opinião do grupo o que faltou implementar para conseguir o comportamento esperado?  </li>
+</ol>
+<p>Ao responder todas as questões acima e implementando todos os artefatos necessários então a nota do grupo será <strong>B</strong>. </p>
+<p>Para obter um <strong>A+</strong> é necessário:</p>
+<ol>
+<li>Escolher um dos ambientes avaliados no artigo [^1] e que está presente na biblioteca <code>gymnasium</code>.</li>
+<li>Usar o algoritmo Double Deep Q-Learning para treinar um agente capaz de aprender a atuar neste ambiente. </li>
+</ol>
+<h2 id="entrega">Entrega</h2>
+<p>Os artefatos podem ser organizados da forma que o grupo escolher. O importante é que todos os artefatos estejam presentes no repositório do grupo no Github Classroom. É importante que o grupo saiba organizar e documentar bem os artefatos. Se os mesmos não estiverem bem organizados ou de fácil acesso então a nota do grupo pode ser decrementada. </p>
+<p>Este projeto é um projeto que deve ser executado em grupos com até 3 integrantes. O prazo para entrega é <strong>27/04/2023</strong> até às 23:30. A entrega deverá ser realizada via Github Classroom. O link para o Github Classroom é este: <a href="https://classroom.github.com/a/SnaQZIS-">https://classroom.github.com/a/SnaQZIS-</a>.</p>
+<p>Este projeto vale 20% da nota final. </p>
+<h2 id="referencias">Referências</h2>
+<p>[^1] van Hasselt, H., Guez, A. and Silver, D. 2016. Deep Reinforcement Learning with Double Q-Learning. Proceedings of the AAAI Conference on Artificial Intelligence. 30, 1 (Mar. 2016). DOI: <a href="https://doi.org/10.1609/aaai.v30i1.10295">https://doi.org/10.1609/aaai.v30i1.10295</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 30, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2023</span>
       
     
   </small>
