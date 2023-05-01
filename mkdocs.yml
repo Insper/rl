@@ -40,7 +40,8 @@ nav:
       - 'classes/15_deep_q_learning_lunar_lander/index.md'
       - 'classes/15_xx_comments/index.md'
       - 'classes/16_double_deep_q_learning/index.md'
-#    - 'classes/17_ppo/index.md'
+    - 'Policy Optimization':
+      - 'classes/17_ppo/index.md'
 #    - 'classes/18_tf_agents/index.md'
 
   - 'Projects':
