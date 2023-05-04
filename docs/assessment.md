@@ -19,7 +19,6 @@ The grade for this subject is calculated as follows:
 | [Tic-tac-toe agent with RL](./classes/07_game_env/index.md#tic-tac-toe-player)                             | 03/19/2023          |
 | [Blackjack agent](./classes/08_game_env_random/index.md#jogador-de-blackjack)                              | 03/21/2023          |
 | [Lunar Lander agent with Deep RL](./classes/15_deep_q_learning_lunar_lander/index.md)                      | 04/13/2023          |
-| [PPO](.)                                                                                                   | TBD                 |
 
 ## Major projects
 
