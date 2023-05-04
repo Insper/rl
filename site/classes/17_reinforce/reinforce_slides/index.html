@@ -8,23 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/18_tf_agents/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/17_reinforce/reinforce_slides/">
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Implementation of RL using TF-Agents - Reinforcement Learning</title>
+        <title>Policy Optimization - Reinforcement Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementation-of-rl-using-tf-agents" class="md-skip">
+        <a href="#policy-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Reinforcement Learning" class="md-header__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
+    <a href="../../.." title="Reinforcement Learning" class="md-header__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation of RL using TF-Agents
+              Policy Optimization
             
           </span>
         </div>
@@ -146,7 +146,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Reinforcement Learning" class="md-nav__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
+    <a href="../../.." title="Reinforcement Learning" class="md-nav__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -177,7 +177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -192,7 +192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../goals/" class="md-nav__link">
+      <a href="../../../goals/" class="md-nav__link">
         Goals
       </a>
     </li>
@@ -207,7 +207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plan/" class="md-nav__link">
+      <a href="../../../plan/" class="md-nav__link">
         Plan
       </a>
     </li>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assessment/" class="md-nav__link">
+      <a href="../../../assessment/" class="md-nav__link">
         Student Assessment
       </a>
     </li>
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_introduction/" class="md-nav__link">
+      <a href="../../01_introduction/" class="md-nav__link">
         Introduction to Reinforcement Learning
       </a>
     </li>
@@ -305,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_problem_solving/" class="md-nav__link">
+      <a href="../../02_problem_solving/" class="md-nav__link">
         Problem-solving searching review
       </a>
     </li>
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_games/" class="md-nav__link">
+      <a href="../../03_games/" class="md-nav__link">
         Adversarial search and games review
       </a>
     </li>
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_review/" class="md-nav__link">
+      <a href="../../03_review/" class="md-nav__link">
         Implementations review
       </a>
     </li>
@@ -381,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_toolings_envs/" class="md-nav__link">
+      <a href="../../04_toolings_envs/" class="md-nav__link">
         Reinforcement Learning Tooling and Environments
       </a>
     </li>
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_q_learning/" class="md-nav__link">
+      <a href="../../05_q_learning/" class="md-nav__link">
         Q-Learning Algorithm
       </a>
     </li>
@@ -409,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_x_hyperparameters/" class="md-nav__link">
+      <a href="../../05_x_hyperparameters/" class="md-nav__link">
         Hyperparameters in Q-Learning
       </a>
     </li>
@@ -423,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_x_sarsa/" class="md-nav__link">
+      <a href="../../05_x_sarsa/" class="md-nav__link">
         SARSA Algorithm: on-policy approach
       </a>
     </li>
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_xx_comments/" class="md-nav__link">
+      <a href="../../05_xx_comments/" class="md-nav__link">
         Comments about Q-Learning and Sarsa implementation
       </a>
     </li>
@@ -485,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_non_determ/" class="md-nav__link">
+      <a href="../../06_non_determ/" class="md-nav__link">
         Using RL in non-deterministic environments
       </a>
     </li>
@@ -499,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_non_determ_comments/" class="md-nav__link">
+      <a href="../../06_non_determ_comments/" class="md-nav__link">
         Comments about the Frozen Lake implementations
       </a>
     </li>
@@ -513,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07_game_env/" class="md-nav__link">
+      <a href="../../07_game_env/" class="md-nav__link">
         Using RL in a competitive environment
       </a>
     </li>
@@ -527,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_game_env_random/" class="md-nav__link">
+      <a href="../../08_game_env_random/" class="md-nav__link">
         Using RL in a competitive environment with random behavior
       </a>
     </li>
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_more_complex/" class="md-nav__link">
+      <a href="../../09_more_complex/" class="md-nav__link">
         Implementing an agent to deal with an environment a little more complex
       </a>
     </li>
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15_deep_q_learning/" class="md-nav__link">
+      <a href="../../15_deep_q_learning/" class="md-nav__link">
         Deep Reinforcement Learning
       </a>
     </li>
@@ -603,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
+      <a href="../../15_deep_q_learning_lunar_lander/" class="md-nav__link">
         Lunar Lander Project
       </a>
     </li>
@@ -617,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15_xx_comments/" class="md-nav__link">
+      <a href="../../15_xx_comments/" class="md-nav__link">
         Comments on Deep Q-Learning activities
       </a>
     </li>
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../16_double_deep_q_learning/" class="md-nav__link">
+      <a href="../../16_double_deep_q_learning/" class="md-nav__link">
         Double Deep Q-Learning
       </a>
     </li>
@@ -679,7 +679,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../17_ppo/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
+        Policy Optimization e Reinforce algoritmos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18_ppo/" class="md-nav__link">
         Policy Optimization e Reinforce algoritmos
       </a>
     </li>
@@ -735,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/project_01/" class="md-nav__link">
+      <a href="../../../projects/project_01/" class="md-nav__link">
         Project 01
       </a>
     </li>
@@ -749,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/project_02/" class="md-nav__link">
+      <a href="../../../projects/project_02/" class="md-nav__link">
         Project 02
       </a>
     </li>
@@ -783,21 +797,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -815,19 +814,72 @@
 
 
 
-<h1 id="implementation-of-rl-using-tf-agents">Implementation of RL using TF-Agents</h1>
-<p>TBD</p>
-<h2 id="references">References</h2>
+<style>
+    footer {
+        position: fixed;
+        bottom: 10px;
+        left: 950px;
+        width: 400px;
+    }
+
+    footer img {
+        vertical-align: middle;
+    }
+
+</style>
+
+<h1 id="policy-optimization">Policy Optimization</h1>
+<p>Disciplina de Reinforcement Learning
+Professor: Fabrício Barth
+E-mail para contato: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#97;&#98;&#114;&#105;&#99;&#105;&#111;&#106;&#98;&#64;&#105;&#110;&#115;&#112;&#101;&#114;&#46;&#98;&#114;">&#102;&#97;&#98;&#114;&#105;&#99;&#105;&#111;&#106;&#98;&#64;&#105;&#110;&#115;&#112;&#101;&#114;&#46;&#98;&#114;</a></p>
+<hr />
+<h1 id="objetivos-desta-aula">Objetivos desta aula</h1>
+<p>Ao final desta aula, você será capaz de: </p>
 <ul>
-<li><a href="https://www.tensorflow.org/agents">TF-Agents</a></li>
+<li>
+<p>entender a diferença entre os algoritmos da família <strong>policy optimization</strong> e os algoritmos da família <strong>Q-learning</strong>, e; </p>
+</li>
+<li>
+<p>compreender como funciona e como implementar os algoritmos <strong>policy gradient</strong> e <strong>proximal policy optimization</strong>;</p>
+</li>
 </ul>
+<hr />
+<h1 id="policy-gradient-ou-reinforce">Policy Gradient ou Reinforce</h1>
+<p>O algoritmo REINFORCE é um algoritmo que ao invés de definir uma <em>policy</em> em termos de <span class="arithmatex">\(\pi(s) = \arg \max_{a} Q(s,a)\)</span>, como é feito com o Q-Learning e Deep Q-Learning, ele define a <em>policy</em> no formato de uma distribuição: </p>
+<div class="arithmatex">\[
+a_{t} \sim \pi_{\theta}(a_{t} | s_{t})
+\]</div>
+<p>onde <span class="arithmatex">\(\theta\)</span> representa os parâmetros da <em>policy</em> e a ideia é atualizar estes parâmetros usando um gradiente ascendente para <strong>maximizar</strong> a expectativa de <em>reward</em> futuro.</p>
+<hr />
+<h1 id="_1"><img alt="height:600px" src="../img/distribuicao.png" /></h1>
+<hr />
+<p>Se durante a experiência do agente, o mesmo percebe que uma ação tem <em>reward</em> positivo (por exemplo, a ação <em>c</em>) então...</p>
+<h1 id="_2"><img alt="height:500px" src="../img/distribuicao_alterada.png" /></h1>
+<hr />
+<h1 id="policy-gradient-ou-reinforce_1">Policy Gradient ou Reinforce</h1>
+<div class="arithmatex">\[
+\theta_{0}
+\]</div>
+<div class="highlight"><pre><span></span><code>def train(policy <span class="k">\theta</span><span class="nb">_{</span>0<span class="nb">}</span>)
+</code></pre></div>
+<p>Input: 
+    * parâmetros iniciais da policy <span class="arithmatex">\(\theta_{0}\)</span>
+    * taxa de aprendizado <span class="arithmatex">\(\alpha &gt; 0\)</span></p>
+<p>Para cada episódio:
+    * </p>
+<hr />
+<h1 id="referencias">Referências</h1>
+<ul>
+<li>Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine Learning 8, 229–256 (1992). <a href="https://doi.org/10.1007/BF00992696">https://doi.org/10.1007/BF00992696</a></li>
+</ul>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 4, 2023</span>
       
     
   </small>
@@ -869,16 +921,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
-        <script src="../../js/markdown-enhancer.js"></script>
+        <script src="../../../js/markdown-enhancer.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

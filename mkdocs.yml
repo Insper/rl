@@ -41,8 +41,8 @@ nav:
       - 'classes/15_xx_comments/index.md'
       - 'classes/16_double_deep_q_learning/index.md'
     - 'Policy Optimization':
-      - 'classes/17_ppo/index.md'
-#    - 'classes/18_tf_agents/index.md'
+      - 'classes/17_reinforce/index.md'
+      - 'classes/18_ppo/index.md'
 
   - 'Projects':
     - 'projects/project_01.md'

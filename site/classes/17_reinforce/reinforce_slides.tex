@@ -25,7 +25,7 @@
 		
 	\begin{itemize}
 		\item entender a diferença entre os algoritmos da família \textbf{policy optimization} e os algoritmos da família \textbf{Q-learning}, e; 
-		\item compreender como funciona e como implementar os algoritmos \textbf{policy gradient} e \textbf{proximal policy optimization}. 
+		\item compreender como funciona e como implementar o algoritmo \textbf{policy gradient}. 
 	\end{itemize}
 \end{frame}
 
@@ -60,9 +60,9 @@
 		\STATE \emph{\textbf{function} REINFORCE($\alpha$, $\gamma$, episódios):}
 		\STATE inicializar os valores de $\theta$ para a policy $\pi(A|S,\theta)$ arbitrariamente
 		\FOR {todos os episódios}
-		\STATE gerar um episódio ${s_{0},a_{0},r_{0},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
+		\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
 		\FOR {cada passo dentro do episódio $t = 0, 1, 2, \cdots, T-1$}
-			\STATE $G \leftarrow \sum_{t=0}^{T} \gamma^{t} \times r_{t}$
+			\STATE $G \leftarrow \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k}$
 			\STATE $\theta \leftarrow \theta + \alpha \times \bigtriangledown \log \pi(a_{t}|s_{t}, \theta) \times G$
 		\ENDFOR
 		\ENDFOR
@@ -74,9 +74,9 @@
 		\STATE \emph{\textbf{function} REINFORCE($\alpha$, $\gamma$, episódios):}
 		\STATE \HiLi inicializar os valores de $\theta$ para a policy $\pi(A|S,\theta)$ arbitrariamente
 		\FOR {todos os episódios}
-		\STATE gerar um episódio ${s_{0},a_{0},r_{0},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
+		\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
 		\FOR {cada passo dentro do episódio $t = 0, 1, 2, \cdots, T-1$}
-		\STATE $G \leftarrow \sum_{t=0}^{T} \gamma^{t} \times r_{t}$
+		\STATE $G \leftarrow \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k}$
 		\STATE $\theta \leftarrow \theta + \alpha \times \bigtriangledown \log \pi(a_{t}|s_{t}, \theta) \times G$
 		\ENDFOR
 		\ENDFOR
@@ -93,9 +93,9 @@
 		\STATE \emph{\textbf{function} REINFORCE($\alpha$, $\gamma$, episódios):}
 		\STATE inicializar os valores de $\theta$ para a policy $\pi(A|S,\theta)$ arbitrariamente
 		\FOR {todos os episódios}
-		\STATE \HiLi gerar um episódio ${s_{0},a_{0},r_{0},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
+		\STATE \HiLi gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
 		\FOR {cada passo dentro do episódio $t = 0, 1, 2, \cdots, T-1$}
-		\STATE $G \leftarrow \sum_{t=0}^{T} \gamma^{t} \times r_{t}$
+		\STATE $G \leftarrow \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k}$
 		\STATE $\theta \leftarrow \theta + \alpha \times \bigtriangledown \log \pi(a_{t}|s_{t}, \theta) \times G$
 		\ENDFOR
 		\ENDFOR
@@ -113,18 +113,21 @@
 		\STATE \emph{\textbf{function} REINFORCE($\alpha$, $\gamma$, episódios):}
 		\STATE inicializar os valores de $\theta$ para a policy $\pi(A|S,\theta)$ arbitrariamente
 		\FOR {todos os episódios}
-		\STATE gerar um episódio ${s_{0},a_{0},r_{0},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
+		\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
 		\FOR {cada passo dentro do episódio $t = 0, 1, 2, \cdots, T-1$}
-		\STATE \HiLi $G \leftarrow \sum_{t=0}^{T} \gamma^{t} \times r_{t}$
+		\STATE \HiLi $G \leftarrow \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k}$
 		\STATE $\theta \leftarrow \theta + \alpha \times \bigtriangledown \log \pi(a_{t}|s_{t}, \theta) \times G$
 		\ENDFOR
 		\ENDFOR
 	\end{algorithmic}
 	
 	\begin{itemize}
-		\item Se $T=3$ então $G = \gamma^{0}r_{0} + \gamma^{1}r_{1} + \gamma^{2}r_{2} + \gamma^{3}r_{3}$
-		\item Muitos dos artigos sobre PO descrevem $G$ como \textit{discounted reward}.
-		\item Também conhecido como \textit{reforço acumulado} em Q-Learning. 
+		\item Considerando $T=5$, temos:
+		\begin{itemize}
+			\item Para $a_{0}$ em $s_{0}$, $G = \gamma^{0}r_{1} + \gamma^{1}r_{2} + \gamma^{2}r_{3} + \gamma^{3}r_{4}$
+			\item Para $a_{1}$ em $s_{1}$, $G = \gamma^{0}r_{2} + \gamma^{1}r_{3} + \gamma^{2}r_{4}$
+		\end{itemize} 
+		\item $G$ é chamado de \textit{discounted reward}.
 	\end{itemize}
 \end{frame}
 
@@ -133,9 +136,9 @@
 		\STATE \emph{\textbf{function} REINFORCE($\alpha$, $\gamma$, episódios):}
 		\STATE inicializar os valores de $\theta$ para a policy $\pi(A|S,\theta)$ arbitrariamente
 		\FOR {todos os episódios}
-		\STATE gerar um episódio ${s_{0},a_{0},r_{0},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
+		\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta)$
 		\FOR {cada passo dentro do episódio $t = 0, 1, 2, \cdots, T-1$}
-		\STATE $G \leftarrow \sum_{t=0}^{T} \gamma^{t} \times r_{t}$
+		\STATE $G \leftarrow \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k}$
 		\STATE \HiLi $\theta \leftarrow \theta + \alpha \times \bigtriangledown \log \pi(a_{t}|s_{t}, \theta) \times G$
 		\ENDFOR
 		\ENDFOR
