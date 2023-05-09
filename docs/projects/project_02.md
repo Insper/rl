@@ -21,11 +21,11 @@ Para alcançar este objetivo, o aluno deverá:
 ## Entregas e datas
 
 
-11/05: *deadline* para definição do objetivo do trabalho, definição do método e resultados esperados. Cada aluno deverá entregar uma página que descreve o objetivo, métodos e resultados esperados do trabalho. As principais referências que serão utilizadas para o desenvolvimento do trabalho devem constar neste texto.  
+**11/05**: *deadline* para definição do objetivo do trabalho, definição do método e resultados esperados. Cada aluno deverá entregar uma página que descreve o objetivo, métodos e resultados esperados do trabalho. As principais referências que serão utilizadas para o desenvolvimento do trabalho devem constar neste texto.  
 
-18/05: trata-se de um marco intermediário onde o professor da disciplina irá analisar os artefatos existentes no repositório do projeto e, consequentemente, o andamento do mesmo. 
+**18/05**: trata-se de um marco intermediário onde o professor da disciplina irá analisar os artefatos existentes no repositório do projeto e, consequentemente, o andamento do mesmo. 
 
-25/05 e 30/05: cada estudante terá 15 minutos para apresentar o projeto desenvolvido. **Importante**: todos os artefatos, inclusive qualquer material utilizado para a apresentação, devem estar prontos no dia 25/05. A ordem das apresentações será definida posteriormente. 
+**25/05 e 30/05**: cada estudante terá 15 minutos para apresentar o projeto desenvolvido. **Importante**: todos os artefatos, inclusive qualquer material utilizado para a apresentação, devem estar prontos no dia 25/05. A ordem das apresentações será definida posteriormente. 
 
 
 ## Submissão dos artefatos produzidos
@@ -64,3 +64,6 @@ Para conseguir a nota máxima é necessário:
 * **relatório**: precisa ter todos os itens descritos acima. O texto precisa ser auto-contido, ter início, meio e fim. 
 * **apresentação**: a apresentação também precisa ser auto-contida, ter início, meio e fim. Não deve ultrapassar 15 minutos. Também não deve ter menos que 10 minutos. 
 
+## Nota importante
+
+A definição do objetivo do trabalho deve acontecer até o dia **11/05/2023**. Se esta definição não acontecer até este dia a nota máxima no projeto será 8. 
