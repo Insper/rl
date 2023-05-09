@@ -25,7 +25,7 @@ The grade for this subject is calculated as follows:
 | Description                                                                                            | Deadline            |
 |:-------------------------------------------------------------------------------------------------------|:-------------------:|
 | [Double Deep Q-Learning](./projects/project_01.md)                                                     | 04/27/2023          |
-| [Appling reinforcement learning](./projects/project_02.md)                                             | TBD                 |
+| [Appling reinforcement learning](./projects/project_02.md)                                             | 05/11/2023 and 05/25/2023 |
 
 
 ## Conversão de conceito para valor numérico
