@@ -25,8 +25,8 @@
 | 04/27  | Double Deep Q-Learning project                                          |
 | 05/02  | Policy Optimization Algorithms (PPO)                                    |
 | 05/04  | Policy Optimization Algorithms (PPO)                                    |
-| 05/09  | Implementation of RL using TF-Agents                                    |
-| 05/11  | Implementation of RL using TF-Agents                                    |
+| 05/09  | Final Project                                                           |
+| 05/11  | Final Project                                                           |
 | 05/16  | Final Project                                                           |
 | 05/18  | Final Project                                                           |
 | 05/23  | Final Project                                                           |
