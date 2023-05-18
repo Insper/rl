@@ -43,6 +43,8 @@ nav:
     - 'Policy Optimization':
       - 'classes/17_reinforce/index.md'
       - 'classes/18_ppo/index.md'
+    - 'Projetos finais':
+      - 'classes/19_projects/index.md'
 
   - 'Projects':
     - 'projects/project_01.md'
