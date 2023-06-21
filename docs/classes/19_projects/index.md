@@ -55,19 +55,19 @@ Deve-se utilizar exemplos que ilustram o funcionamento desta biblioteca de uma f
 
 ## Agenda das apresentações
 
-|Data e horário da apresentação | Estudante | Título do projeto |
-|:----------|:----------|:------------------|
-|25/05/2023 15:45   |Beatriz Rianho Bernardino| Reinforcement Learning e Mobilidade Urbana|
-|25/05/2023 16:05   |Carlos Eduardo Dip| Usando Reinforcement Learning para implementar um jogador de Connect4|
-|25/05/2023 16:25   |Felipe Souza | Reinforcement Learning para o problema do caixeiro viajante|
-|25/05/2023 16:45   |Gustavo Marques Borges| Usando Reinforcement Learning para implementar um jogador de Flappy Bird|
-|25/05/2023 17:05   |Henrique Marti | Implementação de agentes para o ambiente WaterWorld|
-|25/05/2023 17:25   |Lucas Fukada | Reinforcement Learning in Continuous Environments|
-|30/05/2023 15:45   |Marco Piacentini| Desenvolvimento de agentes para o ambiente Pong Colaborativo|
-|30/05/2023 16:05   |Matheus S. M. Oliveira| Using Reinforcement Learning for Recommendation Systems|
-|30/05/2023 16:25   |Eduardo Cunha| Implementação de um environment para jogo de Pokemon|
-|30/05/2023 16:45   |Nívea Lima | Criação de um environment para Campo Minado|
-|30/05/2023 17:05   |André Vital Tavernaro| Unity RL Agent |
+|Data e horário da apresentação | Estudante | Título do projeto | Material extra |
+|:----------|:----------|:------------------|:-----------------------------------|
+|25/05/2023 15:45   |Beatriz Rianho Bernardino| [Reinforcement Learning e Mobilidade Urbana](./projects/veiculos_mobilidade.pdf)| Além do link para o relatório, vale a pena destacar o link para a biblioteca utilizada neste projeto: [http://highway-env.farama.org/](http://highway-env.farama.org/) |
+|25/05/2023 16:05   |Carlos Eduardo Dip| [Usando Reinforcement Learning para implementar um jogador de Connect4](https://github.com/insper-classroom/project-02-CEDipEngineering)| Além do link para o projeto, vale a pena destavar o link para a biblioteca utilizada neste projeto: [Tianshou!](https://tianshou.readthedocs.io/en/master/)|
+|25/05/2023 16:25   |Felipe Souza | [Reinforcement Learning para o problema do caixeiro viajante](https://github.com/insper-classroom/project-02-felipeschiavinato) | |
+|25/05/2023 16:45   |Gustavo Marques Borges| Usando Reinforcement Learning para implementar um jogador de Flappy Bird| |
+|25/05/2023 17:05   |Henrique Marti | Implementação de agentes para o ambiente WaterWorld| |
+|25/05/2023 17:25   |Lucas Fukada | Reinforcement Learning in Continuous Environments| |
+|30/05/2023 15:45   |Marco Piacentini| Desenvolvimento de agentes para o ambiente Pong Colaborativo| |
+|30/05/2023 16:05   |Matheus S. M. Oliveira| [Using Reinforcement Learning for Recommendation Systems](https://github.com/insper-classroom/project-02-matheus-1618)| |
+|30/05/2023 16:25   |Eduardo Cunha| Implementação de um environment para jogo de Pokemon| |
+|30/05/2023 16:45   |Nívea Lima | Criação de um environment para Campo Minado| |
+|30/05/2023 17:05   |André Vital Tavernaro| [Unity RL Agent](https://github.com/insper-classroom/project-02-roguetaver) | |
 
 ## Observação importante
 
