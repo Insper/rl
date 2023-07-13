@@ -49,6 +49,8 @@ nav:
   - 'Projects':
     - 'projects/project_01.md'
     - 'projects/project_02.md'
+  
+  - 'References and Tools': 'references.md'
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
