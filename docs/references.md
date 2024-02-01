@@ -1,8 +1,8 @@
-# References and Tools 
+# Referências e ferramentas 
 
-This page shows the main references and tools used by this subject. 
+Nesta página estão listadas as principais referências e ferramentas utilizadas nesta disciplina.
 
-## References
+## Referências
  
 1. [Reinforcement Learning: an introduction. 2nd edition](https://mitpress.mit.edu/9780262039246/reinforcement-learning/), 2018.
 1. [Q-Learning](https://link.springer.com/article/10.1007/BF00992698), 1992.
@@ -22,10 +22,11 @@ This page shows the main references and tools used by this subject.
 1. Understanding Proximal Policy Optimization (Schulman et al., 2017). Disponível [https://blog.tylertaewook.com/post/proximal-policy-optimization](blog.tylertaewook.com/post/proximal-policy-optimization). Último acesso em maio de 2023. 
 1. Simonini, T. Proximal Policy Optimization (PPO). Unit 8, of the Deep Reinforcement Learning Class with Hugging Face. Disponível em [https://huggingface.co/blog/deep-rl-ppo](https://huggingface.co/blog/deep-rl-ppo). Último acesso em maio de 2023.
 
-## Tools and source code
+
+## Ferramentas
 
 1. [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code): the main code repository for this subject.
-1. [The Farama Foundation](https://farama.org/): this group is responsable to maintain the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) projects. 
+1. [The Farama Foundation](https://farama.org/): this group is responsible for maintaining the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) projects. 
 1. [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 1. How to use [Gymnasium API](https://gymnasium.farama.org/): a Python library for single agent reinforcement learning.
 1. [SuperSuit](https://github.com/Farama-Foundation/SuperSuit): wrappers for RL environments. 

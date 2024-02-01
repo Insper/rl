@@ -1,4 +1,4 @@
-# Introduction to Reinforcement Learning
+# Apresentação da disciplina
 
 ## How will this subject work?
 
