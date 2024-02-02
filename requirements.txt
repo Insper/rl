@@ -9,3 +9,4 @@ openpyxl
 pytest
 pylint
 mkdocs-bibtex
+pretty_html_table
