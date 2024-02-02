@@ -1,31 +1,30 @@
-# Student Assessment
+# Avaliação dos estudantes
 
-The grade for this subject is calculated as follows: 
+A avaliação dos estudantes será realizada através de **exercícios**, **projetos** e uma **avaliação final individual**.
 
-* Several **small implementations** will be performed. This average grade will make up 50% of the final grade for the subject. 
+* Diversos **exercícios** serão realizadas ao longo do semestre. A média simples destas implementações define 30% da nota final da disciplina.
+* **Dois projetos** serão realizados. A média ponderada destes projetos define 50% da nota final da disciplina. O primeiro projeto tem peso 2 e o segundo projeto tem peso 3.
+* A **avaliação final individual** define 20% da nota final da disciplina.
 
-* There will be **two major projects**. The average grade of these projects will make up the other 50% of the final grade. 
+**O critério para aprovação é**:
 
-## Small implementations
+* nota final superior ou igual a cinco (5);
+* o conceito da avaliação final individual deve ser superior ou igual a **Básico (C)**;
+* e 75% de frequência mínima nas aulas.
 
-| Description                                                                                            | Deadline            |
-|:-------------------------------------------------------------------------------------------------------|:-------------------:|
-| [Introduction questions](./classes/01_introduction/index.md)                                           | 02/14/2023          |
-| [Taxi driver agent: a problem-solving searching review](./classes/02_problem_solving/index.md#a-taxi-driver-agent-without-reinforcement-learning)         | 02/21/2023          |
-| [Tic-tac-toe agent: adversarial search and games review](./classes/03_games/index.md#exercise-the-implementation-of-a-tic-tac-toe-player-using-min-max)                  | 02/16/2023          |
-| [Q-Learning and hyperparameters](./classes/05_x_hyperparameters/index.md#atividade)                        | 03/02/2023          |
-| [Q-Learning and Sarsa](./classes/05_x_sarsa/index.md#implementation)                                       | 03/07/2023          |
-| [FrozenLake 8x8](./classes/06_non_determ/index.md#outro-mapa)                                              | 03/12/2023          |
-| [Tic-tac-toe agent with RL](./classes/07_game_env/index.md#tic-tac-toe-player)                             | 03/19/2023          |
-| [Blackjack agent](./classes/08_game_env_random/index.md#jogador-de-blackjack)                              | 03/21/2023          |
-| [Lunar Lander agent with Deep RL](./classes/15_deep_q_learning_lunar_lander/index.md)                      | 04/13/2023          |
+## Exercícios
 
-## Major projects
+| Descrição                                                    | Prazo            |
+|:-------------------------------------------------------------|:-------------------:|
+| [Questões introdutórias](./classes/01_introduction/index.md)     | 06/02/2024          |
+| [Um agente taxista](./classes/02_problem_solving/index.md#a-taxi-driver-agent-without-reinforcement-learning) | 18/02/2024 |
 
-| Description                                                                                            | Deadline            |
-|:-------------------------------------------------------------------------------------------------------|:-------------------:|
-| [Double Deep Q-Learning](./projects/project_01.md)                                                     | 04/27/2023          |
-| [Appling reinforcement learning](./projects/project_02.md)                                             | 05/11/2023 and 05/25/2023 |
+## Projetos
+
+| Descrição                                              | Prazo            |
+|:-----------------------------------------------------------|:-------------------:|
+| TBD                                                     |  TBD       |
+|                                                      |         |
 
 
 ## Conversão de conceito para valor numérico

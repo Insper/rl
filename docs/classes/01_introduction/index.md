@@ -1,44 +1,38 @@
 # Apresentação da disciplina
 
-## How will this subject work?
+## Como esta disciplina irá funcionar?
 
-1. Learning goals
-1. This is a hands-on subject!
-1. Requirements 
-1. Content
-1. Assignments 
+1. Objetivos de aprendizado
+1. Esta é uma disciplina mão na massa!
+1. Requisitos
+1. Conteúdo 
+1. Avaliação 
 
 <embed src="subject_rules.pdf" type="application/pdf" width="600" height="300">
 
+## Introdução ao Aprendizado por Reforço
 
-## Introduction to Reinforcement Learning
-
-1. Definition and key concepts
-1. Differences with other machine learning techniques
-1. Real-world applications
+1. Definição e conceitos-chave
+1. Diferenças com outras técnicas de aprendizado de máquina
+1. Exemplos de aplicações do mundo real
 
 <embed src="introduction_rl.pdf" type="application/pdf" width="600" height="300">
 
 
-## Activities
+## Atividades
 
-1. Why are you doing this subject? Please answer this [form](https://forms.gle/LqWAYMsDsKogm7mD6).
+1. Leia esta [seção](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#key-concepts-and-terminology) no site da OpenAI, as seções 1 e 2 do artigo [Reward is enough](https://www.sciencedirect.com/science/article/pii/S0004370221000862) e responda as questões abaixo: 
 
-<center>
-<img src="figures/qrcode.png" alt="QR Code Form" style="height: 150px; width:150px;"/>
-</center>
 
-1. Read this [section](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#key-concepts-and-terminology) on the OpenAI website and sections 1 and 2 from [Reward is enough](https://www.sciencedirect.com/science/article/pii/S0004370221000862) and answer the questions below: 
+    1. Qual é a definição de agente (*agent*) e ambiente (*environment*)? 
+    1. Quais são as principais dimensões do ambiente?
+    1. O que é um estado (*state*)?
+    1. O que é um espaço de ações (*action space*)?
+    1. O que é uma política (*policy*)?  
 
-    1. What is the definition of agent and environment? 
-    1. Which are the main environment dimensions? 
-    1. What is a state?
-    1. What is an action space?
-    1. What is a policy?  
+Responda as questões acima e envie o documento via Blackboard. **Prazo: 06/02/2024 às 23:30**.
 
-Answer the questions below and send them to my [email](mailto:fabriciojb@insper.edu.br): 
-
-## References
+## Referências
 
 * [Playing Atari with Deep Reinforcement Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf), 2013.
 * [Human-Level control through deep reinforcement learning](https://www.nature.com/articles/nature14236), 2015. 

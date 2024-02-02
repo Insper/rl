@@ -17,7 +17,7 @@ nav:
   - 'Aulas':
     - 'Introdução':
       - 'classes/01_introduction/index.md'
-#      - 'classes/02_problem_solving/index.md'
+      - 'classes/02_problem_solving/index.md'
 #      - 'classes/03_games/index.md'
 #      - 'classes/03_review/index.md'
 #    - 'Q-Learning and Sarsa':

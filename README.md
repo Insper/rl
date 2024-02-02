@@ -4,7 +4,9 @@ This repository has the Reinforcement Learning subject material.
 
 ## Offerings
 
+* 2024/1 - Fabrício Barth
 * 2023/1 - Fabrício Barth
+* 2022/2 - Fabrício Barth
 
 ## How to setup the environment
 
