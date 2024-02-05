@@ -31,10 +31,3 @@
     1. O que é uma política (*policy*)?  
 
 Responda as questões acima e envie o documento via Blackboard. **Prazo: 06/02/2024 às 23:30**.
-
-## Referências
-
-* [Playing Atari with Deep Reinforcement Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf), 2013.
-* [Human-Level control through deep reinforcement learning](https://www.nature.com/articles/nature14236), 2015. 
-* [A General reinforcement learning algorithm that masters chess, shogi, and Go through self-play](https://www.science.org/doi/epdf/10.1126/science.aar6404), 2018.
-* [Reward is enough](https://www.sciencedirect.com/science/article/pii/S0004370221000862), 2021. 
