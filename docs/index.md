@@ -6,7 +6,7 @@
 
 ## Horário das aulas
 
-Terças e quintas das 15:45 até 17:45.
+Segundas e quartas das 13:30 até 15:30.
 
 ## Horário de atendimento
 
