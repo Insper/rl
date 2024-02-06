@@ -47,6 +47,8 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 1. Simonini, T. Proximal Policy Optimization (PPO). Unit 8, of the Deep Reinforcement Learning Class with Hugging Face. Disponível em [https://huggingface.co/blog/deep-rl-ppo](https://huggingface.co/blog/deep-rl-ppo). Último acesso em maio de 2023.
 
+1. Deep Reinforcement Learning Class with Hugging Face. Disponível em [https://huggingface.co/learn/deep-rl-course/unit0/introduction](https://huggingface.co/learn/deep-rl-course/unit0/introduction). Último acesso em fevereiro de 2024.
+
 ## Ferramentas
 
 1. [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code): the main code repository for this subject.
