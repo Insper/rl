@@ -24,6 +24,8 @@ Algumas referências que podem ser úteis:
 
 * [Lecture 5: Search: Optimal, Branch and Bound, A*](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-5-search-optimal-branch-and-bound-a/)
 
+* [Aula sobre Algoritmos de Busca em Espaço de Estados](https://insper.github.io/ia_bcc/referencias/03_algoritmos_busca/)
+
 ## Um Agente Taxista sem Aprendizado por Reforço
 
 Neste exercício, você deve implementar um agente *taxista* que pode pegar um passageiro em um ponto e deixar este passageiro em outro ponto considerando um mapa específico. Um exemplo de mapa é apresentado abaixo:
@@ -103,7 +105,5 @@ Antes de começar a implementação, você deve responder algumas perguntas:
 
 * Este exercício deve ser feito por um grupo de no máximo 3 alunos.
 * O prazo de entrega é **18/02/2024 às 23:30**.
-* A entrega deve ser feita através do *Github classroom*. Este é o link [https://classroom.github.com/a/2z7X09GL]](https://classroom.github.com/a/2z7X09GL).
+* A entrega deve ser feita através do *Github classroom*. Este é o link [https://classroom.github.com/a/2z7X09GL](https://classroom.github.com/a/2z7X09GL).
 
-
- 
