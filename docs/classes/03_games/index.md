@@ -1,10 +1,10 @@
-# Adversarial search and games review
+# Revisão sobre algoritmos de busca competitivos e jogos
 
-## Tic-tac-toe environment and agents
+## Ambiente do jogo da velha e agentes
 
-Tic-tac-toe is a very simple game because it has a very small search space and in this case we usually can solve those types of problems in a manual way. Besides, this is a very good game to test very simple adversarial search algorithms. For this reason, some environments simulate this game, as [PettingZoo from Farama project](https://pettingzoo.farama.org/environments/classic/tictactoe/) or [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
+O jogo da velha é um jogo de tabuleiro bem simples porque o espaço de busca é muito pequeno e, em geral, podemos resolver esses tipos de problemas de forma manual. Além disso, este é um jogo muito bom para testar algoritmos de busca competitiva. Por esse motivo, alguns ambientes simulam esse jogo, como o [PettingZoo do projeto Farama](https://pettingzoo.farama.org/environments/classic/tictactoe/) ou o [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 
-In the code below we are using the PettingZoo project to simulate a tic-tac-toe game: 
+No código abaixo é usado o projeto PettingZoo para simular um jogo da velha:
 
 ```python
 #
@@ -44,7 +44,7 @@ while not_finish:
 print(env.rewards)
 ```
 
-In order to run the code above you must install those packages: 
+Para executar o código acima, você deve instalar os seguintes pacotes:
 
 ```bash
 gymnasium
@@ -53,31 +53,31 @@ matplotlib
 pettingzoo
 ```
 
-Please, prepare a project, with all the setup, to run the code presented above. You will see two random players playing tic-tac-toe. You must understand what is happening with the code and if you have any question, please, access the documentantion [here](https://pettingzoo.farama.org/environments/classic/tictactoe/). 
+Por favor, prepare um projeto, com toda a configuração, para executar o código apresentado acima. Você verá dois jogadores aleatórios jogando tic-tac-toe. Você deve entender o que está acontecendo com o código e se tiver alguma dúvida, por favor, acesse a documentação [aqui](https://pettingzoo.farama.org/environments/classic/tictactoe/) ou pergunte ao professor da disciplina.
 
-## Environments
+## Ambientes
 
-In [class 01](../01_introduction/index.md) I asked which the main environment dimensions are. One possible answer for this question is: 
+Na [primeira aula](../01_introduction/index.md), perguntei quais são as principais dimensões do ambiente. Uma possível resposta para essa pergunta é:
 
-* in terms of **observations** and **actions**, there are two alternatives: **discrete** or **continuous**. The two problems (i.e., Taxi Driver and tic-tac-toe) that we saw so far are discrete in terms of observation and actions because we do not have continuous values for observations or actions.
+* em termos de **observações** e **ações**, existem duas alternativas: **discreto** ou **contínuo**. Os dois problemas (ou seja, o motorista de táxi e o jogo da velha) que vimos até agora são discretos em termos de observações e ações porque não temos valores contínuos para observações ou ações.
 
-* in terms of **dynamics**, there are two alternatives: **deterministic** or **stochastic**. In both cases, the environment is deterministic because we know the result of each action with 100% of confidence. 
+* em termos de **dinâmica**, existem duas alternativas: **determinístico** ou **estocástico**. Em ambos os casos, o ambiente é determinístico porque sabemos o resultado de cada ação com 100% de confiança.
 
-* in terms of **observability**, there are also two alternatives: **full** and **partial**. We have partial observability when the agent does not have all the information necessary in each state to achieve the final goal. According to this definition, both cases are full in terms of observability. 
+* em termos de **observação**, temos duas alternativas: **total** e **parcial**. Nós termos um cenário de observação parcial quando o agente não tem todas as informações necessárias em cada estado para alcançar o objetivo final. De acordo com essa definição, ambos os casos listados acima são completos em termos de observação.
 
-* in terms of **agency**, there are two alternatives: **single-agent** and **multi-agent**. If we have only our agent running in the environment then we have a single-agent environment, otherwise, we have a multi-agent environment. In terms of a multi-agent environment, we could have a competitive environment (like, tic-tac-toe, chess, go) or a collaborative environment - where the agents try to reach the same goal together. 
+* em termos de **agência**, existem duas alternativas: **single-agent** e **multi-agent**. Se temos apenas nosso agente executando no ambiente, então temos um ambiente de agente único, caso contrário, temos um ambiente *multi-agent*. Quando temos um ambiente *multi-agent*, podemos ter um ambiente competitivo (como tic-tac-toe, xadrez, go) ou um ambiente colaborativo - onde os agentes tentam alcançar o mesmo objetivo juntos.
 
+## Algoritmos de busca competitiva
 
-## Adversarial search algorithms
+Algoritmos de busca competitiva são usados em ambientes multi-agent competitivos e determinísticos. Exemplos de jogos que se encaixam nessa categoria são xadrez, go, shogi, tic-tac-toe e connect-4. Esses jogos são determinísticos porque não têm movimento ou ação estocástica. Eles são exemplos de ambientes multi-agent competitivos, determinísticos, discretos e completos. Exemplos de jogos com movimentos estocásticos são blackjack e roleta.
 
-Adversarial search algorithms are used in competitive multi-agent environments and deterministic ones. Examples of those types of games are chess, go, shogi, tic-tac-toe and connect-4. Those games are deterministic because they do not have a stochastic movement or action. They are examples of a competitive multi-agent, deterministic, discrete and full environments. Examples of games with stochastic movements are blackjack and roulette.
+O [algoritmo Min-Max](https://en.wikipedia.org/wiki/Minimax) é um exemplo de algoritmo de busca competitiva. Podemos usar um algoritmo Min-Max para desenvolver agentes capazes de jogar Connect-4 e Xadrez, por exemplo. No [site](http://fbarth.net.br/Connect4-Python/) é possível ver um tutorial completo sobre como criar um agente capaz de jogar Connect-4 usando o algoritmo Min-Max. 
 
-The [Min-Max algorithm](https://en.wikipedia.org/wiki/Minimax) is one example of an adversarial search algorithm. We can use a Min-Max algorithm to develop agents able to play Connect-4 and Chess, for example. On [this website,](http://fbarth.net.br/Connect4-Python/) it is possible to see a full tutorial about how to create an agent able to play Connect-4 using the Min-Max algorithm.  
+## Exercício: implementação de um jogador de jogo da velha usando Min-Max
 
+A proposta deste exercício é implementar um agente que pode jogar o jogo da velha e que nunca perde. O agente deve ser capaz de ganhar ou empatar em todas as situações.
 
-## Exercise: the implementation of a tic-tac-toe player using Min-Max. 
-
-Now that we know how to implement a Min-Max algorithm, let's complete the function: 
+Para isso, você deve considerar o código acima e completar a função definida abaixo: 
 
 ```python
 def play_min_max_agent(agent, obs):
@@ -85,14 +85,12 @@ def play_min_max_agent(agent, obs):
     pass
 ```
 
-of the code below and implement an agent that can win or draw at all times. 
+## Entrega
 
-## Delivery
+* Este exercício deve ser feito por um grupo de no máximo 3 alunos.
 
-* This exercise must be done by a group of maximum 3 students. 
+* O prazo de entrega é dia **25/02/2024 até às 23:30**
 
-* The **deadline is 02/16/2023 20:00 -0300.**
+* A implementação deve ser entregue via *Github classroom*. Este é o link [https://classroom.github.com/a/RTuXpCvk](https://classroom.github.com/a/RTuXpCvk).
 
-* The implementation must be delivered through *Github classroom*. This is the link [https://classroom.github.com/a/W9p4Riif](https://classroom.github.com/a/W9p4Riif).
-
-* You must add everything necessary to run this project in the repository, like the README file, requirements file and code.
+* Você deve adicionar tudo o que é necessário para executar este projeto no repositório, como o arquivo README, o arquivo *requirements.txt* e o código.

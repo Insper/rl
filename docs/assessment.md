@@ -18,6 +18,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 |:-------------------------------------------------------------|:-------------------:|
 | [Questões introdutórias](./classes/01_introduction/index.md)     | 06/02/2024          |
 | [Um agente taxista](./classes/02_problem_solving/index.md#a-taxi-driver-agent-without-reinforcement-learning) | 18/02/2024 |
+| [Jogador de jogo da velha usando Min-Max](./classes/03_games/index.md#exercício-implementação-de-um-jogador-de-jogo-da-velha-usando-min-max) | 25/02/2024 |
 
 ## Projetos
 

@@ -1,4 +1,4 @@
-# Busca em espaço de estados
+# Revisão sobre busca em espaço de estados
 
 A busca em espaço de estados é uma técnica utilizada para encontrar uma solução para um problema através da exploração sistemática de possíveis soluções e eliminando aquelas que não atendem aos requisitos. Ela é utilizada em inteligência artificial para resolver problemas complexos que exigem uma combinação de dados e raciocínio. O objetivo da busca em espaço de estados é encontrar a solução ótima, que é aquela que melhor atende aos critérios desejados.
 
