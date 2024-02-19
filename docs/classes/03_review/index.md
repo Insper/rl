@@ -1,14 +1,14 @@
-# Implementations review
+# Revisão das implementações
 
-## Taxi driver review
+## Review das entregas do Taxi driver
 
-The goal of this exercise was to implement a taxi-driver agent. A *taxi driver* agent can pick up a passenger at one point and leave this passenger at another point considering a specific map.
+O objetivo deste exercício foi implementar um agente *taxi driver*. Um agente *taxi driver* pode pegar um passageiro em um ponto e deixar este passageiro em outro ponto considerando um mapa específico.
 
-The two most common solutions were: 
+As soluções mais comuns apresentadas por esta turma foram: 
 
-* a **breadth-first search algorithm**. This algorithm is **complete** and **optimal**. However, this algorithm has a high memory requirement compared to other algorithms, and the time complexity may be high.
+* **algoritmo de busca em largura**. Este algoritmo é **completo** e **ótimo**. No entanto, este algoritmo tem um alto requisito de memória em comparação com outros algoritmos, e a complexidade de tempo pode ser alta. Para este problema só funciona com mapas pequenos. 
 
-* an **A start algorithm** using the package `AStar` or implemented from scratch. This algorithm uses the concept of **heuristics** to reduce memory and time. It is also **complete** and **optimal** since the heuristics used is **admissible**. The typical heuristics for this type of problem are **manhattan distance** and **euclidean distance**. Above there is a snapshot of the code using `AStar` package: 
+* algoritmo **A Estrela** usando o pacote `AStar` ou implementado do zero. Este algoritmo usa o conceito de **heurísticas** para reduzir memória e tempo. Ele também é **completo** e **ótimo** desde que a heurística usada seja **admissível**. As heurísticas típicas para este tipo de problema são **distância manhattan** e **distância euclidiana**. Abaixo há um trecho de código usando o pacote `AStar`:  
 
 ```python
     def distance(n1, n2):
@@ -25,16 +25,3 @@ The two most common solutions were:
             heuristic_cost_estimate_fnct=cost, distance_between_fnct=distance))
     return path1 + path2
 ```
-
-## Tic-tac-toe review
-
-The goal of this exercise was to implement a tic-tac-toe agent that never loses the game - an agent able to play and win or draw the tic-tac-toe game against another agent, human or artificial.
-
-In order to simulate the environment, each group used a specific environment from the [pettingzoo](https://pettingzoo.farama.org/environments/classic/tictactoe/) project. 
-
-All groups used a **Min-Max** algorithm that is broadly used in competitive situations. According to one of the groups (Carlos Dip, Lucas Fukada and Breatriz Bernardinho), *"the minimax algorithm has a time complexity of $O(b^d)$, where $b$ is the number of branches to be evaluated at each state, and $d$ is the depth of the search. Since tic-tac-toe is a very simple, brief game, this is still possible to implement and run without any optimizations, however for a game like chess, the depth would need to be severely restricted to allow for real-time play. The space complexity is $O(bd)$ because of the recursive implementation of the move tree search"*.
-
-*"...tic-tac-toe is very simple"* because $b$ and $d$ are equal to $9$. 
-
-A few groups used the concept of the *utility function* to evaluate intermediated situations and other groups did not use a *utility function* because they rich the end of the game in each **Min-Max** search. 
-
