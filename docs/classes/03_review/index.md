@@ -25,3 +25,19 @@ As soluções mais comuns apresentadas por esta turma foram:
             heuristic_cost_estimate_fnct=cost, distance_between_fnct=distance))
     return path1 + path2
 ```
+
+## Ambiente similar no projeto gymnasium
+
+```python
+import gymnasium as gym
+env = gym.make("Taxi-v3", render_mode='human').env
+
+done = False
+episodios = 1000
+
+for i in range(episodios):
+    state = env.reset()
+    while not done:
+        action = env.action_space.sample()
+        next_state, reward, done, truncated, info = env.step(action)
+```
