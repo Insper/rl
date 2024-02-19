@@ -28,6 +28,8 @@ As soluções mais comuns apresentadas por esta turma foram:
 
 ## Ambiente similar no projeto gymnasium
 
+[Taxi Driver no Projeto Gymnasium](https://gymnasium.farama.org/environments/toy_text/taxi/)
+
 ```python
 import gymnasium as gym
 env = gym.make("Taxi-v3", render_mode='human').env
