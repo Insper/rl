@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/04_toolings_envs/">
       
       
+        <link rel="prev" href="../03_review/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Reinforcement Learning Tooling and Environments - Reinforcement Learning</title>
+        <title>Ferramentas e ambientes para aprendizagem por reforço - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reinforcement-learning-tooling-and-environments" class="md-skip">
+        <a href="#ferramentas-e-ambientes-para-aprendizagem-por-reforco" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reinforcement Learning Tooling and Environments
+              Ferramentas e ambientes para aprendizagem por reforço
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -324,6 +330,104 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Q-Learning and Sarsa
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Q-Learning and Sarsa
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ferramentas e ambientes para aprendizagem por reforço
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ferramentas e ambientes para aprendizagem por reforço
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principais-referencias" class="md-nav__link">
+    Principais referências
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outras-ferramentas" class="md-nav__link">
+    Outras ferramentas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -372,15 +476,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-references" class="md-nav__link">
-    Main References
+  <a href="#principais-referencias" class="md-nav__link">
+    Principais referências
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-tools" class="md-nav__link">
-    Other tools
+  <a href="#outras-ferramentas" class="md-nav__link">
+    Outras ferramentas
   </a>
   
 </li>
@@ -401,19 +505,39 @@
 
 
 
-<h1 id="reinforcement-learning-tooling-and-environments">Reinforcement Learning Tooling and Environments</h1>
-<p>According to the <a href="https://farama.org/">Farama Foundation</a>, Reinforcement learning is a popular approach to AI where an agent learns to take sequential actions in an environment through trial and error. Reinforcement learning is conceptualized as a loop where the agent observes the state of its environment, and then takes an action that changes that state. At the time of receiving the next observation, the agent also receives a reward associated with the most recent action. This process continues in a cycle, and during learning the agent seeks to maximize its expected average reward. In practice, environments are most often a piece of software like a game or simulation.  </p>
-<p>In supervised learning, the basic software stack typically only has three components: the dataset, preprocessing of the dataset, and the deep learning library. In reinforcement learning, the software stack is much more complex. It starts with constructing the environment itself, usually a piece of software like a simulation or a video game. The base environment logic is then wrapped with an API that learning code can be applied to. Depending on how the reinforcement learning algorithm interacts with the environment, preprocessing wrappers are then applied (e.g. to make image observations greyscale). Only after all of this is done can a reinforcement learning algorithm be applied. </p>
-<h2 id="main-references">Main References</h2>
+<h1 id="ferramentas-e-ambientes-para-aprendizagem-por-reforco">Ferramentas e ambientes para aprendizagem por reforço</h1>
+<p>De acordo com a <a href="https://farama.org/">Farama Foundation</a>, a aprendizagem por reforço é uma abordagem popular para a IA, onde um agente aprende a tomar ações sequenciais em um ambiente por tentativa e erro. A aprendizagem por reforço é conceitualizada como um loop onde o agente observa o estado de seu ambiente e, em seguida, toma uma ação que muda esse estado. No momento de receber a próxima observação, o agente também recebe uma recompensa associada à ação mais recente. Esse processo continua em um ciclo, e durante a aprendizagem, o agente procura maximizar sua recompensa média esperada. Na prática, os ambientes são mais frequentemente um pedaço de software como um jogo ou simulação.</p>
+<p>Exemplo de trecho de código para treinar um agente em um ambiente de aprendizagem por reforço:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="n">env_name</span> <span class="o">=</span> <span class="s2">&quot;CartPole-v1&quot;</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">env_name</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
+
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">episodios</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">episodios</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">select_action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+        <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</code></pre></div>
+Em aprendizagem supervisionada, a pilha de software básica geralmente tem apenas três componentes: </p>
+<ul>
+<li>o conjunto de dados, </li>
+<li>o pré-processamento do conjunto de dados, e </li>
+<li>a biblioteca de aprendizado profundo. </li>
+</ul>
+<p>Na aprendizagem por reforço, a pilha de software é mais complexa. Começa com a construção do próprio ambiente, geralmente um pedaço de software como uma simulação. A lógica do ambiente base é então envolvida com uma API à qual o código de aprendizado pode ser aplicado. Dependendo de como o algoritmo de aprendizado por reforço interage com o ambiente, camadas de pré-processamento são então aplicados (por exemplo, para tornar as observações de imagem em escala de cinza). Somente depois que tudo isso é feito, um algoritmo de aprendizado por reforço pode ser aplicado.</p>
+<h2 id="principais-referencias">Principais referências</h2>
 <ol>
 <li><a href="https://farama.org/Announcing-The-Farama-Foundation">The Farama Foundation</a>.</li>
 <li>How to use <a href="https://gymnasium.farama.org/">Gymnasium API</a>: a Python library for single agent reinforcement learning.</li>
 <li><a href="https://pettingzoo.farama.org/">PettingZoo</a>: a Python library for multi-agent reinforcement learning.</li>
 <li><a href="https://github.com/Farama-Foundation/SuperSuit">SuperSuit</a>: wrappers for RL environments. </li>
 </ol>
-<h2 id="other-tools">Other tools</h2>
+<h2 id="outras-ferramentas">Outras ferramentas</h2>
 <ol>
-<li><a href="https://openai.com/blog/emergent-tool-use/">Worldgen</a>.</li>
+<li><a href="https://openai.com/blog/emergent-tool-use/">Worldgen</a>: ambiente de aprendizagem por reforço para treinar agentes em ambientes multi-agents (competitivos e cooperativos) em um espaço 3D.</li>
 </ol>
 
   <hr>
