@@ -18,8 +18,6 @@ Segundas das 10:00 até 11:30.
 
 * As entregas dos projetos e exercícios serão via [Github Classroom](https://classroom.github.com/classrooms/66448216-insper-classroom-rl-24-1).
 
-* O repositório com o código fonte referência para esta disciplina está em [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code)
-
 ## Contato
 
 Em caso de dúvida ou comentários, favor encaminhar e-mail para fabriciojb@insper.edu.br. 

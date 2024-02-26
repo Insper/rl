@@ -22,8 +22,8 @@ nav:
       - 'classes/03_review/index.md'
     - 'Q-Learning and Sarsa':
       - 'classes/04_toolings_envs/index.md'
-#      - 'classes/05_q_learning/index.md'
-#      - 'classes/05_x_hyperparameters/index.md'
+      - 'classes/05_q_learning/index.md'
+      - 'classes/05_x_hyperparameters/index.md'
 #      - 'classes/05_x_sarsa/index.md'
 #      - 'classes/05_xx_comments/index.md'
 #    - 'Environments':

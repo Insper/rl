@@ -1,41 +1,19 @@
-# Q-Learning Algorithm
-    
-## Definition and key concepts
+# Algoritmo Q-Learning
 
-In this class we will the slides below: 
+## Definições e conceitos chave    
 
-<embed src="reinforcementLearning.pdf" type="application/pdf" width="600" height="300">
+Nesta aula vamos utilizar os slides abaixo:
 
-## Implementation
+<embed src="reinforcementLearning.pdf" type="application/pdf" width="800" height="400">
 
-After a brief explanation of definitions and key concepts, we will implement the first agent using reinforcement learning. Please, follow the instructions below: 
+## Implementação
 
-### Clone the project and configure your machine
+Depois de uma breve conversa sobre os principais conceitos, vamos implementar o primeiro agente utilizando aprendizado por reforço. Por favor, siga as instruções abaixo:
 
-All the code necessary for this subject will be on [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code). Faça o fork do projeto na sua máquina. Para esta atividade vamos utilizar os códigos que estão em `src/part_01`.
+* copie o arquivo [TaxiDriverGym.py](./src/TaxiDriverGym.py) para a sua máquina local. Este arquivo faz uso do ambiente `Taxi-v3` da biblioteca Gymanasium e do algoritmo Q-Learning. 
 
-O processo recomendado é criar um ambiente virtual (*virtualenv*). Na pasta `src/part_01/`, digite: 
+* copie o arquivo [QLearning.py](./src/QLearning.py) para a sua máquina local. Esta implementação está incompleta. Você terá que preencher o método `train` para que o algoritmo Q-Learning funcione corretamente. Mas antes disso, vamos entender a estrutura desta classe. 
 
-````bash
-python3 -m virtualenv venv
-source venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements_part_01.txt
-````
-
-### Trabalhe com o arquivo TaxiDriverGym_introduction.py
-
-* Leia a descrição do ambiente em [https://gymnasium.farama.org/environments/toy_text/taxi/](https://gymnasium.farama.org/environments/toy_text/taxi/).
-
-* No diretório `src/part_01`, abra o arquivo `TaxiDriverGym_introduction.py`.
-
-* Execute cada um dos comandos que estão no arquivo `TaxiDriverGym_introduction.py` em um interpretador python para entender o que o que é environment, reward e action. Além de entender detalhes do ambiente. 
-
-* Quantos espaços possíveis o ambiente Taxi-v3 possui? 
-
-* Quantas ações o agente que atua no ambiente Taxi-v3 possui? 
-
-* O que a variável reward retornada por `env.step(<number>)` significa? 
 
 ### Arquivo QLearning.py
 
@@ -55,23 +33,19 @@ Dentro do método `train` tem-se o seguinte trecho de código:
 
 ````python
 for i in range(1, self.episodes+1):
-    state = self.env.reset()
-    reward = 0
+    (state, _) = self.env.reset()
+    rewards = 0
     done = False
     actions = 0
 
     while not done:
-        action = self.select_action(state)
-        next_state, reward, done, _ = self.env.step(action) 
-        
-        # Adjust Q value for current state
-        old_value = #pegar o valor na q-table para a combinacao action e state
-        next_max = #np.max(`do maior valor considerando next_state`)
-        new_value = #calcula o novo valor
-        self.q_table[state, action] = new_value
-                
-        # atualiza para o novo estado
-        state = next_state
+        #
+        # escolher uma ação $a$ para um estado $s$
+		# executar a ação $a$
+		# observar a recompensa $r$ e o novo estado $s'$ 
+		# Q(s,a) \leftarrow Q(s,a) + \alpha[r + \gamma \max_{A'}Q(s',A') - Q(s,a)]
+		# s recebe s'
+        #
 ````
 
 que é responsável por execurtar *N* episódios e atualizar a variável `self.q_table`. 
@@ -79,7 +53,6 @@ que é responsável por execurtar *N* episódios e atualizar a variável `self.q
 Este método é chamado pelo arquivo `TaxiDriverGym.py` nas linhas 11 e 12:
 
 ````python
-# only execute the following lines if you want to create a new q-table
 qlearn = QLearning(env, alpha=0.1, gamma=0.6, epsilon=0.7, epsilon_min=0.05, epsilon_dec=0.99, episodes=100000)
 q_table = qlearn.train('data/q-table-taxi-driver.csv', 'results/actions_taxidriver')
 #q_table = loadtxt('data/q-table-taxi-driver.csv', delimiter=',')
@@ -95,9 +68,9 @@ Atividades:
 python TaxiDriverGym.py
 ````
 
-Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo data/q-table-taxi-driver.csv. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. 
+Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo `data/q-table-taxi-driver.csv`. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. 
 
-* Abra o arquivo `src/part_01/results/action_taxidriver.jpg` e faça uma análise do mesmo. O que este gráfico representa?
+* Abra o arquivo `results/action_taxidriver.jpg` e faça uma análise do mesmo. O que este gráfico representa?
 
 * Agora faça o algoritmo `TaxiDriverGym.py` ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes.
 
@@ -107,11 +80,11 @@ Considerando os valores informados nos parâmetros do método `train`, se a sua 
 
 Uma vez que você confirmou que a sua implementação não tem *bugs* então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. 
 
-* O arquivo `src/part_01/results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
+* O arquivo `results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
 
-## Q-table ready
+## Q-table pronta
 
-As a result of the training phase, the agent will have a *Q-table* that shows the best action it can take in each state. The way to use this information is very simple: 
+Como resultado da etapa de treinamento, o agente terá uma *Q-table* que mostra a melhor ação que ele pode tomar em cada estado. A maneira de usar essas informações é muito simples:
 
 ```python
 (state, _) = env.reset()
@@ -123,4 +96,10 @@ while not done:
     state, reward, done, truncated, info = env.step(action)
 ```
 
-Here we do not have any random choice. The agent selects the action with the highest value in each state. 
+Aqui, o agente seleciona a ação com o maior valor em cada estado. Nós não temos nenhum comportamento aleatório. 
+
+
+
+
+
+

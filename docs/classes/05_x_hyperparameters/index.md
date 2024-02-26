@@ -1,8 +1,8 @@
-# Hyperparameters in Q-Learning
+# Hiperparâmetros em Q-Learning
 
 Ainda considerando o exemplo a implementação do `TaxiDriver`, responda as perguntas abaixo.
 
-Para responder as questões abaixo utilize as implementações do `TaxiDriverGym.py`, que está no diretório `src/part_02` e o arquivo `QLearning.py` que você implementou na atividade anterior.
+Para responder as questões abaixo utilize as implementações do `TaxiDriverGym.py` e `QLearning.py` que você implementou na atividade anterior.
 
 ## Manipulando $\alpha$ e $\gamma$
 
@@ -70,14 +70,16 @@ Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos 
 
 Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. 
 
-Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia **02/03/2023**. A atividade já foi criada no Blackboard e o nome dela é *Q-Learning with hyperparameters*. Esta atividade é individual.
+Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia **29/02/2023**. A atividade já foi criada no Blackboard e o nome dela é *Exercício 4*. Esta atividade é individual.
 
 ## Rubrica de avaliação
 
 | Conceito | Descrição |
+|:---------|:----------|
 | A+       | Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos |
 | C        | Não entregou uma única imagem |
 
+<!--
 ## Um exemplo de gráfico muito bem feito :new: 
 
 Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfico foi feito pela Letícia. 
@@ -85,3 +87,4 @@ Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfic
 <center>
 <img src="figures/leticia.png" alt="Exemplo de gráfico" style="height: 500px;"/>
 </center>
+-->
