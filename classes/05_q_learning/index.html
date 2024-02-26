@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/05_q_learning/">
       
       
+        <link rel="prev" href="../04_toolings_envs/">
+      
+      
+        <link rel="next" href="../05_x_hyperparameters/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Q-Learning Algorithm - Reinforcement Learning</title>
+        <title>Algoritmo Q-Learning - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#q-learning-algorithm" class="md-skip">
+        <a href="#algoritmo-q-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Q-Learning Algorithm
+              Algoritmo Q-Learning
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -328,14 +334,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -344,7 +352,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Q-Learning and Sarsa
@@ -359,6 +367,109 @@
     <li class="md-nav__item">
       <a href="../04_toolings_envs/" class="md-nav__link">
         Ferramentas e ambientes para aprendizagem por reforço
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Algoritmo Q-Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Algoritmo Q-Learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicoes-e-conceitos-chave" class="md-nav__link">
+    Definições e conceitos chave
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao" class="md-nav__link">
+    Implementação
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-qlearningpy" class="md-nav__link">
+    Arquivo QLearning.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizando-os-valores-da-q-table" class="md-nav__link">
+    Atualizando os valores da Q-table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q-table-pronta" class="md-nav__link">
+    Q-table pronta
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_x_hyperparameters/" class="md-nav__link">
+        Hiperparâmetros em Q-Learning
       </a>
     </li>
   
@@ -420,33 +531,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition-and-key-concepts" class="md-nav__link">
-    Definition and key concepts
+  <a href="#definicoes-e-conceitos-chave" class="md-nav__link">
+    Definições e conceitos chave
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
+  <a href="#implementacao" class="md-nav__link">
+    Implementação
   </a>
   
-    <nav class="md-nav" aria-label="Implementation">
+    <nav class="md-nav" aria-label="Implementação">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clone-the-project-and-configure-your-machine" class="md-nav__link">
-    Clone the project and configure your machine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-taxidrivergym_introductionpy" class="md-nav__link">
-    Trabalhe com o arquivo TaxiDriverGym_introduction.py
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#arquivo-qlearningpy" class="md-nav__link">
@@ -468,8 +565,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#q-table-ready" class="md-nav__link">
-    Q-table ready
+  <a href="#q-table-pronta" class="md-nav__link">
+    Q-table pronta
   </a>
   
 </li>
@@ -490,39 +587,18 @@
 
 
 
-<h1 id="q-learning-algorithm">Q-Learning Algorithm</h1>
-<h2 id="definition-and-key-concepts">Definition and key concepts</h2>
-<p>In this class we will the slides below: </p>
-<p><embed src="reinforcementLearning.pdf" type="application/pdf" width="600" height="300"></p>
-<h2 id="implementation">Implementation</h2>
-<p>After a brief explanation of definitions and key concepts, we will implement the first agent using reinforcement learning. Please, follow the instructions below: </p>
-<h3 id="clone-the-project-and-configure-your-machine">Clone the project and configure your machine</h3>
-<p>All the code necessary for this subject will be on <a href="https://github.com/Insper/rl_code">https://github.com/Insper/rl_code</a>. Faça o fork do projeto na sua máquina. Para esta atividade vamos utilizar os códigos que estão em <code>src/part_01</code>.</p>
-<p>O processo recomendado é criar um ambiente virtual (<em>virtualenv</em>). Na pasta <code>src/part_01/</code>, digite: </p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>venv
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements_part_01.txt
-</code></pre></div>
-<h3 id="trabalhe-com-o-arquivo-taxidrivergym_introductionpy">Trabalhe com o arquivo TaxiDriverGym_introduction.py</h3>
+<h1 id="algoritmo-q-learning">Algoritmo Q-Learning</h1>
+<h2 id="definicoes-e-conceitos-chave">Definições e conceitos chave</h2>
+<p>Nesta aula vamos utilizar os slides abaixo:</p>
+<p><embed src="reinforcementLearning.pdf" type="application/pdf" width="800" height="400"></p>
+<h2 id="implementacao">Implementação</h2>
+<p>Depois de uma breve conversa sobre os principais conceitos, vamos implementar o primeiro agente utilizando aprendizado por reforço. Por favor, siga as instruções abaixo:</p>
 <ul>
 <li>
-<p>Leia a descrição do ambiente em <a href="https://gymnasium.farama.org/environments/toy_text/taxi/">https://gymnasium.farama.org/environments/toy_text/taxi/</a>.</p>
+<p>copie o arquivo <a href="src/TaxiDriverGym.py">TaxiDriverGym.py</a> para a sua máquina local. Este arquivo faz uso do ambiente <code>Taxi-v3</code> da biblioteca Gymanasium e do algoritmo Q-Learning. </p>
 </li>
 <li>
-<p>No diretório <code>src/part_01</code>, abra o arquivo <code>TaxiDriverGym_introduction.py</code>.</p>
-</li>
-<li>
-<p>Execute cada um dos comandos que estão no arquivo <code>TaxiDriverGym_introduction.py</code> em um interpretador python para entender o que o que é environment, reward e action. Além de entender detalhes do ambiente. </p>
-</li>
-<li>
-<p>Quantos espaços possíveis o ambiente Taxi-v3 possui? </p>
-</li>
-<li>
-<p>Quantas ações o agente que atua no ambiente Taxi-v3 possui? </p>
-</li>
-<li>
-<p>O que a variável reward retornada por <code>env.step(&lt;number&gt;)</code> significa? </p>
+<p>copie o arquivo <a href="src/QLearning.py">QLearning.py</a> para a sua máquina local. Esta implementação está incompleta. Você terá que preencher o método <code>train</code> para que o algoritmo Q-Learning funcione corretamente. Mas antes disso, vamos entender a estrutura desta classe. </p>
 </li>
 </ul>
 <h3 id="arquivo-qlearningpy">Arquivo QLearning.py</h3>
@@ -544,28 +620,23 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <h3 id="atualizando-os-valores-da-q-table">Atualizando os valores da Q-table</h3>
 <p>Dentro do método <code>train</code> tem-se o seguinte trecho de código: </p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">episodes</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-    <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">rewards</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
-        <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
-        <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span> 
-
-        <span class="c1"># Adjust Q value for current state</span>
-        <span class="n">old_value</span> <span class="o">=</span> <span class="c1">#pegar o valor na q-table para a combinacao action e state</span>
-        <span class="n">next_max</span> <span class="o">=</span> <span class="c1">#np.max(`do maior valor considerando next_state`)</span>
-        <span class="n">new_value</span> <span class="o">=</span> <span class="c1">#calcula o novo valor</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_value</span>
-
-        <span class="c1"># atualiza para o novo estado</span>
-        <span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+        <span class="c1">#</span>
+        <span class="c1"># escolher uma ação $a$ para um estado $s$</span>
+        <span class="c1"># executar a ação $a$</span>
+        <span class="c1"># observar a recompensa $r$ e o novo estado $s&#39;$ </span>
+        <span class="c1"># Q(s,a) \leftarrow Q(s,a) + \alpha[r + \gamma \max_{A&#39;}Q(s&#39;,A&#39;) - Q(s,a)]</span>
+        <span class="c1"># s recebe s&#39;</span>
+        <span class="c1">#</span>
 </code></pre></div>
 <p>que é responsável por execurtar <em>N</em> episódios e atualizar a variável <code>self.q_table</code>. </p>
 <p>Este método é chamado pelo arquivo <code>TaxiDriverGym.py</code> nas linhas 11 e 12:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># only execute the following lines if you want to create a new q-table</span>
-<span class="n">qlearn</span> <span class="o">=</span> <span class="n">QLearning</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">qlearn</span> <span class="o">=</span> <span class="n">QLearning</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
 <span class="n">q_table</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="s1">&#39;data/q-table-taxi-driver.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;results/actions_taxidriver&#39;</span><span class="p">)</span>
 <span class="c1">#q_table = loadtxt(&#39;data/q-table-taxi-driver.csv&#39;, delimiter=&#39;,&#39;)</span>
 </code></pre></div>
@@ -580,10 +651,10 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 </ul>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>TaxiDriverGym.py
 </code></pre></div>
-<p>Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo data/q-table-taxi-driver.csv. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. </p>
+<p>Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo <code>data/q-table-taxi-driver.csv</code>. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. </p>
 <ul>
 <li>
-<p>Abra o arquivo <code>src/part_01/results/action_taxidriver.jpg</code> e faça uma análise do mesmo. O que este gráfico representa?</p>
+<p>Abra o arquivo <code>results/action_taxidriver.jpg</code> e faça uma análise do mesmo. O que este gráfico representa?</p>
 </li>
 <li>
 <p>Agora faça o algoritmo <code>TaxiDriverGym.py</code> ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes.</p>
@@ -595,10 +666,10 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <p>Considerando os valores informados nos parâmetros do método <code>train</code>, se a sua implementação do <code>Q-learning</code> estiver correta então o agente <code>TaxiDriverGym.py</code> deve encontrar a solução para todos os casos apresentados. Se por algum motivo a sua solução não estiver convergindo então significa que tem algum <em>bug</em> na atualização da q-table. </p>
 <p>Uma vez que você confirmou que a sua implementação não tem <em>bugs</em> então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. </p>
 <ul>
-<li>O arquivo <code>src/part_01/results/action_taxidriver.jpg</code> é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos <code>rewards</code> ao invés da quantidade de atividades? A visualização fica melhor? </li>
+<li>O arquivo <code>results/action_taxidriver.jpg</code> é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos <code>rewards</code> ao invés da quantidade de atividades? A visualização fica melhor? </li>
 </ul>
-<h2 id="q-table-ready">Q-table ready</h2>
-<p>As a result of the training phase, the agent will have a <em>Q-table</em> that shows the best action it can take in each state. The way to use this information is very simple: </p>
+<h2 id="q-table-pronta">Q-table pronta</h2>
+<p>Como resultado da etapa de treinamento, o agente terá uma <em>Q-table</em> que mostra a melhor ação que ele pode tomar em cada estado. A maneira de usar essas informações é muito simples:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -607,7 +678,7 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
     <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
     <span class="n">state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
 </code></pre></div>
-<p>Here we do not have any random choice. The agent selects the action with the highest value in each state. </p>
+<p>Aqui, o agente seleciona a ação com o maior valor em cada estado. Nós não temos nenhum comportamento aleatório. </p>
 
   <hr>
 <div class="md-source-file">

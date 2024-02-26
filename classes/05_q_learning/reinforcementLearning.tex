@@ -8,12 +8,14 @@
 
 \usepackage{algorithmic}
 
+\def\HiLi{\leavevmode\rlap{\hbox to \hsize{\color{yellow!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
+
 \begin{document}
 
 \title{Aprendizagem por Reforço} 
 \author{Fabrício Barth}
 \institute{Insper Instituto de Ensino e Pesquisa}
-\date{Março de 2023}
+\date{Fevereiro de 2024}
 
 \maketitle
 
@@ -123,153 +125,73 @@ Até o momento vimos nesta disciplina:
 	\begin{itemize}
 	\item A política de controle desejada é aquela que \textbf{maximiza} os reforços 
 	(\textit{reward}) acumulados ao longo do tempo pelo 
-	agente: $r_{0} + \gamma r_{1} + \gamma^{2} r_{2} + \cdots $ onde $0 \leq \gamma < 1$.
+	agente.
+	\item Em tese, é a política que faz o agente percorrer o \textbf{melhor caminho}. 
 	\end{itemize}
 
 %\hspace{1cm}
 
   \begin{center}
-	\includegraphics[width=.7\textwidth]{figuras/sequencia_futuro.png}
+	\includegraphics[width=.8\textwidth]{figuras/grafo_rewards_0.png}
 \end{center}
 
-\pause
+\end{frame}
 
-\begin{itemize}
-	\item O $V(s_{1})$ será a soma de $r_{1}$ com o $V(s_{2})$. No entanto, considerando 
-	o fator de desconto $\gamma$, temos: $V(s_{1}) = r_{1} + \gamma V(s_{2}) $.
-	
+
+\begin{frame}{Reward acumulado (1/4)}
+
+\begin{center}
+	\includegraphics[width=.8\textwidth]{figuras/grafo_rewards_1.png}
+\end{center}
+
+\begin{itemize}	
 	\item O valor de um estado final leva-se em consideração apenas o 
 	reforço: $V(s_{n}) = r_{n}$.
-	
-	%\item Resumindo, temos: $V(s) = \sum_{t} \gamma^{t} R$
 \end{itemize}
+
 \end{frame}
 
 
-\begin{frame}{Exemplo}
-	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
-			\hline
-			\cellcolor{red!25} Início & Campo & Campo & Campo \\ 
-			\hline
-			Campo & \cellcolor{black!25} Buraco & Campo &  \cellcolor{black!25} Buraco\\ 
-			\hline
-			Campo & Campo & Campo & \cellcolor{black!25} Buraco\\ 
-			\hline
-			\cellcolor{black!25} Buraco & Campo & Campo & \textbf{Objetivo} \\ 
-			\hline
-		\end{tabular}
-	\end{center}
-	
-	\vspace{0.2cm}
-	\small
-	\textbf{Ações que o agente sabe executar}: 
-	\begin{enumerate}
-		\item Mover para Baixo ($\downarrow$)
-		\item Mover para Cima ($\uparrow$)
-		\item Mover para Direita ($\rightarrow$)
-		\item Mover para Esquerda ($\leftarrow$)
-	\end{enumerate}
-	
-\end{frame}
-
-
-\begin{frame}{Exemplo}
-	\begin{itemize}
-		\item Considerando que o local do objetivo, dos buracos e dos campos serão sempre 
-		os mesmos então temos \textbf{16} estados possíveis. 
-		\item Este problema tem \textbf{4} ações possíveis. 
-		\item Se o agente cair em um buraco ele recebe \textbf{-1} como recompensa, se ele ir para um 
-		campo ele recebe \textbf{0} e ao chegar no objetivo ele recebe \textbf{1}.  
-		%\item Para que agente possa identificar uma política de controle ótima este agente 
-		%precisa criar um \textbf{mapeamento} entre \textbf{estados} (S) e \textbf{ações} (A)
-		
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Considere o seguinte estado}
+\begin{frame}{Reward acumulado (2/4)}
 	
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
-			\hline
-			Início & Campo & Campo & Campo \\ 
-			\hline
-			Campo & \cellcolor{black!25} Buraco & Campo &  \cellcolor{black!25} Buraco\\ 
-			\hline
-			Campo & Campo & Campo & \cellcolor{black!25} Buraco\\ 
-			\hline
-			\cellcolor{black!25} Buraco & Campo & \cellcolor{red!25} Campo & \textbf{Objetivo} \\ 
-			\hline
-		\end{tabular}
+		\includegraphics[width=.8\textwidth]{figuras/grafo_rewards_2.png}
 	\end{center}
 	
-	\vspace{0.2cm}
-	
-	\begin{itemize}
-		\item Se o agente for para $\rightarrow$ (direita) então $V(s_{n}) = 1$
-	\end{itemize}
-		
-\end{frame}
-
-
-\begin{frame}{Considere um estado anterior $s_{n-1}$}
-	
-	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
-			\hline
-			Início & Campo & Campo & Campo \\ 
-			\hline
-			Campo & \cellcolor{black!25} Buraco & Campo &  \cellcolor{black!25} Buraco\\ 
-			\hline
-			Campo & Campo & \cellcolor{red!25} Campo & \cellcolor{black!25} Buraco\\ 
-			\hline
-			\cellcolor{black!25} Buraco & Campo & Campo & \textbf{Objetivo} \\ 
-			\hline
-		\end{tabular}
-	\end{center}
-	
-	\vspace{0.2cm}
-	
-	\begin{itemize}
-		\item Se o agente for para $\rightarrow$ (direita) então $V(s_{n-1}) = -1$
-		\item Se o agente for para $\downarrow$ (baixo) então:
-		\begin{eqnarray}
-		V(s_{n-1}) = r(s_{n-1}) + \gamma V(s_{n}) \\ \nonumber
-		V(s_{n-1}) = 0 + \gamma \times 1 \nonumber
-		\end{eqnarray}
+	\begin{itemize}	
+		\item O $V(s_{2})$ será a soma de $r_{2}$ com o $V(s_{3})$. 
+		\item Considerando o fator de desconto $\gamma$, temos: $V(s_{2}) = r_{2} + \gamma^{3} V(s_{3}) $.
+		\item O fator de desconto: $0 \leq \gamma < 1$ 
 	\end{itemize}
 	
 \end{frame}
 
-\begin{frame}{Considere um estado anterior $s_{n-2}$}
-	
-	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
-			\hline
-			Início & Campo & Campo & Campo \\ 
-			\hline
-			Campo & \cellcolor{black!25} Buraco & \cellcolor{red!25} Campo &  \cellcolor{black!25} Buraco\\ 
-			\hline
-			Campo & Campo & Campo & \cellcolor{black!25} Buraco\\ 
-			\hline
-			\cellcolor{black!25} Buraco & Campo & Campo & \textbf{Objetivo} \\ 
-			\hline
-		\end{tabular}
-	\end{center}
-	
-	\vspace{0.2cm}
-	
-	\begin{itemize}
-		\item Se o agente for para $\rightarrow$ (direita) então $V(s_{n-2}) = -1$
-		\item Se o agente for para $\leftarrow$ (esquerda) então $V(s_{n-2}) = -1$
-		\item Se o agente for para $\downarrow$ (baixo) então:
-		\begin{eqnarray}
-			V(s_{n-2}) = r(s_{n-2}) + \gamma V(s_{n-1}) + \gamma^{2} V(s_{n}) \\ \nonumber
-			V(s_{n-1}) = 0 + \gamma \times (\gamma^{2} \times 1) + \gamma^{2} \times 1 \nonumber
-		\end{eqnarray}
-	\end{itemize}
-	
+\begin{frame}{Reward acumulado (3/4)}
+
+\begin{center}
+	\includegraphics[width=.9\textwidth]{figuras/grafo_rewards_3.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Reward acumulado (4/4)}
+
+Desta forma, temos: 
+
+\begin{eqnarray}
+V(s_{0}) = r_{0} + \gamma V(s_{1}) \nonumber \\
+V(s_{0}) = r_{0} + \gamma r_{1} + \gamma^{2} V(s_{2}) \nonumber \\
+V(s_{0}) = r_{0} + \gamma r_{1} + \gamma^{2} r_{2} + \gamma^{3} V(s_{3}) \nonumber \\
+V(s_{0}) = r_{0} + \gamma r_{1} + \gamma^{2} r_{2} + \gamma^{3} r_{3} \nonumber
+\end{eqnarray}
+
+Ou melhor: 
+
+\begin{equation}
+V(s_{0}) = r_{0} + \gamma r_{1} + \gamma^{2} r_{2} + \gamma^{3} r_{3} \cdots + \gamma^{n}r_{n} \nonumber
+\end{equation}
+
+
 \end{frame}
 
 
@@ -304,7 +226,7 @@ precisa criar um \textbf{mapeamento} entre \textbf{estados} ($S$) e \textbf{aç�
 	
 \begin{itemize}
 	
-	\item Este mapeamento pode ser representado por uma função $Q(S,A)$ onde $S$ são 
+	\item Este mapeamento é representado por uma função $Q(S,A)$ onde $S$ são 
 	todos os estados possíveis ($s_{1}, s_{2}, \cdots$) e onde $A$ são todas as 
 	ações possíveis ($a_{1}, a_{2}, \cdots$)
 
@@ -324,20 +246,6 @@ precisa criar um \textbf{mapeamento} entre \textbf{estados} ($S$) e \textbf{aç�
 		$s_{n}$&  &  &  & \\ 
 \hline
 	\end{tabular}
-\end{center}
-
-\begin{itemize}
-	\item Para criar um \textbf{mapeamento} $Q(S,A)$ é necessário executar o 
-	agente no ambiente considerando o \textbf{reforço} dado por cada ação. 
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Algoritmo Q-Learning}
-
-  \begin{center}
-	\includegraphics[width=\textwidth]{figuras/mapa1.png}
 \end{center}
 
 \end{frame}
@@ -361,106 +269,10 @@ precisa criar um \textbf{mapeamento} entre \textbf{estados} ($S$) e \textbf{aç�
 
 \end{frame}
 
-\begin{frame}{Algoritmo Q-Learning}
-\begin{small}
-\begin{center}
-	\begin{tabular}{ |c|c|c|c| } 
-		\hline
-		\cellcolor{red!25} Início & Campo & Campo & Campo \\ 
-		\hline
-		Campo & \cellcolor{black!25} Buraco & Campo &  \cellcolor{black!25} Buraco\\ 
-		\hline
-		 Campo & Campo & Campo & \cellcolor{black!25} Buraco\\ 
-		\hline
-		\cellcolor{black!25} Buraco & Campo & Campo & \textbf{Objetivo} \\ 
-		\hline
-	\end{tabular}
-\end{center}
-\end{small}
-
-Primeiro episódio ($\gamma = 0.9$):
-\begin{eqnarray}
-Q(s_{1}, baixo) \leftarrow  r + \gamma \max_{a'}{Q(s', a')} \nonumber \\
-Q(s_{1}, baixo) \leftarrow  0 + 0.9 \times \max[0, 0, 0] \nonumber \\ \nonumber \\
-Q(s_{2}, direita) \leftarrow  -1 + 0.9 \times \max[0, 0, 0,0] \nonumber 
-%Q(s_{n}, direita) \leftarrow  1 + 0.9 \times \max[0, 0, 0,0] \nonumber 
-\end{eqnarray}
-
-\end{frame}
-
-\begin{frame}{Algoritmo Q-Learning}
-
-Q-table resultante da execução do $1^{o}$ episódio. 
-
-	\begin{center}
-	\begin{tabular}{ |c|c|c|c|c| } 
-		\hline
-		\textbf{Q-table}  & $esquerda$ & $baixo$ & $direita$& $cima$ \\
-		\hline
-		$s_{1}$& 0  & 0 & 0 & 0\\ 
-		\hline
-		$s_{2}$& 0 & 0  & -1 & 0\\ 
-		\hline
-$s_{3}$& 0 & 0 & 0 & 0\\ 
-\hline
-$s_{4}$& 0 & 0  & 0  &  0\\ 
-\hline
-		$\cdots$& $\cdots$ & $\cdots$ & $\cdots$ &$\cdots$ \\ 
-		\hline
-		$s_{n}$& 0 & 0  & 0  & 0 \\ 
-		\hline
-	\end{tabular}
-\end{center}
-\end{frame}
-
-%\begin{frame}{Algoritmo Q-Learning}
-%
-%Já na execução do $2^{o}$ episódio... 
-%
-%	\begin{center}
-%	\begin{tabular}{ |c|c|c|c| } 
-%		\hline
-%	 Início & Campo & Campo & Campo \\ 
-%		\hline
-%		Campo & \cellcolor{black!25} Buraco & Campo (0.0) &  \cellcolor{black!25} Buraco\\ 
-%		\hline
-%		Campo & Campo (0.0) & \cellcolor{red!25}Campo & \cellcolor{black!25} Buraco (-0.1)\\ 
-%		\hline
-%		\cellcolor{black!25} Buraco & Campo & Campo (0.9) & \textbf{Objetivo} \\ 
-%		\hline
-%	\end{tabular}
-%\end{center}
-%
-%\end{frame}
-
-\begin{frame}{Algoritmo Q-Learning}
-
-Q-table resultante da execução do $n$-éssimo episódio. 
-
-\begin{center}
-	\begin{tabular}{ |c|c|c|c|c| } 
-		\hline
-		\textbf{Q-table}  & $esquerda$ & $baixo$ & $direita$& $cima$ \\
-		\hline
-		$s_{1}$& 0.02  & 0.03 & 0.0001 & 0.0001\\ 
-		\hline
-		$s_{2}$& 0.00 & 0.05 & -0.003 & 0.001\\ 
-		\hline
-		$\cdots$& $\cdots$ & $\cdots$ & $\cdots$ &$\cdots$ \\ 
-		\hline
-		$s_{n}$& 0.985 & 0.0001  & 0.003  & 0.002 \\ 
-		\hline
-	\end{tabular}
-\end{center}
-
-Após a execução de $n$ episódios o agente conhece qual a melhor ação para cada estado. 
-
-\end{frame}
-
 
 \begin{frame}{Algoritmo Q-Learning} 
 	\begin{algorithmic} 
-		\STATE \emph{\textbf{function} Q-Learning(env, $\alpha$, $\gamma$, episódios)}
+		\STATE \emph{\textbf{function} Q-Learning(env, $\gamma$, $\alpha$, episódios)}
 		\STATE inicializar os valores de $Q(s, a)$ arbitrariamente
 		\FOR {todos os episódios}
 		\STATE inicializar $s$ a partir de $env$
@@ -468,7 +280,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 		\STATE escolher uma ação $a$ para um estado $s$
 		\STATE executar a ação $a$
 		\STATE observar a recompensa $r$ e o novo estado $s'$ 
-		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
+		\STATE \HiLi $Q(s,a) \leftarrow Q(s,a) + \alpha[r + \gamma \max_{A'}Q(s',A') - Q(s,a)]$ 
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
@@ -476,23 +288,10 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 	\end{algorithmic}
 \end{frame}
 
-
-\begin{frame}{Atividade de implementação}
-	
-	\begin{block}{Setup do ambiente}
-		Faça o clone ou fork do projeto https://github.com/Insper/rl\_code
-		\href{https://github.com/Insper/rl_code}{\beamergotobutton{Link}}
-	\end{block}
-	
-	\begin{alertblock}{Atualização da Q-table}
-		O objetivo desta atividade é implementar a rotira responsável pela atualização da \textit{Q-table} no arquivo QLearning.py
-	\end{alertblock}
-	
-	\begin{block}{Atividades}
-		Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_q\_learning/ \href{https://insper.github.io/rl/classes/05_q_learning/}
-		{\beamergotobutton{Link}}
-	\end{block}
-
+\begin{frame}{Algoritmo Q-Learning: hiperparâmetro $\alpha$}
+	\begin{itemize}
+		\item $\alpha$ é a taxa de aprendizado ($0 < \alpha \leq 1$), quanto maior, mais valor dá ao novo aprendizado.
+	\end{itemize}
 \end{frame}
 
 %%\begin{frame}{Algoritmo Q-Learning} 
@@ -535,11 +334,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 %\end{frame}
 %
 
-\begin{frame}{Algoritmo Q-Learning: hiperparâmetro $\alpha$}
-	\begin{itemize}
-		\item $\alpha$ é a taxa de aprendizado ($0 < \alpha \leq 1$), quanto maior, mais valor dá ao novo aprendizado.
-	\end{itemize}
-\end{frame}
+
 
 \begin{frame}{Que ação escolher?} 
 	\small
@@ -549,7 +344,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 		\FOR {todos os episódios}
 		\STATE inicializar $s$ a partir de $env$
 		\REPEAT
-		\STATE \emph{escolher uma ação $a$ para um estado $s$}
+		\STATE \HiLi \emph{escolher uma ação $a$ para um estado $s$}
 		\STATE executar a ação $a$
 		\STATE observar a recompensa $r$ e o novo estado $s'$ 
 		\STATE $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]$
@@ -568,7 +363,7 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 		da \textit{Q-table}.
 		\item<2-> No entanto, para que o algoritmo \textit{Q-learning} possa convergir 
 		para um determinado problema é necessário que o algoritmo visite pares de 
-		ação-estado infinitas (muitas) vezes.
+		ação-estado muitas (infinitas) vezes.
 		\item<3-> Por isso, que a escolha de determinada \textit{ação} em um \textit{estado} 
 		poderia ser feita de forma \textbf{aleatória}. 
 		
@@ -635,6 +430,19 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 \end{frame}
 
 \begin{frame}{Atividade de implementação}
+	
+	\begin{alertblock}{Atualização da Q-table}
+		O objetivo desta atividade é implementar a rotira responsável pela atualização da \textit{Q-table} no arquivo QLearning.py
+	\end{alertblock}
+	
+	\begin{block}{Atividades}
+		Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_q\_learning/ \href{https://insper.github.io/rl/classes/05_q_learning/}
+		{\beamergotobutton{Link}}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}{Atividade de implementação}
 		
 	\begin{alertblock}{Hiperparâmetros e seleção das ações}
 		O objetivo desta atividade é compreender o funcionamento e impacto dos hiperparâmetros de $\alpha$, $\gamma$ e dos conceitos de \textit{exploration} e \textit{exploitation}.
@@ -688,8 +496,6 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 	
 \end{frame}
 
-\def\HiLi{\leavevmode\rlap{\hbox to \hsize{\color{yellow!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
-
 \begin{frame}{\textsc{Sarsa}: on-policy}
 \begin{algorithmic} 
 	\STATE \emph{\textbf{function} Sarsa(env, $\alpha$, $\gamma$, $\epsilon$, $\epsilon_{min}$, $\epsilon_{dec}$, episódios)}
@@ -710,18 +516,22 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 \end{algorithmic}	
 \end{frame}
 
-\begin{frame}{Atividade de implementação}
-	
-	\begin{alertblock}{Comparando \textsc{Q-learning} e \textsc{Sarsa}}
-		O objetivo desta atividade é implementar o algoritmo \textsc{Sarsa} e compará-lo com o \textsc{Q-learning}.
-	\end{alertblock}
-	
-	\begin{block}{Atividades}
-	Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_x\_sarsa/ \href{https://insper.github.io/rl/classes/05_x_sarsa/}
-	{\beamergotobutton{Link}}
-	\end{block}
-
-\end{frame} 
+%
+% Vou mudar este exercício
+%
+%
+%\begin{frame}{Atividade de implementação}
+%	
+%	\begin{alertblock}{Comparando \textsc{Q-learning} e \textsc{Sarsa}}
+%		O objetivo desta atividade é implementar o algoritmo \textsc{Sarsa} e compará-lo com o \textsc{Q-learning}.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%	Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_x\_sarsa/ \href{https://insper.github.io/rl/classes/05_x_sarsa/}
+%	{\beamergotobutton{Link}}
+%	\end{block}
+%
+%\end{frame} 
 
 
 
@@ -819,14 +629,13 @@ Após a execução de $n$ episódios o agente conhece qual a melhor ação para 
 \begin{frame}{Material de \textbf{consulta}}
 \begin{itemize}
   \item Tom Mitchell. Machine Learning. McGraw-Hill, 1997.
-  \item Richard Sutton and Andrew Barto. Reinforcement Learning: An Introduction. Second Edition, in progress. The MIT Press, 2015.
+  \item Richard S. Sutton and Andrew G. Barto. 2018. Reinforcement Learning: An Introduction. A Bradford Book, Cambridge, MA, USA.
   \item Projeto Gymnasium \href{https://gymnasium.farama.org/}{\beamergotobutton{Link}}
   \item Projeto PettingZoo \href{https://pettingzoo.farama.org/}{\beamergotobutton{Link}}
   %\item https://deepmind.com/research/case-studies/alphago-the-story-so-far
   %\item Aurélien Géron. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition, 2019. 
 \end{itemize}
 \end{frame}
-
 
 \end{document}
 

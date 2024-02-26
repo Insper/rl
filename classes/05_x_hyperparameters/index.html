@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_hyperparameters/">
       
       
+        <link rel="prev" href="../05_q_learning/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Hyperparameters in Q-Learning - Reinforcement Learning</title>
+        <title>Hiperparâmetros em Q-Learning - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hyperparameters-in-q-learning" class="md-skip">
+        <a href="#hiperparametros-em-q-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hyperparameters in Q-Learning
+              Hiperparâmetros em Q-Learning
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -328,14 +334,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -344,7 +352,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Q-Learning and Sarsa
@@ -360,6 +368,110 @@
       <a href="../04_toolings_envs/" class="md-nav__link">
         Ferramentas e ambientes para aprendizagem por reforço
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_q_learning/" class="md-nav__link">
+        Algoritmo Q-Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hiperparâmetros em Q-Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Hiperparâmetros em Q-Learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulando-alpha-e-gamma" class="md-nav__link">
+    Manipulando \(\alpha\) e \(\gamma\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-uma-escolha-de-acao-sempre-aletatoria" class="md-nav__link">
+    Considerando uma escolha de ação sempre aletatória
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-um-agente-que-nunca-explora-novas-acoes" class="md-nav__link">
+    Considerando um agente que nunca explora novas ações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumarizando-os-resultados-atraves-de-imagens" class="md-nav__link">
+    Sumarizando os resultados através de imagens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade" class="md-nav__link">
+    Atividade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -461,13 +573,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#um-exemplo-de-grafico-muito-bem-feito" class="md-nav__link">
-    Um exemplo de gráfico muito bem feito
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -484,9 +589,9 @@
 
 
 
-<h1 id="hyperparameters-in-q-learning">Hyperparameters in Q-Learning</h1>
+<h1 id="hiperparametros-em-q-learning">Hiperparâmetros em Q-Learning</h1>
 <p>Ainda considerando o exemplo a implementação do <code>TaxiDriver</code>, responda as perguntas abaixo.</p>
-<p>Para responder as questões abaixo utilize as implementações do <code>TaxiDriverGym.py</code>, que está no diretório <code>src/part_02</code> e o arquivo <code>QLearning.py</code> que você implementou na atividade anterior.</p>
+<p>Para responder as questões abaixo utilize as implementações do <code>TaxiDriverGym.py</code> e <code>QLearning.py</code> que você implementou na atividade anterior.</p>
 <h2 id="manipulando-alpha-e-gamma">Manipulando <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span></h2>
 <ul>
 <li>
@@ -539,16 +644,35 @@
 <p>Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: </p>
 <p><img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/></p>
 <p>Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. </p>
-<p>Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia <strong>02/03/2023</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Q-Learning with hyperparameters</em>. Esta atividade é individual.</p>
+<p>Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia <strong>29/02/2023</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Exercício 4</em>. Esta atividade é individual.</p>
 <h2 id="rubrica-de-avaliacao">Rubrica de avaliação</h2>
-<p>| Conceito | Descrição |
-| A+       | Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos |
-| C        | Não entregou uma única imagem |</p>
-<h2 id="um-exemplo-de-grafico-muito-bem-feito">Um exemplo de gráfico muito bem feito <img alt="🆕" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f195.svg" title=":new:" /></h2>
-<p>Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfico foi feito pela Letícia. </p>
-<p><center>
+<table>
+<thead>
+<tr>
+<th align="left">Conceito</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">A+</td>
+<td align="left">Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos</td>
+</tr>
+<tr>
+<td align="left">C</td>
+<td align="left">Não entregou uma única imagem</td>
+</tr>
+</tbody>
+</table>
+<!--
+## Um exemplo de gráfico muito bem feito :new: 
+
+Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfico foi feito pela Letícia. 
+
+<center>
 <img src="figures/leticia.png" alt="Exemplo de gráfico" style="height: 500px;"/>
-</center></p>
+</center>
+-->
 
   <hr>
 <div class="md-source-file">
