@@ -1,3 +1,9 @@
+Exercise 6.12 Suppose action selection is greedy. Is Q-learning then exactly the same
+algorithm as Sarsa? Will they make exactly the same action selections and weight
+updates?
+
+
+
 # SARSA Algorithm: on-policy approach
     
 ## Definition and key concepts

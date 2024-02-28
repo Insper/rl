@@ -459,12 +459,39 @@
     Atividade
   </a>
   
+    <nav class="md-nav" aria-label="Atividade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1" class="md-nav__link">
+    Parte 1
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#parte-2" class="md-nav__link">
+    Parte 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rubrica-de-avaliacao" class="md-nav__link">
     Rubrica de avaliação
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -564,12 +591,39 @@
     Atividade
   </a>
   
+    <nav class="md-nav" aria-label="Atividade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1" class="md-nav__link">
+    Parte 1
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#parte-2" class="md-nav__link">
+    Parte 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rubrica-de-avaliacao" class="md-nav__link">
     Rubrica de avaliação
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -638,14 +692,20 @@
 </li>
 </ul>
 <h2 id="atividade">Atividade</h2>
+<p>Este exercício é composto por duas partes. </p>
+<h3 id="parte-1">Parte 1</h3>
 <p>Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo <span class="arithmatex">\(y\)</span> do gráfico. O eixo <span class="arithmatex">\(x\)</span> deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor <em>zoom</em> (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.</p>
 <p>Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. </p>
 <p>O gráfico deve possuir 3 linhas distintas. Cada uma destas linhas deve apresentar uma variação possível considerando os hiperparâmetros <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\gamma\)</span> e <span class="arithmatex">\(\epsilon\)</span>. Deverá ficar a critério do estudante quais valores utilizar. </p>
 <p>Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: </p>
 <p><img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/></p>
 <p>Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. </p>
-<p>Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia <strong>29/02/2023</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Exercício 4</em>. Esta atividade é individual.</p>
-<h2 id="rubrica-de-avaliacao">Rubrica de avaliação</h2>
+<h3 id="parte-2">Parte 2</h3>
+<p>O objetivo desta parte é entender a evolução da <em>Q-table</em> ao longo dos episódios. Para isso, você deve escolher um estados específicos e mostrar a evolução da <em>Q-table</em> para estes estados. Mais especificamente, você deve escolher um estado que corresponde a um episódio inicial, um estado que corresponde a um episódio intermediário e um estado que corresponde a um episódio final.</p>
+<p>Para cada uma destas versões da <em>Q-table</em> você deve gerar um heatmap. Crie uma única imagem que contenha os três heatmaps. Na legenda desta imagem descreva o que cada um dos heatmaps representa, por exemplo, descrevendo o que são as colunas e linhas do heatmap.</p>
+<h3 id="entrega">Entrega</h3>
+<p>Um documento com estas duas imagens e legendas deve ser entregue via Blackboard até o dia <strong>29/02/2023</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Exercício 4</em>. Esta atividade é individual.</p>
+<h3 id="rubrica-de-avaliacao">Rubrica de avaliação</h3>
 <table>
 <thead>
 <tr>
@@ -656,11 +716,15 @@
 <tbody>
 <tr>
 <td align="left">A+</td>
-<td align="left">Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos</td>
+<td align="left">Entregou duas imagens com qualidade alta e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. Uma das imagens é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos e a outra imagem consegue mostrar bem a evolução da Q-table.</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="left">Não entregou uma única imagem</td>
+<td align="left">B</td>
+<td align="left">Entregou duas imagens com qualidade média e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. As imagens não conseguem mostrar bem a diferença entre os hiperparâmetros escolhidos e a evolução da Q-table.</td>
+</tr>
+<tr>
+<td align="left">D</td>
+<td align="left">Entregou apenas uma imagem ou entregou imagens incompletas ou sem legenda.</td>
 </tr>
 </tbody>
 </table>
@@ -679,7 +743,7 @@ Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfic
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 26, 2024</span>
       
     
   </small>

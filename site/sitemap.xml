@@ -2,202 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://insper.github.io/rl/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/assessment/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/goals/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/plan/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/references/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plan/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plano_aula_1/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plano_aula_2/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plano_aula_3/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plano_aula_4/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/_snippets/plano_aula_5/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/introduction_rl/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/01_introduction/subject_rules/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/02_problem_solving/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/03_games/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/03_review/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/04_taxonomy/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/04_toolings_envs/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/05_q_learning/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/05_x_hyperparameters/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/05_x_sarsa/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/05_xx_comments/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/06_non_determ/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/06_non_determ_comments/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/07_game_env/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/08_game_env_random/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/09_more_complex/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/11_evaluation/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/13_nn_review/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/14_nn_policies/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/15_deep_q_learning/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/15_deep_q_learning_lunar_lander/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/15_xx_comments/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/16_double_deep_q_learning/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/17_reinforce/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/17_reinforce/reinforce/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/17_reinforce/reinforce_slides/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/18_ppo/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://insper.github.io/rl/classes/19_projects/</loc>
-         <lastmod>2024-02-26</lastmod>
+         <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

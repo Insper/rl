@@ -43,3 +43,7 @@ for i in range(episodios):
         action = env.action_space.sample()
         next_state, reward, done, truncated, info = env.step(action)
 ```
+
+## Implementações de jogadores de tic-tac-toe
+
+O objetivo deste exercício foi implementar um jogador de **tic-tac-toe**. As soluções mais comuns apresentadas por esta turma foram: ...

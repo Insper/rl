@@ -58,6 +58,10 @@ Neste momento, você já deve ter percebido que uma ferramenta muito útil para 
 
 ## Atividade
 
+Este exercício é composto por duas partes. 
+
+### Parte 1
+
 Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo $y$ do gráfico. O eixo $x$ deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor *zoom* (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.
 
 Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. 
@@ -70,14 +74,23 @@ Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos 
 
 Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. 
 
-Um documento com esta imagem e legenda deve ser entregue via Blackboard até o dia **29/02/2023**. A atividade já foi criada no Blackboard e o nome dela é *Exercício 4*. Esta atividade é individual.
+### Parte 2
 
-## Rubrica de avaliação
+O objetivo desta parte é entender a evolução da *Q-table* ao longo dos episódios. Para isso, você deve escolher um estados específicos e mostrar a evolução da *Q-table* para estes estados. Mais especificamente, você deve escolher um estado que corresponde a um episódio inicial, um estado que corresponde a um episódio intermediário e um estado que corresponde a um episódio final.
+
+Para cada uma destas versões da *Q-table* você deve gerar um heatmap. Crie uma única imagem que contenha os três heatmaps. Na legenda desta imagem descreva o que cada um dos heatmaps representa, por exemplo, descrevendo o que são as colunas e linhas do heatmap.
+
+### Entrega
+
+Um documento com estas duas imagens e legendas deve ser entregue via Blackboard até o dia **29/02/2023**. A atividade já foi criada no Blackboard e o nome dela é *Exercício 4*. Esta atividade é individual.
+
+### Rubrica de avaliação
 
 | Conceito | Descrição |
 |:---------|:----------|
-| A+       | Entregou uma única imagem com legenda. O texto da legenda possui toda a informação necessária para entender os resultados alcançados pelo experimento. A imagem é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos |
-| C        | Não entregou uma única imagem |
+| A+       | Entregou duas imagens com qualidade alta e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. Uma das imagens é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos e a outra imagem consegue mostrar bem a evolução da Q-table. |
+| B        | Entregou duas imagens com qualidade média e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. As imagens não conseguem mostrar bem a diferença entre os hiperparâmetros escolhidos e a evolução da Q-table. |
+| D        | Entregou apenas uma imagem ou entregou imagens incompletas ou sem legenda. |
 
 <!--
 ## Um exemplo de gráfico muito bem feito :new: 
