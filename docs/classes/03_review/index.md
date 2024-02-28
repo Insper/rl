@@ -46,4 +46,4 @@ for i in range(episodios):
 
 ## Implementações de jogadores de tic-tac-toe
 
-O objetivo deste exercício foi implementar um jogador de **tic-tac-toe**. As soluções mais comuns apresentadas por esta turma foram: ...
+O objetivo deste exercício foi implementar um jogador de **tic-tac-toe**. As soluções mais comuns apresentadas por esta turma foram utilizando o algoritmo Min-Max com ou sem limite de profundidade. Como o espaço de estados do jogo é pequeno, a solução sem limite de profundidade é viável. Da mesma forma que não é necessário recorrer ao uso de versões mais sofisticadas do Min-Max, como por exemplo, Min-Max com poda alfa-beta.
