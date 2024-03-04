@@ -92,12 +92,19 @@ Um documento com estas duas imagens e legendas deve ser entregue via Blackboard 
 | B        | Entregou duas imagens com qualidade média e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. As imagens não conseguem mostrar bem a diferença entre os hiperparâmetros escolhidos e a evolução da Q-table. |
 | D        | Entregou apenas uma imagem ou entregou imagens incompletas ou sem legenda. |
 
-<!--
+
 ## Um exemplo de gráfico muito bem feito :new: 
 
-Segue abaixo um exemplo de gráfico muito bem formatado e completo. Este gráfico foi feito pela Letícia. 
+Seguem abaixo exemplos de gráficos bem formatados e completos. 
+
+Exemplo de gráfico com a evolução do aprendizado do agente. Este gráfico foi feito pela Letícia em 2023/1. 
 
 <center>
-<img src="figures/leticia.png" alt="Exemplo de gráfico" style="height: 500px;"/>
+<img src="figures/leticia.png" alt="Exemplo de gráfico com a evolução do aprendizado do agente" style="height: 500px;"/>
 </center>
--->
+
+Exemplo de gráfico com a evolução da *Q-table*. Este gráfico foi feito pelo Giancarlo em 2023/1.
+
+<center>
+<img src="figures/giancarlo.png" alt="Exemplo de gráfico com a evolução da Q-table" style="height: 450px;"/>
+</center>

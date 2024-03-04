@@ -24,7 +24,7 @@ nav:
       - 'classes/04_toolings_envs/index.md'
       - 'classes/05_q_learning/index.md'
       - 'classes/05_x_hyperparameters/index.md'
-#      - 'classes/05_x_sarsa/index.md'
+      - 'classes/05_x_sarsa/index.md'
 #      - 'classes/05_xx_comments/index.md'
 #    - 'Environments':
 #      - 'classes/06_non_determ/index.md'

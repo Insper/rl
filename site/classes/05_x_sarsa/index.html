@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_sarsa/">
       
       
+        <link rel="prev" href="../05_x_hyperparameters/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Index - Reinforcement Learning</title>
+        <title>Algoritmo SARSA: abordagem on-policy - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sarsa-algorithm-on-policy-approach" class="md-skip">
+        <a href="#algoritmo-sarsa-abordagem-on-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Algoritmo SARSA: abordagem on-policy
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -328,14 +334,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -344,7 +352,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Q-Learning and Sarsa
@@ -388,6 +396,82 @@
       <a href="../05_x_hyperparameters/" class="md-nav__link">
         Hiperparâmetros em Q-Learning
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Algoritmo SARSA: abordagem on-policy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Algoritmo SARSA: abordagem on-policy
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-e-conceitos-chave" class="md-nav__link">
+    Definição e conceitos-chave
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao" class="md-nav__link">
+    Implementação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -448,22 +532,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition-and-key-concepts" class="md-nav__link">
-    Definition and key concepts
+  <a href="#definicao-e-conceitos-chave" class="md-nav__link">
+    Definição e conceitos-chave
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
+  <a href="#implementacao" class="md-nav__link">
+    Implementação
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#delivery" class="md-nav__link">
-    Delivery
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    Entrega
   </a>
   
 </li>
@@ -484,36 +575,36 @@
 
 
 
-<p>Exercise 6.12 Suppose action selection is greedy. Is Q-learning then exactly the same
-algorithm as Sarsa? Will they make exactly the same action selections and weight
-updates?</p>
-<h1 id="sarsa-algorithm-on-policy-approach">SARSA Algorithm: on-policy approach</h1>
-<h2 id="definition-and-key-concepts">Definition and key concepts</h2>
-<p>The updating rule in <strong>Q-Learning</strong> is as follows:</p>
+<h1 id="algoritmo-sarsa-abordagem-on-policy">Algoritmo SARSA: abordagem on-policy</h1>
+<h2 id="definicao-e-conceitos-chave">Definição e conceitos-chave</h2>
+<p>A atualização da <em>Q-table</em> no algoritmo <strong>Q-Learning</strong> é dada por:</p>
 <div class="arithmatex">\[
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
 \]</div>
-<p>The difference between the new sample and the old estimation is used to update the old estimation. The <strong>Q-Learning</strong> algorithm considers the value of the new sample as the maximum <span class="arithmatex">\(Q\)</span> possible value in state <span class="arithmatex">\(s'\)</span>: </p>
+<p>A diferença entre a nova amostra e a estimativa antiga é usada para atualizar a estimativa antiga. O algoritmo <strong>Q-Learning</strong> considera o valor da nova amostra como o valor máximo possível de <span class="arithmatex">\(Q\)</span> no estado <span class="arithmatex">\(s'\)</span>: </p>
 <div class="arithmatex">\[
 \max_{A'}{Q(s', A')}
 \]</div>
-<p>However, the action with maximum <span class="arithmatex">\(Q\)</span> possible value may not be the actual action the agent will take in the future because with <span class="arithmatex">\(\epsilon\)</span> probability the agent will take a random action. In other words, the action used to update policy in <strong>Q-Learning</strong> is different from the true action the agent will take. This is the reason why <strong>Q-Learning</strong> is called an <strong>off-policy</strong> algorithm. </p>
-<p>On the other hand, the State-Action-Reward-State-Action (<strong>SARSA</strong>) algorithm is <strong>on-policy</strong> because it updates the Q-table with:</p>
+<p>No entanto, a ação com o valor máximo possível de <span class="arithmatex">\(Q\)</span> pode não ser a ação real que o agente tomará no futuro, porque com probabilidade <span class="arithmatex">\(\epsilon\)</span> o agente poderá executar uma ação aleatória. Em outras palavras, a ação usada para atualizar a política em <strong>Q-Learning</strong> é diferente da ação real que o agente tomará. Esta é a razão pela qual <strong>Q-Learning</strong> é chamado de algoritmo <strong>off-policy</strong>. </p>
+<p>Por outro lado, o algoritmo <strong>SARSA</strong> é <strong>on-policy</strong> porque ele atualiza a <em>Q-table</em> com:</p>
 <div class="arithmatex">\[
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 \]</div>
-<p>it updates <span class="arithmatex">\(Q(s,a)\)</span> considering the real action executed by the agent.</p>
-<p>Sarsa algorithm is very similar to Q-Learning algorithm:</p>
+<p>esta equação atualiza <span class="arithmatex">\(Q(s,a)\)</span> considerando a ação real executada pelo agente.</p>
+<p>O algoritmo Sarsa é muito semelhante ao algoritmo Q-Learning:</p>
 <p><img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/></p>
-<h2 id="implementation">Implementation</h2>
-<p>The goal of this activity is to verify if we understood how to implement the <strong>Sarsa</strong> algorithm and grasp the practical differences between <strong>Sarsa</strong> and <strong>Q-Learning</strong>.</p>
-<p>First, you must <strong>implement the Sarsa algorithm</strong>. You can start from the <code>QLearning.py</code> file, make a copy, change the name <img alt="😃" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f603.svg" title=":smiley:" />, and change what is necessary.  </p>
-<p>Then, you must <strong>apply the Sarsa implementation to solve the taxi-driver problem</strong>. Compare the Sarsa results with the Q-Learning results. Compare the training curve and the agent's behavior after the training. You can use the same file <code>TaxiDriverGym.py</code>, but remember to change the output file names (*.csv and plot).  </p>
-<p>The third activity of this implementation is <strong>applying Q-Learning and Sarsa algorithms in a different environment</strong>: the <a href="https://gymnasium.farama.org/environments/toy_text/cliff_walking/">Cliff Walking</a>. This is still a very simple environment. However, when you apply those algorithms in this type of environment you can see the differences between those algorithms and identify any bug in your implementation if exists.</p>
-<p>In order to train your agent for the Cliff Walking problem you must setup the environment like this: </p>
+<h2 id="implementacao">Implementação</h2>
+<p>O objetivo desta atividade é validar o entendimento do algoritmo <strong>Sarsa</strong> e compreender as diferenças práticas entre <strong>Sarsa</strong> e <strong>Q-Learning</strong>.</p>
+<p>Siga os passos a seguir:</p>
+<ul>
+<li><strong>implementar o algoritmo Sarsa</strong>: você pode começar a partir do arquivo <code>QLearning.py</code>, fazer uma cópia, mudar o nome <img alt="😃" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f603.svg" title=":smiley:" />, e mudar o que for necessário.</li>
+<li><strong>aplicar a implementação do Sarsa para resolver o problema do taxi-driver</strong>:  compare os resultados do Sarsa com os resultados do Q-Learning. Compare a curva de treinamento e o comportamento do agente após o treinamento. Você pode usar o mesmo arquivo <code>TaxiDriverGym.py</code>, mas lembre-se de mudar os nomes dos arquivos de saída (*.csv e plot). Para facilitar esta comparação, você pode usar o mesmo valor de <span class="arithmatex">\(\epsilon\)</span>, <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> para ambos os algoritmos.</li>
+<li>a terceira atividade desta implementação é <strong>aplicar os algoritmos Q-Learning e Sarsa em um ambiente diferente</strong>: o <a href="https://gymnasium.farama.org/environments/toy_text/cliff_walking/">Cliff Walking</a>. Este é um ambiente muito simples. No entanto, quando você aplica esses algoritmos nesse tipo de ambiente, você pode ver as diferenças entre esses algoritmos e identificar qualquer bug em sua implementação, se existir.</li>
+</ul>
+<p>Para treinar seu agente para o problema do <strong>Cliff Walking</strong>, você deve configurar o ambiente assim:</p>
 <div class="highlight"><pre><span></span><code><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CliffWalking-v0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 </code></pre></div>
-<p>After the training phase, to see the behavior, you must code something like this: </p>
+<p>Depois da etapa de treinamento, para ver o comportamento, você deve codificar algo assim:</p>
 <div class="highlight"><pre><span></span><code><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CliffWalking-v0&quot;</span><span class="p">,</span> <span class="n">render_mode</span><span class="o">=</span><span class="s2">&quot;human&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 
 <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
@@ -533,32 +624,85 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Actions taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rewards: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rewards</span><span class="p">))</span>
 </code></pre></div>
-<p>Setting the <code>render_mode</code> equal to <code>human</code> will allow you to see an animation.</p>
-<p>The final activity of this implementation is to create a <code>README.md</code> file and answer the following questions: </p>
-<ul>
+<p>Configure o <code>render_mode</code> para <code>human</code> para ver a animação do agente.</p>
+<p>Crie um arquivo <code>README.md</code> e responda as seguintes perguntas:</p>
+<ol>
 <li>
-<p>Which algorithm has the best results for the taxi-driver environment? </p>
+<p>Qual algoritmo tem os melhores resultados para o ambiente do taxi-driver? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? </p>
 </li>
 <li>
-<p>Which algorithm has the best results for the Cliff Walking environment? </p>
+<p>Qual algoritmo tem os melhores resultados para o ambiente do Cliff Walking? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? Qual agente tem um comportamento mais conservador e qual tem um comportamento mais otimista?</p>
 </li>
-<li>
-<p>Try to explain the results. Why one algorithm is better than another? </p>
-</li>
-<li>
-<p>Do a small research about <strong>Sarsa</strong> algorithm to understand its cons and pros. </p>
-</li>
-</ul>
-<!-- para a proxima versao eu preciso definir melhor a rubrica de avaliacao
-A+ ou A = somente para os trabalhos que apresentam as curvas de aprendizagem e o resultado final do agente para dar base as suas respostas.
-B = para aqueles que implementaram tudo e responderam as perguntas sem utilizar as curvas de aprendizagem como base para a resposta. 
-C = para aqueles que só implementaram
-D = para aqueles que implementaram parcialmente
--->
+</ol>
+<details class="hint">
+<summary>Sugestão para plotar a curva de aprendizado</summary>
+<p>Você pode usar o código a seguir para plotar a curva de aprendizado. Desta forma você irá suavisar a curva e facilitar a comparação entre os algoritmos.
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<h2 id="delivery">Delivery</h2>
-<p>Put all those files in the same project and then submit them to <a href="https://classroom.github.com/a/gTxejAeH">https://classroom.github.com/a/gTxejAeH</a>. This activity is individual and the <strong>deadline is 03/07/2023 20:00 -0300.</strong></p>
+<span class="c1"># Calculate the rolling average of 50 values for both series</span>
+<span class="n">sarsa_avg</span> <span class="o">=</span> <span class="n">sarsa</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">qlearning_avg</span> <span class="o">=</span> <span class="n">qlearning</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Plotting the rolling average series</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sarsa_avg</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SARSA&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qlearning_avg</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Q-Learning&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Episode&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reward&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SARSA vs Q-Learning&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Displaying the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></p>
+</details>
+<ol>
+<li>Suponha uma seleção de ação gulosa (<em>greedy</em>) </li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="p">(</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">gamma</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">epsilon_dec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+    <span class="n">episodes</span><span class="o">=</span><span class="mi">500</span>
+<span class="p">)</span>
+</code></pre></div>
+, qual seria a diferença entre os algoritmos <strong>Q-Learning</strong> e <strong>Sarsa</strong>? Os agentes treinados teriam o mesmo comportamento? As curvas de aprendizado também? </p>
+<h2 id="rubrica-de-avaliacao">Rubrica de avaliação</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Conceito</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">A+</td>
+<td align="left">Responderam todas as perguntas e utilizaram as curvas de aprendizado e ilustrações do comportamento dos agentes treinados como base para as respostas.</td>
+</tr>
+<tr>
+<td align="left">B</td>
+<td align="left">Responderam todas as perguntas e utilizaram as curvas de aprendizado como base para as respostas.</td>
+</tr>
+<tr>
+<td align="left">C</td>
+<td align="left">A implementação dos algoritmos está correta, mas o estudante não entregou o arquivo README.md com as respostas.</td>
+</tr>
+<tr>
+<td align="left">D</td>
+<td align="left">A implementação dos algoritmos <em>Q-Learning</em> e <em>Sarsa</em> foi parcial.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="entrega">Entrega</h2>
+<p>Coloque todos os arquivos em um mesmo projeto e submeta-os para o <a href="https://classroom.github.com/a/hAhU4zU3">https://classroom.github.com/a/hAhU4zU3</a>. Esta atividade é individual e o <strong>prazo é 05/03/2024 23:30.</strong></p>
 <!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
+<!-- usar o próprio livro do Sutton para comentar os resultados -->
 
   <hr>
 <div class="md-source-file">

@@ -1,56 +1,50 @@
-Exercise 6.12 Suppose action selection is greedy. Is Q-learning then exactly the same
-algorithm as Sarsa? Will they make exactly the same action selections and weight
-updates?
-
-
-
-# SARSA Algorithm: on-policy approach
+# Algoritmo SARSA: abordagem on-policy
     
-## Definition and key concepts
+## Definição e conceitos-chave
 
-The updating rule in **Q-Learning** is as follows:
+A atualização da *Q-table* no algoritmo **Q-Learning** é dada por:
 
 $$
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
 $$
 
-The difference between the new sample and the old estimation is used to update the old estimation. The **Q-Learning** algorithm considers the value of the new sample as the maximum $Q$ possible value in state $s'$: 
+A diferença entre a nova amostra e a estimativa antiga é usada para atualizar a estimativa antiga. O algoritmo **Q-Learning** considera o valor da nova amostra como o valor máximo possível de $Q$ no estado $s'$: 
 
 $$
 \max_{A'}{Q(s', A')}
 $$
 
-However, the action with maximum $Q$ possible value may not be the actual action the agent will take in the future because with $\epsilon$ probability the agent will take a random action. In other words, the action used to update policy in **Q-Learning** is different from the true action the agent will take. This is the reason why **Q-Learning** is called an **off-policy** algorithm. 
+No entanto, a ação com o valor máximo possível de $Q$ pode não ser a ação real que o agente tomará no futuro, porque com probabilidade $\epsilon$ o agente poderá executar uma ação aleatória. Em outras palavras, a ação usada para atualizar a política em **Q-Learning** é diferente da ação real que o agente tomará. Esta é a razão pela qual **Q-Learning** é chamado de algoritmo **off-policy**. 
 
-On the other hand, the State-Action-Reward-State-Action (**SARSA**) algorithm is **on-policy** because it updates the Q-table with:
+Por outro lado, o algoritmo **SARSA** é **on-policy** porque ele atualiza a *Q-table* com:
 
 $$
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 $$
 
-it updates $Q(s,a)$ considering the real action executed by the agent.
+esta equação atualiza $Q(s,a)$ considerando a ação real executada pelo agente.
 
-Sarsa algorithm is very similar to Q-Learning algorithm:
+O algoritmo Sarsa é muito semelhante ao algoritmo Q-Learning:
 
 <img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/>
 
-## Implementation
+## Implementação
 
-The goal of this activity is to verify if we understood how to implement the **Sarsa** algorithm and grasp the practical differences between **Sarsa** and **Q-Learning**.
+O objetivo desta atividade é validar o entendimento do algoritmo **Sarsa** e compreender as diferenças práticas entre **Sarsa** e **Q-Learning**.
 
-First, you must **implement the Sarsa algorithm**. You can start from the `QLearning.py` file, make a copy, change the name :smiley:, and change what is necessary.  
+Siga os passos a seguir:
 
-Then, you must **apply the Sarsa implementation to solve the taxi-driver problem**. Compare the Sarsa results with the Q-Learning results. Compare the training curve and the agent's behavior after the training. You can use the same file `TaxiDriverGym.py`, but remember to change the output file names (*.csv and plot).  
+* **implementar o algoritmo Sarsa**: você pode começar a partir do arquivo `QLearning.py`, fazer uma cópia, mudar o nome :smiley:, e mudar o que for necessário.
+* **aplicar a implementação do Sarsa para resolver o problema do taxi-driver**:  compare os resultados do Sarsa com os resultados do Q-Learning. Compare a curva de treinamento e o comportamento do agente após o treinamento. Você pode usar o mesmo arquivo `TaxiDriverGym.py`, mas lembre-se de mudar os nomes dos arquivos de saída (*.csv e plot). Para facilitar esta comparação, você pode usar o mesmo valor de $\epsilon$, $\alpha$ e $\gamma$ para ambos os algoritmos.
+* a terceira atividade desta implementação é **aplicar os algoritmos Q-Learning e Sarsa em um ambiente diferente**: o [Cliff Walking](https://gymnasium.farama.org/environments/toy_text/cliff_walking/). Este é um ambiente muito simples. No entanto, quando você aplica esses algoritmos nesse tipo de ambiente, você pode ver as diferenças entre esses algoritmos e identificar qualquer bug em sua implementação, se existir.
 
-The third activity of this implementation is **applying Q-Learning and Sarsa algorithms in a different environment**: the [Cliff Walking](https://gymnasium.farama.org/environments/toy_text/cliff_walking/). This is still a very simple environment. However, when you apply those algorithms in this type of environment you can see the differences between those algorithms and identify any bug in your implementation if exists.
-
-In order to train your agent for the Cliff Walking problem you must setup the environment like this: 
+Para treinar seu agente para o problema do **Cliff Walking**, você deve configurar o ambiente assim:
 
 ```python
 env = gym.make("CliffWalking-v0").env
 ```
 
-After the training phase, to see the behavior, you must code something like this: 
+Depois da etapa de treinamento, para ver o comportamento, você deve codificar algo assim:
 
 ```python
 env = gym.make("CliffWalking-v0", render_mode="human").env
@@ -73,29 +67,67 @@ print("Actions taken: {}".format(actions))
 print("Rewards: {}".format(rewards))
 ```
 
-Setting the `render_mode` equal to `human` will allow you to see an animation.
+Configure o `render_mode` para `human` para ver a animação do agente.
 
-The final activity of this implementation is to create a `README.md` file and answer the following questions: 
+Crie um arquivo `README.md` e responda as seguintes perguntas:
 
-* Which algorithm has the best results for the taxi-driver environment? 
+1. Qual algoritmo tem os melhores resultados para o ambiente do taxi-driver? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? 
 
-* Which algorithm has the best results for the Cliff Walking environment? 
+2. Qual algoritmo tem os melhores resultados para o ambiente do Cliff Walking? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? Qual agente tem um comportamento mais conservador e qual tem um comportamento mais otimista?
 
-* Try to explain the results. Why one algorithm is better than another? 
+??? hint "Sugestão para plotar a curva de aprendizado"
+    Você pode usar o código a seguir para plotar a curva de aprendizado. Desta forma você irá suavisar a curva e facilitar a comparação entre os algoritmos.
+    ```python
+    import matplotlib.pyplot as plt
 
-* Do a small research about **Sarsa** algorithm to understand its cons and pros. 
+    # Calculate the rolling average of 50 values for both series
+    sarsa_avg = sarsa[0].rolling(window=50).mean()
+    qlearning_avg = qlearning[0].rolling(window=50).mean()
 
-<!-- para a proxima versao eu preciso definir melhor a rubrica de avaliacao
-A+ ou A = somente para os trabalhos que apresentam as curvas de aprendizagem e o resultado final do agente para dar base as suas respostas.
-B = para aqueles que implementaram tudo e responderam as perguntas sem utilizar as curvas de aprendizagem como base para a resposta. 
-C = para aqueles que só implementaram
-D = para aqueles que implementaram parcialmente
--->
+    # Plotting the rolling average series
+    plt.plot(sarsa_avg, label='SARSA')
+    plt.plot(qlearning_avg, label='Q-Learning')
 
-## Delivery
+    # Adding labels and title
+    plt.xlabel('Episode')
+    plt.ylabel('Reward')
+    plt.title('SARSA vs Q-Learning')
 
-Put all those files in the same project and then submit them to [https://classroom.github.com/a/gTxejAeH](https://classroom.github.com/a/gTxejAeH). This activity is individual and the **deadline is 03/07/2023 20:00 -0300.**
+    # Adding legend
+    plt.legend()
 
+    # Displaying the plot
+    plt.show()
+    ```
+
+3. Suponha uma seleção de ação gulosa (*greedy*) 
+
+```python
+(
+    alpha=0.1, 
+    gamma=0.99, 
+    epsilon=0.1, 
+    epsilon_min=0.1, 
+    epsilon_dec=1, 
+    episodes=500
+)
+```
+, qual seria a diferença entre os algoritmos **Q-Learning** e **Sarsa**? Os agentes treinados teriam o mesmo comportamento? As curvas de aprendizado também? 
+
+
+## Rubrica de avaliação
+
+| Conceito | Descrição |
+|:---------|:----------|
+| A+       | Responderam todas as perguntas e utilizaram as curvas de aprendizado e ilustrações do comportamento dos agentes treinados como base para as respostas.|
+| B        | Responderam todas as perguntas e utilizaram as curvas de aprendizado como base para as respostas. |
+| C        | A implementação dos algoritmos está correta, mas o estudante não entregou o arquivo README.md com as respostas. |
+| D        | A implementação dos algoritmos *Q-Learning* e *Sarsa* foi parcial. |
+
+
+## Entrega
+
+Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/hAhU4zU3](https://classroom.github.com/a/hAhU4zU3). Esta atividade é individual e o **prazo é 05/03/2024 23:30.**
 
 <!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
-
+<!-- usar o próprio livro do Sutton para comentar os resultados -->
