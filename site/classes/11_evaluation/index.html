@@ -630,6 +630,24 @@
 <span class="p">)</span>
 </code></pre></div>
 <p>os valores de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> devem ser escolhidos por você.</p>
+<p>Uma sugestão para a implementação dos gráficos é utilizar a biblioteca <code>seaborn</code>. Considere um dataframe com as seguintes colunas: </p>
+<ul>
+<li>algoritmo: Q-Learning ou Sarsa;</li>
+<li>episodio: número do episódio;</li>
+<li>retorno: retorno acumulado.</li>
+</ul>
+<p>Execute <code>N</code> episódios em 100 treinamentos. Adicione todos os valores de episódio e retorno neste dataframe. Informe também qual é o algoritmo. Uma vez formado o dataframe, você pode utilizar o seguinte código para fazer o plot: </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;episodio&quot;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;retorno&quot;</span><span class="p">,</span> 
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;algoritmo&quot;</span><span class="p">,</span> 
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
 <p>Faça a entrega do código fonte e dos gráficos gerados via <a href="https://classroom.github.com/a/7JKrtofS">Github Classroom</a>. Esta atividade é <strong>individual</strong> e o prazo de entrega é <strong>08 de março de 2024 até às 23:30</strong> horas.</p>
 <h2 id="referencias">Referências</h2>
 <p>As imagens acima foram retiradas do capítulo 2 do livro: </p>

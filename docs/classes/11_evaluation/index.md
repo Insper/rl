@@ -35,6 +35,27 @@ Utilize os seguintes hiperparâmetros:
 
 os valores de $\alpha$ e $\gamma$ devem ser escolhidos por você.
 
+Uma sugestão para a implementação dos gráficos é utilizar a biblioteca `seaborn`. Considere um dataframe com as seguintes colunas: 
+
+* algoritmo: Q-Learning ou Sarsa;
+* episodio: número do episódio;
+* retorno: retorno acumulado.
+
+Execute `N` episódios em 100 treinamentos. Adicione todos os valores de episódio e retorno neste dataframe. Informe também qual é o algoritmo. Uma vez formado o dataframe, você pode utilizar o seguinte código para fazer o plot: 
+
+```python
+import seaborn as sns
+sns.set_theme(style="darkgrid")
+
+df = read.csv('data.csv')
+
+sns.lineplot(
+    x="episodio", 
+    y="retorno", 
+    hue="algoritmo", 
+    data=df)
+```
+
 Faça a entrega do código fonte e dos gráficos gerados via [Github Classroom](https://classroom.github.com/a/7JKrtofS). Esta atividade é **individual** e o prazo de entrega é **08 de março de 2024 até às 23:30** horas.
 
 ## Referências
