@@ -17,11 +17,25 @@ Abaixo são apresentados outros gráficos que ilustram o aprendizado do agente.
 
 A proposta desta atividade é reutilizar o código já feito no [atividade sobre on-olicy e off-policy](./classes/05_x_sarsa/index.md#implementação) criando novos plots para apresentação dos resultados. 
 
-Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.
+Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo (Q-Learning e Sarsa) e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.
 
 Crie dois gráficos, comparando Q-Learning e Sarsa, como os apresentados acima. Um para o retorno acumulado e outro para a quantidade de passos necessários para o agente chegar no objetivo.
 
-Faça a entrega do código fonte e dos gráficos gerados via [Github Classroom](https://classroom.github.com/a/7JKrtofS). Esta atividade é **individual** e o prazo de entrega é **06 de março de 2024 até às 23:30** horas.
+Utilize os seguintes hiperparâmetros:
+
+```python
+(
+    alpha=X, 
+    epsilon=0.1, 
+    epsilon_min=0.1,
+    epsilon_decay=1,
+    gamma=Y
+)
+```
+
+os valores de $\alpha$ e $\gamma$ devem ser escolhidos por você.
+
+Faça a entrega do código fonte e dos gráficos gerados via [Github Classroom](https://classroom.github.com/a/7JKrtofS). Esta atividade é **individual** e o prazo de entrega é **08 de março de 2024 até às 23:30** horas.
 
 ## Referências
 

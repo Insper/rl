@@ -618,9 +618,19 @@
 <p><img src="fig/compare_2.png" alt="Curva de aprendizado" style="height: 400px;"/></p>
 <h2 id="exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking">Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking</h2>
 <p>A proposta desta atividade é reutilizar o código já feito no <a href="./classes/05_x_sarsa/index.md#implementação">atividade sobre on-olicy e off-policy</a> criando novos plots para apresentação dos resultados. </p>
-<p>Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.</p>
+<p>Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo (Q-Learning e Sarsa) e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.</p>
 <p>Crie dois gráficos, comparando Q-Learning e Sarsa, como os apresentados acima. Um para o retorno acumulado e outro para a quantidade de passos necessários para o agente chegar no objetivo.</p>
-<p>Faça a entrega do código fonte e dos gráficos gerados via <a href="https://classroom.github.com/a/7JKrtofS">Github Classroom</a>. Esta atividade é <strong>individual</strong> e o prazo de entrega é <strong>06 de março de 2024 até às 23:30</strong> horas.</p>
+<p>Utilize os seguintes hiperparâmetros:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">epsilon_decay</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">gamma</span><span class="o">=</span><span class="n">Y</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>os valores de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> devem ser escolhidos por você.</p>
+<p>Faça a entrega do código fonte e dos gráficos gerados via <a href="https://classroom.github.com/a/7JKrtofS">Github Classroom</a>. Esta atividade é <strong>individual</strong> e o prazo de entrega é <strong>08 de março de 2024 até às 23:30</strong> horas.</p>
 <h2 id="referencias">Referências</h2>
 <p>As imagens acima foram retiradas do capítulo 2 do livro: </p>
 <p>Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. <a href="https://www.marl-book.com/">Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</a>. MIT Press, 2024.</p>
@@ -630,7 +640,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 6, 2024</span>
       
     
   </small>
