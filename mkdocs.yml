@@ -25,14 +25,14 @@ nav:
       - 'classes/05_q_learning/index.md'
       - 'classes/05_x_hyperparameters/index.md'
       - 'classes/05_x_sarsa/index.md'
-#      - 'classes/05_xx_comments/index.md'
-#    - 'Environments':
+      - 'classes/05_xx_comments/index.md'
+    - 'Ambientes e metodologias':
+      - 'classes/11_evaluation/index.md'
 #      - 'classes/06_non_determ/index.md'
 #      - 'classes/06_non_determ_comments/index.md'
 #      - 'classes/07_game_env/index.md'
 #      - 'classes/08_game_env_random/index.md'
 #      - 'classes/09_more_complex/index.md'
-##    - 'classes/11_evaluation/index.md'
 ##    - 'classes/13_nn_review/index.md'
 ##    - 'classes/14_nn_policies/index.md'
 #    - 'Deep Q-Learning':

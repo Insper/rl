@@ -17,7 +17,7 @@
     
     
       
-        <title>Using RL in non-deterministic environments - Reinforcement Learning</title>
+        <title>Aprendizado por Reforço em ambientes não-determinísticos - Reinforcement Learning</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-rl-in-non-deterministic-environments" class="md-skip">
+        <a href="#aprendizado-por-reforco-em-ambientes-nao-deterministicos" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using RL in non-deterministic environments
+              Aprendizado por Reforço em ambientes não-determinísticos
             
           </span>
         </div>
@@ -407,6 +407,68 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_xx_comments/" class="md-nav__link">
+        Comentários sobre as implementações do Q-Learning e Sarsa
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Ambientes e metodologias
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Ambientes e metodologias
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_evaluation/" class="md-nav__link">
+        Como avaliar o desempenho de um agente?
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -462,40 +524,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlake_introductionpy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake_introduction.py
+  <a href="#perguntas" class="md-nav__link">
+    Perguntas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trabalhe-com-o-arquivo-frozenlakepy" class="md-nav__link">
-    Trabalhe com o arquivo FrozenLake.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-o-algoritmo-sarsa" class="md-nav__link">
-    E o algoritmo Sarsa?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outro-mapa" class="md-nav__link">
-    Outro mapa
-  </a>
-  
-    <nav class="md-nav" aria-label="Outro mapa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
     Algoritmo e hiperparâmetros utilizados para o treinamento
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Algoritmo e hiperparâmetros utilizados para o treinamento">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#rubrica-de-avaliacao" class="md-nav__link">
@@ -532,100 +573,25 @@
 
 
 
-<h1 id="using-rl-in-non-deterministic-environments">Using RL in non-deterministic environments</h1>
+<h1 id="aprendizado-por-reforco-em-ambientes-nao-deterministicos">Aprendizado por Reforço em ambientes não-determinísticos</h1>
 <p>O ambiente <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">Frozen Lake</a> é um ambiente não determinístico onde um agente deve encontrar um caminho do lugar onde ele está para outro lugar passando por buracos. Se ele chegar no objetivo sem cair no buraco então ele termina a tarefa e tem 1 ponto de reward. Se ele cair em um dos buracos então ele termina a tarefa com 0 pontos de reward. Cada ação que não leva para um estado terminal tem reward igual a 0.  </p>
 <p>Neste ambiente o agente consegue executar 4 ações: ir para cima, ir para baixo, ir para esquerda e ir para direita. <strong>Como o chão é de gelo, não necessariamente a ação de ir para baixo vai levar o agente para baixo</strong>, por exemplo. Isto acontece com todas as quatro ações. Por isso que este ambiente é não determinístico.</p>
-<h2 id="trabalhe-com-o-arquivo-frozenlake_introductionpy">Trabalhe com o arquivo <code>FrozenLake_introduction.py</code></h2>
-<ol>
-<li>
-<p>Este arquivo está disponível em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a>.</p>
-</li>
-<li>
-<p>Leia a documentação do código fonte disponível em <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">https://gymnasium.farama.org/environments/toy_text/frozen_lake/</a></p>
-</li>
-<li>
-<p>Veja o que está codificado no arquivo <code>FrozenLake_introduction.py</code> e execute o mesmo.</p>
-</li>
-<li>
-<p>Quantos estados e quantas ações o ambiente FrozenLake-v1 tem?</p>
-</li>
-<li>
-<p>O que aconteceu com a execução das ações? O resultado foi o esperado? Descreva o que aconteceu.</p>
-</li>
-</ol>
-<h2 id="trabalhe-com-o-arquivo-frozenlakepy">Trabalhe com o arquivo <code>FrozenLake.py</code></h2>
-<ul>
-<li>
-<p>Este arquivo também está em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a></p>
-</li>
-<li>
-<p>Abra em um editor de texto e descomente as linhas 12 e 13 e comente a linha 14. O código deve ficar como abaixo:</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># only execute the following lines if you want to create a new q-table</span>
-<span class="n">qlearn</span> <span class="o">=</span> <span class="n">QLearning</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="o">=</span><span class="mf">0.9999</span><span class="p">,</span> <span class="n">episodes</span><span class="o">=</span><span class="mi">500000</span><span class="p">)</span>
-<span class="n">q_table</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="s1">&#39;data/q-table-frozen-lake.csv&#39;</span><span class="p">,</span><span class="s1">&#39;results/actions_frozen_lake&#39;</span><span class="p">)</span>
-<span class="c1">#q_table = loadtxt(&#39;data/q-table-frozen-lake.csv&#39;, delimiter=&#39;,&#39;)</span>
-</code></pre></div>
-<ul>
-<li>Execute o arquivo <code>FrozenLake.py</code> com o comando:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>FrozenLake.py
-</code></pre></div>
-<ul>
-<li>
-<p>Agora faça o algoritmo <code>FrozenLake.py</code> ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes. Ele consegue chegar ao objetivo sempre? Ele consegue chegar ao objetivo na maioria das vezes? </p>
-</li>
-<li>
-<p>E se executarmos 100 vezes? Quantas vezes o agente consegue atingir o objetivo? Execute o comando abaixo:</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>FrozenLake100times.py
-</code></pre></div>
-<ul>
-<li>
-<p>Como podemos melhorar o desempenho deste agente?</p>
-</li>
-<li>
-<p>Teste diferentes configurações de hiperparâmetros. Qual é o comportamento visto no gráfico de episódios versus rewards? </p>
-</li>
-</ul>
-<h2 id="e-o-algoritmo-sarsa">E o algoritmo Sarsa?</h2>
-<ul>
-<li>
-<p>Será que o algoritmo Sarsa tem um desempenho melhor para problemas não-determinísticos? </p>
-</li>
-<li>
-<p>Em <a href="https://github.com/Insper/rl_code/tree/main/src/part_03">https://github.com/Insper/rl_code/tree/main/src/part_03</a> tem um arquivo chamado <code>FrozenLakeSarsa.py</code> que você pode utilizar para responder esta pergunta. </p>
-</li>
-</ul>
-<h2 id="outro-mapa">Outro mapa</h2>
-<p>Existem dois mapas pré-configurados em <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">https://gymnasium.farama.org/environments/toy_text/frozen_lake/</a>. O mapa 4x4 e um mapa 8x8. E se mudarmos o mapa para 8x8? </p>
+<p>O ambiente Frozen Lake está disponível no pacote <code>gymnasium</code> com duas configurações: 4x4 e 8x8. </p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;FrozenLake-v1&#39;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s2">&quot;4x4&quot;</span><span class="p">,</span> <span class="n">is_slippery</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;FrozenLake-v1&quot;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s2">&quot;8x8&quot;</span><span class="p">,</span> <span class="n">is_slippery</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 </code></pre></div>
-<ul>
-<li>O que muda? O problema se torna mais complexo? É necessário mudar algum dos hiperparâmetros? Qual é o melhor algoritmo? <em>Sarsa</em> ou <em>Q-Learning</em>? </li>
-</ul>
-<p>Considere o seguinte objetivo: <em>desenvolver um agente capaz de chegar ao ponto final em mais de 80% das vezes". Faça o *clone</em> do projeto <a href="https://classroom.github.com/a/Ag-dCmlJ">https://classroom.github.com/a/Ag-dCmlJ</a>. Você deve adicionar neste projeto e fazer o commit dos seguintes artefatos: </p>
+<h2 id="perguntas">Perguntas</h2>
 <ul>
 <li>
-<p>o arquivo <code>q-table.csv</code> dentro do diretório <code>data</code>. Já existe um arquivo q-table neste projeto, mas ele é para a versão do ambiente 4x4. Quando você executar o arquivo <code>test_frozenlake.py</code> usando o comando <code>pytest</code> irá ocorrer um erro de <code>IndexError</code>. Você deve substituir este arquivo pelo arquivo gerado pelo seu agente durante o período de treinamento; </p>
+<p>É possível treinar um agente capaz de atuar no ambiente do Frozen Lake? Ou seja, é possível treinar um agente capaz de atuar em um mundo <strong>não-determinístico</strong>?</p>
 </li>
 <li>
-<p>depois de substituir o arquivo <code>data/q-table.csv</code>, você poderá executar os testes e verificar se o mesmo é aprovado em todos os testes. São quatro testes: o primeiro executa o ambiente 1000 vezes e verifica se o agente conseguiu chegar ao final em no mínimo 700 vezes. Os outros 3 testes fazem exatamente a mesma coisa: executam o agente no ambiente 1000 vezes e verificam se o agente conseguiu chegar ao final em no mínimo 800 vezes;</p>
-</li>
-<li>
-<p>você também deve adicionar a sua implementação no diretório raiz deste projeto, e;</p>
-</li>
-<li>
-<p>alterar o arquivo README.md informando os hiperparâmetros utilizados para o treinamento. </p>
-</li>
-<li>
-<p>(critério para A+) apresentar um gráfico comparando a curva de aprendizagem de diversas abordagens utilizadas durante o treinamento. A imagem deste gráfico deve ser adicionada ao projeto e o texto explicando os resultados ao arquivo README.md.  </p>
+<p>Qual é o melhor algoritmo e os melhores hiperparâmetros para treinar um agente capaz de atuar no ambiente do Frozen Lake?</p>
 </li>
 </ul>
-<h3 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h3>
+<p>Para determinar </p>
+<h2 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h2>
 <table>
 <thead>
 <tr>
@@ -683,7 +649,7 @@
 </li>
 </ul>
 <h3 id="deadline">Deadline</h3>
-<p>O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. </p>
+<p>O deadline para a entrega desta atividade é 8 de março de 2023 às 23:30 horas. </p>
 
   <hr>
 <div class="md-source-file">
