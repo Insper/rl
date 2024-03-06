@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/11_evaluation/">
       
       
+        <link rel="prev" href="../05_xx_comments/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>How to evaluate the performance of an agent? - Reinforcement Learning</title>
+        <title>Como avaliar o desempenho de um agente? - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-evaluate-the-performance-of-an-agent" class="md-skip">
+        <a href="#como-avaliar-o-desempenho-de-um-agente" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to evaluate the performance of an agent?
+              Como avaliar o desempenho de um agente?
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -407,6 +413,118 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_xx_comments/" class="md-nav__link">
+        Comentários sobre as implementações do Q-Learning e Sarsa
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Ambientes e metodologias
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Ambientes e metodologias
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Como avaliar o desempenho de um agente?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Como avaliar o desempenho de um agente?
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking" class="md-nav__link">
+    Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -455,6 +573,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking" class="md-nav__link">
+    Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -469,12 +609,21 @@
 
 
 
-<h1 id="how-to-evaluate-the-performance-of-an-agent">How to evaluate the performance of an agent?</h1>
-<ol>
-<li>Metrics</li>
-<li>How to summarize results</li>
-<li>Exercise: compare Q-Learning and SARSA algorithms considering a deterministic environment</li>
-</ol>
+<h1 id="como-avaliar-o-desempenho-de-um-agente">Como avaliar o desempenho de um agente?</h1>
+<p>O desempenho de um agente pode ser avaliado de diversas formas. A forma mais comum é através da curva de aprendizagem. A curva de aprendizagem mostra o desempenho do agente ao longo do tempo de treinamento. O desempenho pode ser medido em termos do objetivo de aprendizagem (e.g., retorno acumulado) bem como outras métricas secundárias.</p>
+<p><img src="fig/compare_1.png" alt="Curva de aprendizado" style="height: 400px;"/></p>
+<p>Para gerar a figura acima da esquerda foi necessário executar o treinamento do agente N vezes com os mesmos hiperparâmetros, calculando a média e mostrando a variância via gráfico. No mesmo gráfico também é mostrado o retorno acumulado ótimo.</p>
+<p>A figura acima do lado direito mostra outra métrica utilizada para acompanhar o aprendizado do agente. Neste caso, a métrica é a quantidade de passos necessários para o agente chegar no objetivo.</p>
+<p>Abaixo são apresentados outros gráficos que ilustram o aprendizado do agente.</p>
+<p><img src="fig/compare_2.png" alt="Curva de aprendizado" style="height: 400px;"/></p>
+<h2 id="exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking">Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking</h2>
+<p>A proposta desta atividade é reutilizar o código já feito no <a href="./classes/05_x_sarsa/index.md#implementação">atividade sobre on-olicy e off-policy</a> criando novos plots para apresentação dos resultados. </p>
+<p>Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.</p>
+<p>Crie dois gráficos, comparando Q-Learning e Sarsa, como os apresentados acima. Um para o retorno acumulado e outro para a quantidade de passos necessários para o agente chegar no objetivo.</p>
+<p>Faça a entrega do código fonte e dos gráficos gerados via <a href="https://classroom.github.com/a/7JKrtofS">Github Classroom</a>. Esta atividade é <strong>individual</strong> e o prazo de entrega é <strong>06 de março de 2024 até às 23:30</strong> horas.</p>
+<h2 id="referencias">Referências</h2>
+<p>As imagens acima foram retiradas do capítulo 2 do livro: </p>
+<p>Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. <a href="https://www.marl-book.com/">Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</a>. MIT Press, 2024.</p>
 
   <hr>
 <div class="md-source-file">
