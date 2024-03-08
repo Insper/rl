@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/06_non_determ/">
       
       
+        <link rel="prev" href="../11_evaluation/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Aprendizado por Reforço em ambientes não-determinísticos - Reinforcement Learning</title>
+        <title>Ambientes não-determinísticos - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aprendizado-por-reforco-em-ambientes-nao-deterministicos" class="md-skip">
+        <a href="#ambientes-nao-deterministicos" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aprendizado por Reforço em ambientes não-determinísticos
+              Ambientes não-determinísticos
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -432,14 +438,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
       
       
       
@@ -448,7 +456,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Ambientes e metodologias
@@ -464,6 +472,95 @@
       <a href="../11_evaluation/" class="md-nav__link">
         Como avaliar o desempenho de um agente?
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ambientes não-determinísticos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ambientes não-determinísticos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perguntas" class="md-nav__link">
+    Perguntas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodo" class="md-nav__link">
+    Método
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefatos-que-devem-ser-entregues" class="md-nav__link">
+    Artefatos que devem ser entregues
+  </a>
+  
+    <nav class="md-nav" aria-label="Artefatos que devem ser entregues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    Rubrica de avaliação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    Deadline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -531,11 +628,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algoritmo-e-hiperparametros-utilizados-para-o-treinamento" class="md-nav__link">
-    Algoritmo e hiperparâmetros utilizados para o treinamento
+  <a href="#metodo" class="md-nav__link">
+    Método
   </a>
   
-    <nav class="md-nav" aria-label="Algoritmo e hiperparâmetros utilizados para o treinamento">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefatos-que-devem-ser-entregues" class="md-nav__link">
+    Artefatos que devem ser entregues
+  </a>
+  
+    <nav class="md-nav" aria-label="Artefatos que devem ser entregues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -573,7 +677,7 @@
 
 
 
-<h1 id="aprendizado-por-reforco-em-ambientes-nao-deterministicos">Aprendizado por Reforço em ambientes não-determinísticos</h1>
+<h1 id="ambientes-nao-deterministicos">Ambientes não-determinísticos</h1>
 <p>O ambiente <a href="https://gymnasium.farama.org/environments/toy_text/frozen_lake/">Frozen Lake</a> é um ambiente não determinístico onde um agente deve encontrar um caminho do lugar onde ele está para outro lugar passando por buracos. Se ele chegar no objetivo sem cair no buraco então ele termina a tarefa e tem 1 ponto de reward. Se ele cair em um dos buracos então ele termina a tarefa com 0 pontos de reward. Cada ação que não leva para um estado terminal tem reward igual a 0.  </p>
 <p>Neste ambiente o agente consegue executar 4 ações: ir para cima, ir para baixo, ir para esquerda e ir para direita. <strong>Como o chão é de gelo, não necessariamente a ação de ir para baixo vai levar o agente para baixo</strong>, por exemplo. Isto acontece com todas as quatro ações. Por isso que este ambiente é não determinístico.</p>
 <p>O ambiente Frozen Lake está disponível no pacote <code>gymnasium</code> com duas configurações: 4x4 e 8x8. </p>
@@ -581,6 +685,15 @@
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;FrozenLake-v1&#39;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s2">&quot;4x4&quot;</span><span class="p">,</span> <span class="n">is_slippery</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;FrozenLake-v1&quot;</span><span class="p">,</span> <span class="n">map_name</span><span class="o">=</span><span class="s2">&quot;8x8&quot;</span><span class="p">,</span> <span class="n">is_slippery</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">env</span>
 </code></pre></div>
+<p>A função de recompensa é dada por: </p>
+<div class="arithmatex">\[\begin{equation}
+R(s_{i}, A) = \begin{cases}
+    1, &amp; \text{se } s_{i} = \text{objetivo} \\
+    0, &amp; \text{se } s_{i} = \text{buraco} \\
+    0, &amp; \text{caso contrário}
+    \end{cases}
+\end{equation}\]</div>
+<p>Os estados terminais são o objetivo e os buracos. Mas se o agente fizer mais de 100 movimentos no ambiente <span class="arithmatex">\(4 \times 4\)</span> ou mais de 200 movimentos no ambiente <span class="arithmatex">\(8 \times 8\)</span> então o episódio termina com <code>truncated</code> igual a <code>True</code>.</p>
 <h2 id="perguntas">Perguntas</h2>
 <ul>
 <li>
@@ -590,66 +703,39 @@
 <p>Qual é o melhor algoritmo e os melhores hiperparâmetros para treinar um agente capaz de atuar no ambiente do Frozen Lake?</p>
 </li>
 </ul>
-<p>Para determinar </p>
-<h2 id="algoritmo-e-hiperparametros-utilizados-para-o-treinamento">Algoritmo e hiperparâmetros utilizados para o treinamento</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Atributo</th>
-<th align="center">Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Algoritmo</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">alpha</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">gamma</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon_dec</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">epsilon_min</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">qtd_episodios</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<h2 id="metodo">Método</h2>
+<p>Para responder as perguntas acima você deve treinar um agente capaz de atuar no ambiente do Frozen Lake e comparar a curva de aprendizagem do agente treinado com a curva de aprendizagem de outros agentes treinados com diferentes algoritmos e hiperparâmetros. </p>
+<p>Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo duas configurações de hiperparâmetros para cada algoritmo. Ou seja, você irá comparar a curva de aprendizagem de 4 agentes diferentes. Nesta atividade considere apenas o ambiente <span class="arithmatex">\(4 \times 4\)</span>.</p>
+<p><strong>Detalhe importante</strong>: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na <a href="../11_evaluation/#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking">aula anterior</a> provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.</p>
+<p>Após treinar os agentes você deve utilizar o agente com melhor desempenho e executar 100 vezes no ambiente <span class="arithmatex">\(4 \times 4\)</span> e calcular a quantidade de vezes que o agente chegou até o destino final sem cair no buraco.</p>
+<h2 id="artefatos-que-devem-ser-entregues">Artefatos que devem ser entregues</h2>
+<p>Cada equipe deve entregar os seguintes artefatos: </p>
+<ul>
+<li>
+<p>Relatório com os gráficos das curvas de aprendizado dos agentes treinados e dados sobre o desempenho do melhor agente no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).</p>
+</li>
+<li>
+<p>Todos os códigos utilizados para executar os experimentos.</p>
+</li>
+<li>
+<p>Arquivo README.md descrevendo como executar o experimento. </p>
+</li>
+</ul>
+<p>A entrega deve ser feita através do <a href="https://classroom.github.com/a/inGUJX6C">Github Classroom</a>. O trabalho é em equipe com até 3 pessoas.</p>
 <h3 id="rubrica-de-avaliacao">Rubrica de avaliação</h3>
 <ul>
 <li>
-<p>Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a <strong>Insuficiente (I)</strong> - nota 2. </p>
+<p>O relatório deve conter uma descrição detalhada dos experimentos realizados e uma discussão sobre os resultados obtidos.</p>
 </li>
 <li>
-<p>Entregou todos os artefatos mencionados acima então a nota é calculada de acordo com o número de testes aprovados: </p>
-<ul>
-<li>1 teste aprovado = 2.5, </li>
-<li>2 testes aprovados = 5.0, </li>
-<li>3 testes aprovados = 7.5, </li>
-<li>4 testes aprovados = 9.0</li>
-</ul>
+<p>O código deve estar bem organizado e documentado.</p>
 </li>
 <li>
-<p>Foi aprovado em todos os testes e entregou o gráfico comparando a curva de aprendizagem de diversas abordagens utilizadas ao longo do treinamento então nota igual a <strong>10 (dez)</strong>. </p>
+<p>O README.md deve conter instruções claras sobre como executar o experimento.</p>
 </li>
 </ul>
 <h3 id="deadline">Deadline</h3>
-<p>O deadline para a entrega desta atividade é 8 de março de 2023 às 23:30 horas. </p>
+<p>O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. </p>
 
   <hr>
 <div class="md-source-file">
