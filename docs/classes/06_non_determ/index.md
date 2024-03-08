@@ -1,4 +1,4 @@
-# Aprendizado por Reforço em ambientes não-determinísticos
+# Ambientes não-determinísticos
     
 O ambiente [Frozen Lake](https://gymnasium.farama.org/environments/toy_text/frozen_lake/) é um ambiente não determinístico onde um agente deve encontrar um caminho do lugar onde ele está para outro lugar passando por buracos. Se ele chegar no objetivo sem cair no buraco então ele termina a tarefa e tem 1 ponto de reward. Se ele cair em um dos buracos então ele termina a tarefa com 0 pontos de reward. Cada ação que não leva para um estado terminal tem reward igual a 0.  
 
@@ -12,39 +12,55 @@ env = gym.make('FrozenLake-v1', map_name="4x4", is_slippery=True).env
 env = gym.make("FrozenLake-v1", map_name="8x8", is_slippery=True).env
 ```
 
+A função de recompensa é dada por: 
+
+
+\begin{equation}
+R(s_{i}, A) = \begin{cases}
+    1, & \text{se } s_{i} = \text{objetivo} \\
+    0, & \text{se } s_{i} = \text{buraco} \\
+    0, & \text{caso contrário}
+    \end{cases}
+\end{equation}
+
+Os estados terminais são o objetivo e os buracos. Mas se o agente fizer mais de 100 movimentos no ambiente $4 \times 4$ ou mais de 200 movimentos no ambiente $8 \times 8$ então o episódio termina com `truncated` igual a `True`.
+
 ## Perguntas
 
 * É possível treinar um agente capaz de atuar no ambiente do Frozen Lake? Ou seja, é possível treinar um agente capaz de atuar em um mundo **não-determinístico**?
 
 * Qual é o melhor algoritmo e os melhores hiperparâmetros para treinar um agente capaz de atuar no ambiente do Frozen Lake?
 
-Para determinar 
+## Método
 
-## Algoritmo e hiperparâmetros utilizados para o treinamento
+Para responder as perguntas acima você deve treinar um agente capaz de atuar no ambiente do Frozen Lake e comparar a curva de aprendizagem do agente treinado com a curva de aprendizagem de outros agentes treinados com diferentes algoritmos e hiperparâmetros. 
 
-| Atributo        |  Valor     |
-|:----------------|:----------:|
-| Algoritmo       |            |
-| alpha           |            |
-| gamma           |            |
-| epsilon         |            |
-| epsilon_dec     |            |
-| epsilon_min     |            |
-| qtd_episodios   |            |
+Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo duas configurações de hiperparâmetros para cada algoritmo. Ou seja, você irá comparar a curva de aprendizagem de 4 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
 
+**Detalhe importante**: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na [aula anterior](../11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.
+
+Após treinar os agentes você deve utilizar o agente com melhor desempenho e executar 100 vezes no ambiente $4 \times 4$ e calcular a quantidade de vezes que o agente chegou até o destino final sem cair no buraco.
+
+## Artefatos que devem ser entregues
+
+Cada equipe deve entregar os seguintes artefatos: 
+
+* Relatório com os gráficos das curvas de aprendizado dos agentes treinados e dados sobre o desempenho do melhor agente no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).
+
+* Todos os códigos utilizados para executar os experimentos.
+
+* Arquivo README.md descrevendo como executar o experimento. 
+
+A entrega deve ser feita através do [Github Classroom](https://classroom.github.com/a/inGUJX6C). O trabalho é em equipe com até 3 pessoas.
 
 ### Rubrica de avaliação
 
-* Deixou de entregar um dos artefatos: q-table, implementação na forma de arquivo python ou arquivo README.md atualizado com os hiperparâmetros: igual a **Insuficiente (I)** - nota 2. 
+* O relatório deve conter uma descrição detalhada dos experimentos realizados e uma discussão sobre os resultados obtidos.
 
-* Entregou todos os artefatos mencionados acima então a nota é calculada de acordo com o número de testes aprovados: 
-    * 1 teste aprovado = 2.5, 
-    * 2 testes aprovados = 5.0, 
-    * 3 testes aprovados = 7.5, 
-    * 4 testes aprovados = 9.0
+* O código deve estar bem organizado e documentado.
 
-* Foi aprovado em todos os testes e entregou o gráfico comparando a curva de aprendizagem de diversas abordagens utilizadas ao longo do treinamento então nota igual a **10 (dez)**. 
+* O README.md deve conter instruções claras sobre como executar o experimento.
 
 ### Deadline
 
-O deadline para a entrega desta atividade é 8 de março de 2023 às 23:30 horas. 
+O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. 
