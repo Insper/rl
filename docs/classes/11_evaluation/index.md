@@ -64,3 +64,38 @@ As imagens acima foram retiradas do capítulo 2 do livro:
 
 Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. [Multi-Agent Reinforcement Learning: Foundations and Modern Approaches](https://www.marl-book.com/). MIT Press, 2024.
 
+
+## Comentários sobre as entregas :new: 
+
+**Por que é importante apresentar os hiperparâmetros utilizados na legenda da figura?**
+
+<img src="fig/curva-bruno.png" alt="Curva de aprendizado estranha e sem legenda" style="height: 400px;"/>
+
+Um gráfico sem legenda e sem título não é autoexplicativo. O leitor não tem como saber o que está sendo mostrado.
+
+**Um tipo de gráfico apresentado mas que não mostra a diferença entre os algoritmos**
+
+<img src="fig/media-desvio.png" alt="Curva com média e desvio" style="height: 800px;"/>
+
+Visualmente é um gráfico muito bem feito, mas não mostra a diferença entre os algoritmos. Além disso, tem algo de errado com o gráfico onde o eixo `y` é a quantidade de ações. **Como pode ter ações com quantidade negativa?**
+
+**Um gráfico quase perfeito**:
+
+<img src="fig/quase-perfeito.png" alt="Gráfico quase perfeito" style="height: 400px;"/>
+
+Faltou uma descrição sobre quais hiperparâmetros foram utilizados.
+
+**Um gráfico com todos os elementos necessários**:
+
+<img src="fig/perfeito.jpg" alt="Gráfico com todos os elementos" style="height: 400px;"/>
+
+
+**Em algumas situações um zoom pode ser interessante**:
+
+<img src="fig/perfeito_2.png" alt="Gráfico com todos os elementos" style="height: 500px;"/>
+
+Utilizando este gráfico talvez seja difícil de visualizar a diferença entre os algoritmos. Portanto, pode ser interessante fazer um zoom em uma parte do gráfico: 
+
+<img src="fig/perfeito_2_zoom1.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
+
+<img src="fig/perfeito_2_zoom2.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
