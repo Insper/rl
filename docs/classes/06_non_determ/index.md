@@ -63,4 +63,4 @@ A entrega deve ser feita através do [Github Classroom](https://classroom.github
 
 ### Deadline
 
-O deadline para a entrega desta atividade é 12 de março de 2023 às 23:30 horas. 
+O deadline para a entrega desta atividade é 13 de março de 2023 às 23:30 horas. 
