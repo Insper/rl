@@ -22,6 +22,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 | [Hiperparâmetros em Q-Learning](./classes/05_x_hyperparameters/index.md#atividade) | 29/02/2024 |
 | [Algoritmo Sarsa](./classes/05_x_sarsa/index.md#implementação) | 05/03/2024 |
 | [Avaliação de agentes](./classes/11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) | 06/03/2024 |
+| [Ambientes não-determinísticos](./classes/06_non_determ/index.md) | 12/03/2024 |
 
 ## Projetos
 
