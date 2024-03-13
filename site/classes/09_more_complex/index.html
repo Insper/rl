@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/09_more_complex/">
       
       
+        <link rel="prev" href="../06_non_determ/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Implementing an agent to deal with an environment a little more complex - Reinforcement Learning</title>
+        <title>Implementando um agente para lidar com um ambiente um pouco mais complexo - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementing-an-agent-to-deal-with-an-environment-a-little-more-complex" class="md-skip">
+        <a href="#implementando-um-agente-para-lidar-com-um-ambiente-um-pouco-mais-complexo" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementing an agent to deal with an environment a little more complex
+              Implementando um agente para lidar com um ambiente um pouco mais complexo
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -432,14 +438,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
       
       
       
@@ -448,7 +456,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Ambientes e metodologias
@@ -478,6 +486,123 @@
       <a href="../06_non_determ/" class="md-nav__link">
         Ambientes não-determinísticos
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Implementando um agente para lidar com um ambiente um pouco mais complexo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Implementando um agente para lidar com um ambiente um pouco mais complexo
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entendendo-o-ambiente" class="md-nav__link">
+    Entendendo o ambiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discretizando-o-espaco-de-estados" class="md-nav__link">
+    Discretizando o espaço de estados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#treinando-o-agente" class="md-nav__link">
+    Treinando o agente
+  </a>
+  
+    <nav class="md-nav" aria-label="Treinando o agente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#na-inicializacao-da-q-table" class="md-nav__link">
+    Na inicialização da Q-table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#na-escolha-da-acao" class="md-nav__link">
+    Na escolha da ação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ao-manipular-o-estado" class="md-nav__link">
+    Ao manipular o estado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-o-ambiente-com-o-treinamento-do-agente" class="md-nav__link">
+    Conectando o ambiente com o treinamento do agente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-propostas" class="md-nav__link">
+    Atividades propostas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-complementares" class="md-nav__link">
+    Atividades complementares
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -538,29 +663,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#atividades-propostas-parte-1" class="md-nav__link">
-    Atividades propostas: parte 1
+  <a href="#entendendo-o-ambiente" class="md-nav__link">
+    Entendendo o ambiente
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atividades-propostas-parte-2" class="md-nav__link">
-    Atividades propostas: parte 2
+  <a href="#discretizando-o-espaco-de-estados" class="md-nav__link">
+    Discretizando o espaço de estados
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atividades-propostas-parte-3" class="md-nav__link">
-    Atividades propostas: parte 3
+  <a href="#treinando-o-agente" class="md-nav__link">
+    Treinando o agente
+  </a>
+  
+    <nav class="md-nav" aria-label="Treinando o agente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#na-inicializacao-da-q-table" class="md-nav__link">
+    Na inicialização da Q-table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#na-escolha-da-acao" class="md-nav__link">
+    Na escolha da ação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ao-manipular-o-estado" class="md-nav__link">
+    Ao manipular o estado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-o-ambiente-com-o-treinamento-do-agente" class="md-nav__link">
+    Conectando o ambiente com o treinamento do agente
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atividade-complementar-e-opcional" class="md-nav__link">
-    Atividade complementar e opcional
+  <a href="#atividades-propostas" class="md-nav__link">
+    Atividades propostas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-complementares" class="md-nav__link">
+    Atividades complementares
   </a>
   
 </li>
@@ -581,11 +747,11 @@
 
 
 
-<h1 id="implementing-an-agent-to-deal-with-an-environment-a-little-more-complex">Implementing an agent to deal with an environment a little more complex</h1>
+<h1 id="implementando-um-agente-para-lidar-com-um-ambiente-um-pouco-mais-complexo">Implementando um agente para lidar com um ambiente um pouco mais complexo</h1>
 <p>Até este momento, trabalhamos com diversos ambientes que tem uma quantidade razoavelmente pequena de estados e ações discretas. O objetivo deste exercício é mostrar o uso do Q-Learning em um cenário onde é necessário discretizar o espaço de estados. </p>
-<p>Para isto, vamos utilizar o ambiente <a href="https://gymnasium.farama.org/environments/classic_control/mountain_car/">MountainCar-v0</a> da bibliote Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.</p>
+<p>Para isto, vamos utilizar o ambiente <a href="https://gymnasium.farama.org/environments/classic_control/mountain_car/">MountainCar-v0</a> da biblioteca Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.</p>
 <p><img src="mountain_car.gif" alt="Mountain car environment" width="300"/></p>
-<p>As ações são discretas: </p>
+<p>As ações do agente são discretas: </p>
 <ul>
 <li>0: acelera para a esquerda.</li>
 <li>1: não acelera.</li>
@@ -595,63 +761,114 @@
 <p><span class="arithmatex">\(velocity_{t+1} = velocity_{t} + (action - 1) * force - cos(3 * position_{t}) * gravity\)</span></p>
 <p><span class="arithmatex">\(position_{t+1} = position_{t} + velocity_{t+1}\)</span></p>
 <p>onde <span class="arithmatex">\(force = 0.001\)</span> e <span class="arithmatex">\(gravity = 0.0025\)</span>. </p>
-<h2 id="atividades-propostas-parte-1">Atividades propostas: parte 1</h2>
-<ul>
-<li>
-<p>Abra e execute o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar_introduction.py">MountainCar_introduction.py</a> para entender melhor o ambiente. </p>
-</li>
-<li>
-<p>Que estrutura de dados o <code>(state, _) = env.reset()</code> retorna neste caso? O que significa <code>state</code>?</p>
-</li>
-<li>
-<p>Depois de executar:</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;State space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="p">)</span>
+<h2 id="entendendo-o-ambiente">Entendendo o ambiente</h2>
+<p>Considere o código abaixo: </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MountainCar-v0&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;State space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Action space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
 </code></pre></div>
-<p>O que você pode afirmar sobre o espaço de estados e as ações? </p>
-<ul>
-<li>O que a sequência de ações abaixo faz?</li>
-</ul>
+<p>Ao executar o código acima, você irá ver que a variável <code>state</code> é um vetor com duas posições. O primeiro elemento é a posição do carro e o segundo é a velocidade do carro: </p>
+<div class="highlight"><pre><span></span><code><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.46128714</span><span class="p">,</span>  <span class="mf">0.</span>        <span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float32</span><span class="p">)</span>
+</code></pre></div>
+<p>Você também verá que o espaço de estados é um espaço contínuo e que as ações são discretas.</p>
+<p>O ambiente também tem um limite inferior e superior para o espaço de estados: </p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="o">-</span><span class="mf">1.2</span>  <span class="o">-</span><span class="mf">0.07</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.6</span>  <span class="mf">0.07</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="discretizando-o-espaco-de-estados">Discretizando o espaço de estados</h2>
+<p>Uma abordagem possível para treinar um agente usando os algoritmos vistos até agora seria <strong>discretizar o espaço de estados</strong> e usar uma Q-table de três dimensões: posição do carro, velocidade do carro e ação.</p>
+<p>Ao executar o código abaixo, você verá que o espaço de estados é discretizado em 19x15: </p>
 <div class="highlight"><pre><span></span><code><span class="n">num_states</span> <span class="o">=</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
 <span class="n">num_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">num_states</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div>
-<ul>
-<li>O que <code>state_adj</code> representa depois de executarmos as seguintes linhas de comando: </li>
-</ul>
+<p>Incluindo as ações então temos uma Q-table de dimensões 19x15x3. A transformação do estado acontece da seguinte forma: </p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">state_adj</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
 <span class="n">state_adj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">state_adj</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="atividades-propostas-parte-2">Atividades propostas: parte 2</h2>
-<ul>
-<li>
-<p>Abra o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/QLearningBox.py">QLearningBox.py</a> e veja quais são as diferenças desta implementação com a implementação do <code>QLearning.py</code> vista até agora. </p>
-</li>
-<li>
-<p>Execute o arquivo <a href="https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar.py">MountainCar.py</a>. O veículo consegue chegar no topo da montanha? O que está acontecendo? O que precisa ser alterado?</p>
-</li>
-<li>
-<p>Considere o código abaixo: </p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<h2 id="treinando-o-agente">Treinando o agente</h2>
+<p>Para lidar com este ambiente, mesmo discretizando o espaço de estados, é necessário fazer algumas modificações no código do Q-Learning.</p>
+<h3 id="na-inicializacao-da-q-table">Na inicialização da Q-table</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="p">,</span> <span class="n">episodes</span><span class="p">):</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">env</span> <span class="o">=</span> <span class="n">env</span>
+
+    <span class="c1"># discretizando o espaco de estados</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">num_states</span> <span class="o">=</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span> <span class="o">-</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">num_states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_states</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1">#inicializando uma q-table com 3 dimensoes: x, velocidade, acao</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">num_states</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_states</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">])</span>
+</code></pre></div>
+<h3 id="na-escolha-da-acao">Na escolha da ação</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_adj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Q</span><span class="p">[</span><span class="n">state_adj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state_adj</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span> 
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="ao-manipular-o-estado">Ao manipular o estado</h3>
+<p>Podemos definir uma função: </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">transform_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="n">state_adj</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">state_adj</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</code></pre></div>
+<p>Para então ser utilizada nas seguintes situações: </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">state_adj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</code></pre></div>
+<p>e </p>
+<div class="highlight"><pre><span></span><code><span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_action</span><span class="p">(</span><span class="n">state_adj</span><span class="p">)</span>
+<span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span> 
+<span class="n">next_state_adj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">next_state</span><span class="p">)</span>
+</code></pre></div>
+<p>A implementação completa desta nova versão do algoritmo Q-Learning está disponível <a href="src/QLearningBox.py">aqui</a>.</p>
+<h2 id="conectando-o-ambiente-com-o-treinamento-do-agente">Conectando o ambiente com o treinamento do agente</h2>
+<p>Para treinar o agente e avaliar os resultados o procedimento é o mesmo que foi feito anteriormente em outros casos. Um exemplo de código que faz isto é o seguinte:  </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">QLearningBox</span> <span class="kn">import</span> <span class="n">QLearningBox</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MountainCar-v0&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;State space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Action space: &#39;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">low</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
+
+<span class="n">qlearn</span> <span class="o">=</span> <span class="n">QLearningBox</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">epsilon_min</span><span class="p">,</span> <span class="n">epsilon_dec</span><span class="p">,</span> <span class="n">episodes</span><span class="p">)</span>
+<span class="n">qtable</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="s1">&#39;data/q-table-mountain-car.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;results/rewards_MountainCar-v0&#39;</span><span class="p">)</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MountainCar-v0&#39;</span><span class="p">,</span> <span class="n">render_mode</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
     <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
     <span class="n">state_adj</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">qtable</span><span class="p">[</span><span class="n">state_adj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state_adj</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
-    <span class="n">state2</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    <span class="n">state2</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
     <span class="n">state</span> <span class="o">=</span> <span class="n">state2</span>
+
+<span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter a key...&quot;</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<p>Explique o que acontece nestas duas linhas: </p>
-<div class="highlight"><pre><span></span><code>    <span class="n">state_adj</span> <span class="o">=</span> <span class="n">qlearn</span><span class="o">.</span><span class="n">transform_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">qtable</span><span class="p">[</span><span class="n">state_adj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state_adj</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
-</code></pre></div>
-<h2 id="atividades-propostas-parte-3">Atividades propostas: parte 3</h2>
+<h2 id="atividades-propostas">Atividades propostas</h2>
 <ul>
+<li>
+<p>Defina os valores para os hiperparâmetros.</p>
+</li>
+<li>
+<p>Execute o código acima e observe o comportamento do agente.</p>
+</li>
 <li>
 <p>Analise o gráfico gerado na pasta <code>results</code>. O aprendizado do agente converge rapidamente? Fica estável? </p>
 </li>
@@ -659,9 +876,17 @@
 <p>Depois de treinado, o agente consegue chegar ao topo em todas as vezes? Quantas ações em média são necessárias? </p>
 </li>
 </ul>
-<h2 id="atividade-complementar-e-opcional">Atividade complementar e opcional</h2>
+<h2 id="atividades-complementares">Atividades complementares</h2>
 <ul>
-<li>Esta implementação não tem como usar a função <code>savetxt</code> do <code>numpy</code> para gravar a <em>Q-table</em> porque a Q-table neste caso é 3D. Implemente uma função que permita armazenar e ler uma <em>Q-table</em> 3D. </li>
+<li>
+<p>Esta implementação não tem como usar a função <code>savetxt</code> do <code>numpy</code> para gravar a <em>Q-table</em> porque a Q-table neste caso é 3D. Implemente uma função que permite armazenar e ler uma <em>Q-table</em> 3D. </p>
+</li>
+<li>
+<p>Faça uma análise do aprendizado do agente mais robusta. Execute o treinamento do agente diversas vezes (por exemplo, 100 vezes) e analise a variabilidade do aprendizado. Faça um gráfico com a mesma estrutura que os gráficos apresentandos na <a href="../11_evaluation/#comentários-sobre-as-entregas-new">aula sobre avaliação</a>.</p>
+</li>
+<li>
+<p>Teste diferentes hiperparâmetros e analise o impacto no aprendizado do agente. Faça um gráfico com várias curvas de aprendizado. </p>
+</li>
 </ul>
 
   <hr>

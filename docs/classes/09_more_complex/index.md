@@ -1,12 +1,12 @@
-# Implementing an agent to deal with an environment a little more complex
+# Implementando um agente para lidar com um ambiente um pouco mais complexo
 
 Até este momento, trabalhamos com diversos ambientes que tem uma quantidade razoavelmente pequena de estados e ações discretas. O objetivo deste exercício é mostrar o uso do Q-Learning em um cenário onde é necessário discretizar o espaço de estados. 
 
-Para isto, vamos utilizar o ambiente [MountainCar-v0](https://gymnasium.farama.org/environments/classic_control/mountain_car/) da bibliote Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.
+Para isto, vamos utilizar o ambiente [MountainCar-v0](https://gymnasium.farama.org/environments/classic_control/mountain_car/) da biblioteca Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.
 
 <img src="mountain_car.gif" alt="Mountain car environment" width="300"/>
 
-As ações são discretas: 
+As ações do agente são discretas: 
 
 * 0: acelera para a esquerda.
 * 1: não acelera.
@@ -20,29 +20,50 @@ $position_{t+1} = position_{t} + velocity_{t+1}$
 
 onde $force = 0.001$ e $gravity = 0.0025$. 
 
-## Atividades propostas: parte 1
+## Entendendo o ambiente
 
-* Abra e execute o arquivo [MountainCar_introduction.py](https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar_introduction.py) para entender melhor o ambiente. 
-
-* Que estrutura de dados o `(state, _) = env.reset()` retorna neste caso? O que significa `state`?
-
-* Depois de executar:
+Considere o código abaixo: 
 
 ```python
+import gymnasium as gym
+
+env = gym.make('MountainCar-v0')
+(state,_) = env.reset()
+
 print('State space: ', env.observation_space)
 print('Action space: ', env.action_space)
+
+print(env.observation_space.low)
+print(env.observation_space.high)
 ```
 
-O que você pode afirmar sobre o espaço de estados e as ações? 
+Ao executar o código acima, você irá ver que a variável `state` é um vetor com duas posições. O primeiro elemento é a posição do carro e o segundo é a velocidade do carro: 
 
-* O que a sequência de ações abaixo faz?
+```python
+array([-0.46128714,  0.        ], dtype=float32)
+```
+
+Você também verá que o espaço de estados é um espaço contínuo e que as ações são discretas.
+
+O ambiente também tem um limite inferior e superior para o espaço de estados: 
+
+```python
+[-1.2  -0.07]
+[0.6  0.07]
+```
+
+## Discretizando o espaço de estados
+
+Uma abordagem possível para treinar um agente usando os algoritmos vistos até agora seria **discretizar o espaço de estados** e usar uma Q-table de três dimensões: posição do carro, velocidade do carro e ação.
+
+Ao executar o código abaixo, você verá que o espaço de estados é discretizado em 19x15: 
 
 ```python
 num_states = (env.observation_space.high - env.observation_space.low)*np.array([10, 100])
 num_states = np.round(num_states, 0).astype(int) + 1
 ```
 
-* O que `state_adj` representa depois de executarmos as seguintes linhas de comando: 
+Incluindo as ações então temos uma Q-table de dimensões 19x15x3. A transformação do estado acontece da seguinte forma: 
 
 ```python
 (state,_) = env.reset()
@@ -50,15 +71,83 @@ state_adj = (state - env.observation_space.low)*np.array([10, 100])
 state_adj = np.round(state_adj, 0).astype(int)
 ```
 
-## Atividades propostas: parte 2
+## Treinando o agente
 
-* Abra o arquivo [QLearningBox.py](https://github.com/Insper/rl_code/blob/main/src/part_05/QLearningBox.py) e veja quais são as diferenças desta implementação com a implementação do `QLearning.py` vista até agora. 
+Para lidar com este ambiente, mesmo discretizando o espaço de estados, é necessário fazer algumas modificações no código do Q-Learning.
 
-* Execute o arquivo [MountainCar.py](https://github.com/Insper/rl_code/blob/main/src/part_05/MountainCar.py). O veículo consegue chegar no topo da montanha? O que está acontecendo? O que precisa ser alterado?
+### Na inicialização da Q-table 
 
-* Considere o código abaixo: 
+```python
+def __init__(self, env, alpha, gamma, epsilon, epsilon_min, epsilon_dec, episodes):
 
-````python
+    self.env = env
+
+    # discretizando o espaco de estados
+    self.num_states = (env.observation_space.high - env.observation_space.low)*np.array([10, 100])
+    self.num_states = np.round(self.num_states, 0).astype(int) + 1
+
+    #inicializando uma q-table com 3 dimensoes: x, velocidade, acao
+    self.Q = np.zeros([self.num_states[0], self.num_states[1], env.action_space.n])
+```
+
+### Na escolha da ação
+
+```python
+def select_action(self, state_adj):
+    if np.random.random() < 1 - self.epsilon:
+        return np.argmax(self.Q[state_adj[0], state_adj[1]]) 
+    return np.random.randint(0, self.env.action_space.n)
+```
+
+### Ao manipular o estado
+
+Podemos definir uma função: 
+
+```python
+def transform_state(self, state):
+    state_adj = (state - self.env.observation_space.low)*np.array([10, 100])
+    return np.round(state_adj, 0).astype(int)
+```
+
+Para então ser utilizada nas seguintes situações: 
+
+```python
+(state,_) = self.env.reset()
+state_adj = self.transform_state(state)
+```
+
+e 
+
+```python
+action = self.select_action(state_adj)
+next_state, reward, done, truncated, _ = self.env.step(action) 
+next_state_adj = self.transform_state(next_state)
+```
+
+A implementação completa desta nova versão do algoritmo Q-Learning está disponível [aqui](./src/QLearningBox.py).
+
+## Conectando o ambiente com o treinamento do agente
+
+Para treinar o agente e avaliar os resultados o procedimento é o mesmo que foi feito anteriormente em outros casos. Um exemplo de código que faz isto é o seguinte:  
+
+```python
+import gymnasium as gym
+import numpy as np
+import matplotlib.pyplot as plt
+from QLearningBox import QLearningBox
+
+env = gym.make('MountainCar-v0')
+
+print('State space: ', env.observation_space)
+print('Action space: ', env.action_space)
+
+print(env.observation_space.low)
+print(env.observation_space.high)
+
+qlearn = QLearningBox(env, alpha, gamma, epsilon, epsilon_min, epsilon_dec, episodes)
+qtable = qlearn.train('data/q-table-mountain-car.csv', 'results/rewards_MountainCar-v0')
+
+env = gym.make('MountainCar-v0', render_mode='human')
 (state,_) = env.reset()
 done = False
 
@@ -66,23 +155,27 @@ while not done:
     env.render()
     state_adj = qlearn.transform_state(state)
     action = np.argmax(qtable[state_adj[0], state_adj[1]])
-    state2, reward, done, _, _ = env.step(action)
+    state2, reward, done, truncated, _ = env.step(action)
     state = state2
-````
 
-Explique o que acontece nestas duas linhas: 
+input("enter a key...")
+env.close()
+```
 
-````python
-    state_adj = qlearn.transform_state(state)
-    action = np.argmax(qtable[state_adj[0], state_adj[1]])
-````
+## Atividades propostas
 
-## Atividades propostas: parte 3
+* Defina os valores para os hiperparâmetros.
+
+* Execute o código acima e observe o comportamento do agente.
 
 * Analise o gráfico gerado na pasta `results`. O aprendizado do agente converge rapidamente? Fica estável? 
 
 * Depois de treinado, o agente consegue chegar ao topo em todas as vezes? Quantas ações em média são necessárias? 
 
-## Atividade complementar e opcional
+## Atividades complementares
 
-* Esta implementação não tem como usar a função `savetxt` do `numpy` para gravar a *Q-table* porque a Q-table neste caso é 3D. Implemente uma função que permita armazenar e ler uma *Q-table* 3D. 
+* Esta implementação não tem como usar a função `savetxt` do `numpy` para gravar a *Q-table* porque a Q-table neste caso é 3D. Implemente uma função que permite armazenar e ler uma *Q-table* 3D. 
+
+* Faça uma análise do aprendizado do agente mais robusta. Execute o treinamento do agente diversas vezes (por exemplo, 100 vezes) e analise a variabilidade do aprendizado. Faça um gráfico com a mesma estrutura que os gráficos apresentandos na [aula sobre avaliação](../11_evaluation/index.md#comentários-sobre-as-entregas-new).
+
+* Teste diferentes hiperparâmetros e analise o impacto no aprendizado do agente. Faça um gráfico com várias curvas de aprendizado. 
