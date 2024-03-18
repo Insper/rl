@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning/">
       
       
+        <link rel="prev" href="../09_more_complex/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -518,6 +524,158 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Deep Q-Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Deep Q-Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deep Reinforcement Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Deep Reinforcement Learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q-learning" class="md-nav__link">
+    Q-Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-reinforcement-learning_1" class="md-nav__link">
+    Deep Reinforcement Learning
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Reinforcement Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-codigo" class="md-nav__link">
+    Pseudo-código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experience-replay" class="md-nav__link">
+    Experience replay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-de-treinamento" class="md-nav__link">
+    Loop de treinamento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso-cartpole" class="md-nav__link">
+    Exemplo de uso: CartPole
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso: CartPole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sera-que-este-agente-conseguiu-aprender-a-controlar-o-cartpole" class="md-nav__link">
+    Será que este agente conseguiu aprender a controlar o CartPole?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao-para-o-mountain-car" class="md-nav__link">
+    Implementação para o Mountain Car
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -581,8 +739,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pseudo-codigo" class="md-nav__link">
+    Pseudo-código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#experience-replay" class="md-nav__link">
     Experience replay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-de-treinamento" class="md-nav__link">
+    Loop de treinamento
   </a>
   
 </li>
@@ -595,6 +767,26 @@
         <li class="md-nav__item">
   <a href="#exemplo-de-uso-cartpole" class="md-nav__link">
     Exemplo de uso: CartPole
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso: CartPole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sera-que-este-agente-conseguiu-aprender-a-controlar-o-cartpole" class="md-nav__link">
+    Será que este agente conseguiu aprender a controlar o CartPole?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao-para-o-mountain-car" class="md-nav__link">
+    Implementação para o Mountain Car
   </a>
   
 </li>
@@ -721,6 +913,9 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
     <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div>
+<h3 id="pseudo-codigo">Pseudo-código</h3>
+<p>Abaixo é apresentado o pseudo-código do algoritmo proposto por <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>:</p>
+<p><img src="./figures/mnih_pseudocode.png" alt="Pseudo-código do Deep Q-Learning" style="width:600px;"/></p>
 <h3 id="experience-replay">Experience replay</h3>
 <p><a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> propõe o uso de uma técnica chamada <em>experience replay</em>, que consiste em armazenar as experiências do agente em cada momento <span class="arithmatex">\(e_{t} = (s_{t}, a_{t}, r_{t}, s_{t+1})\)</span> em um dataset <span class="arithmatex">\(D = e_{1}, \cdots, e_{N}\)</span>. </p>
 <p>Aprender diretamente a partir de exemplos consecutivos é ineficiente devido a alta correlação entre os exemplos. Desta forma, o treinamento do modelo considera uma amostra aleatória retirada de <span class="arithmatex">\(D\)</span>. </p>
@@ -762,7 +957,10 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
 <p>Preste atenção neste update da rede neural: </p>
 <div class="highlight"><pre><span></span><code><span class="n">targets</span> <span class="o">=</span> <span class="n">rewards</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">*</span> <span class="p">(</span><span class="n">next_max</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">terminals</span><span class="p">)</span>
 </code></pre></div>
-<p>O pseudo-código que define esta forma de atualização está na página 5 em <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>. </p>
+<p>este código está implementando esta equação:</p>
+<p><img src="./figures/equacao.png" style="width:500px;"/></p>
+<p>As ações em um estado terminal tem todas valor zero. Quando implementamos o algoritmo Q-Learning, iniciamos a Q-table com zeros, desta forma não precisamos nos preocupar com os valores das ações em um estado terminal. No entanto, quando usamos uma rede neural, temos que garantir que as ações em um estado terminal tem valor zero.</p>
+<h3 id="loop-de-treinamento">Loop de treinamento</h3>
 <p>O loop principal de treinamento tem este comportamento:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_steps</span><span class="p">):</span>
     <span class="n">rewards</span> <span class="o">=</span> <span class="p">[]</span>
@@ -789,17 +987,38 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
 <p>Podemos verificar o funcionamento deste algoritmo com o ambiente <code>CartPole</code> da biblioteca <code>Gymnasium</code> executando: </p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>CarPole.py
 </code></pre></div>
-<p>Para a execução deste arquivo serão necessários os arquivos: 
-* <a href="https://github.com/Insper/rl_code/blob/main/src/part_06/CartPole.py">CartPole.py</a>
-* <a href="https://github.com/Insper/rl_code/blob/main/src/part_06/DeepQLearning.py">DeepQLearning.py</a></p>
-<p>O resultado desta execução irá gerar o arquivo <code>cartpole_DeepQLearning.jpg</code> dentro da pasta <code>results</code>. Espera-se que o 
-resultado encontrado seja similar a este: </p>
-<p><img src="./figures/cartpole_DeepQLearning_copy.jpg" alt="Resultado da execução do Deep Q-Learning no ambiente CartPole" style="width:600px;"/></p>
-<p><strong>Importante</strong>: Antes de executar o arquivo <code>CarPole.py</code> você vai ter que instalar o pacote <code>tensorflow</code> visto que agora a implementação está usando <code>tensorflow</code> e <code>keras</code>. </p>
-<p><strong>Será que este agente conseguiu aprender a controlar o CartPole?</strong></p>
+<p>Para a execução deste arquivo serão necessários os arquivos: </p>
+<ul>
+<li><a href="src/CartPole.py">CartPole.py</a></li>
+<li><a href="src/DeepQLearning.py">DeepQLearning.py</a></li>
+</ul>
+<p><strong>Importante</strong>: </p>
+<ul>
+<li>Antes de executar o arquivo <code>CarPole.py</code> você vai ter que instalar o pacote <code>tensorflow</code> visto que agora a implementação está usando <code>tensorflow</code> e <code>keras</code>.</li>
+<li>Você também deverá criar dois diretórios: <code>results</code> e <code>data</code> na raiz do projeto. Em <code>results</code> serão salvos os dados para imprimir a curva de aprendizado e em <code>data</code> os pesos da rede neural. </li>
+</ul>
+<p>Espera-se que o resultado da curva de aprendizado seja similar a este: </p>
+<p><img src="./figures/learning_curve_5_times.png"  style="width:600px;"/> </p>
+<p>ou este: </p>
+<p><img src="./figures/learning_curve_1_time.png"  style="width:600px;"/> </p>
+<p>O algoritmo Deep Q Learning foi configurado com os seguintes hiperparâmetros:</p>
+<div class="highlight"><pre><span></span><code><span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.99</span> 
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">epsilon_dec</span> <span class="o">=</span> <span class="mf">0.99</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</code></pre></div>
+<p>Para o problema do CartPole foi necessário adicionar mais uma condição de parada: caso o agente realize 500 episódios sem cair, o episódio é finalizado.</p>
+<h3 id="sera-que-este-agente-conseguiu-aprender-a-controlar-o-cartpole">Será que este agente conseguiu aprender a controlar o CartPole?</h3>
 <p>Uma forma de testar isto é executando um script que faz uso da rede neural treinada: </p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>CartPole_trained.py
 </code></pre></div>
+<p>Este script está disponível <a href="src/CartPole_trained.py">aqui</a>.</p>
+<h2 id="implementacao-para-o-mountain-car">Implementação para o Mountain Car</h2>
+<p>Que tal implementarmos uma solução para o ambiente <code>MountainCar</code> e compararmos os resultados com a solução usando Q-Learning? </p>
 
   <hr>
 <div class="md-source-file">
