@@ -239,7 +239,7 @@ def train(self, max_steps):
 Podemos verificar o funcionamento deste algoritmo com o ambiente `CartPole` da biblioteca `Gymnasium` executando: 
 
 ````bash
-python CarPole.py
+python CartPole.py
 ````
 
 Para a execução deste arquivo serão necessários os arquivos: 
@@ -249,7 +249,7 @@ Para a execução deste arquivo serão necessários os arquivos:
 
 **Importante**: 
 
-- Antes de executar o arquivo `CarPole.py` você vai ter que instalar o pacote `tensorflow` visto que agora a implementação está usando `tensorflow` e `keras`.
+- Antes de executar o arquivo `CartPole.py` você vai ter que instalar o pacote `tensorflow` visto que agora a implementação está usando `tensorflow` e `keras`.
 - Você também deverá criar dois diretórios: `results` e `data` na raiz do projeto. Em `results` serão salvos os dados para imprimir a curva de aprendizado e em `data` os pesos da rede neural. 
 
 Espera-se que o resultado da curva de aprendizado seja similar a este: 
