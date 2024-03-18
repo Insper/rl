@@ -142,6 +142,12 @@ def select_action(self, state):
     return np.argmax(action[0])
 ````
 
+### Pseudo-código
+
+Abaixo é apresentado o pseudo-código do algoritmo proposto por [Mnih,2013](http://arxiv.org/abs/1312.5602):
+
+<img src="./figures/mnih_pseudocode.png" alt="Pseudo-código do Deep Q-Learning" style="width:600px;"/>
+
 ### Experience replay
 
 [Mnih,2013](http://arxiv.org/abs/1312.5602) propõe o uso de uma técnica chamada *experience replay*, que consiste em armazenar as experiências do agente em cada momento $e_{t} = (s_{t}, a_{t}, r_{t}, s_{t+1})$ em um dataset $D = e_{1}, \cdots, e_{N}$. 
@@ -195,7 +201,13 @@ Preste atenção neste update da rede neural:
 targets = rewards + self.gamma * (next_max) * (1 - terminals)
 ```
 
-O pseudo-código que define esta forma de atualização está na página 5 em [Mnih,2013](http://arxiv.org/abs/1312.5602). 
+este código está implementando esta equação:
+
+<img src="./figures/equacao.png" style="width:500px;"/>
+
+As ações em um estado terminal tem todas valor zero. Quando implementamos o algoritmo Q-Learning, iniciamos a Q-table com zeros, desta forma não precisamos nos preocupar com os valores das ações em um estado terminal. No entanto, quando usamos uma rede neural, temos que garantir que as ações em um estado terminal tem valor zero.
+
+### Loop de treinamento
 
 O loop principal de treinamento tem este comportamento:
 
@@ -231,20 +243,48 @@ python CarPole.py
 ````
 
 Para a execução deste arquivo serão necessários os arquivos: 
-* [CartPole.py](https://github.com/Insper/rl_code/blob/main/src/part_06/CartPole.py)
-* [DeepQLearning.py](https://github.com/Insper/rl_code/blob/main/src/part_06/DeepQLearning.py)
 
-O resultado desta execução irá gerar o arquivo `cartpole_DeepQLearning.jpg` dentro da pasta `results`. Espera-se que o 
-resultado encontrado seja similar a este: 
+- [CartPole.py](./src/CartPole.py)
+- [DeepQLearning.py](./src/DeepQLearning.py)
 
-<img src="./figures/cartpole_DeepQLearning_copy.jpg" alt="Resultado da execução do Deep Q-Learning no ambiente CartPole" style="width:600px;"/>
+**Importante**: 
 
-**Importante**: Antes de executar o arquivo `CarPole.py` você vai ter que instalar o pacote `tensorflow` visto que agora a implementação está usando `tensorflow` e `keras`. 
+- Antes de executar o arquivo `CarPole.py` você vai ter que instalar o pacote `tensorflow` visto que agora a implementação está usando `tensorflow` e `keras`.
+- Você também deverá criar dois diretórios: `results` e `data` na raiz do projeto. Em `results` serão salvos os dados para imprimir a curva de aprendizado e em `data` os pesos da rede neural. 
 
-**Será que este agente conseguiu aprender a controlar o CartPole?**
+Espera-se que o resultado da curva de aprendizado seja similar a este: 
+
+<img src="./figures/learning_curve_5_times.png"  style="width:600px;"/> 
+
+ou este: 
+
+<img src="./figures/learning_curve_1_time.png"  style="width:600px;"/> 
+
+O algoritmo Deep Q Learning foi configurado com os seguintes hiperparâmetros:
+
+```python
+gamma = 0.99 
+epsilon = 1.0
+epsilon_min = 0.01
+epsilon_dec = 0.99
+episodes = 200
+batch_size = 64
+learning_rate=0.001
+memory = deque(maxlen=10000)
+```
+
+Para o problema do CartPole foi necessário adicionar mais uma condição de parada: caso o agente realize 500 episódios sem cair, o episódio é finalizado.
+
+### Será que este agente conseguiu aprender a controlar o CartPole?
 
 Uma forma de testar isto é executando um script que faz uso da rede neural treinada: 
 
 ````bash
 python CartPole_trained.py
 ````
+
+Este script está disponível [aqui](./src/CartPole_trained.py).
+
+## Implementação para o Mountain Car
+
+Que tal implementarmos uma solução para o ambiente `MountainCar` e compararmos os resultados com a solução usando Q-Learning? 
