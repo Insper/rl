@@ -254,11 +254,11 @@ Para a execução deste arquivo serão necessários os arquivos:
 
 Espera-se que o resultado da curva de aprendizado seja similar a este: 
 
-<img src="./figures/learning_curve_5_times.png"  style="width:600px;"/> 
+<img src="./figures/learning_curve_5_times.png"  style="height:600px;"/> 
 
 ou este: 
 
-<img src="./figures/learning_curve_1_time.png"  style="width:600px;"/> 
+<img src="./figures/learning_curve_1_time.png"  style="height:600px;"/> 
 
 O algoritmo Deep Q Learning foi configurado com os seguintes hiperparâmetros:
 
