@@ -1,6 +1,8 @@
 # Deep Reinforcement Learning
 
 Segundo [Mnih,2013](http://arxiv.org/abs/1312.5602), desenvolver agentes que aprendem a atuar em um ambiente de alta dimensionalidade sempre foi um desafio para soluções baseadas em aprendizagem por reforço. Até 2013, a maioria das aplicações de aprendizagem por reforço operavam nestes domínios com base em atributos determinados manualmente pelo projetista.
+
+Os algoritmos Q-Learning e Sarsa representam as funções valor como tabelas. Durante o aprendizado a atualização dos valores $Q(s_{i}, a_{i})$ é feita somente para um estado específico, mantendo todas as outras estimativas inalteradas. Esta falta de capacidade dos modelos tabulares de generalizar, ou seja, de atualizar sua estimativa de valor para estados similares mas não idênticos aos estados encontrados, torna os algoritmos de aprendizagem por reforço baseados em tabelas impraticáveis para tarefas mais complexas com espaços de estados e ações maiores.
 	
 Em [Mnih,2013](http://arxiv.org/abs/1312.5602) os autores do artigo propõe uma variante do algoritmo Q-Learning ([Watkins,1992](https://doi.org/10.1007/BF00992698)) onde os pesos de uma rede neural são treinados no lugar de uma Q-table.
 
@@ -142,6 +144,12 @@ def select_action(self, state):
     return np.argmax(action[0])
 ````
 
+A *loss function* usada para treinar a rede neural é a *mean squared error* (MSE): 
+
+$\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2} $
+
+entre o reward acumulado $y^{t}$ e o valor estimado pela rede neural $Q(s^{t}, a^{t}; \theta)$.
+
 ### Pseudo-código
 
 Abaixo é apresentado o pseudo-código do algoritmo proposto por [Mnih,2013](http://arxiv.org/abs/1312.5602):
@@ -149,6 +157,8 @@ Abaixo é apresentado o pseudo-código do algoritmo proposto por [Mnih,2013](htt
 <img src="./figures/mnih_pseudocode.png" alt="Pseudo-código do Deep Q-Learning" style="width:600px;"/>
 
 ### Experience replay
+
+A forte correlação entre as amostras consecutivas usadas para atualizar a função de valor leva a um *overfitting* indesejável da rede com os exemplos mais recentes.
 
 [Mnih,2013](http://arxiv.org/abs/1312.5602) propõe o uso de uma técnica chamada *experience replay*, que consiste em armazenar as experiências do agente em cada momento $e_{t} = (s_{t}, a_{t}, r_{t}, s_{t+1})$ em um dataset $D = e_{1}, \cdots, e_{N}$. 
 
