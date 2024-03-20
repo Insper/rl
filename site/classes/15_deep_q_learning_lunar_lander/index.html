@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning_lunar_lander/">
       
       
+        <link rel="prev" href="../15_deep_q_learning/">
+      
+      
+        <link rel="next" href="../../references/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -522,14 +528,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
       
       
       
@@ -538,7 +546,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Deep Q-Learning
@@ -554,6 +562,75 @@
       <a href="../15_deep_q_learning/" class="md-nav__link">
         Deep Reinforcement Learning
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lunar Lander Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Lunar Lander Project
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-basica" class="md-nav__link">
+    Entrega básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-avancada-com-dqn" class="md-nav__link">
+    Entrega avançada com DQN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    Deadline
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -614,6 +691,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entrega-basica" class="md-nav__link">
+    Entrega básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-avancada-com-dqn" class="md-nav__link">
+    Entrega avançada com DQN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deadline" class="md-nav__link">
     Deadline
   </a>
@@ -638,6 +729,7 @@
 
 <h1 id="lunar-lander-project">Lunar Lander Project</h1>
 <p>Objetivo da atividade: implementar um agente capaz de controlar o <em>lunar lander</em> do ambiente <code>env = gym.make('LunarLander-v2')</code>. </p>
+<h2 id="entrega-basica">Entrega básica</h2>
 <p>Sugestão de atividades: </p>
 <ul>
 <li>
@@ -665,17 +757,23 @@
 </li>
 </ul>
 <p>Ao entregar estes itens você tem garantido um <strong>B</strong>. </p>
+<h2 id="entrega-avancada-com-dqn">Entrega avançada com DQN</h2>
 <p>Para ter uma nota <strong>A+</strong> neste projeto você precisa: </p>
 <ul>
-<li>Pesquisar por alguma biblioteca que implementa o algoritmo Deep Q-Learning e fazer uso desta biblioteca.</li>
-<li>Comparar os resultados alcançados com o uso desta biblioteca versus a implementação de Deep Q-Learning que já temos disponível em termos de aprendizado do agente e também considerando o tempo de treinamento e recurso computacional demandado. </li>
-<li>Na documentação do projeto você precisa adicionar esta análise.</li>
-<li>No projeto você precisa adicionar o script que você implementou e que faz uso desta biblioteca. </li>
-<li>Não esqueça de atualizar o arquivo de <code>requirements.txt</code>. </li>
+<li>Implementar a versão final do algoritmo <strong>Deep Q-networks (DQN)</strong> como apresentado no pseudo-código abaixo: </li>
 </ul>
-<p>Você deve submeter o seu projeto neste link: <a href="https://classroom.github.com/a/Dzs78isA">https://classroom.github.com/a/Dzs78isA</a> do Github Classroom. </p>
+<p><img src="./figures/dqn_pseudo_codigo.png"  style="height:600px;"/> </p>
+<p>Preste atenção em alguns pontos: (i) Esta versão do algoritmo faz uso de duas redes (linha 1 e 2); (ii) Toda a escolha de ação acontece usando a <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 8); (iii) A recompença acumulada é calculada usando a <em>target network <span class="arithmatex">\(\overline{\theta}\)</span></em> (linha 15); (iv) O cálculo da função de perda é feito usando a <em>value network</em> (linha 16); O update dos parâmetros a cada episódio acontece somente na <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 17), e; (v) A <em>target network</em> é atualizada a cada <span class="arithmatex">\(C\)</span> episódios (linha 18) - esta atualização é uma simples cópia dos pesos (<span class="arithmatex">\(\overline{\theta} \leftarrow \theta\)</span>).</p>
+<p>Espera-se que com o uso de duas redes neurais o aprendizado do agente seja mais estável. Ao utilizar apenas uma rede neural o aprendizado do agente pode ser instável porque a rede neural está estimando a função de valor e ao mesmo tempo está sendo atualizada.</p>
+<ul>
+<li>Comparar os resultados alcançados com o uso desta implementação versus a implementação de Deep Q-Learning que já temos disponível em termos de aprendizado do agente. </li>
+<li>Na documentação do projeto você precisa adicionar esta análise.</li>
+<li>No projeto você precisa adicionar os scripts que você implementou. </li>
+<li>Não esqueça de atualizar o arquivo de <code>requirements.txt</code>, se necessário. </li>
+</ul>
+<p>Você deve submeter o seu projeto neste link: <a href="https://classroom.github.com/a/Khj4RN1-">https://classroom.github.com/a/Khj4RN1-</a> do Github Classroom. </p>
 <h2 id="deadline">Deadline</h2>
-<p>O deadline para a entrega desta atividade é <strong>13 de abril de 2023</strong> às 23:30 horas. Este trabalho deve ser feito em grupo com até 3 integrantes.</p>
+<p>O deadline para a entrega desta atividade é <strong>24 de abril de 2023</strong> (domingo) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.</p>
 
   <hr>
 <div class="md-source-file">
