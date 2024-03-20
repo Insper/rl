@@ -14,7 +14,7 @@
         <link rel="prev" href="../09_more_complex/">
       
       
-        <link rel="next" href="../../references/">
+        <link rel="next" href="../15_deep_q_learning_lunar_lander/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -669,6 +669,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
+        Lunar Lander Project
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -809,6 +823,7 @@
 
 <h1 id="deep-reinforcement-learning">Deep Reinforcement Learning</h1>
 <p>Segundo <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>, desenvolver agentes que aprendem a atuar em um ambiente de alta dimensionalidade sempre foi um desafio para soluções baseadas em aprendizagem por reforço. Até 2013, a maioria das aplicações de aprendizagem por reforço operavam nestes domínios com base em atributos determinados manualmente pelo projetista.</p>
+<p>Os algoritmos Q-Learning e Sarsa representam as funções valor como tabelas. Durante o aprendizado a atualização dos valores <span class="arithmatex">\(Q(s_{i}, a_{i})\)</span> é feita somente para um estado específico, mantendo todas as outras estimativas inalteradas. Esta falta de capacidade dos modelos tabulares de generalizar, ou seja, de atualizar sua estimativa de valor para estados similares mas não idênticos aos estados encontrados, torna os algoritmos de aprendizagem por reforço baseados em tabelas impraticáveis para tarefas mais complexas com espaços de estados e ações maiores.</p>
 <p>Em <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> os autores do artigo propõe uma variante do algoritmo Q-Learning (<a href="https://doi.org/10.1007/BF00992698">Watkins,1992</a>) onde os pesos de uma rede neural são treinados no lugar de uma Q-table.</p>
 <h2 id="q-learning">Q-Learning</h2>
 <p>Na figura abaixo é apresentado o pseudo-código do algoritmo Q-Learning. Neste pseudo-código é possível ver como os pares <em>Q(s,a)</em> são atualizados repetidas vezes através nas inúmeras interações do agente com o ambiente.</p>
@@ -913,10 +928,14 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
     <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div>
+<p>A <em>loss function</em> usada para treinar a rede neural é a <em>mean squared error</em> (MSE): </p>
+<p>$\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2} $</p>
+<p>entre o reward acumulado <span class="arithmatex">\(y^{t}\)</span> e o valor estimado pela rede neural <span class="arithmatex">\(Q(s^{t}, a^{t}; \theta)\)</span>.</p>
 <h3 id="pseudo-codigo">Pseudo-código</h3>
 <p>Abaixo é apresentado o pseudo-código do algoritmo proposto por <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>:</p>
 <p><img src="./figures/mnih_pseudocode.png" alt="Pseudo-código do Deep Q-Learning" style="width:600px;"/></p>
 <h3 id="experience-replay">Experience replay</h3>
+<p>A forte correlação entre as amostras consecutivas usadas para atualizar a função de valor leva a um <em>overfitting</em> indesejável da rede com os exemplos mais recentes.</p>
 <p><a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a> propõe o uso de uma técnica chamada <em>experience replay</em>, que consiste em armazenar as experiências do agente em cada momento <span class="arithmatex">\(e_{t} = (s_{t}, a_{t}, r_{t}, s_{t+1})\)</span> em um dataset <span class="arithmatex">\(D = e_{1}, \cdots, e_{N}\)</span>. </p>
 <p>Aprender diretamente a partir de exemplos consecutivos é ineficiente devido a alta correlação entre os exemplos. Desta forma, o treinamento do modelo considera uma amostra aleatória retirada de <span class="arithmatex">\(D\)</span>. </p>
 <p>A criação do dataset <span class="arithmatex">\(D\)</span> pode ser feita desta forma:</p>
