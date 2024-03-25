@@ -44,7 +44,10 @@ Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/Kh
 
 ## Deadline
 
-O deadline para a entrega desta atividade é **24 de março de 2023** (domingo) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+O deadline para a entrega desta atividade é **24 de março de 2024** (domingo) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+
+
+
 
 
 

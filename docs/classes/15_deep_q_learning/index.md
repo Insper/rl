@@ -146,7 +146,7 @@ def select_action(self, state):
 
 A *loss function* usada para treinar a rede neural é a *mean squared error* (MSE): 
 
-$\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2} $
+$\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2}$
 
 entre o reward acumulado $y^{t}$ e o valor estimado pela rede neural $Q(s^{t}, a^{t}; \theta)$.
 

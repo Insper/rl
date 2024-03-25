@@ -39,15 +39,15 @@ nav:
       - 'classes/15_deep_q_learning/index.md'
       - 'classes/15_deep_q_learning_lunar_lander/index.md'
 #      - 'classes/15_xx_comments/index.md'
-#      - 'classes/16_double_deep_q_learning/index.md'
+      - 'classes/16_double_deep_q_learning/index.md'
 #    - 'Policy Optimization':
 #      - 'classes/17_reinforce/index.md'
 #      - 'classes/18_ppo/index.md'
 #    - 'Projetos finais':
 #      - 'classes/19_projects/index.md'
 
-#  - 'Projects':
-#    - 'projects/project_01.md'
+  - 'Projetos':
+    - 'projects/projeto_intermediario/index.md'
 #    - 'projects/project_02.md'
   
   - 'Referências': 'references.md'
