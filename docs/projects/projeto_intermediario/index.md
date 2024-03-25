@@ -17,13 +17,15 @@ Ao fazer isto a equipe terá conceito **B**.
 
 ### Entrega avançada
 
-Para obter conceito **A+** nesta atividade a equipe deve incluir o treinamento de um agente para o ambiente [Flappy Bird](https://github.com/Talendar/flappy-bird-gym).
+Para obter conceito **A+** nesta atividade a equipe deve incluir o treinamento de um agente para o ambiente [Flappy Bird](https://github.com/markub3327/flappy-bird-gymnasium).
 
 A mesma análise feita com os ambientes anteriores deve ser feita com o ambiente Flappy Bird. Para este ambiente a equipe deve prestar atenção especial no espaço de observação e consequentemente na arquitetura da rede neural.
 
 ## Deadline
 
-O deadline para a entrega desta atividade é **05 de abril de 2024** às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+O deadline para a entrega desta atividade é **07 de abril de 2024** às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+
+A entrega deve ser feita via Github Classroom: [https://classroom.github.com/a/Hw222fiZ](https://classroom.github.com/a/Hw222fiZ).
 
 ## Referências
 
