@@ -683,8 +683,71 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16_double_deep_q_learning/" class="md-nav__link">
+        Double Deep Q-Learning
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Projetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Projetos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/projeto_intermediario/" class="md-nav__link">
+        Projeto intermediário
+      </a>
     </li>
   
 
@@ -929,7 +992,7 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div>
 <p>A <em>loss function</em> usada para treinar a rede neural é a <em>mean squared error</em> (MSE): </p>
-<p>$\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2} $</p>
+<p><span class="arithmatex">\(\mathcal{L}(\theta) = (y^{t} - Q(s^{t}, a^{t}; \theta))^{2}\)</span></p>
 <p>entre o reward acumulado <span class="arithmatex">\(y^{t}\)</span> e o valor estimado pela rede neural <span class="arithmatex">\(Q(s^{t}, a^{t}; \theta)\)</span>.</p>
 <h3 id="pseudo-codigo">Pseudo-código</h3>
 <p>Abaixo é apresentado o pseudo-código do algoritmo proposto por <a href="http://arxiv.org/abs/1312.5602">Mnih,2013</a>:</p>
@@ -1044,7 +1107,7 @@ onde <code>action[0]</code> é um vetor com o tamanho igual as ações que o age
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 25, 2024</span>
       
     
   </small>
