@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/16_double_deep_q_learning/">
       
       
+        <link rel="prev" href="../15_deep_q_learning_lunar_lander/">
+      
+      
+        <link rel="next" href="../../projects/projeto_intermediario/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -522,14 +528,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
       
       
       
@@ -538,7 +546,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Deep Q-Learning
@@ -573,8 +581,126 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Double Deep Q-Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Double Deep Q-Learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-work" class="md-nav__link">
+    Pre-work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-dqn" class="md-nav__link">
+    Double DQN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes" class="md-nav__link">
+    Questões
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Projetos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Projetos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/projeto_intermediario/" class="md-nav__link">
+        Projeto intermediário
+      </a>
     </li>
   
 
@@ -621,6 +747,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-work" class="md-nav__link">
+    Pre-work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-dqn" class="md-nav__link">
+    Double DQN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes" class="md-nav__link">
+    Questões
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -636,24 +791,65 @@
 
 
 <h1 id="double-deep-q-learning">Double Deep Q-Learning</h1>
-<p>The goals of this section are:</p>
+<p>Os objetivos desta seção são:</p>
 <ul>
-<li>discuss the definitions and key concepts related to Double Deep Q-Learning; </li>
-<li>understand the differences between Deep Q-Learning and Double Deep Q-Learning, and; </li>
-<li>implement a Double Deep Q-Learning algorithm and compare the results with Deep Q-Learning. </li>
+<li>discutir as definições e conceitos-chave relacionados ao Double Deep Q-Learning proposto por <a href="https://doi.org/10.1609/aaai.v30i1.10295">van Hasselt, Guez e Silver (2016)</a>;</li>
+<li>entender as diferenças entre DQN e Double Deep Q-Learning, e;</li>
+<li>implementar um algoritmo Double Deep Q-Learning e comparar os resultados com DQN.</li>
 </ul>
-<p>However, instead of having boring lectures, all students are invited to read the following paper: </p>
+<p>As principais referências para esta atividade são:</p>
 <ul>
-<li>van Hasselt, H., Guez, A. and Silver, D. 2016. Deep Reinforcement Learning with Double Q-Learning. Proceedings of the AAAI Conference on Artificial Intelligence. 30, 1 (Mar. 2016). DOI: <a href="https://doi.org/10.1609/aaai.v30i1.10295">https://doi.org/10.1609/aaai.v30i1.10295</a>.</li>
+<li>
+<p>van Hasselt, H., Guez, A. and Silver, D. 2016. Deep Reinforcement Learning with Double Q-Learning. Proceedings of the AAAI Conference on Artificial Intelligence. 30, 1 (Mar. 2016). DOI: <a href="https://doi.org/10.1609/aaai.v30i1.10295">https://doi.org/10.1609/aaai.v30i1.10295</a>.</p>
+</li>
+<li>
+<p>Seção 8.1.5 do livro <a href="https://www.marl-book.com/">Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. Multi-Agent Reinforcement Learning: Foundations and Modern Approaches. MIT Press, 2024</a>.</p>
+</li>
 </ul>
-<p>and understand the main topics. The main topics of this activity are described <a href="../../projects/project_01.md">here</a>. This is our first major project in this subject. </p>
+<h2 id="pre-work">Pre-work</h2>
+<p>Na <a href="../15_deep_q_learning_lunar_lander/">aula passada</a> implementamos uma versão simples do Deep Q-Learning para o ambiente <code>LunarLander-v2</code> e comparamos os resultados com a implementação do algoritmo DQN, também implementado em sala de aula. Ao comparar os resultados obtidos com DQN e Deep Q-Learning, esperamos uma curva de apresendizado similar a apresentada abaixo: </p>
+<p><img src="./img/learning_curve.png"  style="height:600px;"/></p>
+<p>Estas curvas de aprendizado foram obtidas utilizados os seguintes hiperparâmetros:</p>
+<div class="highlight"><pre><span></span><code><span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.99</span> 
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">epsilon_dec</span> <span class="o">=</span> <span class="mf">0.99</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">ma_steps</span> <span class="o">=</span> <span class="mi">1500</span>
+</code></pre></div>
+<p>A arquitetura da rede neural utilizada foi a mesma para ambos os algoritmos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">linear</span><span class="p">))</span>
+</code></pre></div>
+<p>Foram executados 5 treinamentos para cada algoritmo.</p>
+<p>Com os resultados obtidos, percebemos que o DQN é mais estável que o Deep Q-Learning. De acordo com a literatura, o DQN além de mais estável também converge mais rápido que o Deep Q-Learning.</p>
+<p>O DQN é mais estável porque utiliza duas redes neurais: uma para estimar a função de valor e outra para calcular a recompensa acumulada. Além disso, também faz uso do conceito de experience replay. A imagem abaixo sumariza a relação entre as duas redes neurais: </p>
+<p><img src="./img/apenas_value_target_network.png"  style="height:600px;"/></p>
+<h2 id="double-dqn">Double DQN</h2>
+<p>O Double Deep Q-Learning proposto por <a href="https://doi.org/10.1609/aaai.v30i1.10295">van Hasselt, Guez e Silver (2016)</a> é uma extensão do DQN que visa corrigir o problema de superestimação de valores de ação. Da mesma forma que o Q-Learning tradicional, o DQN também superestima os valores para os estados futuro através da equação: </p>
+<p><span class="arithmatex">\(y^{k} \leftarrow r^{k} + \gamma max_{a'} Q(s^{k+1}, a', \overline{\theta})\)</span></p>
+<p>A proposta do Double DQN é substituir a equação acima por: </p>
+<p><img src="./img/double_dqn_equation.png"  style="height:100px;"/></p>
+<p>A ideia é separar a seleção da ação da estimativa de valor do estado. A seleção da ação é feita pela <em>value network</em> e a estimativa de valor é feita pela <em>target network</em>.</p>
+<p>Escolha da ação: </p>
+<p><span class="arithmatex">\(bestA \leftarrow \arg \max_{a'}{Q(s^{t+1},a',\theta)}\)</span></p>
+<p>Estimativa de valor:</p>
+<p><span class="arithmatex">\(r^{t} + \gamma Q(s^{t+1}, bestA, \overline{\theta})\)</span></p>
+<h2 id="questoes">Questões</h2>
+<p>Segundo a literatura, o Double DQN não super valoriza o valor dos estados futuros. De fato, fornece estimativas mais realistas dos valores de ação. Isto tem algum impacto no aprendizado do agente? O aprendizado converge mais rápido? O aprendizado é mais estável? </p>
+<p><a href="../../projects/projeto_intermediario/">Ver enunciado do projeto intermediário</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 25, 2024</span>
       
     
   </small>
