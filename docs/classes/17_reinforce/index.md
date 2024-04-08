@@ -19,3 +19,5 @@ Para tanto, será utilizado este conjunto de slides para uma aula expositiva ini
 
 * Também não esqueça de salvar o modelo para depois executar **N** vezes sem precisar re-treinar o agente. 
 
+* Utilize os ambientes `CartPole-v1` e `LunarLander-v2` para testar o algoritmo.
+
