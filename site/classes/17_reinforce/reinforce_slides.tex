@@ -14,7 +14,7 @@
 \title{Policy Optimization} 
 \author{Fabrício Barth}
 \institute{Insper Instituto de Ensino e Pesquisa}
-\date{Maio de 2023}
+\date{Abril de 2024}
 	
 \maketitle
 
@@ -24,14 +24,20 @@
 	Ao final desta aula, você será capaz de: 
 		
 	\begin{itemize}
-		\item entender a diferença entre os algoritmos da família \textbf{policy optimization} e os algoritmos da família \textbf{Q-learning}, e; 
-		\item compreender como funciona e como implementar o algoritmo \textbf{policy gradient}. 
+		\item entender a diferença entre os algoritmos da família \textbf{policy-based} e os algoritmos da família \textbf{value-based} (Q-Learning, Sarsa, DQN), e; 
+		\item compreender como funciona e como implementar um algoritmo da família \textbf{policy-based}. 
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Policy Gradient ou Reinforce}
 	
-	O algoritmo REINFORCE é um algoritmo que ao invés de definir uma \textbf{policy} em termos de $\pi(s) = \arg \max_{a} Q(s,a)$, como é feito com o Q-Learning e Deep Q-Learning, ele define a \textbf{policy} no formato de uma distribuição: 
+	O algoritmo REINFORCE é um algoritmo que ao invés de definir uma \textbf{policy} em termos de 
+	
+	\begin{equation}
+	\pi(s) = \arg \max_{a} Q(s,a)
+	\end{equation}
+	
+	como é feito com o Q-Learning e DQN, ele define a \textbf{policy} no formato de uma distribuição: 
 	
 	\begin{equation}
 	a_{t} \sim \pi_{\theta}(a_{t} | s_{t})
@@ -42,6 +48,9 @@
 
 
 \begin{frame}
+	
+	Imagine um agente que tem \textbf{5} ações possíveis: 
+	
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{img/distribuicao.png}
 	\end{center}
@@ -146,7 +155,7 @@
 	
 	\begin{itemize}
 		\item $\pi(a_{t}|s_{t}, \theta)$ é a probabilidade de $a_{t}$ ser escolhida em $s_{t}$ seguindo $\pi(.|.,\theta)$
-		\item a ideia principal desta equação é ajustar os pesos de $\theta$ usando um gradiente ascendente para aumentar a probabilidade de escolher trajetórias onde $G$ é alto.
+		\item a ideia principal desta equação é ajustar os pesos de $\theta$ usando um gradiente ascendente para \textbf{aumentar a probabilidade de escolher trajetórias onde $G$ é alto}.
 		\item $\alpha$ é a taxa de aprendizado.  
 	\end{itemize}
 \end{frame}
@@ -157,10 +166,19 @@
 
 \begin{frame}{Avaliação de uma ação}
 	\lstinputlisting[language=Python]{src/evaluateaction.py}
+	\vspace{1cm}
+	O log da probabilidade da ação 1 é o mesmo que o log da probabilidade de 0.9. 
 \end{frame}
 
 \begin{frame}{Definição da rede neural}
 	\lstinputlisting[language=Python]{src/nn.py}
+	
+	\begin{itemize}
+		\item O número de nodos da primeira camada é 4 porque o \textbf{estado é representado por 4 valores}.
+		\item Na última camada é utilizada uma função \textbf{Softmax} porque queremos a probabilidade de cada uma das ações acontecer. Ou seja, o valor de todos os nodos de saída precisa ser igual a 1. 
+	\end{itemize}
+	
+	
 \end{frame}
 
 \begin{frame}{Gerando os episódios}
@@ -170,6 +188,8 @@
 
 \begin{frame}{Calculando $G$}
 	\lstinputlisting[language=Python]{src/discountedrewards.py}
+	\vspace{0.6cm}
+	Ao final deste loop, \textbf{DiscountedReturns} vai ter um valor de \textit{reward acumulado} para cada par $(a_{i},s_{j})$ da trajetória do agente. 
 \end{frame}
 
 \begin{frame}{Atualizando $\theta$}
@@ -177,12 +197,12 @@
 	\lstinputlisting[language=Python]{src/theta.py}
 \end{frame}
 
-\begin{frame}{Usando o modelo}
-	\lstinputlisting[language=Python]{src/usando.py}
-\end{frame}
-
 \begin{frame}{Treinando e salvando o modelo}
 	\lstinputlisting[language=Python]{src/treinando.py}
+\end{frame}
+
+\begin{frame}{Usando o modelo}
+	\lstinputlisting[language=Python]{src/usando.py}
 \end{frame}
 
 \begin{frame}{Lendo e usando o modelo}
@@ -201,7 +221,8 @@
 			
 \begin{frame}{Referências}
 	\begin{itemize}
-		\item Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine Learning 8, 229–256 (1992). https://doi.org/10.1007/BF00992696
+		\item Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine Learning 8, 229–256 (1992). \href{https://doi.org/10.1007/BF00992696}{https://doi.org/10.1007/BF00992696}
+		\item REINFORCE: Reinforcement Learning Most Fundamental Algorithm. Vídeo produzido por Andriy Drozdyuk. Disponível em \href{https://www.youtube.com/watch?v=5eSh5F8gjWU}{https://www.youtube.com/watch?v=5eSh5F8gjWU}
 	\end{itemize}
 \end{frame}
 		
