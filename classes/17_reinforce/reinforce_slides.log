@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.28)  4 MAY 2023 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.18)  5 APR 2024 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,19 +935,19 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 41.
+ut line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -963,7 +963,7 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 <img/distribuicao.png, id=118, 435.0654pt x 245.718pt>
 File: img/distribuicao.png Graphic file (type png)
 <use img/distribuicao.png>
-Package pdftex.def Info: img/distribuicao.png  used on input line 48.
+Package pdftex.def Info: img/distribuicao.png  used on input line 57.
 (pdftex.def)             Requested size: 308.06367pt x 173.98857pt.
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
@@ -976,7 +976,7 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 <img/distribuicao_alterada.png, id=148, 604.2575pt x 341.275pt>
 File: img/distribuicao_alterada.png Graphic file (type png)
 <use img/distribuicao_alterada.png>
-Package pdftex.def Info: img/distribuicao_alterada.png  used on input line 56.
+Package pdftex.def Info: img/distribuicao_alterada.png  used on input line 65.
 (pdftex.def)             Requested size: 273.83728pt x 154.65547pt.
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
@@ -988,14 +988,14 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  <./img/distribuicao_alterada.png>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 70.
+(Font)              using `OT1/cmss/b/it' instead on input line 79.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/b/it' undefined
-(Font)              using `OT1/cmss/b/n' instead on input line 70.
+(Font)              using `OT1/cmss/b/n' instead on input line 79.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 70.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 79.
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1006,10 +1006,10 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 88.
+(Font)              using `OT1/cmss/b/it' instead on input line 97.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/it' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 88.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 97.
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1020,7 +1020,7 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 108.
+(Font)              using `OT1/cmss/b/it' instead on input line 117.
 
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
@@ -1032,7 +1032,7 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 132.
+(Font)              using `OT1/cmss/b/it' instead on input line 141.
 
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
@@ -1044,7 +1044,7 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 152.
+(Font)              using `OT1/cmss/b/it' instead on input line 161.
 
 
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
@@ -1112,14 +1112,14 @@ Overfull \hbox (22.63634pt too wide) has occurred while \output is active
 
 [16
 
-] (./src/usando.py)
+] (./src/treinando.py)
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [17
 
-] (./src/treinando.py)
+] (./src/usando.py)
 Overfull \hbox (22.63634pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
@@ -1165,10 +1165,10 @@ Package rerunfilecheck Info: File `reinforce_slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24237 strings out of 480247
- 462353 string characters out of 5896151
- 900657 words of memory out of 5000000
- 41611 multiletter control sequences out of 15000+600000
+ 24238 strings out of 480247
+ 462365 string characters out of 5896151
+ 900659 words of memory out of 5000000
+ 41612 multiletter control sequences out of 15000+600000
  484416 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,16n,122p,423b,1451s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1188,10 +1188,10 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.
 pfb>
-Output written on reinforce_slides.pdf (21 pages, 231835 bytes).
+Output written on reinforce_slides.pdf (21 pages, 234227 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
- 623 compressed objects within 7 object streams
+ 721 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
  43 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

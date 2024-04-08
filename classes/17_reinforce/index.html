@@ -11,13 +11,17 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/17_reinforce/">
       
       
+        <link rel="prev" href="../16_double_deep_q_learning/">
+      
+      
+        <link rel="next" href="../../projects/projeto_intermediario/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Policy Optimization e Reinforce algoritmos - Reinforcement Learning</title>
+        <title>Algoritmo Reinforce - Reinforcement Learning</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#policy-optimization-e-reinforce-algoritmos" class="md-skip">
+        <a href="#algoritmo-reinforce" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Policy Optimization e Reinforce algoritmos
+              Algoritmo Reinforce
             
           </span>
         </div>
@@ -211,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -227,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -594,6 +600,97 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Policy Optimization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Policy Optimization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Algoritmo Reinforce
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Algoritmo Reinforce
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao-em-sala-de-aula" class="md-nav__link">
+    Implementação em sala de aula
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -697,13 +794,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#referencias" class="md-nav__link">
-    Referências
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -720,7 +810,7 @@
 
 
 
-<h1 id="policy-optimization-e-reinforce-algoritmos">Policy Optimization e Reinforce algoritmos</h1>
+<h1 id="algoritmo-reinforce">Algoritmo Reinforce</h1>
 <p>O objetivo deste grupo de aulas é explorar uma categoria de algoritmos de Reinforcement Learning baseados em <em>policy optimization</em>. </p>
 <p>Esta aula está dividida em duas etapas: </p>
 <ul>
@@ -741,31 +831,13 @@
 <p>Também não esqueça de salvar o modelo para depois executar <strong>N</strong> vezes sem precisar re-treinar o agente. </p>
 </li>
 </ul>
-<h2 id="referencias">Referências</h2>
-<ul>
-<li>
-<p>Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em <a href="http://karpathy.github.io/2016/05/31/rl/">http://karpathy.github.io/2016/05/31/rl/</a>. Acessado a última vez em 30 de abril de 2023. </p>
-</li>
-<li>
-<p>Schulman J, Levine S, Abbeel P, Jordan M, Moritz P. <a href="https://arxiv.org/abs/1502.05477">Trust region policy optimization</a>. In International conference on machine learning 2015 Jun 1 (pp. 1889-1897). PMLR.</p>
-</li>
-<li>
-<p>Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research, 2021. <a href="http://jmlr.org/papers/v22/20-1364.html">http://jmlr.org/papers/v22/20-1364.html</a>.</p>
-</li>
-<li>
-<p>Deep Reinforcement Learning from OpenAI. Disponível em <a href="https://spinningup.openai.com/en/latest/index.html">https://spinningup.openai.com/en/latest/index.html</a>. Acessado a última vez em 30 de abril de 2023.</p>
-</li>
-<li>
-<p>Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine Learning 8, 229–256 (1992). <a href="https://doi.org/10.1007/BF00992696">https://doi.org/10.1007/BF00992696</a>.</p>
-</li>
-</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 8, 2024</span>
       
     
   </small>
