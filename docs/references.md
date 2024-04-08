@@ -4,8 +4,12 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 ## Livros
 
-1. Mitchell, T. (1997). Reinforcement Learning in [Machine Learning](https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf). McGraw-Hill.
 1. Sutton, R. S., & Barto, A. G. (2018). [Reinforcement learning: An introduction (2nd ed.)](https://mitpress.mit.edu/9780262039246/reinforcement-learning/). The MIT Press. 
+
+1. Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. [Multi-Agent Reinforcement Learning: Foundations and Modern Approaches](https://www.marl-book.com/). MIT Press, 2024.
+
+1. Mitchell, T. (1997). Reinforcement Learning in [Machine Learning](https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf). McGraw-Hill.
+
 1. NORVIG, P.; RUSSELL, S., [Inteligência Artificial](https://aima.cs.berkeley.edu/), 3ª ed., Campus Elsevier, 2013
 
 ## Artigos
@@ -31,7 +35,13 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 1. Shuo Sun, Rundong Wang, and Bo An. 2023. [Reinforcement Learning for Quantitative Trading](https://doi.org/10.1145/3582560). ACM Trans. Intell. Syst. Technol. 14, 3, Article 44 (June 2023), 29 pages. https://doi.org/10.1145/3582560
 
+* Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Acessado a última vez em 30 de abril de 2023. 
+
+* Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research, 2021. [http://jmlr.org/papers/v22/20-1364.html](http://jmlr.org/papers/v22/20-1364.html).
+
 ## Implementações e tutoriais
+
+1. Deep Reinforcement Learning from OpenAI. Disponível em [https://spinningup.openai.com/en/latest/index.html](https://spinningup.openai.com/en/latest/index.html). Acessado a última vez em 30 de abril de 2023.
 
 1. Brockman G, Cheung V, Pettersson L, Schneider J, Schulman J, Tang J, Zaremba W. [Openai gym](https://arxiv.org/abs/1606.01540). arXiv preprint arXiv:1606.01540. 2016 Jun 5.
 
