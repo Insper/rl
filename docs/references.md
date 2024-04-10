@@ -61,7 +61,6 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 ## Ferramentas
 
-1. [https://github.com/Insper/rl_code](https://github.com/Insper/rl_code): the main code repository for this subject.
 1. [The Farama Foundation](https://farama.org/): this group is responsible for maintaining the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) projects. 
 1. [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 1. How to use [Gymnasium API](https://gymnasium.farama.org/): a Python library for single agent reinforcement learning.
@@ -73,3 +72,5 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 1. [Reinforcement learning for Recommendation Systems](https://github.com/shashist/recsys-rl).
 1. [FlatLand](https://flatland.aicrowd.com/intro.html). 
 1. [Drone Swarm Search Environment](https://pypi.org/project/DSSE/).
+1. [MARLlib environments](https://marllib.readthedocs.io/en/latest/handbook/env.html#).
+1. [Multi-Robot Warehouse Environments](https://agents.inf.ed.ac.uk/blog/new-environments-algorithm-multiagent-rl/).

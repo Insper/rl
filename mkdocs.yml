@@ -49,7 +49,7 @@ nav:
 
   - 'Projetos':
     - 'projects/projeto_intermediario/index.md'
-#    - 'projects/project_02.md'
+    - 'projects/projeto_final/index.md'
   
   - 'Referências': 'references.md'
 

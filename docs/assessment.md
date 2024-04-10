@@ -30,7 +30,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 | Descrição                                              | Prazo            |
 |:-----------------------------------------------------------|:-------------------:|
 | [Comparação entre DQN e Double DQN](./projects/projeto_intermediario/index.md)   |   05/04/2024   |
-|                                                      |         |
+| [Projeto final](./projects/projeto_final/index.md)   | Diversos   |
 
 
 ## Conversão de conceito para valor numérico
