@@ -30,7 +30,7 @@ Para alcançar este objetivo, o grupo deverá:
 
 ## Submissão dos artefatos produzidos
 
-Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é []().
+Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é [https://classroom.github.com/a/OtOzQGPE](https://classroom.github.com/a/OtOzQGPE).
 
 
 Cada grupo deverá adicionar ao repositório do projeto: 
