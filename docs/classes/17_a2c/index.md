@@ -19,7 +19,7 @@ A interpretação da vantagem pode ser usada para guiar a otimização da polít
 O método de ator-critic é uma abordagem que combina um ator, que é responsável por escolher ações, e um crítico, que é responsável por avaliar as ações escolhidas. 
 
 <center>
-<img src="img/pseudo_a2c.png" alt="Pseudo código A2C" style="width:500px;"/>
+<img src="img/pseudo_a2c.png" alt="Pseudo código A2C" style="width:800px;"/>
 </center>
 
 Uma forma visual de entender o funcionamento do algoritmo é apresentada abaixo: 
