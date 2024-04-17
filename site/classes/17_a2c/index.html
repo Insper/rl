@@ -8,16 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/_snippets/plano_aula_3/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/17_a2c/">
       
       
+        <link rel="prev" href="../17_reinforce/">
+      
+      
+        <link rel="next" href="../../projects/projeto_intermediario/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
-        <title>Plano aula 3 - Reinforcement Learning</title>
+        <title>A2C: Advantage Actor-Critic - Reinforcement Learning</title>
       
     
     
@@ -66,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#a2c-advantage-actor-critic" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plano aula 3
+              A2C: Advantage Actor-Critic
             
           </span>
         </div>
@@ -206,14 +215,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -222,7 +233,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Aulas
@@ -262,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/01_introduction/" class="md-nav__link">
+      <a href="../01_introduction/" class="md-nav__link">
         Apresentação da disciplina
       </a>
     </li>
@@ -276,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/02_problem_solving/" class="md-nav__link">
+      <a href="../02_problem_solving/" class="md-nav__link">
         Revisão sobre busca em espaço de estados
       </a>
     </li>
@@ -290,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/03_games/" class="md-nav__link">
+      <a href="../03_games/" class="md-nav__link">
         Revisão sobre algoritmos de busca competitivos e jogos
       </a>
     </li>
@@ -304,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/03_review/" class="md-nav__link">
+      <a href="../03_review/" class="md-nav__link">
         Revisão das implementações
       </a>
     </li>
@@ -352,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/04_toolings_envs/" class="md-nav__link">
+      <a href="../04_toolings_envs/" class="md-nav__link">
         Ferramentas e ambientes para aprendizagem por reforço
       </a>
     </li>
@@ -366,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/05_q_learning/" class="md-nav__link">
+      <a href="../05_q_learning/" class="md-nav__link">
         Algoritmo Q-Learning
       </a>
     </li>
@@ -380,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/05_x_hyperparameters/" class="md-nav__link">
+      <a href="../05_x_hyperparameters/" class="md-nav__link">
         Hiperparâmetros em Q-Learning
       </a>
     </li>
@@ -394,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/05_x_sarsa/" class="md-nav__link">
+      <a href="../05_x_sarsa/" class="md-nav__link">
         Algoritmo SARSA: abordagem on-policy
       </a>
     </li>
@@ -408,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/05_xx_comments/" class="md-nav__link">
+      <a href="../05_xx_comments/" class="md-nav__link">
         Comentários sobre as implementações do Q-Learning e Sarsa
       </a>
     </li>
@@ -456,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/11_evaluation/" class="md-nav__link">
+      <a href="../11_evaluation/" class="md-nav__link">
         Como avaliar o desempenho de um agente?
       </a>
     </li>
@@ -470,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/06_non_determ/" class="md-nav__link">
+      <a href="../06_non_determ/" class="md-nav__link">
         Ambientes não-determinísticos
       </a>
     </li>
@@ -484,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/06_non_determ_comments/" class="md-nav__link">
+      <a href="../06_non_determ_comments/" class="md-nav__link">
         Comentários sobre as entregas referentes ao ambiente Frozen Lake.
       </a>
     </li>
@@ -498,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/09_more_complex/" class="md-nav__link">
+      <a href="../09_more_complex/" class="md-nav__link">
         Implementando um agente para lidar com um ambiente um pouco mais complexo
       </a>
     </li>
@@ -546,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/15_deep_q_learning/" class="md-nav__link">
+      <a href="../15_deep_q_learning/" class="md-nav__link">
         Deep Reinforcement Learning
       </a>
     </li>
@@ -560,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/15_deep_q_learning_lunar_lander/" class="md-nav__link">
+      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
         Lunar Lander Project
       </a>
     </li>
@@ -574,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/16_double_deep_q_learning/" class="md-nav__link">
+      <a href="../16_double_deep_q_learning/" class="md-nav__link">
         Double Deep Q-Learning
       </a>
     </li>
@@ -622,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../classes/17_reinforce/" class="md-nav__link">
+      <a href="../17_reinforce/" class="md-nav__link">
         Algoritmo Reinforce
       </a>
     </li>
@@ -641,14 +652,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
       
       
       
@@ -657,7 +670,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           Actor-Critic
@@ -668,11 +681,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../classes/17_a2c/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          A2C: Advantage Actor-Critic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         A2C: Advantage Actor-Critic
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vantagem" class="md-nav__link">
+    Vantagem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a2c" class="md-nav__link">
+    A2C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sugestao-de-atividade" class="md-nav__link">
+    Sugestão de atividade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-adicionais" class="md-nav__link">
+    Questões adicionais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -786,6 +868,51 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vantagem" class="md-nav__link">
+    Vantagem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a2c" class="md-nav__link">
+    A2C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sugestao-de-atividade" class="md-nav__link">
+    Sugestão de atividade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-adicionais" class="md-nav__link">
+    Questões adicionais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -801,64 +928,87 @@
 
 
 
-<p><table class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th style = "background-color: #548235;font-family: Century Gothic, sans-serif;font-size: medium;color: #FFFFFF;text-align: left;border-bottom: 2px solid #548235;padding: 0px 20px 0px 0px;width: auto">Data</th>
-      <th style = "background-color: #548235;font-family: Century Gothic, sans-serif;font-size: medium;color: #FFFFFF;text-align: left;border-bottom: 2px solid #548235;padding: 0px 20px 0px 0px;width: auto">Conteúdo</th>
-      <th style = "background-color: #548235;font-family: Century Gothic, sans-serif;font-size: medium;color: #FFFFFF;text-align: left;border-bottom: 2px solid #548235;padding: 0px 20px 0px 0px;width: auto">Programação/Atividade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">18-Março</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Implementando um agente que precisa lidar com um ambiente mais complexo</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Apresentação do problema e implementação da solução em grupo.</td>
-    </tr>
-    <tr>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">20-Março</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Deep Q-Learning</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
-    <tr>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">25-Março</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Revisão sobre Redes Neurais e decisões de projeto de RN para RL</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
-    <tr>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">27-Março</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Revisão sobre Redes Neurais e decisões de projeto de RN para RL</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
-    <tr>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">1-Abril</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Avaliação Intermediária - implementação do projeto 1</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Avaliação Intermediária - implementação do projeto 1</td>
-    </tr>
-    <tr>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">3-Abril</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Avaliação Intermediária - implementação do projeto 1</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Avaliação Intermediária - implementação do projeto 1</td>
-    </tr>
-    <tr>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">8-Abril</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Algoritmo Reinforce</td>
-      <td style = "background-color: #E2EFDA;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
-    <tr>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">10-Abril</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Comparando Deep Q-Learning e Reinforce</td>
-      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
-  </tbody>
-</table></p>
+<h1 id="a2c-advantage-actor-critic">A2C: Advantage Actor-Critic</h1>
+<p>No artigo original de Mnih et al. (2016), os autores propõem um algoritmo de aprendizado por reforço chamado A2C (Advantage Actor-Critic). Os autores também propõe o conceito de vantagem, que é uma medida de quão melhor é uma ação em relação a outra. </p>
+<h2 id="vantagem">Vantagem</h2>
+<p>A vantagem é calculada como a diferença entre o retorno esperado de uma ação e o valor do estado atual. </p>
+<p><span class="arithmatex">\(Adv^{\pi}(s,a) = Q^{\pi}(s,a) - V^{\pi}(s)\)</span></p>
+<p>onde <span class="arithmatex">\(Q^{\pi}(s,a)\)</span> é o retorno esperado de uma ação <span class="arithmatex">\(a\)</span> em um estado <span class="arithmatex">\(s\)</span> seguindo uma política <span class="arithmatex">\(\pi\)</span>, e <span class="arithmatex">\(V^{\pi}(s)\)</span> é o valor do estado <span class="arithmatex">\(s\)</span> seguindo a política <span class="arithmatex">\(\pi\)</span>.</p>
+<p>A vantagem pode ser entendida como quantificar o quanto mais alto é o retorno esperado ao aplicar a ação específica <span class="arithmatex">\(a\)</span> em comparação com seguir a política <span class="arithmatex">\(\pi\)</span> no estado <span class="arithmatex">\(s\)</span>.</p>
+<p>A interpretação da vantagem pode ser usada para guiar a otimização da política. Para uma vantagem positiva, devemos aumentar a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span>; e devemos diminuir a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span> sempre que a vantagem for negativa.</p>
+<h2 id="a2c">A2C</h2>
+<p>O método de ator-critic é uma abordagem que combina um ator, que é responsável por escolher ações, e um crítico, que é responsável por avaliar as ações escolhidas. </p>
+<p><center>
+<img src="img/pseudo_a2c.png" alt="Pseudo código A2C" style="width:500px;"/>
+</center></p>
+<p>Uma forma visual de entender o funcionamento do algoritmo é apresentada abaixo: </p>
+<p><center>
+<img src="img/diagrama_a2c.png" alt="Diagrama A2C" style="width:500px;"/>
+</center></p>
+<p>Onde <strong>Actor</strong> é do tipo <em>policy gradient</em> e <strong>Critic</strong> é do tipo <em>value function</em> ou <em>value based</em>.</p>
+<h2 id="sugestao-de-atividade">Sugestão de atividade</h2>
+<p>Utilize a implementação do A2C disponível na biblioteca <a href="https://pypi.org/project/stable-baselines3/">stable-baselines3</a> para treinar um agente que consegue atuar nos ambientes <a href="https://gymnasium.farama.org/environments/classic_control/cart_pole/">CartPole-v1</a> e <a href="https://gymnasium.farama.org/environments/box2d/lunar_lander/">LunarLander-v2</a>. </p>
+<p>A implementação é direta. No entanto, exige alguns cuidados. A biblioteca stable-baseline3 possui o seu próprio ambiente. O escopo desta atividade não inclui o uso dos ambientes da biblioteca stable-baseline3. Você deve utilizar o ambiente Gymnasium para esta atividade.</p>
+<p>Segue exemplo de código</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">stable_baselines3</span> <span class="kn">import</span> <span class="n">PPO</span><span class="p">,</span> <span class="n">DQN</span><span class="p">,</span> <span class="n">A2C</span>
+<span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">from</span> <span class="nn">stable_baselines3.common.logger</span> <span class="kn">import</span> <span class="n">configure</span>
+<span class="kn">from</span> <span class="nn">stable_baselines3.common.evaluation</span> <span class="kn">import</span> <span class="n">evaluate_policy</span>
+
+<span class="n">tmp_path</span> <span class="o">=</span> <span class="s2">&quot;./results/&quot;</span>
+<span class="n">new_logger</span> <span class="o">=</span> <span class="n">configure</span><span class="p">(</span><span class="n">tmp_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;stdout&quot;</span><span class="p">,</span> <span class="s2">&quot;csv&quot;</span><span class="p">,</span> <span class="s2">&quot;tensorboard&quot;</span><span class="p">])</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CartPole-v1&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">A2C</span><span class="p">(</span><span class="n">policy</span> <span class="o">=</span> <span class="s2">&quot;MlpPolicy&quot;</span><span class="p">,</span> <span class="n">env</span> <span class="o">=</span> <span class="n">env</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">set_logger</span><span class="p">(</span><span class="n">new_logger</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">total_timesteps</span><span class="o">=</span><span class="mi">100_000</span><span class="p">)</span>
+
+<span class="n">mean_reward</span><span class="p">,</span> <span class="n">std_reward</span> <span class="o">=</span> <span class="n">evaluate_policy</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">get_env</span><span class="p">(),</span> <span class="n">n_eval_episodes</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean reward: </span><span class="si">{</span><span class="n">mean_reward</span><span class="si">}</span><span class="s1"> +/- </span><span class="si">{</span><span class="n">std_reward</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;modelo treinado&#39;</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;CartPole-v1&quot;</span><span class="p">,</span> <span class="n">render_mode</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">obs</span><span class="p">,</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">action</span><span class="p">,</span> <span class="n">_state</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">deterministic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">done</span><span class="p">:</span>
+      <span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Entenda o funcionamento do código acima. </li>
+<li>Analise os logs gerados. É possível a partir deste log criar as curvas de aprendizado?</li>
+<li>O comportamento do agente treinado é adequado? </li>
+<li>Leia a documentação em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html">https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html</a> e tente modificar os hiperparâmetros do modelo para melhorar o desempenho do agente.</li>
+<li>A mesma biblioteca possui uma implementação de DQN. A documentação está disponível em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html">https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html</a>. Compare o desempenho do A2C com o DQN. Qual dos dois algoritmos é mais eficiente para resolver o problema do CartPole-v1? E para o LunarLander-v2?</li>
+</ul>
+<h2 id="questoes-adicionais">Questões adicionais</h2>
+<ul>
+<li>O ambiente que você escolheu para o projeto final da disciplina respeita a interface do Gymnasium? Se sim então é possível utilizar a biblioteca stable-baselines3 para treinar um agente para o seu ambiente.</li>
+</ul>
+<p>Outros ambientes com implementações já prontas que podem ser úteis são: </p>
+<ul>
+<li><a href="https://tianshou.org/en/stable/">https://tianshou.org/en/stable/</a></li>
+<li><a href="https://marllib.readthedocs.io/en/latest/">https://marllib.readthedocs.io/en/latest/</a></li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>
+<p>Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. Asynchronous methods for deep reinforcement learning. In Proceedings of the 33<sup>rd</sup> International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.</p>
+</li>
+<li>
+<p>Antonin Raffin, Ashley Hill, Adam Gleave, Anssi Kanervisto, Maximilian Ernestus, and Noah Dormann. 2021. Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research 22, 268 (2021), 1–8. Retrieved from <a href="http://jmlr.org/papers/v22/20-1364.html">http://jmlr.org/papers/v22/20-1364.html</a></p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 17, 2024</span>
       
     
   </small>

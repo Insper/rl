@@ -42,7 +42,8 @@ nav:
       - 'classes/16_double_deep_q_learning/index.md'
     - 'Policy Optimization':
       - 'classes/17_reinforce/index.md'
-#    - 'Actor-Critic':
+    - 'Actor-Critic':
+      - 'classes/17_a2c/index.md'
 #      - 'classes/18_ppo/index.md'
 #    - 'Projetos finais':
 #      - 'classes/19_projects/index.md'
