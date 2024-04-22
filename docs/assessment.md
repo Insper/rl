@@ -24,6 +24,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 | [Avaliação de agentes](./classes/11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) | 06/03/2024 |
 | [Ambientes não-determinísticos](./classes/06_non_determ/index.md) | 13/03/2024 |
 | [Deep Q-Learning](./classes/15_deep_q_learning_lunar_lander/index.md) | 24/03/2024 |
+| [Comparação entre algoritmos e ambientes](./classes/18_comparativo_algs_env/index.md) | 24/04/2024 |
 
 ## Projetos
 

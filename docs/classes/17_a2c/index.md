@@ -88,3 +88,5 @@ Outros ambientes com implementações já prontas que podem ser úteis são:
 * Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. Asynchronous methods for deep reinforcement learning. In Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.
 
 * Antonin Raffin, Ashley Hill, Adam Gleave, Anssi Kanervisto, Maximilian Ernestus, and Noah Dormann. 2021. Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research 22, 268 (2021), 1–8. Retrieved from http://jmlr.org/papers/v22/20-1364.html
+
+* OpenAI Baselines: ACKTR & A2C. Disponível em [https://openai.com/research/openai-baselines-acktr-a2c](https://openai.com/research/openai-baselines-acktr-a2c).
