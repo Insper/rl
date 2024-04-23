@@ -65,6 +65,7 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 1. [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 1. How to use [Gymnasium API](https://gymnasium.farama.org/): a Python library for single agent reinforcement learning.
 1. [SuperSuit](https://github.com/Farama-Foundation/SuperSuit): wrappers for RL environments. 
+1. [CleanRL](https://docs.cleanrl.dev/): site com diversas implementações de algoritmos de RL. 
 1. [Worldgen](https://openai.com/blog/emergent-tool-use/): Emergent tool use from multi-agent interaction.
 1. [Highway envs](http://highway-env.farama.org/).
 1. [Tianshou](https://tianshou.readthedocs.io/en/master/) is a reinforcement learning platform based on pure PyTorch.
