@@ -3,14 +3,13 @@ import gymnasium as gym
 from stable_baselines3 import PPO
 from stable_baselines3.common.env_util import make_vec_env
 
-# Parallel environments
 env = make_vec_env("LunarLander-v2", n_envs=1)
 
 model = PPO("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=200_000)
 model.save("ppo_lunarlander")
 
-del model # remove to demonstrate saving and loading
+del model
 
 model = PPO.load("ppo_lunarlander")
 

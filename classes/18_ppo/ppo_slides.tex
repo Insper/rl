@@ -16,7 +16,7 @@
 \title{Proximal Policy Optimization (PPO)} 
 \author{Fabrício Barth}
 \institute{Insper Instituto de Ensino e Pesquisa}
-\date{Maio de 2023}
+\date{Abril de 2024}
 	
 \maketitle
 
@@ -26,16 +26,9 @@
 
 \def\TB{\leavevmode\rlap{\hbox to \hsize{\color{red!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
 	
-\begin{frame}{Contexto}
-\begin{itemize}
-	\item Na última aula vimos o funcionamento do algoritmo \textbf{Reinforce}. 
-	\item O algoritmo \textbf{Reinforce} tem um problema relacionado com a atualização dos parâmetros do modelo. 
-	\item Dependendo do espaço de busca do problema, a atualização dos parâmetros pode ser grande demais e levar para situações indesejadas. Mesmo em situações onde a atualização dos parâmetros estava levando para uma situação de otimização. 
-\end{itemize}
-\end{frame}
-
 \begin{frame}{Proximal Policy Optimization (PPO)}
 	\begin{itemize}
+		\item Em algoritmos da família \textit{policy optimization}, dependendo do espaço de busca do problema, a atualização dos parâmetros pode ser grande demais e levar para situações indesejadas. Mesmo em situações onde a atualização dos parâmetros estava levando para uma situação de otimização. 
 		\item O PPO é um método de \textit{policy gradient} que evita a atualização grande dos parâmetros da \textit{policy}.
 		\item Basicamente, o PPO usa uma razão entre a política atual e a política antiga e mantêm esta razão entre $\left[ 1 - \epsilon, 1 + \epsilon \right]$.
 		\item Desta forma o algoritmo PPO garante que a atualização do parâmetros não seja tão grande e o treinamento se torna mais estável. 
@@ -44,9 +37,9 @@
 	
 \end{frame}
 	
-\begin{frame}{Objetivo desta aula}
-	Ao final desta aula, você será capaz de compreender como funciona e como implementar o algoritmo \textbf{PPO}.
-\end{frame}
+%\begin{frame}{Objetivo desta aula}
+%	Ao final desta aula, você será capaz de compreender como funciona e como implementar o algoritmo \textbf{PPO}.
+%\end{frame}
 
 \begin{frame}{Algoritmo Reinforce}
 	\begin{algorithmic} 
@@ -97,14 +90,14 @@
 \end{frame}
 
 
-\begin{frame}{Estimador de vantagem}
-\begin{eqnarray}
-	\hat{A}(s_{t},a_{t}) = \hat{Q}(s_{t},a_{t}) - \hat{V}(s_{t}) \nonumber \\
-	\hat{Q}(s_{t},a_{t}) = \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k} \nonumber \\
-	\hat{V}(s_{t}) = \sum_{a_{t} \in A} \pi (a_{t}|s_{t}).\hat{Q}(s_{t},a_{t}) \nonumber \\
-	\hat{A}(s_{t},a_{t}) = \hat{Q}(s_{t},a_{t}) - \sum_{a_{t} \in A} \pi (a_{t}|s_{t}).\hat{Q}(s_{t},a_{t}) 
-\end{eqnarray}	
-\end{frame}
+%\begin{frame}{Estimador de vantagem}
+%\begin{eqnarray}
+%	\hat{A}(s_{t},a_{t}) = \hat{Q}(s_{t},a_{t}) - \hat{V}(s_{t}) \nonumber \\
+%	\hat{Q}(s_{t},a_{t}) = \sum_{k=t+1}^{T} \gamma^{k-t-1} \times r_{k} \nonumber \\
+%	\hat{V}(s_{t}) = \sum_{a_{t} \in A} \pi (a_{t}|s_{t}).\hat{Q}(s_{t},a_{t}) \nonumber \\
+%	\hat{A}(s_{t},a_{t}) = \hat{Q}(s_{t},a_{t}) - \sum_{a_{t} \in A} \pi (a_{t}|s_{t}).\hat{Q}(s_{t},a_{t}) 
+%\end{eqnarray}	
+%\end{frame}
 
 
 \begin{frame}{Razão entre políticas}
@@ -149,22 +142,22 @@ O algoritmo PPO define uma nova função objetivo que garante que a política no
 	\end{center}
 \end{frame}
 
-\begin{frame}{Algoritmo PPO, estilo "Actor-Critic"}
-
-\begin{algorithmic} 
-	\FOR {iterações=1,2,$\cdots$}
-		\FOR {actor=1,2,$\cdots$, N}
-			\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta_{old})$
-			\STATE calcular as estimativas de vantagem $\hat{A}_{1}, \cdots, \hat{A}_{T}$
-		\ENDFOR
-	
-	\STATE Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch com tamanho $M \leq NT$. 
-	\STATE $\theta_{old} \leftarrow \theta$
-	
-	\ENDFOR
-\end{algorithmic}	
-	
-\end{frame}
+%\begin{frame}{Algoritmo PPO, estilo "Actor-Critic"}
+%
+%\begin{algorithmic} 
+%	\FOR {iterações=1,2,$\cdots$}
+%		\FOR {actor=1,2,$\cdots$, N}
+%			\STATE gerar um episódio ${s_{0},a_{0},r_{1},\cdots,s_{T-1},a_{T-1},r_{T}}$ seguindo $\pi(.|.,\theta_{old})$
+%			\STATE calcular as estimativas de vantagem $\hat{A}_{1}, \cdots, \hat{A}_{T}$
+%		\ENDFOR
+%	
+%	\STATE Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch de tamanho $M \leq N \times T$. 
+%	\STATE $\theta_{old} \leftarrow \theta$
+%	
+%	\ENDFOR
+%\end{algorithmic}	
+%	
+%\end{frame}
 
 
 \begin{frame}{Algoritmo PPO, estilo "Actor-Critic"}
@@ -176,7 +169,7 @@ O algoritmo PPO define uma nova função objetivo que garante que a política no
 		\STATE \TA calcular as estimativas de vantagem $\hat{A}_{1}, \cdots, \hat{A}_{T}$
 		\ENDFOR
 		
-		\STATE \TB Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch com tamanho $M \leq NT$. 
+		\STATE \TB Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch de tamanho $M \leq N \times T$. 
 		\STATE \TB $\theta_{old} \leftarrow \theta$
 		
 		\ENDFOR
@@ -201,7 +194,7 @@ Este algoritmo é dividido em duas threads:
 		\STATE \TA calcular as estimativas de vantagem $\hat{A}_{1}, \cdots, \hat{A}_{T}$
 		\ENDFOR
 		
-		\STATE Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch com tamanho $M \leq NT$. 
+		\STATE Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch de tamanho $M \leq N \times T$. 
 		\STATE $\theta_{old} \leftarrow \theta$
 		
 		\ENDFOR
@@ -225,7 +218,7 @@ Este algoritmo é dividido em duas threads:
 		\STATE calcular as estimativas de vantagem $\hat{A}_{1}, \cdots, \hat{A}_{T}$
 		\ENDFOR
 		
-		\STATE \TB Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch com tamanho $M \leq NT$. 
+		\STATE \TB Otimiza $L^{CLIP}(\theta)$ com $K$ épocas e minibatch de tamanho $M \leq N \times T$. 
 		\STATE \TB $\theta_{old} \leftarrow \theta$
 		
 		\ENDFOR
@@ -238,6 +231,17 @@ Este algoritmo é dividido em duas threads:
 		\item executar treinamentos usando minibatch e com $K$ épocas não é usual em Reinforcement Learning. No entanto, devido ao uso da função $L^{CLIP}$ isso é possível.  
 	\end{itemize}
 	
+\end{frame}
+
+\begin{frame}{Hiperparâmetros do algoritmo PPO}
+	\begin{itemize}
+		\item $K$: quantidade de épocas usadas no treinamento de $\theta$.
+		\item $M$: tamanho do minibath - que não pode ser maior que $N$ (número de atores) $\times$ $T$ (tamanho máximo das trajetórias).
+		\item $\epsilon$: define as margens da função $CLIP$.
+		\item $\alpha$: define o \textit{learning rate} do aprendizado. 
+		\item $\gamma$: define o valor que deve ser dado aos \textit{rewards} futuros. 
+		\item $episodios$: define a quantidade de episódios.  
+	\end{itemize}
 \end{frame}
 
 
