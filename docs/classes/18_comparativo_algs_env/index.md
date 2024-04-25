@@ -35,6 +35,12 @@ Cada estudante deverá contribuir com a execução de um experimento. Esta contr
 
 Ao fazer o pull request o estudante deve incluir uma descrição clara sobre qual experimento está sendo executado, o arquivo python, o arquivo do modelo na pasta `models` e os resultados obtidos na pasta `results/<diretorio_especifico>`.
 
+Cada **pull request** deve possuir os seguintes arquivos:
+
+* Um arquivo python com o experimento. Este arquivo python deve ter o nome no formato `env_algoritmo.py`.
+* O arquivo do modelo treinado na pasta `models` com o nome `env_algoritmo.zip`.
+* Os arquivos de resultados na pasta `results/<diretorio_especifico>`.
+
 Cada aluno deve encontrar a melhor configuração de hiperparâmetros para o algoritmo e ambiente escolhido.
 
 ## Prazo para entrega
