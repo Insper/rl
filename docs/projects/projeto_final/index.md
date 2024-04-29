@@ -41,12 +41,13 @@ Cada grupo deverá adicionar ao repositório do projeto:
 
 O relatório final do projeto deve ter a seguinte estrutura: 
 
-* contexto e objetivo do trabalho;
+* contexto e objetivo do trabalho;  
+* descrição do ambiente utilizado;
 * descrição do método;
 * resultados obtidos, e;
 * considerações finais. 
 
-E não ultrapassar 4 páginas. 
+E não ultrapassar 4 páginas. Você pode baixar um [template em $\LaTeX$ para o relatório aqui](template_latex.zip). Neste [outro link](template_relatorio.pdf) você consegue visualizar o arquivo PDF gerado a partir do template.
 
 ## Rubrica do projeto
 
