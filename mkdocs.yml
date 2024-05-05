@@ -46,8 +46,8 @@ nav:
       - 'classes/17_a2c/index.md'
       - 'classes/18_comparativo_algs_env/index.md'
       - 'classes/18_ppo/index.md'
-#    - 'Projetos finais':
-#      - 'classes/19_projects/index.md'
+    - 'Projetos finais':
+      - 'classes/19_projects/index.md'
 
   - 'Projetos':
     - 'projects/projeto_intermediario/index.md'
