@@ -46,6 +46,10 @@ Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/Kh
 
 O deadline para a entrega desta atividade é **24 de março de 2024** (domingo) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
 
+## Exemplo de entrega completa :new: 
+
+O projeto mais completo entregue em 2024/1 fois [este aqui](https://github.com/insper-classroom/08-lunar-lander-droneiros-de-cabreuva).
+
 
 
 
