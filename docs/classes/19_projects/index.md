@@ -8,10 +8,17 @@ Neste documento você irá encontrar informações sobre o projeto final da disc
 
 ## Agenda das apresentações
 
-Cada equipe terá **10 minutos** para apresentar o projeto e depois **5 minutos**  para responder perguntas da plateia. As apresentações acontecerão no dia **22/05/2024**.
+Cada equipe terá **10 minutos** para apresentar o projeto e depois **5 minutos**  para responder perguntas da plateia. As apresentações acontecerão no dia **22/05/2024** na seguinte ordem:
 
-|Data e horário da apresentação | Estudantes | Título do projeto | Material extra |
-|:----------|:----------|:------------------|:-----------------------------------|
+| Título do projeto | Material extra |
+|:------------------|:-----------------------------------|
+|Markov Decision Process no ambiente SimpleGrid da Gymnasium | https://github.com/insper-classroom/projeto-final-markov|
+|Minigrid Doorkey: Uma análise de modelos (DQN x PPO) | https://github.com/insper-classroom/projeto-final-clube-do-raio|
+|Implementação de algoritmo PPO capaz de controlar veículo autônomo em ambiente simulado | https://github.com/insper-classroom/projeto-final-projggf|
+|Employing RL-powered drone swarms to locate shipwrecked individuals | https://github.com/insper-classroom/projeto-final-droneiros-de-ibitinga|
+|DRL para Jogos de Atari |https://github.com/insper-classroom/projeto-final-pfinal |
+|Ambiente CyberBattleSim com Reinforcement Learning| https://github.com/insper-classroom/projeto-final-les-grenouilles|
+|Uso de DRL em sistemas de recomendação | https://github.com/insper-classroom/projeto-final-pf-rl-trust-me-bro|
 
 ## Observação importante
 
