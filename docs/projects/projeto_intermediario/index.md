@@ -30,3 +30,14 @@ A entrega deve ser feita via Github Classroom: [https://classroom.github.com/a/H
 ## Referências
 
 * [Material sobre Double DQN](../../classes/16_double_deep_q_learning/index.md)
+
+## Exemplos de projetos completos :new: 
+
+Aqui estão alguns exemplos de projetos completos que podem servir de inspiração:
+
+* Este é o projeto mais completo entregue: [https://github.com/insper-classroom/projeto-intermediario-ornithopter](https://github.com/insper-classroom/projeto-intermediario-ornithopter). O relatório deste projeto está no arquivo README.md. 
+
+* Este projeto não considerou o ambiente Flappy Bird, mas o seu relatório também está muito bem feito e completo: [https://github.com/insper-classroom/projeto-intermediario-mileage](https://github.com/insper-classroom/projeto-intermediario-mileage). O relatório deste projeto está no arquivo README.md.
+
+
+
