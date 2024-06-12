@@ -12,7 +12,7 @@ Cada equipe terá **10 minutos** para apresentar o projeto e depois **5 minutos*
 
 | Título do projeto | Material extra |
 |:------------------|:-----------------------------------|
-|Markov Decision Process no ambiente SimpleGrid da Gymnasium | https://github.com/insper-classroom/projeto-final-markov|
+|Markov Decision Process no ambiente FrozenLake da Gymnasium | https://github.com/insper-classroom/projeto-final-markov|
 |Minigrid Doorkey: Uma análise de modelos (DQN x PPO) | https://github.com/insper-classroom/projeto-final-clube-do-raio|
 |Implementação de algoritmo PPO capaz de controlar veículo autônomo em ambiente simulado | https://github.com/insper-classroom/projeto-final-projggf|
 |Employing RL-powered drone swarms to locate shipwrecked individuals | https://github.com/insper-classroom/projeto-final-droneiros-de-ibitinga|
