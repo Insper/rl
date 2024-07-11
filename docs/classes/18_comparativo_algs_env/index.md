@@ -49,7 +49,4 @@ O prazo para entrega desta atividade é 24/04/2024. No entanto, acredita-se que 
 
 ## Relatório final :new: 
 
-O relatório final desta atividade pode ser visto neste [link](https://html-preview.github.io/?url=https://github.com/fbarth/rl_compare/blob/main/report/analise_curva_aprendizado.html). Este relatório ainda está em desenvolvimento, mas já é possível visualizar o resultado da atividade individual de cada estudante que participou da atividade. 
-
-O link para todo o repositório da atividade é [https://github.com/fbarth/rl_compare](https://github.com/fbarth/rl_compare). 
-
+O relatório final desta atividade pode ser visto neste [link](./analise_curva_aprendizado.html). O link para todo o repositório da atividade é [https://github.com/fbarth/rl_compare](https://github.com/fbarth/rl_compare). 
