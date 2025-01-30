@@ -4,6 +4,7 @@ This repository has the Reinforcement Learning subject material.
 
 ## Offerings
 
+* 2025/1 - Fabrício Barth
 * 2024/1 - Fabrício Barth
 * 2023/1 - Fabrício Barth
 * 2022/2 - Fabrício Barth
@@ -11,7 +12,7 @@ This repository has the Reinforcement Learning subject material.
 ## How to setup the environment
 
 ```bash
-python3.7 -m virtualenv venv
+python3.10 -m virtualenv venv
 source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt

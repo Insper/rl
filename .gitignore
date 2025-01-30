@@ -7,3 +7,4 @@ students.xlsx
 *.snm
 *.gz
 *.toc
+venv
