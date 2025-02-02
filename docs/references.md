@@ -14,6 +14,10 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 ## Artigos
 
+1. Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger. 2018. Deep reinforcement learning that matters. In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence and Thirtieth Innovative Applications of Artificial Intelligence Conference and Eighth AAAI Symposium on Educational Advances in Artificial Intelligence (AAAI'18/IAAI'18/EAAI'18). AAAI Press, Article 392, 3207–3214.
+
+1. Dohare, S., Hernandez-Garcia, J.F., Lan, Q. et al. Loss of plasticity in deep continual learning. Nature 632, 768–774 (2024). https://doi.org/10.1038/s41586-024-07711-7
+
 1. Watkins, C.J.C.H., Dayan, P. [Q-Learning](https://link.springer.com/article/10.1007/BF00992698). Mach Learn 8, 279–292 (1992). https://doi.org/10.1007/BF00992698
 1. Williams, R.J. [Simple statistical gradient-following algorithms for connectionist reinforcement learning](https://doi.org/10.1007/BF00992696). Machine Learning 8, 229–256
 (1992). https://doi.org/10.1007/BF00992696.

@@ -16,22 +16,13 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 
 | Descrição                                                    | Prazo            |
 |:-------------------------------------------------------------|:-------------------:|
-| [Questões introdutórias](./classes/01_introduction/index.md)     | 06/02/2024          |
-| [Um agente taxista](./classes/02_problem_solving/index.md#a-taxi-driver-agent-without-reinforcement-learning) | 18/02/2024 |
-| [Jogador de jogo da velha usando Min-Max](./classes/03_games/index.md#exercício-implementação-de-um-jogador-de-jogo-da-velha-usando-min-max) | 25/02/2024 |
-| [Hiperparâmetros em Q-Learning](./classes/05_x_hyperparameters/index.md#atividade) | 29/02/2024 |
-| [Algoritmo Sarsa](./classes/05_x_sarsa/index.md#implementação) | 05/03/2024 |
-| [Avaliação de agentes](./classes/11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) | 06/03/2024 |
-| [Ambientes não-determinísticos](./classes/06_non_determ/index.md) | 13/03/2024 |
-| [Deep Q-Learning](./classes/15_deep_q_learning_lunar_lander/index.md) | 24/03/2024 |
-| [Comparação entre algoritmos e ambientes](./classes/18_comparativo_algs_env/index.md) | 24/04/2024 |
+| TBD                                                          | TBD |
 
 ## Projetos
 
 | Descrição                                              | Prazo            |
 |:-----------------------------------------------------------|:-------------------:|
-| [Comparação entre DQN e Double DQN](./projects/projeto_intermediario/index.md)   |   05/04/2024   |
-| [Projeto final](./projects/projeto_final/index.md)   | Diversos   |
+| TBD   |   TBD   |
 
 
 ## Conversão de conceito para valor numérico

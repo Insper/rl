@@ -9,8 +9,8 @@ Aprendizagem por Reforço. Algoritmos de Aprendizagem por Reforço. Implementaç
 Ao final da disciplina o estudante será capaz de:
 
 1. Construir um sistema baseado em aprendizagem por reforço para tomada de decisões sequenciais. 
-1. Compreender como se deve formalizar uma tarefa considerando um problema de aprendizagem por reforço e como implementar uma solução.
-1. Compreender os tipos de algoritmos de aprendizagem por reforço: tabular, value-based, policy gradient e actor-critic. 
+1. Compreender como se deve formalizar uma tarefa considerando um problema de aprendizagem por reforço, como implementar uma solução e avaliá-la.
+1. Compreender os tipos de algoritmos de aprendizagem por reforço: value-based, policy gradient e actor-critic. 
 1. Compreender qual é a relação de aprendizagem por reforço com aprendizagem supervisionada e não-supervisionada. 
 supervised learning. 
 
@@ -19,7 +19,6 @@ supervised learning.
 1. Introdução ao Aprendizado por Reforço.
 1. Implementação de agentes autônomos usando aprendizagem por reforço. 
 1. Taxonomia dos algoritmos de aprendizagem por reforço.
-1. Temporal-Difference learning.
 1. Algoritmo Q-Learning.
 1. Algoritmo Sarsa.
 1. Deep Reinforcement Learning.
@@ -39,10 +38,13 @@ supervised learning.
 
 ## Bibliografia Complementar
 
+1. Laura Graesser and Wah Loon Keng. 2019. Foundations of Deep Reinforcement Learning: Theory and Practice in Python (1st. ed.). Addison-Wesley Professional.
 1. NORVIG, P.; RUSSELL, S., Inteligência Artificial, 3ª ed., Campus Elsevier, 2013.
 1. SILVER, D.; SINGH S.; PRECUP D.; SUTTON R. [Reward is enough](https://doi.org/10.1016/j.artint.2021.103535). Artificial Intelligence. Vol 299, 2021.
 1. [MuZero: Mastering Go, chess, shogi and Atari without rules](https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules). Publicado em Dezembro, 2020.
 1. SILVER, D.; HUBERT T.; SCHRITTWIESER, J.; ANTONOGLOU, I.; LAI, M.; GUEZ, A. [A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play](https://doi.org/10.1126/science.aar6404). Science 362, 1140-1144 (2018).
 1. Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D. and Riedmiller, M., 2013. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602.
+1. Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger. 2018. Deep reinforcement learning that matters. In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence and Thirtieth Innovative Applications of Artificial Intelligence Conference and Eighth AAAI Symposium on Educational Advances in Artificial Intelligence (AAAI'18/IAAI'18/EAAI'18). AAAI Press, Article 392, 3207–3214.
+1. Dohare, S., Hernandez-Garcia, J.F., Lan, Q. et al. Loss of plasticity in deep continual learning. Nature 632, 768–774 (2024). https://doi.org/10.1038/s41586-024-07711-7
 
 
