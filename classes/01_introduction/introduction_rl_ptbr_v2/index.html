@@ -1,0 +1,962 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Fabricio Barth">
+      
+      
+        <link rel="canonical" href="https://insper.github.io/rl/classes/01_introduction/introduction_rl_ptbr_v2/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Introdução ao Aprendizado por Reforço - Aprendizagem por Reforço</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inteligencia-artificial-definicoes-e-principais-conceitos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Aprendizagem por Reforço" class="md-header__button md-logo" aria-label="Aprendizagem por Reforço" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aprendizagem por Reforço
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introdução ao Aprendizado por Reforço
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Aprendizagem por Reforço" class="md-nav__button md-logo" aria-label="Aprendizagem por Reforço" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Aprendizagem por Reforço
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../goals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ementa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plano
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introdução
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apresentação da disciplina
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Q-Learning and Sarsa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Q-Learning and Sarsa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_toolings_envs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ferramentas e ambientes para aprendizagem por reforço
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Referências
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agente-autonomo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agente Autônomo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ibm-deep-blue-versus-kasparov-1997" class="md-nav__link">
+    <span class="md-ellipsis">
+      IBM Deep Blue versus Kasparov (1997)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconhecimento-de-digitos-manuscritos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconhecimento de dígitos manuscritos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robo-em-um-labirinto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robô em um labirinto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veiculo-autonomo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Veículo autônomo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-imagenet-2009" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset ImageNet (2009)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alphago-jogando-go-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      AlphaGO jogando GO (2016)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-generativos-dall-e-e-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos Generativos (DALL-E e chatGPT)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="inteligencia-artificial-definicoes-e-principais-conceitos">Inteligência Artificial: Definições e principais conceitos</h1>
+<h2 id="agente-autonomo">Agente Autônomo</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<div class="arithmatex">\[\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{figures/AE_loop_without_reward.png}
+\end{figure}\]</div>
+<p>:::
+::: {.column width="50%"}</p>
+<p>"Agentes autônomos são sistemas computacionais que habitam um <strong>ambiente dinâmico complexo</strong>, <strong>sentem</strong> e <strong>agem</strong> autonomamente neste ambiente, e ao fazer isso realizam um conjunto de <strong>objetivos</strong> ou <strong>tarefas</strong> para os quais são projetados." Pattie Maes</p>
+<p>:::
+::::::::::::::</p>
+<h2 id="ibm-deep-blue-versus-kasparov-1997">IBM Deep Blue versus Kasparov (1997)</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<div class="arithmatex">\[\begin{center}
+\includegraphics[width=1\textwidth]{figures/deep_blue.jpg}
+\end{center}\]</div>
+<p>:::
+::: {.column width="50%"}</p>
+<ul>
+<li><strong>ambiente</strong>: tabuleiro de xadrez;</li>
+<li><strong>tarefa</strong>: jogar e vencer uma partida de xadrez;</li>
+<li><strong>ações</strong>: mover peças de xadrez;</li>
+<li><strong>implementação</strong>: algoritmo Min-Max + heurísticas + base de conhecimento + hardware dedicado.</li>
+</ul>
+<p>:::
+::::::::::::::</p>
+<h2 id="reconhecimento-de-digitos-manuscritos">Reconhecimento de dígitos manuscritos</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}
+\includegraphics[width=1\textwidth]{figures/mnist.jpeg}
+:::
+::: {.column width="50%"}</p>
+<p>O banco de dados MNIST é um conjunto de 70.000 imagens de dígitos manuscritos de 0 a 9 criado em 1998.</p>
+<ul>
+<li><strong>environment</strong>: uma imagem de um dígito manuscrito;</li>
+<li><strong>task</strong>: classificar uma imagem sem erro;</li>
+<li><strong>actions</strong>: classificar a imagem;</li>
+<li><strong>implementation</strong>: existem muitas implementações. No entanto, a melhor abordagem são modelos de rede neural, mais especificamente CNN.</li>
+</ul>
+<p>O gold standard para este problema é um erro de teste igual a 0,23% (2012).
+:::
+::::::::::::::</p>
+<h2 id="robo-em-um-labirinto">Robô em um labirinto</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<div class="arithmatex">\[\begin{center}
+\includegraphics[width=1\textwidth]{figures/labirinto.png}
+\end{center}\]</div>
+<p>:::
+::: {.column width="50%"}</p>
+<ul>
+<li><strong>ambiente</strong>: labirinto;</li>
+<li><strong>tarefa</strong>: encontrar a saída do labirinto;</li>
+<li><strong>ações</strong>: mover-se para frente, para trás, para a esquerda ou para a direita;</li>
+<li><strong>implementação</strong>: algoritmo de busca A*.</li>
+</ul>
+<p>:::
+::::::::::::::</p>
+<h2 id="veiculo-autonomo">Veículo autônomo</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<div class="arithmatex">\[\begin{center}
+\includegraphics[width=1\textwidth]{figures/car_stanford.jpg}
+\end{center}\]</div>
+<p>:::
+::: {.column width="50%"}</p>
+<p>Este é o carro da equipe de Stanford, que venceu a competição DARPA em 2005.</p>
+<ul>
+<li><strong>environment</strong>: uma estrada no deserto;</li>
+<li><strong>task</strong>: dirigir por um deserto e chegar a um ponto específico;</li>
+<li><strong>actions</strong>: acelerar, frear, virar à esquerda, virar à direita;</li>
+<li><strong>implementation</strong>: uma implementação bem complexa com diferentes sensores e atuadores.</li>
+</ul>
+<p>A equipe de Stanford foi a primeira equipe a vencer esta competição (2005).</p>
+<p>:::
+::::::::::::::</p>
+<h2 id="dataset-imagenet-2009">Dataset ImageNet (2009)</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}
+\includegraphics[width=1\textwidth]{figures/image_classification.png}
+:::
+::: {.column width="50%"}</p>
+<p>Este conjunto de dados tem mais de 14 milhões de imagens anotadas de acordo com a taxonomia do <a href="http://wordnet.princeton.edu/">WordNet</a>.</p>
+<p>Este dataset tem sido usado no ImageNet Large Scale Visual Recognition Challenge (ILSVRC) desde 2010. Esta competição é uma referência para tarefas de <strong>classificação de imagens</strong> e <strong>reconhecimento de objetos</strong>.</p>
+<p>:::
+::::::::::::::</p>
+<!-- ## IBM Watson vence no Jeopardy (2011)
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{figures/watson.jpg}
+\end{center}
+
+A partir de **2015** proliferação de **assistentes virtuais** que fazem uso de **classificação de texto** para compreensão das intenção de uma sentença.
+
+-->
+
+<h2 id="alphago-jogando-go-2016">AlphaGO jogando GO (2016)</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}
+\includegraphics[width=1\textwidth]{figures/go.jpg}
+:::</p>
+<p>::: {.column width="50%"}</p>
+<ul>
+<li><strong>environment</strong>: tabuleiro de GO;</li>
+<li><strong>task</strong>: jogar e vencer uma partida de GO;</li>
+<li><strong>actions</strong>: mover peças de GO;</li>
+<li><strong>implementation</strong>: Aprendizagem por Reforço.</li>
+</ul>
+<p>:::
+:::::::::::::: </p>
+<h2 id="modelos-generativos-dall-e-e-chatgpt">Modelos Generativos (DALL-E e chatGPT)</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<p><strong>DALL-E</strong> entrada: <em>"an autonomous robot solving a problem"</em></p>
+<ul>
+<li><strong>environment</strong>: uma descrição textual;</li>
+<li><strong>task</strong>: gerar imagens relacionadas ao texto informado;</li>
+<li><strong>actions</strong>: gerar imagens;</li>
+<li><strong>implementation</strong>: uma Deep Neural Network com uma arquitetura bem complexa.</li>
+</ul>
+<p>::: </p>
+<p>::: {.column width="50%"}
+\includegraphics[width=1\textwidth]{figures/dall_example.png}</p>
+<p>:::
+::::::::::::::</p>
+<h1 id="aprendizado-por-reforco-definicao-e-principais-conceitos">Aprendizado por Reforço: definição e principais conceitos</h1>
+<h2 id="aprendizagem-por-reforco-ou-reinforcement-learning-rl">Aprendizagem por Reforço ou Reinforcement Learning (RL)</h2>
+<p>:::::::::::::: {.columns}
+::: {.column width="50%"}</p>
+<div class="arithmatex">\[\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{figures/AE_loop.png}
+\end{figure}\]</div>
+<p>:::
+::: {.column width="50%"}</p>
+<ul>
+<li>
+<p>RL é uma abordagem de IA onde um agente aprende a tomar ações sequenciais em um ambiente.</p>
+</li>
+<li>
+<p>O aprendizado deste agente acontece através de uma <em>loop</em> de interação com o ambiente.</p>
+</li>
+<li>
+<p>O objetivo do agente é aprender a melhor sequência de ações para maximizar uma recompensa.</p>
+</li>
+<li>
+<p>Para cada estado <span class="arithmatex">\(s_{t}\)</span>, o agente escolhe uma ação <span class="arithmatex">\(a_{t}\)</span>, que muda o ambiente para um novo estado <span class="arithmatex">\(s_{t+1}\)</span> e gera uma recompensa <span class="arithmatex">\(r_{t}\)</span>.</p>
+</li>
+</ul>
+<p>:::
+::::::::::::::</p>
+<h2 id="aprendizagem-por-reforco-conceitos">Aprendizagem por Reforço: conceitos</h2>
+<ul>
+<li>
+<p>A tupla <span class="arithmatex">\((s_{t}, a_{t}, r_{t})\)</span> é chamada de <strong>experiência</strong>. Onde <span class="arithmatex">\(t\)</span> denota o instante de tempo onde esta experiência acontece. </p>
+</li>
+<li>
+<p>O loop entre o agente e o ambiente termina quando o agente atinge um estado terminal ou depois de um número máximo de iterações <span class="arithmatex">\(T\)</span> \footnote{Teoricamente, existe a possibilidade de loop infinito.}. O loop entre o agente e o ambiente é chamado de <strong>episódio</strong>.</p>
+</li>
+<li>
+<p>Um agente tipicamente precisa de muitos episódios para aprender uma boa política, variando de centenas de episódios até milhões de episódios.</p>
+</li>
+<li>
+<p>Uma <strong>trajetória</strong> é uma sequência de estados, ações e recompensas: <span class="arithmatex">\(\tau = (s_{0}, a_{0}, r_{0}), (s_{1}, a_{1}, r_{1}), \ldots, (s_{T}, a_{T}, r_{T})\)</span>.</p>
+</li>
+</ul>
+<h2 id="exemplos-de-ambientes">Exemplos de ambientes</h2>
+<div class="arithmatex">\[\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{figures/ambientes.png}
+\end{figure}\]</div>
+<h2 id="ambiente-cartpole">Ambiente CartPole</h2>
+<ul>
+<li><strong>Objetivo</strong>: Manter o pêndulo em pé por 200 passos de tempo (<em>time steps</em>).</li>
+<li><strong>Estado</strong>: Um vetor de tamanho 4 que representa: posição do carrinho, velocidade do carrinho, ângulo do pêndulo, velocidade angular do pêndulo. Por exemplo, <span class="arithmatex">\(s = [-0.034, 0.032, -0.031, 0.036]\)</span>.</li>
+<li><strong>Ação</strong>: Um valor inteiro, sendo 0 para mover o carrinho uma distância fixa para a esquerda, ou 1 para mover o carrinho uma distância fixa para a direita.</li>
+<li><strong>Reward</strong>: +1 para todo passo de tempo que o pêndulo permanece em pé.</li>
+<li><strong>Finalização</strong>: quando o pêndulo cai (mais de 12 graus da vertical), ou quando o carrinho sai da tela, ou quando o tempo máximo de 200 passos é atingido.</li>
+</ul>
+<h2 id="atari-breakout">Atari Breakout</h2>
+<ul>
+<li><strong>Objetivo</strong>: maximizar o score do jogo.</li>
+<li><strong>Estado</strong>: Uma imagem RGB com resolução 160 <span class="arithmatex">\(\times\)</span> 210 pixels, ou seja, o que vemos na tela do jogo.</li>
+<li><strong>Ação</strong>: Um valor inteiro de 0 a 3 que mapeia as ações do controle do jogo: {no-action, launch the ball, move right, move left}.</li>
+<li><strong>Reward</strong>: A diferença do score do jogo entre os estados consecutivos.</li>
+<li><strong>Finalização</strong>: Quando todas as vidas do jogo são perdidas.</li>
+</ul>
+<h2 id="bipedal-walker">Bipedal Walker</h2>
+<ul>
+<li><strong>Objetivo</strong>: Andar para a direita sem cair.</li>
+<li><strong>Estado</strong>: Um vetor de tamanho 24 que representa: [ângulo do casco, velocidade angular do casco, velocidade em x, velocidade em y, ângulo da junta do quadril 1, velocidade da junta do quadril 1, ângulo da junta do joelho 1, velocidade da junta do joelho 1, contato com o solo da perna 1, ângulo da junta do quadril 2, velocidade da junta do quadril 2, ângulo da junta do joelho 2, velocidade da junta do joelho 2, contato com o solo da perna 2, ..., 10 leituras do lidar]. </li>
+</ul>
+<p>Por exemplo, <span class="arithmatex">\(s = [2.745e^{-03}, 1.180e^{-05}, -1.539e^{-03}, -1.600e^{-02}, \ldots, 7.091e^{-01}, 8.859e^{-01}, 1.000e+00, 1.000e+00]\)</span>.</p>
+<h2 id="_1"></h2>
+<ul>
+<li><strong>Ação</strong>: Um vetor de quatro números de ponto flutuante no intervalo [-1.0, 1.0] que representa: [torque e velocidade do quadril 1, torque e velocidade do joelho 1, torque e velocidade do quadril 2, torque e velocidade do joelho 2]. Por exemplo, <span class="arithmatex">\(a = [0.097, 0.430, 0.205, 0.089]\)</span>.</li>
+<li><strong>Reward</strong>: Recompensa positiva para avançar para a direita, até um máximo de +300. -100 se o robô cair. Além disso, há uma pequena recompensa negativa (custo de movimento) a cada passo de tempo, proporcional ao torque absoluto aplicado.</li>
+<li><strong>Finalização</strong>: Quando o robô toca o solo com o corpo, ou quando o robô alcança a meta à direita, ou após o número máximo de passos de tempo de 1600.</li>
+</ul>
+<h2 id="algumas-formalizacoes-e-simplicacoes-importantes">Algumas formalizações e simplicações importantes</h2>
+<ul>
+<li><span class="arithmatex">\(s_{t} \in \mathcal{S}\)</span> é o estado, <span class="arithmatex">\(\mathcal{S}\)</span> é o espaço de estados.</li>
+<li><span class="arithmatex">\(a_{t} \in \mathcal{A}\)</span> é a ação, <span class="arithmatex">\(\mathcal{A}\)</span> é o espaço de ações.</li>
+<li>
+<p><span class="arithmatex">\(r_{t} = \mathcal{R}(s_{t}, a_{t}, s_{t+1})\)</span> é a recompensa, <span class="arithmatex">\(\mathcal{R}\)</span> é a função de recompensa.</p>
+</li>
+<li>
+<p>A probabilidade de uma transição de estado <span class="arithmatex">\(s_{t}\)</span> para <span class="arithmatex">\(s_{t+1}\)</span> depende de todos os estados e ações que ocorreram até o momento em um episódio: <span class="arithmatex">\(s_{t+1} \sim \mathcal{P}(s_{t+1} | (s_{0}, a_{0}), \ldots, (s_{t-1}, a_{t-1}) ,(s_{t}, a_{t}))\)</span>. Isto é muito complexo para modelar, principalmente se o episódio tem um número grande de passos de tempo.</p>
+</li>
+</ul>
+<h2 id="_2"></h2>
+<ul>
+<li>
+<p>Para fazer a transição de ambiente mais prática, transformamos em um <em>Markov Decision Process</em> (MDP) adicionando a suposição de que a transição para o próximo estado <span class="arithmatex">\(s_{t+1}\)</span> depende apenas do estado anterior <span class="arithmatex">\(s_{t}\)</span> e a ação <span class="arithmatex">\(a_{t}\)</span>. Isto é conhecido como a propriedade de Markov.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(s_{t+1} \sim \mathcal{P}(s_{t+1} | s_{t}, a{t})\)</span></p>
+</li>
+<li>
+<p><strong>Consequências práticas</strong>: a representação do estado precisa ter toda a informação necessária para tomar uma decisão\footnote{O agente pode fazer uso de representações internas do estado que são diferentes da representação fornecida pelo ambiente}.</p>
+</li>
+</ul>
+<h2 id="problema-de-rl-formulado-como-mdp">Problema de RL formulado como MDP</h2>
+<ul>
+<li><span class="arithmatex">\(\mathcal{S}\)</span> é o espaço de estados.</li>
+<li><span class="arithmatex">\(\mathcal{A}\)</span> é o espaço de ações.</li>
+<li><span class="arithmatex">\(\mathcal{P}(s_{t+1} | s_{t}, a{t})\)</span> é a função de transição de estado do ambiente.</li>
+<li><span class="arithmatex">\(\mathcal{R}(s_{t}, a_{t}, s_{t+1})\)</span> é a função de recompensa do ambiente.</li>
+</ul>
+<p><strong>Importante</strong>: </p>
+<ul>
+<li>Agentes não tem acesso a função de transição de estado <span class="arithmatex">\(\mathcal{P}\)</span> e a função de recompensa <span class="arithmatex">\(\mathcal{R}\)</span> do ambiente.</li>
+<li>A única forma que o agente tem para pegar informações sobre estas funções é através da interação com o ambiente, <span class="arithmatex">\((s_{t},a_{t},s_{t+1})\)</span>.</li>
+</ul>
+<h2 id="_3"></h2>
+<ul>
+<li>
+<p>Dado uma trajetória <span class="arithmatex">\(\tau = (s_{0}, a_{0}, r_{0}), (s_{1}, a_{1}, r_{1}), \ldots, (s_{T}, a_{T}, r_{T})\)</span>, o retorno desta trajetória é definido por: </p>
+<ul>
+<li><span class="arithmatex">\(R(\tau) = r_{0} + \gamma r_{1} + \gamma^{2} r_{2} + \cdots + \gamma^{T} r_{T} = \sum_{t=0}^{T} \gamma^{t} r_{t}\)</span></li>
+<li>que é o desconto da soma das recompensas em uma trajetória, onde <span class="arithmatex">\(\gamma \in [0,1]\)</span> é o fator de desconto.</li>
+</ul>
+</li>
+<li>
+<p>A função objetivo <span class="arithmatex">\(J(\tau)\)</span> é a expectativa dos retornos sobre todas as trajetórias: </p>
+<ul>
+<li><span class="arithmatex">\(J(\tau) = \mathbb{E}_{\tau \sim \pi}[R(\tau)]\)</span></li>
+<li>O objetivo <span class="arithmatex">\(J(\tau)\)</span> é o retorno médio ao longo de vários episódios. </li>
+</ul>
+</li>
+</ul>
+<h2 id="loop-generico-para-treinamento">Loop genérico para treinamento</h2>
+<div class="arithmatex">\[\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{figures/RL_loop.png}
+\end{figure}\]</div>
+<h2 id="funcoes-que-podem-ser-aprendidas-pelo-agente">Funções que podem ser aprendidas pelo agente</h2>
+<ul>
+<li>Uma <strong>política</strong> <span class="arithmatex">\(\pi\)</span> que mapeia um estado <span class="arithmatex">\(s\)</span> em uma ação <span class="arithmatex">\(a\)</span>: <span class="arithmatex">\(a \sim \pi(s)\)</span>. Idealmente, a política <span class="arithmatex">\(\pi\)</span> é a melhor política que maximiza a recompensa esperada.</li>
+<li>Uma <strong>função valor</strong>, <span class="arithmatex">\(V^{\pi}(s)\)</span> ou <span class="arithmatex">\(Q^{\pi}(s,a)\)</span>, para estimar uma expectativa de retorno <span class="arithmatex">\(\mathbb{E}_{\tau}[R(\tau)]\)</span>. <span class="arithmatex">\(V^{\pi}(s)\)</span> é a expectativa do retorno começando no estado <span class="arithmatex">\(s\)</span> e seguindo a política <span class="arithmatex">\(\pi\)</span>. <span class="arithmatex">\(Q^{\pi}(s,a)\)</span> é a expectativa do retorno começando no estado <span class="arithmatex">\(s\)</span>, tomando a ação <span class="arithmatex">\(a\)</span> e seguindo a política <span class="arithmatex">\(\pi\)</span>.</li>
+<li>Um <strong>modelo do ambiente</strong>, <span class="arithmatex">\(P(s'|s,a)\)</span>. Algoritmos desta família podem aprender um modelo do ambiente ou usar um modelo do ambiente para, por exemplo, facilitar o aprendizado de uma política.</li>
+</ul>
+<h2 id="algoritmos-de-aprendizado-por-reforco">Algoritmos de Aprendizado por Reforço</h2>
+<ul>
+<li><strong>Policy-based</strong>: Reinforce</li>
+<li><strong>Value-based</strong>: Q-Learning, SARSA, Deep Q-Network (DQN), Double DQN.</li>
+<li>
+<p><strong>Model based</strong>: Monte Carlo Tree Search (MCTS)</p>
+</li>
+<li>
+<p><strong>Policy-based + Value-based</strong>: Actor-Critic, Proximal Policy Optimization (PPO), Trust Region Policy Optimization (TRPO)</p>
+</li>
+</ul>
+<h1 id="exemplos-de-projetos-e-aplicacoes">Exemplos de projetos e aplicações</h1>
+<h2 id="exemplos-12">Exemplos (&frac12;)</h2>
+<ul>
+<li><a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">Playing Atari with Deep Reinforcement Learning</a>, 2013.</li>
+<li><a href="https://www.nature.com/articles/nature14236">Human-Level control through deep reinforcement learning</a>, 2015. <span class="arithmatex">\(\rightarrow\)</span> <em>Overpassed human results</em></li>
+<li><a href="https://www.science.org/doi/epdf/10.1126/science.aar6404">A General reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a>, 2018. </li>
+</ul>
+<h2 id="exemplos-22">Exemplos (2/2)</h2>
+<ul>
+<li><strong>Veículos autônomos</strong>: há alguns componentes em veículos autônomos que são otimizados através de RL.</li>
+<li><strong>Automatização industrial</strong>: os data centers do Google estão usando RL para reduzir o gasto de energia.</li>
+<li><strong>Negociação e finanças</strong>: há muitas empresas dizendo que estão usando RL para criar robôs para <em>trading</em>.</li>
+<li><strong>Processamento de linguagem natural (NLP)</strong>: LLMs estão usando RL para melhorar seu treinamento.</li>
+<li><strong>Recomendação</strong>: há muitos artigos sobre RL em sistemas de recomendação.</li>
+<li><strong>Path Planning</strong>: há muitos artigos sobre RL em planejamento de trajetórias para sistemas multi-agentes. </li>
+</ul>
+<h1 id="diferencas-entre-aprendizado-supervisionado-nao-supervisionado-e-por-reforco">Diferenças entre Aprendizado Supervisionado, Não Supervisionado e por Reforço</h1>
+<h2 id="diferencas">Diferenças</h2>
+<ul>
+<li>
+<p><strong>Aprendizado supervisionado</strong>: </p>
+<ul>
+<li>o principal objetivo é criar um modelo preditivo.</li>
+<li>Toda a construção do modelo é baseada em conjuntos de dados de treinamento e teste e ambos os conjuntos de dados devem ter um atributo de <strong>label</strong>.</li>
+<li>Todo o processo de treinamento é em modo <strong>batch</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aprendizado não supervisionado</strong>:</p>
+<ul>
+<li>o principal objetivo é resumir dados. Normalmente, através de modelos de agrupamento ou regras.</li>
+<li>Toda a construção do modelo é baseada em conjuntos de dados de treinamento sem um atributo de <strong>label</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aprendizado por Reforço</strong>:</p>
+<ul>
+<li>O principal objetivo é aprender a interagir com um ambiente.</li>
+<li>Todo o processo de treinamento é <strong>interativo</strong>.</li>
+<li>Não há dados de treinamento. No entanto, há um <strong>ambiente</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="caracteristicas-do-aprendizado-por-reforco">Características do Aprendizado por Reforço</h2>
+<ul>
+<li>
+<p>Falta de um oráculo: a única informação que um agente tem depois de executar uma ação <span class="arithmatex">\(a\)</span> em um estado <span class="arithmatex">\(s\)</span> é a recompensa. Ninguém fala para o agente qual é a melhor ação a ser tomada. Ele apenas recebe uma indicação de que a ação foi boa ou ruim.</p>
+</li>
+<li>
+<p><em>Sparsity of Feedback</em>: em muitos ambientes, a recompensa pode ser esparsa. Isto é, o agente pode receber uma recompensa positiva ou negativa apenas após um grande número de ações.</p>
+</li>
+</ul>
+<p>A combinação destas duas características torna o aprendizado por reforço menos efetivo se comparado com uma abordagem supervisionada\footnote{No contexto do aprendizado por reforço uma experiência entrega menos informação.}.</p>
+<h2 id="_4"></h2>
+<ul>
+<li>Geração dos dados: a qualidade do algoritmo não afeta somente o aprendizado, mas também afeta a geração dos dados. Se o agente não está aprendendo bem, ele pode não explorar o ambiente corretamente.</li>
+</ul>
+<h1 id="referencias-e-proximas-atividades">Referências e próximas atividades</h1>
+<h2 id="principal-referencia">Principal Referência</h2>
+<ul>
+<li>Capítulo 1 do livro Laura Graesser and Wah Loon Keng. 2019. Foundations of Deep Reinforcement Learning: Theory and Practice in Python (1<sup>st</sup>. ed.). Addison-Wesley Professional.</li>
+</ul>
+<h2 id="proximas-atividades">Próximas atividades</h2>
+<ul>
+<li>Ferramentas e ambientes para aprendizagem por reforço. </li>
+<li>Estimando funções valor <span class="arithmatex">\(Q^{\pi}(s,a)\)</span> com o algoritmo Q-Learning.</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+      
+        <script src="../../../js/markdown-enhancer.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
