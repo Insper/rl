@@ -422,6 +422,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#atividade-pre-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade pré-aula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principais-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       Principais referências
@@ -510,6 +519,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#atividade-pre-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade pré-aula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principais-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       Principais referências
@@ -562,9 +580,20 @@ Em aprendizagem supervisionada, a pilha de software básica geralmente tem apena
 <ul>
 <li>o conjunto de dados, </li>
 <li>o pré-processamento do conjunto de dados, e </li>
-<li>a biblioteca de aprendizado profundo. </li>
+<li>o algoritmo de aprendizado. </li>
 </ul>
 <p>Na aprendizagem por reforço, a pilha de software é mais complexa. Começa com a construção do próprio ambiente, geralmente um pedaço de software como uma simulação. A lógica do ambiente base é então envolvida com uma API à qual o código de aprendizado pode ser aplicado. Dependendo de como o algoritmo de aprendizado por reforço interage com o ambiente, camadas de pré-processamento são então aplicados (por exemplo, para tornar as observações de imagem em escala de cinza). Somente depois que tudo isso é feito, um algoritmo de aprendizado por reforço pode ser aplicado.</p>
+<h2 id="atividade-pre-aula">Atividade pré-aula</h2>
+<ol>
+<li>Acesse o <a href="https://gymnasium.farama.org/">Gymnasium API</a> e leia a documentação.</li>
+<li>Instale o Gymnasium API na sua máquina. Em outras palavras, crie um projeto, com ambiente virtual, e instale o Gymnasium API.</li>
+<li>Leia a documentação dos ambientes Taxi Driver e Cliff Walking que fazem parte dos <em>Toy Text</em> environments.</li>
+<li>Implemente o loop genérico de treinamento, discutido na última aula, para entender como os ambientes Taxi Driver e Cliff Walking funcionam.</li>
+</ol>
+<p><img src="figures/RL_loop.png" width="500"></p>
+<p>Alguns comandos deste pseudo-código não poderão ser implementados, por exemplo, a linha 8. Pois ainda não vimos nenhum algoritmo de aprendizagem por reforço. No entanto, é possível, por exemplo, apenas armazenar as experiências em um arquivo de log - isto irá ajudar a entender o que acontece no ambiente. </p>
+<p>Tem algumas instruções que não estão explícitas no pseudo-código acima, por exemplo, como o agente seleciona uma ação depois da inicialização do ambiente? </p>
+<p>Tais questões vão ser discutidas na próxima aula. </p>
 <h2 id="principais-referencias">Principais referências</h2>
 <ol>
 <li><a href="https://farama.org/Announcing-The-Farama-Foundation">The Farama Foundation</a>.</li>
@@ -596,7 +625,7 @@ Em aprendizagem supervisionada, a pilha de software básica geralmente tem apena
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2025</span>
   </span>
 
     
