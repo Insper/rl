@@ -6,7 +6,7 @@ institute: Aprendizagem por Reforço
 date: 02/2025
 theme: insper
 aspectratio: 169
-...
+---
 
 # Inteligência Artificial: Definições e principais conceitos
 

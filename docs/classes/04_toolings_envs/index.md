@@ -22,9 +22,24 @@ Em aprendizagem supervisionada, a pilha de software básica geralmente tem apena
 
 * o conjunto de dados, 
 * o pré-processamento do conjunto de dados, e 
-* a biblioteca de aprendizado profundo. 
+* o algoritmo de aprendizado. 
 
 Na aprendizagem por reforço, a pilha de software é mais complexa. Começa com a construção do próprio ambiente, geralmente um pedaço de software como uma simulação. A lógica do ambiente base é então envolvida com uma API à qual o código de aprendizado pode ser aplicado. Dependendo de como o algoritmo de aprendizado por reforço interage com o ambiente, camadas de pré-processamento são então aplicados (por exemplo, para tornar as observações de imagem em escala de cinza). Somente depois que tudo isso é feito, um algoritmo de aprendizado por reforço pode ser aplicado.
+
+## Atividade pré-aula
+
+1. Acesse o [Gymnasium API](https://gymnasium.farama.org/) e leia a documentação.
+1. Instale o Gymnasium API na sua máquina. Em outras palavras, crie um projeto, com ambiente virtual, e instale o Gymnasium API.
+1. Leia a documentação dos ambientes Taxi Driver e Cliff Walking que fazem parte dos *Toy Text* environments.
+1. Implemente o loop genérico de treinamento, discutido na última aula, para entender como os ambientes Taxi Driver e Cliff Walking funcionam.
+
+<img src="figures/RL_loop.png" width="500">
+
+Alguns comandos deste pseudo-código não poderão ser implementados, por exemplo, a linha 8. Pois ainda não vimos nenhum algoritmo de aprendizagem por reforço. No entanto, é possível, por exemplo, apenas armazenar as experiências em um arquivo de log - isto irá ajudar a entender o que acontece no ambiente. 
+
+Tem algumas instruções que não estão explícitas no pseudo-código acima, por exemplo, como o agente seleciona uma ação depois da inicialização do ambiente? 
+
+Tais questões vão ser discutidas na próxima aula. 
 
 ## Principais referências
 
