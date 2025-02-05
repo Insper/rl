@@ -1,0 +1,203 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{color}
+\usepackage{colortbl}
+
+\usepackage{algorithmic}
+
+\def\HiLi{\leavevmode\rlap{\hbox to \hsize{\color{yellow!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
+
+\begin{document}
+
+\title{Algoritmo \textsc{Sarsa}} 
+\author{Fabrício Barth}
+\institute{Insper Instituto de Ensino e Pesquisa}
+\date{Fevereiro de 2025}
+
+\maketitle
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	A regra para update da \textbf{Q-table} no algoritmo \textbf{Q-Learning} é: 
+	
+	\begin{equation}
+	Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma \max_{A'}{Q(s', A')} - Q(s,a)]
+	\end{equation}
+
+	A diferença entre o novo valor e a estimativa antiga é utilizada para atualizar a estimativa antiga. O algoritmo \textbf{Q-Learning} considera como o novo valor o valor máximo das possibilidades no novo estado $s'$: 
+	
+	\begin{equation}
+	\max_{A'}{Q(s', A')}
+	\end{equation}
+	
+\end{frame}
+
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	\begin{itemize}
+		
+	\item No entanto, a ação realmente executada pelo agente pode não ser a ação que tem o valor máximo em $s'$ devido a função de escolha da ação ser baseada no valor de $\epsilon$ e ter características aleatórias.
+	
+	\item Por isso que o algoritmo \textbf{Q-Learning} é chamado de \textbf{off-policy}.   
+\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+	
+	O algoritmo \textsc{Sarsa} é chamado de  \textbf{on-policy} porque ele atualiza a \textbf{Q-table} da seguinte forma: 
+	
+	\begin{equation}
+		Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
+	\end{equation}
+	
+	o algoritmo \textsc{Sarsa} atualiza $Q(s,a)$ considerando a real ação $a'$ executada pelo agente em $s'$.
+	
+\end{frame}
+
+\begin{frame}{\textsc{Sarsa}: on-policy}
+\begin{algorithmic} 
+	\STATE \emph{\textbf{function} Sarsa(env, $\alpha$, $\gamma$, $\epsilon$, $\epsilon_{min}$, $\epsilon_{dec}$, episódios)}
+	\STATE inicializar os valores de $Q(s, a)$ arbitrariamente
+	\FOR {todos os episódios}
+	\STATE inicializar $s$ a partir de $env$
+	\STATE \HiLi $a \leftarrow escolha(s, \epsilon)$
+	\REPEAT
+	\STATE $s', r \leftarrow$ executar a ação $a$ no $env$
+	\STATE \HiLi $a' \leftarrow escolha(s', \epsilon)$
+	\STATE \HiLi $Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]$
+	\STATE $s  \leftarrow s'$
+	\STATE \HiLi $a  \leftarrow a'$
+	\UNTIL {$s$ ser um estado final}
+	\STATE \textbf{if} $\epsilon > \epsilon_{min}$ \textbf{then} $\epsilon \leftarrow \epsilon \times \epsilon_{dec}$
+	\ENDFOR
+	\STATE \textbf{return} Q
+\end{algorithmic}	
+\end{frame}
+
+
+\begin{frame}{Atividade de implementação}
+	
+	\begin{alertblock}{Comparando \textsc{Q-learning} e \textsc{Sarsa}}
+		O objetivo desta atividade é implementar o algoritmo \textsc{Sarsa} e compará-lo com o \textsc{Q-learning}.
+	\end{alertblock}
+	
+	\begin{block}{Atividades}
+	Siga o roteiro descrito em https://insper.github.io/rl/classes/05\_x\_sarsa/ \href{https://insper.github.io/rl/classes/05_x_sarsa/}
+	{\beamergotobutton{Link}}
+	\end{block}
+
+\end{frame} 
+
+
+
+%
+% ################################ VERSAO 2023 REVISADA ATEH AQUI ########################
+%
+
+%\begin{frame}{Ambientes não-determinísticos}
+%	
+%	\begin{alertblock}{Ambientes não-determinísticos}
+%		O objetivo desta atividade é desenvolver agentes capazes de atuar em ambientes não-determinísticos.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte3/parte3.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte3/parte3.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%
+%\begin{frame}{Ambiente competitivo com variável aleatória}
+%	\begin{alertblock}{Jogos}
+%		O objetivo desta atividade é utilizar e analisar o comportamento de agentes em ambientes competitivos com variável aleatória.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte4/parte4.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte4/parte4.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}{Ambiente contínuo}
+%	
+%	\begin{alertblock}{Espaço de estados contínuo}
+%		O objetivo desta atividade é fazer uso de aprendizagem de reforço em ambientes com um espaço de estados contínuo.
+%	\end{alertblock}
+%	
+%	\begin{block}{Atividades}
+%		Siga o roteiro descrito em src/parte5/parte5.md \href{https://github.com/fbarth/reinLearn/blob/main/src/parte5/parte5.md}
+%		{\beamergotobutton{Link}}
+%	\end{block}
+%\end{frame}
+%
+%
+%%%\begin{frame}{Q-Learning com GridSearch}
+%%%Faz sentido usar GridSearch para encontrar os melhores valores de $\alpha$ e $\gamma$? 
+%%%\end{frame}
+%
+%
+%
+%\begin{frame}{Considerações Finais}
+%\begin{itemize}
+%	\item O algoritmo \textit{Q-Learning} pode ser utilizado por agentes que 
+%	não tem conhecimento prévio sobre o problema.
+%	
+%	%\item Diversos autores já provaram que o algoritmo \textit{Q-Learning} converge 
+%	%para a função correta $Q$ dentro de certas condições. Por exemplo, uma 
+%	%delas é garantir que o agente avalie um par $Q(s,a)$ diversas vezes.  
+%	
+%	%\newpage
+%	
+%	\item \textit{Q-Learning} converge em ambientes 
+%	\textbf{determinísticos} e \textbf{não-determinísticos}.
+%	
+%	\item Na prática, o algoritmo \textit{Q-Learning} necessita de muitas iterações de 
+%	treinamento até convergir, inclusive para problemas que não tem um espaço de busca 
+%	tão grande.   
+%
+%\pause 
+%
+%	\item \textbf{E quando o espaço de busca for muito grande?} 
+%
+%	%\item Usar \textit{Deep Learning} com \textit{Reinforcement Learning}! \emph{Assunto do 
+%	%nosso próximo encontro!}
+%
+%	%\item Ler o capítulo \textit{18. Reinforcement Learning} até a seção 
+%	%\textit{Implementing Deep Q-Learning} do livro \textbf{Hands-On Machine Learning 
+%	%with Scikit-Learn, Keras, and TensorFlow, 2nd Edition} do Aurélien Géron.
+%
+%	%\item Referência adicional: https://deepmind.com/research/case-studies/alphago-the-story-so-far
+%
+%\end{itemize}
+%\end{frame}
+%
+%
+%\begin{frame}{O que vimos até o momento?}
+%\begin{itemize}
+%	\item o que é \textbf{Aprendizagem por Reforço} e os seus principais conceitos;
+%	\item como desenvolver um agente autônomo usando o algoritmo \textbf{Q-Learning};
+%	\item quais os aspectos positivos e negativos do algoritmo \textbf{Q-Learning}, e;
+%	\item funcionamento da biblioteca \textbf{Gym}. 
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Material de \textbf{consulta}}
+\begin{itemize}
+  %\item Tom Mitchell. Machine Learning. McGraw-Hill, 1997.
+  \item Richard S. Sutton and Andrew G. Barto. 2018. Reinforcement Learning: An Introduction. A Bradford Book, Cambridge, MA, USA. \textbf{Capítulo 6.4} 
+  \item Rummery, G. A. \& Niranjan, M. (1994), On-Line Q-Learning Using Connectionist Systems (TR 166), Technical report, Cambridge University Engineering Department, Cambridge, England.
+  %\item Projeto Gymnasium \href{https://gymnasium.farama.org/}{\beamergotobutton{Link}}
+  %\item Projeto PettingZoo \href{https://pettingzoo.farama.org/}{\beamergotobutton{Link}}
+  %\item https://deepmind.com/research/case-studies/alphago-the-story-so-far
+  \item Aurélien Géron. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition, 2019. 
+\end{itemize}
+\end{frame}
+
+\end{document}
+

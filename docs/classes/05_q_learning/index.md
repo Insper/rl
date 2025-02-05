@@ -4,102 +4,32 @@
 
 Nesta aula vamos utilizar os slides abaixo:
 
-<embed src="reinforcementLearning.pdf" type="application/pdf" width="800" height="400">
+<embed src="q_learning.pdf" type="application/pdf" width="800" height="400">
 
 ## Implementação
 
 Depois de uma breve conversa sobre os principais conceitos, vamos implementar o primeiro agente utilizando aprendizado por reforço. Por favor, siga as instruções abaixo:
 
-* copie o arquivo [TaxiDriverGym.py](./src/TaxiDriverGym.py) para a sua máquina local. Este arquivo faz uso do ambiente `Taxi-v3` da biblioteca Gymanasium e do algoritmo Q-Learning. 
+1. Utilize como base o código que você implementou na [aula anterior](../04_toolings_envs/index.md).
+1. Considere apenas o ambiente do *Taxi Driver*.
+1. Na linha 8 `agent.update(action, state, reward)`, implemente a equação de Bellman para atualizar os valoes da Q-table. 
+1. Implemente a linha 6 `action = agent.select_action(state)` para selecionar a ação com base na política epsilon-greedy.
+1. Detalhe importante: a variável `state` da linha 6 é o estado atual, e a variável `state` da linha 7 é  de fato o `next_state`. 
+1. Implemente alguma forma para persistir a Q-table. Pode ser um arquivo CSV, JSON, ou qualquer outro formato que você preferir.
+1. Para cada episódio use uma variável que armazena a recompensa acumulada da trajetória executada naquele episódio. Basicamente, você vai ter que inicializar esta variável com zero no início de cada episódio e atualizá-la a cada ação tomada com o reward recebido. 
+1. Ao final de cada ação executada pelo agente não esqueça de atualizar o estado atual com o `next_state`. 
+1. Ao final de cada episódio, registre a recompensa acumulada em um arquivo de log onde você irá informar o número do episódio e a recompensa acumulada.
 
-* copie o arquivo [QLearning.py](./src/QLearning.py) para a sua máquina local. Esta implementação está incompleta. Você terá que preencher o método `train` para que o algoritmo Q-Learning funcione corretamente. Mas antes disso, vamos entender a estrutura desta classe. 
+O script implementado acima deve gerar:
 
+* um arquivo de log com o número do episódio e a recompensa acumulada, e;
+* um arquivo com a Q-table.
 
-### Arquivo QLearning.py
+Crie mais dois artefatos de software que: 
 
-Este arquivo implementa o algoritmo Q-Learning. A classe implementada neste arquivo possui 4 métodos: 
+* imprime a curva de aprendizado do agente. A curva de aprendizado do agente precisa ser um gráfico que mostra o número do episódio no eixo x e a recompensa acumulada no eixo y.
+* faz uso da Q-table para executar o agente no ambiente do *Taxi Driver*. O agente deve ser capaz de executar o ambiente sem treinamento.
 
-* `__init__` (construtor): que recebe todos os hiperparâmetros do algoritmo Q-Learning e inicializa a Q-table com base no número de ações e estados informados pelo parâmetro *env*. Alguns destes hiperparâmetros não serão utilizados neste momento, mas vamos mantê-los. 
+## Entrega
 
-* `select_action`: dado um estado, este método seleciona uma ação que deve ser executada. 
-
-* `train`: método responsável por executar as simulações e popular a **Q-table**. Este método retorna uma q-table, mas também atualiza um arquivo CSV com os dados da q-table e uma imagem que é um plot da quantidade de ações executadas em cada episódio. 
-
-* `plotactions`: é um método que cria uma imagem com o plot da quantidade de ações executadas em cada episódio. 
-
-### Atualizando os valores da Q-table
-
-Dentro do método `train` tem-se o seguinte trecho de código: 
-
-````python
-for i in range(1, self.episodes+1):
-    (state, _) = self.env.reset()
-    rewards = 0
-    done = False
-    actions = 0
-
-    while not done:
-        #
-        # escolher uma ação $a$ para um estado $s$
-		# executar a ação $a$
-		# observar a recompensa $r$ e o novo estado $s'$ 
-		# Q(s,a) \leftarrow Q(s,a) + \alpha[r + \gamma \max_{A'}Q(s',A') - Q(s,a)]
-		# s recebe s'
-        #
-````
-
-que é responsável por execurtar *N* episódios e atualizar a variável `self.q_table`. 
-
-Este método é chamado pelo arquivo `TaxiDriverGym.py` nas linhas 11 e 12:
-
-````python
-qlearn = QLearning(env, alpha=0.1, gamma=0.6, epsilon=0.7, epsilon_min=0.05, epsilon_dec=0.99, episodes=100000)
-q_table = qlearn.train('data/q-table-taxi-driver.csv', 'results/actions_taxidriver')
-#q_table = loadtxt('data/q-table-taxi-driver.csv', delimiter=',')
-````
-
-Atividades: 
-
-* Complete o código do método `train` em `QLearning.py`. 
-
-* Execute o arquivo `TaxiDriverGym.py` com o comando:
-
-````bash
-python TaxiDriverGym.py
-````
-
-Lembre-se que nesta execução o programa irá criar toda a Q-table e armazenar no arquivo `data/q-table-taxi-driver.csv`. Depois de calcular os valores para a Q-table o programa irá resolver um dos possíveis cenários considerando um estado inicial qualquer. Além disso, o programa irá gerar um plot no diretório results que descreve a quantidade de ações executadas em cada época. 
-
-* Abra o arquivo `results/action_taxidriver.jpg` e faça uma análise do mesmo. O que este gráfico representa?
-
-* Agora faça o algoritmo `TaxiDriverGym.py` ler a Q-table a partir do arquivo gerado anteriormente e veja qual é o comportamento. Execute diversas vezes.
-
-* Qual é o comportamento do agente? Ele sempre consegue encontrar uma solução? As soluções parecem ser ótimas?  
-
-Considerando os valores informados nos parâmetros do método `train`, se a sua implementação do `Q-learning` estiver correta então o agente `TaxiDriverGym.py` deve encontrar a solução para todos os casos apresentados. Se por algum motivo a sua solução não estiver convergindo então significa que tem algum *bug* na atualização da q-table. 
-
-Uma vez que você confirmou que a sua implementação não tem *bugs* então você pode ajustar alguns dos hiperparâmetros. Por exemplo, diminuindo a quantidade de episódios e analisando a Q-table gerada. 
-
-* O arquivo `results/action_taxidriver.jpg` é um plot da quantidade de episódios versus a quantidade de atividades. Teria alguma outra forma de visualizar a evolução do agente? E se usarmos `rewards` ao invés da quantidade de atividades? A visualização fica melhor? 
-
-## Q-table pronta
-
-Como resultado da etapa de treinamento, o agente terá uma *Q-table* que mostra a melhor ação que ele pode tomar em cada estado. A maneira de usar essas informações é muito simples:
-
-```python
-(state, _) = env.reset()
-done = False
-    
-while not done:
-    print(state)
-    action = np.argmax(q_table[state])
-    state, reward, done, truncated, info = env.step(action)
-```
-
-Aqui, o agente seleciona a ação com o maior valor em cada estado. Nós não temos nenhum comportamento aleatório. 
-
-
-
-
-
-
+Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/TMjBraJx](https://classroom.github.com/a/TMjBraJx). Esta atividade é individual ou em dupla e o **prazo é 05/02/2024 15:30.** Eventualmente, você não conseguirá terminar a atividade no tempo estipulado. Neste caso, submeta o que você conseguiu fazer. No arquivo README.md você deve informar o que está faltando. 
