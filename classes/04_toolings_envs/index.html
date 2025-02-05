@@ -14,7 +14,7 @@
         <link rel="prev" href="../01_introduction/">
       
       
-        <link rel="next" href="../../references/">
+        <link rel="next" href="../05_q_learning/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -272,17 +272,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -296,7 +298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Introdução
@@ -323,51 +325,6 @@
   
 
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Q-Learning and Sarsa
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            Q-Learning and Sarsa
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -422,11 +379,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#atividade-pre-aula" class="md-nav__link">
+  <a href="#atividade" class="md-nav__link">
     <span class="md-ellipsis">
-      Atividade pré-aula
+      Atividade
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Atividade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questões
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -452,6 +424,70 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Q-Learning and Sarsa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Q-Learning and Sarsa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_q_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algoritmo Q-Learning
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -519,11 +555,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#atividade-pre-aula" class="md-nav__link">
+  <a href="#atividade" class="md-nav__link">
     <span class="md-ellipsis">
-      Atividade pré-aula
+      Atividade
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Atividade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questões
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -583,17 +634,26 @@ Em aprendizagem supervisionada, a pilha de software básica geralmente tem apena
 <li>o algoritmo de aprendizado. </li>
 </ul>
 <p>Na aprendizagem por reforço, a pilha de software é mais complexa. Começa com a construção do próprio ambiente, geralmente um pedaço de software como uma simulação. A lógica do ambiente base é então envolvida com uma API à qual o código de aprendizado pode ser aplicado. Dependendo de como o algoritmo de aprendizado por reforço interage com o ambiente, camadas de pré-processamento são então aplicados (por exemplo, para tornar as observações de imagem em escala de cinza). Somente depois que tudo isso é feito, um algoritmo de aprendizado por reforço pode ser aplicado.</p>
-<h2 id="atividade-pre-aula">Atividade pré-aula</h2>
+<h2 id="atividade">Atividade</h2>
 <ol>
 <li>Acesse o <a href="https://gymnasium.farama.org/">Gymnasium API</a> e leia a documentação.</li>
 <li>Instale o Gymnasium API na sua máquina. Em outras palavras, crie um projeto, com ambiente virtual, e instale o Gymnasium API.</li>
-<li>Leia a documentação dos ambientes Taxi Driver e Cliff Walking que fazem parte dos <em>Toy Text</em> environments.</li>
-<li>Implemente o loop genérico de treinamento, discutido na última aula, para entender como os ambientes Taxi Driver e Cliff Walking funcionam.</li>
+<li>Leia a documentação dos ambientes <em>Taxi Driver</em> e <em>Cliff Walking</em> que fazem parte dos <em>Toy Text</em> environments.</li>
+<li>Implemente o loop genérico de treinamento, apresentado abaixo e discutido na última aula, para entender como os ambientes <em>Taxi Driver</em> e <em>Cliff Walking</em> funcionam.</li>
 </ol>
 <p><img src="figures/RL_loop.png" width="500"></p>
-<p>Alguns comandos deste pseudo-código não poderão ser implementados, por exemplo, a linha 8. Pois ainda não vimos nenhum algoritmo de aprendizagem por reforço. No entanto, é possível, por exemplo, apenas armazenar as experiências em um arquivo de log - isto irá ajudar a entender o que acontece no ambiente. </p>
-<p>Tem algumas instruções que não estão explícitas no pseudo-código acima, por exemplo, como o agente seleciona uma ação depois da inicialização do ambiente? </p>
-<p>Tais questões vão ser discutidas na próxima aula. </p>
+<ol>
+<li>A linha 4 é desnecessária. Você pode simplesmente ignorar. </li>
+<li>Implemente para a linha 8: <code>agent.update(action, state, reward)</code> um registro em algum arquivo de <em>log</em> para o registro das experiências. </li>
+<li>O script deve considerar os dois ambientes. No entanto, se você preferir, pode implementar dois scripts, um para cada ambiente. Ou implementar um script que recebe o nome do ambiente como argumento de linha de comando.</li>
+<li>Mantenha este código salvo em algum lugar pois você vai precisar dele para as próximas aulas.</li>
+</ol>
+<h3 id="questoes">Questões</h3>
+<ol>
+<li>Como os estados são representados nestes dois ambientes? </li>
+<li>Quais são as ações possíveis nestes dois ambientes?</li>
+<li>Como as recompensas são dadas nestes dois ambientes?</li>
+</ol>
 <h2 id="principais-referencias">Principais referências</h2>
 <ol>
 <li><a href="https://farama.org/Announcing-The-Farama-Foundation">The Farama Foundation</a>.</li>
