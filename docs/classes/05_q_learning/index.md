@@ -32,4 +32,4 @@ Crie mais dois artefatos de software que:
 
 ## Entrega
 
-Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/TMjBraJx](https://classroom.github.com/a/TMjBraJx). Esta atividade é individual ou em dupla e o **prazo é 05/02/2024 15:30.** Eventualmente, você não conseguirá terminar a atividade no tempo estipulado. Neste caso, submeta o que você conseguiu fazer. No arquivo README.md você deve informar o que está faltando. 
+Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/TMjBraJx](https://classroom.github.com/a/TMjBraJx). Esta atividade é individual ou em dupla e o **prazo é 10/02/2024 15:30.** Eventualmente, você não conseguirá terminar a atividade no tempo estipulado. Neste caso, submeta o que você conseguiu fazer. No arquivo README.md você deve informar o que está faltando. 
