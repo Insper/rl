@@ -13,9 +13,11 @@ Abaixo são apresentados outros gráficos que ilustram o aprendizado do agente.
 <img src="fig/compare_2.png" alt="Curva de aprendizado" style="height: 400px;"/>
 
 
+<!--
+
 ## Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking
 
-A proposta desta atividade é reutilizar o código já feito no [atividade sobre on-olicy e off-policy](./classes/05_x_sarsa/index.md#implementação) criando novos plots para apresentação dos resultados. 
+A proposta desta atividade é reutilizar o código já feito no [atividade sobre on-policy e off-policy](./classes/05_x_sarsa/index.md#implementação) criando novos plots para apresentação dos resultados. 
 
 Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo (Q-Learning e Sarsa) e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.
 
@@ -58,12 +60,16 @@ sns.lineplot(
 
 Faça a entrega do código fonte e dos gráficos gerados via [Github Classroom](https://classroom.github.com/a/7JKrtofS). Esta atividade é **individual** e o prazo de entrega é **08 de março de 2024 até às 23:30** horas.
 
+-->
+
 ## Referências
 
 As imagens acima foram retiradas do capítulo 2 do livro: 
 
 Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. [Multi-Agent Reinforcement Learning: Foundations and Modern Approaches](https://www.marl-book.com/). MIT Press, 2024.
 
+
+<!--
 
 ## Comentários sobre as entregas :new: 
 
@@ -99,3 +105,5 @@ Utilizando este gráfico talvez seja difícil de visualizar a diferença entre o
 <img src="fig/perfeito_2_zoom1.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
 
 <img src="fig/perfeito_2_zoom2.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
+
+-->

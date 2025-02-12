@@ -16,7 +16,8 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 
 | Descrição                                                    | Prazo            |
 |:-------------------------------------------------------------|:-------------------:|
-| TBD                                                          | TBD |
+| [Implementação do Q-Learning](./classes/05_q_learning/index.md)              | 10/02/2025 |
+| [Manipulando os hiperparâmetros do Q-Learning](./classes/05_x_hyperparameters/index.md) | 13/02/2025 |
 
 ## Projetos
 

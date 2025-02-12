@@ -1,16 +1,17 @@
 # Hiperparâmetros em Q-Learning
 
-Ainda considerando o exemplo a implementação do `TaxiDriver`, responda as perguntas abaixo.
-
-Para responder as questões abaixo utilize as implementações do `TaxiDriverGym.py` e `QLearning.py` que você implementou na atividade anterior.
+Antes de iniciar esta atividade, leia o material sobre [avaliação de algoritmos de aprendizado por reforço](../11_evaluation/index.md).
 
 ## Manipulando $\alpha$ e $\gamma$
 
-* Se $\alpha$ for um valor muito próximo de zero? Explique o comportamento encontrado.
+Ainda considerando o exemplo a implementação do `TaxiDriver`, responda as perguntas abaixo.
 
-* Se $\gamma$ for zero? Explique o comportamento encontrado. 
+* O que é melhor? Um valor de $\alpha$ muito próximo de zero ou um valor de $\alpha$ muito próximo de um?
+* O que é melhor? Um valor de $\gamma$ muito próximo de zero ou um valor de $\gamma$ muito próximo de um?
 
-Para fundamentar a sua resposta, use os plots gerados na pasta `results` depois do treinamento. 
+Execute treinamentos considerando valores de $\alpha$ e $\gamma$ próximos de zero, intermediários e próximos de um. Armazene os dados sobre reward acumulado ou qualquer outra métrica que você considere relevante e crie gráficos para comparar os resultados.
+
+O importante é comparar a curva de aprendizado para diferentes valores de $\alpha$ e $\gamma$ e saber dizer se o agente aprendeu ou não a tarefa. Ao variar o $\alpha$ você deve fixar o valor de $\gamma$ e vice-versa. Fica a seu critério quais valores fixos de $\alpha$ e $\gamma$ você vai escolher.
 
 ## Considerando uma escolha de ação sempre aletatória
 
@@ -31,7 +32,7 @@ def select_action(self, state):
     return self.env.action_space.sample() # Explore action space
 ````
 
-Qual o comportamento do agente? **Novamente**: use os plots gerados na pasta `results` depois do treinamento para fundamentar a sua resposta. 
+Qual o comportamento do agente? **Novamente**: use gráficos para justificar a sua resposta.  
 
 ## Considerando um agente que nunca explora novas ações
 
@@ -42,56 +43,29 @@ def select_action(self, state):
     return np.argmax(self.q_table[state]) # Exploit learned values
 ````  
 
-## Sumarizando os resultados através de imagens
-
-Como podemos sumarizar os diferentes resultados através de imagens?
-
-Neste momento, você já deve ter percebido que uma ferramenta muito útil para visualizar e sumarizar o aprendizado do agente são gráficos que mostram a evolução de alguma métrica ao longo dos diversos episódios.
-
-* Quais foram as métricas utilizadas no caso do `TaxiDriver`?
-
-* Quais foram os hiperparâmetros utilizados? 
-
-* O aprendizado dos agentes implementados para este caso **convergem** rapidamente? 
-
-* O **desempenho** do agente se mantem ao longo dos episódios? 
-
 ## Atividade
 
-Este exercício é composto por duas partes. 
+Nesta atividade você deve responder as seguintes perguntas: 
 
-### Parte 1
+* O que é melhor? Um valor de $\alpha$ muito próximo de zero ou um valor de $\alpha$ muito próximo de um?
+* O que é melhor? Um valor de $\gamma$ muito próximo de zero ou um valor de $\gamma$ muito próximo de um?
+* Qual é o impacto ao escolher uma ação sempre de forma aleatória durante o treinamento? 
+* Qual é o impacto ao escolher uma ação sempre considerando a Q-table durante o treinamento?
 
-Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo $y$ do gráfico. O eixo $x$ deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor *zoom* (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.
+Para responder estas perguntas você deve considerar o processo de aprendizado do agente e o resultado final do treinamento.
 
-Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. 
-
-O gráfico deve possuir 3 linhas distintas. Cada uma destas linhas deve apresentar uma variação possível considerando os hiperparâmetros $\alpha$, $\gamma$ e $\epsilon$. Deverá ficar a critério do estudante quais valores utilizar. 
-
-Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: 
-
-<img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/>
-
-Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. 
-
-### Parte 2
-
-O objetivo desta parte é entender a evolução da *Q-table* ao longo dos episódios. Para isso, você deve escolher um estados específicos e mostrar a evolução da *Q-table* para estes estados. Mais especificamente, você deve escolher um estado que corresponde a um episódio inicial, um estado que corresponde a um episódio intermediário e um estado que corresponde a um episódio final.
-
-Para cada uma destas versões da *Q-table* você deve gerar um heatmap. Crie uma única imagem que contenha os três heatmaps. Na legenda desta imagem descreva o que cada um dos heatmaps representa, por exemplo, descrevendo o que são as colunas e linhas do heatmap.
-
-### Entrega
-
-Um documento com estas duas imagens e legendas deve ser entregue via Blackboard até o dia **29/02/2023**. A atividade já foi criada no Blackboard e o nome dela é *Exercício 4*. Esta atividade é individual.
+Um documento PDF com imagens e legendas deve ser entregue via Blackboard até o dia **13/02/2025**. A atividade já foi criada no Blackboard e o nome dela é *Exercício 2*. Esta atividade é individual.
 
 ### Rubrica de avaliação
 
 | Conceito | Descrição |
 |:---------|:----------|
-| A+       | Entregou duas imagens com qualidade alta e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. Uma das imagens é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos e a outra imagem consegue mostrar bem a evolução da Q-table. |
-| B        | Entregou duas imagens com qualidade média e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. As imagens não conseguem mostrar bem a diferença entre os hiperparâmetros escolhidos e a evolução da Q-table. |
-| D        | Entregou apenas uma imagem ou entregou imagens incompletas ou sem legenda. |
+| A+       | Respondeu todas as perguntas com gráficos de alta qualidade e que sumarizam diversos experimentos da forma como é descrito no documento sobre [avaliação de agentes](../11_evaluation/index.md) |
+| B        | Respondeu todas as perguntas, mas com gráficos que tem algum tipo de defeito, tal como, falta de legenda, legenda errada, qualidade da imagem baixa, falta de informações sobre os eixos, entre outros problemas |
+| C        | Respondeu parcialmente as perguntas |
 
+
+<!--
 
 ## Um exemplo de gráfico muito bem feito :new: 
 
@@ -108,3 +82,5 @@ Exemplo de gráfico com a evolução da *Q-table*. Este gráfico foi feito pelo 
 <center>
 <img src="figures/giancarlo.png" alt="Exemplo de gráfico com a evolução da Q-table" style="height: 450px;"/>
 </center>
+
+-->
