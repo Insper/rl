@@ -11,10 +11,14 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/11_evaluation/">
       
       
+        <link rel="prev" href="../05_x_hyperparameters/">
+      
+      
+        <link rel="next" href="../../references/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -22,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -235,17 +239,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -260,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -413,6 +419,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_x_hyperparameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hiperparâmetros em Q-Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ambientes e metodologias
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ambientes e metodologias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Como avaliar o desempenho de um agente?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Como avaliar o desempenho de um agente?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -476,27 +622,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
       Referências
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comentarios-sobre-as-entregas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comentários sobre as entregas
     </span>
   </a>
   
@@ -525,11 +653,18 @@
 <p>A figura acima do lado direito mostra outra métrica utilizada para acompanhar o aprendizado do agente. Neste caso, a métrica é a quantidade de passos necessários para o agente chegar no objetivo.</p>
 <p>Abaixo são apresentados outros gráficos que ilustram o aprendizado do agente.</p>
 <p><img src="fig/compare_2.png" alt="Curva de aprendizado" style="height: 400px;"/></p>
-<h2 id="exercicio-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking">Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking</h2>
-<p>A proposta desta atividade é reutilizar o código já feito no <a href="./classes/05_x_sarsa/index.md#implementação">atividade sobre on-olicy e off-policy</a> criando novos plots para apresentação dos resultados. </p>
-<p>Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo (Q-Learning e Sarsa) e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.</p>
-<p>Crie dois gráficos, comparando Q-Learning e Sarsa, como os apresentados acima. Um para o retorno acumulado e outro para a quantidade de passos necessários para o agente chegar no objetivo.</p>
-<p>Utilize os seguintes hiperparâmetros:</p>
+<!--
+
+## Exercício: comparar Q-Learning e SARSA no ambiente do Cliff Walking
+
+A proposta desta atividade é reutilizar o código já feito no [atividade sobre on-policy e off-policy](./classes/05_x_sarsa/index.md#implementação) criando novos plots para apresentação dos resultados. 
+
+Nesta atividade você deverá executar o treinamento 100 vezes para cada algoritmo (Q-Learning e Sarsa) e calcular a média e a variância do retorno acumulado e da quantidade de passos necessários para o agente chegar no objetivo.
+
+Crie dois gráficos, comparando Q-Learning e Sarsa, como os apresentados acima. Um para o retorno acumulado e outro para a quantidade de passos necessários para o agente chegar no objetivo.
+
+Utilize os seguintes hiperparâmetros:
+
 <div class="highlight"><pre><span></span><code><span class="p">(</span>
     <span class="n">alpha</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> 
     <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
@@ -538,14 +673,17 @@
     <span class="n">gamma</span><span class="o">=</span><span class="n">Y</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>os valores de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> devem ser escolhidos por você.</p>
-<p>Uma sugestão para a implementação dos gráficos é utilizar a biblioteca <code>seaborn</code>. Considere um dataframe com as seguintes colunas: </p>
-<ul>
-<li>algoritmo: Q-Learning ou Sarsa;</li>
-<li>episodio: número do episódio;</li>
-<li>retorno: retorno acumulado.</li>
-</ul>
-<p>Execute <code>N</code> episódios em 100 treinamentos. Adicione todos os valores de episódio e retorno neste dataframe. Informe também qual é o algoritmo. Uma vez formado o dataframe, você pode utilizar o seguinte código para fazer o plot: </p>
+
+os valores de $\alpha$ e $\gamma$ devem ser escolhidos por você.
+
+Uma sugestão para a implementação dos gráficos é utilizar a biblioteca `seaborn`. Considere um dataframe com as seguintes colunas: 
+
+* algoritmo: Q-Learning ou Sarsa;
+* episodio: número do episódio;
+* retorno: retorno acumulado.
+
+Execute `N` episódios em 100 treinamentos. Adicione todos os valores de episódio e retorno neste dataframe. Informe também qual é o algoritmo. Uma vez formado o dataframe, você pode utilizar o seguinte código para fazer o plot: 
+
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
 
@@ -557,27 +695,52 @@
     <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;algoritmo&quot;</span><span class="p">,</span> 
     <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
 </code></pre></div>
-<p>Faça a entrega do código fonte e dos gráficos gerados via <a href="https://classroom.github.com/a/7JKrtofS">Github Classroom</a>. Esta atividade é <strong>individual</strong> e o prazo de entrega é <strong>08 de março de 2024 até às 23:30</strong> horas.</p>
+
+Faça a entrega do código fonte e dos gráficos gerados via [Github Classroom](https://classroom.github.com/a/7JKrtofS). Esta atividade é **individual** e o prazo de entrega é **08 de março de 2024 até às 23:30** horas.
+
+-->
+
 <h2 id="referencias">Referências</h2>
 <p>As imagens acima foram retiradas do capítulo 2 do livro: </p>
 <p>Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. <a href="https://www.marl-book.com/">Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</a>. MIT Press, 2024.</p>
-<h2 id="comentarios-sobre-as-entregas">Comentários sobre as entregas <img alt="🆕" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f195.svg" title=":new:" /></h2>
-<p><strong>Por que é importante apresentar os hiperparâmetros utilizados na legenda da figura?</strong></p>
-<p><img src="fig/curva-bruno.png" alt="Curva de aprendizado estranha e sem legenda" style="height: 400px;"/></p>
-<p>Um gráfico sem legenda e sem título não é autoexplicativo. O leitor não tem como saber o que está sendo mostrado.</p>
-<p><strong>Um tipo de gráfico apresentado mas que não mostra a diferença entre os algoritmos</strong></p>
-<p><img src="fig/media-desvio.png" alt="Curva com média e desvio" style="height: 800px;"/></p>
-<p>Visualmente é um gráfico muito bem feito, mas não mostra a diferença entre os algoritmos. Além disso, tem algo de errado com o gráfico onde o eixo <code>y</code> é a quantidade de ações. <strong>Como pode ter ações com quantidade negativa?</strong></p>
-<p><strong>Um gráfico quase perfeito</strong>:</p>
-<p><img src="fig/quase-perfeito.png" alt="Gráfico quase perfeito" style="height: 400px;"/></p>
-<p>Faltou uma descrição sobre quais hiperparâmetros foram utilizados.</p>
-<p><strong>Um gráfico com todos os elementos necessários</strong>:</p>
-<p><img src="fig/perfeito.jpg" alt="Gráfico com todos os elementos" style="height: 400px;"/></p>
-<p><strong>Em algumas situações um zoom pode ser interessante</strong>:</p>
-<p><img src="fig/perfeito_2.png" alt="Gráfico com todos os elementos" style="height: 500px;"/></p>
-<p>Utilizando este gráfico talvez seja difícil de visualizar a diferença entre os algoritmos. Portanto, pode ser interessante fazer um zoom em uma parte do gráfico: </p>
-<p><img src="fig/perfeito_2_zoom1.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/></p>
-<p><img src="fig/perfeito_2_zoom2.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/></p>
+<!--
+
+## Comentários sobre as entregas :new: 
+
+**Por que é importante apresentar os hiperparâmetros utilizados na legenda da figura?**
+
+<img src="fig/curva-bruno.png" alt="Curva de aprendizado estranha e sem legenda" style="height: 400px;"/>
+
+Um gráfico sem legenda e sem título não é autoexplicativo. O leitor não tem como saber o que está sendo mostrado.
+
+**Um tipo de gráfico apresentado mas que não mostra a diferença entre os algoritmos**
+
+<img src="fig/media-desvio.png" alt="Curva com média e desvio" style="height: 800px;"/>
+
+Visualmente é um gráfico muito bem feito, mas não mostra a diferença entre os algoritmos. Além disso, tem algo de errado com o gráfico onde o eixo `y` é a quantidade de ações. **Como pode ter ações com quantidade negativa?**
+
+**Um gráfico quase perfeito**:
+
+<img src="fig/quase-perfeito.png" alt="Gráfico quase perfeito" style="height: 400px;"/>
+
+Faltou uma descrição sobre quais hiperparâmetros foram utilizados.
+
+**Um gráfico com todos os elementos necessários**:
+
+<img src="fig/perfeito.jpg" alt="Gráfico com todos os elementos" style="height: 400px;"/>
+
+
+**Em algumas situações um zoom pode ser interessante**:
+
+<img src="fig/perfeito_2.png" alt="Gráfico com todos os elementos" style="height: 500px;"/>
+
+Utilizando este gráfico talvez seja difícil de visualizar a diferença entre os algoritmos. Portanto, pode ser interessante fazer um zoom em uma parte do gráfico: 
+
+<img src="fig/perfeito_2_zoom1.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
+
+<img src="fig/perfeito_2_zoom2.png" alt="Gráfico com todos os elementos com zoom" style="height: 500px;"/>
+
+-->
 
 
 
@@ -598,7 +761,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 11, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2025</span>
   </span>
 
     
@@ -648,7 +811,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       

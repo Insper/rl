@@ -11,10 +11,14 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_hyperparameters/">
       
       
+        <link rel="prev" href="../05_q_learning/">
+      
+      
+        <link rel="next" href="../11_evaluation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -22,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -235,17 +239,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -260,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -359,17 +365,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -384,7 +392,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Q-Learning and Sarsa
@@ -403,6 +411,186 @@
   
   <span class="md-ellipsis">
     Algoritmo Q-Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hiperparâmetros em Q-Learning
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Hiperparâmetros em Q-Learning
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulando-alpha-e-gamma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulando \(\alpha\) e \(\gamma\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-uma-escolha-de-acao-sempre-aletatoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerando uma escolha de ação sempre aletatória
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerando-um-agente-que-nunca-explora-novas-acoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerando um agente que nunca explora novas ações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atividade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rubrica de avaliação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ambientes e metodologias
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ambientes e metodologias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como avaliar o desempenho de um agente?
     
   </span>
   
@@ -503,15 +691,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sumarizando-os-resultados-atraves-de-imagens" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sumarizando os resultados através de imagens
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#atividade" class="md-nav__link">
     <span class="md-ellipsis">
       Atividade
@@ -520,33 +699,6 @@
   
     <nav class="md-nav" aria-label="Atividade">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parte-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parte 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parte 2
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrega
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#rubrica-de-avaliacao" class="md-nav__link">
@@ -559,15 +711,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#um-exemplo-de-grafico-muito-bem-feito" class="md-nav__link">
-    <span class="md-ellipsis">
-      Um exemplo de gráfico muito bem feito
-    </span>
-  </a>
   
 </li>
       
@@ -588,18 +731,15 @@
 
 
 <h1 id="hiperparametros-em-q-learning">Hiperparâmetros em Q-Learning</h1>
-<p>Ainda considerando o exemplo a implementação do <code>TaxiDriver</code>, responda as perguntas abaixo.</p>
-<p>Para responder as questões abaixo utilize as implementações do <code>TaxiDriverGym.py</code> e <code>QLearning.py</code> que você implementou na atividade anterior.</p>
+<p>Antes de iniciar esta atividade, leia o material sobre <a href="../11_evaluation/">avaliação de algoritmos de aprendizado por reforço</a>.</p>
 <h2 id="manipulando-alpha-e-gamma">Manipulando <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span></h2>
+<p>Ainda considerando o exemplo a implementação do <code>TaxiDriver</code>, responda as perguntas abaixo.</p>
 <ul>
-<li>
-<p>Se <span class="arithmatex">\(\alpha\)</span> for um valor muito próximo de zero? Explique o comportamento encontrado.</p>
-</li>
-<li>
-<p>Se <span class="arithmatex">\(\gamma\)</span> for zero? Explique o comportamento encontrado. </p>
-</li>
+<li>O que é melhor? Um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de um?</li>
+<li>O que é melhor? Um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de um?</li>
 </ul>
-<p>Para fundamentar a sua resposta, use os plots gerados na pasta <code>results</code> depois do treinamento. </p>
+<p>Execute treinamentos considerando valores de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> próximos de zero, intermediários e próximos de um. Armazene os dados sobre reward acumulado ou qualquer outra métrica que você considere relevante e crie gráficos para comparar os resultados.</p>
+<p>O importante é comparar a curva de aprendizado para diferentes valores de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> e saber dizer se o agente aprendeu ou não a tarefa. Ao variar o <span class="arithmatex">\(\alpha\)</span> você deve fixar o valor de <span class="arithmatex">\(\gamma\)</span> e vice-versa. Fica a seu critério quais valores fixos de <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> você vai escolher.</p>
 <h2 id="considerando-uma-escolha-de-acao-sempre-aletatoria">Considerando uma escolha de ação sempre aletatória</h2>
 <p>O que acontece se a escolha das ações em cada estado for sempre aleatória? Ou seja, se a função <code>select_action</code> ao invés de ser definida como abaixo:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
@@ -612,43 +752,22 @@
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="c1"># Explore action space</span>
 </code></pre></div>
-<p>Qual o comportamento do agente? <strong>Novamente</strong>: use os plots gerados na pasta <code>results</code> depois do treinamento para fundamentar a sua resposta. </p>
+<p>Qual o comportamento do agente? <strong>Novamente</strong>: use gráficos para justificar a sua resposta.  </p>
 <h2 id="considerando-um-agente-que-nunca-explora-novas-acoes">Considerando um agente que nunca explora novas ações</h2>
 <p>O que acontece se a escolha das ações em cada estado for sempre buscando a melhor ação? Ou seja:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">select_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="c1"># Exploit learned values</span>
 </code></pre></div>
-<h2 id="sumarizando-os-resultados-atraves-de-imagens">Sumarizando os resultados através de imagens</h2>
-<p>Como podemos sumarizar os diferentes resultados através de imagens?</p>
-<p>Neste momento, você já deve ter percebido que uma ferramenta muito útil para visualizar e sumarizar o aprendizado do agente são gráficos que mostram a evolução de alguma métrica ao longo dos diversos episódios.</p>
-<ul>
-<li>
-<p>Quais foram as métricas utilizadas no caso do <code>TaxiDriver</code>?</p>
-</li>
-<li>
-<p>Quais foram os hiperparâmetros utilizados? </p>
-</li>
-<li>
-<p>O aprendizado dos agentes implementados para este caso <strong>convergem</strong> rapidamente? </p>
-</li>
-<li>
-<p>O <strong>desempenho</strong> do agente se mantem ao longo dos episódios? </p>
-</li>
-</ul>
 <h2 id="atividade">Atividade</h2>
-<p>Este exercício é composto por duas partes. </p>
-<h3 id="parte-1">Parte 1</h3>
-<p>Faça uso de uma única imagem para sumarizar o aprendizado do agente. Você deve escolher a melhor métrica para o eixo <span class="arithmatex">\(y\)</span> do gráfico. O eixo <span class="arithmatex">\(x\)</span> deve ser a quantidade de episódios utilizado no treinamento. Você também deve definir qual é o melhor <em>zoom</em> (foco) no gráfico. Crie um documento que tem esta única imagem e a legenda dela.</p>
-<p>Na legenda é necessário ter o título da imagem e um texto explicativo. O texto explicativo pode ser longo e deve ter as informações sobre os hiperparâmetros utilizados. </p>
-<p>O gráfico deve possuir 3 linhas distintas. Cada uma destas linhas deve apresentar uma variação possível considerando os hiperparâmetros <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\gamma\)</span> e <span class="arithmatex">\(\epsilon\)</span>. Deverá ficar a critério do estudante quais valores utilizar. </p>
-<p>Um exemplo de imagem que sumariza dados ou apresenta resultados de experimentos é apresentada abaixo: </p>
-<p><img src="figures/graph_anatomy.png" alt="Elementos de um gráfico" style="height: 400px;"/></p>
-<p>Todas as informações relevantes para entender o resultado do treinamento precisam estar auto-contidas na imagem e na legenda da imagem. </p>
-<h3 id="parte-2">Parte 2</h3>
-<p>O objetivo desta parte é entender a evolução da <em>Q-table</em> ao longo dos episódios. Para isso, você deve escolher um estados específicos e mostrar a evolução da <em>Q-table</em> para estes estados. Mais especificamente, você deve escolher um estado que corresponde a um episódio inicial, um estado que corresponde a um episódio intermediário e um estado que corresponde a um episódio final.</p>
-<p>Para cada uma destas versões da <em>Q-table</em> você deve gerar um heatmap. Crie uma única imagem que contenha os três heatmaps. Na legenda desta imagem descreva o que cada um dos heatmaps representa, por exemplo, descrevendo o que são as colunas e linhas do heatmap.</p>
-<h3 id="entrega">Entrega</h3>
-<p>Um documento com estas duas imagens e legendas deve ser entregue via Blackboard até o dia <strong>29/02/2023</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Exercício 4</em>. Esta atividade é individual.</p>
+<p>Nesta atividade você deve responder as seguintes perguntas: </p>
+<ul>
+<li>O que é melhor? Um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de um?</li>
+<li>O que é melhor? Um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de um?</li>
+<li>Qual é o impacto ao escolher uma ação sempre de forma aleatória durante o treinamento? </li>
+<li>Qual é o impacto ao escolher uma ação sempre considerando a Q-table durante o treinamento?</li>
+</ul>
+<p>Para responder estas perguntas você deve considerar o processo de aprendizado do agente e o resultado final do treinamento.</p>
+<p>Um documento PDF com imagens e legendas deve ser entregue via Blackboard até o dia <strong>13/02/2025</strong>. A atividade já foi criada no Blackboard e o nome dela é <em>Exercício 2</em>. Esta atividade é individual.</p>
 <h3 id="rubrica-de-avaliacao">Rubrica de avaliação</h3>
 <table>
 <thead>
@@ -660,28 +779,37 @@
 <tbody>
 <tr>
 <td style="text-align: left;">A+</td>
-<td style="text-align: left;">Entregou duas imagens com qualidade alta e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. Uma das imagens é uma imagem que consegue mostrar a diferença entre os hiperparâmetros escolhidos e a outra imagem consegue mostrar bem a evolução da Q-table.</td>
+<td style="text-align: left;">Respondeu todas as perguntas com gráficos de alta qualidade e que sumarizam diversos experimentos da forma como é descrito no documento sobre <a href="../11_evaluation/">avaliação de agentes</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">B</td>
-<td style="text-align: left;">Entregou duas imagens com qualidade média e legenda. Os textos das legendas possuem todas as informações necessárias para entender os resultados alcançados pelo experimento. As imagens não conseguem mostrar bem a diferença entre os hiperparâmetros escolhidos e a evolução da Q-table.</td>
+<td style="text-align: left;">Respondeu todas as perguntas, mas com gráficos que tem algum tipo de defeito, tal como, falta de legenda, legenda errada, qualidade da imagem baixa, falta de informações sobre os eixos, entre outros problemas</td>
 </tr>
 <tr>
-<td style="text-align: left;">D</td>
-<td style="text-align: left;">Entregou apenas uma imagem ou entregou imagens incompletas ou sem legenda.</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Respondeu parcialmente as perguntas</td>
 </tr>
 </tbody>
 </table>
-<h2 id="um-exemplo-de-grafico-muito-bem-feito">Um exemplo de gráfico muito bem feito <img alt="🆕" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f195.svg" title=":new:" /></h2>
-<p>Seguem abaixo exemplos de gráficos bem formatados e completos. </p>
-<p>Exemplo de gráfico com a evolução do aprendizado do agente. Este gráfico foi feito pela Letícia em 2023/1. </p>
-<p><center>
+<!--
+
+## Um exemplo de gráfico muito bem feito :new: 
+
+Seguem abaixo exemplos de gráficos bem formatados e completos. 
+
+Exemplo de gráfico com a evolução do aprendizado do agente. Este gráfico foi feito pela Letícia em 2023/1. 
+
+<center>
 <img src="figures/leticia.png" alt="Exemplo de gráfico com a evolução do aprendizado do agente" style="height: 500px;"/>
-</center></p>
-<p>Exemplo de gráfico com a evolução da <em>Q-table</em>. Este gráfico foi feito pelo Giancarlo em 2023/1.</p>
-<p><center>
+</center>
+
+Exemplo de gráfico com a evolução da *Q-table*. Este gráfico foi feito pelo Giancarlo em 2023/1.
+
+<center>
 <img src="figures/giancarlo.png" alt="Exemplo de gráfico com a evolução da Q-table" style="height: 450px;"/>
-</center></p>
+</center>
+
+-->
 
 
 
@@ -702,7 +830,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2025</span>
   </span>
 
     
@@ -752,7 +880,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
