@@ -21,6 +21,7 @@ nav:
     - 'Q-Learning and Sarsa':
       - 'classes/05_q_learning/index.md'
       - 'classes/05_x_hyperparameters/index.md'
+      - 'classes/05_xx_hyper_comments/index.md'
 #      - 'classes/05_x_sarsa/index.md'
 #      - 'classes/05_xx_comments/index.md'
     - 'Ambientes e metodologias':
