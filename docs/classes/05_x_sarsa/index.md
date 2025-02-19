@@ -1,4 +1,8 @@
 # Algoritmo SARSA: abordagem on-policy
+
+Nesta aula vamos utilizar os slides abaixo:
+
+<embed src="sarsa.pdf" type="application/pdf" width="800" height="400">
     
 ## Definição e conceitos-chave
 
