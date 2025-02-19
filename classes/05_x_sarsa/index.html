@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/05_x_sarsa/">
       
       
+        <link rel="prev" href="../05_xx_hyper_comments/">
+      
+      
+        <link rel="next" href="../11_evaluation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -235,17 +239,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -260,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -359,17 +365,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -384,7 +392,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Q-Learning and Sarsa
@@ -452,6 +460,120 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Algoritmo SARSA: abordagem on-policy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Algoritmo SARSA: abordagem on-policy
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-e-conceitos-chave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição e conceitos-chave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rubrica de avaliação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -601,6 +723,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Implementação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -613,7 +750,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
+  <a href="#entrega_1" class="md-nav__link">
     <span class="md-ellipsis">
       Entrega
     </span>
@@ -659,8 +796,48 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 <p>O objetivo desta atividade é validar o entendimento do algoritmo <strong>Sarsa</strong> e compreender as diferenças práticas entre <strong>Sarsa</strong> e <strong>Q-Learning</strong>.</p>
 <p>Siga os passos a seguir:</p>
 <ul>
-<li><strong>implementar o algoritmo Sarsa</strong>: você pode começar a partir do arquivo <code>QLearning.py</code>, fazer uma cópia, mudar o nome <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f603.svg" title=":smiley:" />, e mudar o que for necessário.</li>
-<li><strong>aplicar a implementação do Sarsa para resolver o problema do taxi-driver</strong>:  compare os resultados do Sarsa com os resultados do Q-Learning. Compare a curva de treinamento e o comportamento do agente após o treinamento. Você pode usar o mesmo arquivo <code>TaxiDriverGym.py</code>, mas lembre-se de mudar os nomes dos arquivos de saída (*.csv e plot). Para facilitar esta comparação, você pode usar o mesmo valor de <span class="arithmatex">\(\epsilon\)</span>, <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> para ambos os algoritmos.</li>
+<li><strong>implementar o algoritmo Sarsa</strong>: você pode começar a partir da sua implementação do Q-Learning, fazer uma cópia, mudar o nome <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f603.svg" title=":smiley:" />, e mudar o que for necessário.</li>
+<li><strong>aplicar a implementação do Sarsa para resolver o problema do taxi-driver</strong>:  compare os resultados do Sarsa com os resultados do Q-Learning. Compare a curva de treinamento e o comportamento do agente após o treinamento. Para facilitar esta comparação, você pode usar o mesmo valor de <span class="arithmatex">\(\epsilon\)</span>, <span class="arithmatex">\(\alpha\)</span> e <span class="arithmatex">\(\gamma\)</span> para ambos os algoritmos. Sugere-se a seguinte configuração: </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">(</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">gamma</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">epsilon_dec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+    <span class="n">episodes</span><span class="o">=</span><span class="mi">5000</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Sugere-se também fazer uma validação mais robusta após o treinamento, executando o agente treinado em 100 episódios e calculando a recompensa média. Como apresentado no código abaixo: </p>
+<div class="highlight"><pre><span></span><code><span class="n">q_table</span> <span class="o">=</span> <span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;data/q-table-sarsa-cliff-walking.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="c1">#q_table = loadtxt(&#39;data/q-table-qlearning-cliff-walking.csv&#39;, delimiter=&#39;,&#39;)</span>
+
+<span class="n">list_actions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">list_rewards</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">rewards</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">q_table</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+        <span class="n">state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+        <span class="n">rewards</span> <span class="o">=</span> <span class="n">rewards</span> <span class="o">+</span> <span class="n">reward</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="n">actions</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">list_actions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+    <span class="n">list_rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rewards</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average actions taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">list_actions</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard deviation actions taken: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">list_actions</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average rewards: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">list_rewards</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard deviation rewards: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">list_rewards</span><span class="p">)))</span>
+</code></pre></div>
+<ul>
 <li>a terceira atividade desta implementação é <strong>aplicar os algoritmos Q-Learning e Sarsa em um ambiente diferente</strong>: o <a href="https://gymnasium.farama.org/environments/toy_text/cliff_walking/">Cliff Walking</a>. Este é um ambiente muito simples. No entanto, quando você aplica esses algoritmos nesse tipo de ambiente, você pode ver as diferenças entre esses algoritmos e identificar qualquer bug em sua implementação, se existir.</li>
 </ul>
 <p>Para treinar seu agente para o problema do <strong>Cliff Walking</strong>, você deve configurar o ambiente assim:</p>
@@ -687,53 +864,19 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rewards: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rewards</span><span class="p">))</span>
 </code></pre></div>
 <p>Configure o <code>render_mode</code> para <code>human</code> para ver a animação do agente.</p>
+<h3 id="entrega">Entrega</h3>
 <p>Crie um arquivo <code>README.md</code> e responda as seguintes perguntas:</p>
 <ol>
 <li>
-<p>Qual algoritmo tem os melhores resultados para o ambiente do taxi-driver? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? </p>
+<p>Qual algoritmo tem os melhores resultados para o ambiente do taxi-driver? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo em ambos os casos? </p>
 </li>
 <li>
 <p>Qual algoritmo tem os melhores resultados para o ambiente do Cliff Walking? A curva de aprendizado dos dois algoritmos é a mesma? O comportamento final do agente, depois de treinado, é ótimo? Qual agente tem um comportamento mais conservador e qual tem um comportamento mais otimista?</p>
 </li>
+<li>
+<p>De uma forma geral, qual seria a diferença entre os algoritmos <strong>Q-Learning</strong> e <strong>Sarsa</strong>? Os agentes treinados teriam o mesmo comportamento? As curvas de aprendizado também? </p>
+</li>
 </ol>
-<details class="hint">
-<summary>Sugestão para plotar a curva de aprendizado</summary>
-<p>Você pode usar o código a seguir para plotar a curva de aprendizado. Desta forma você irá suavisar a curva e facilitar a comparação entre os algoritmos.
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="c1"># Calculate the rolling average of 50 values for both series</span>
-<span class="n">sarsa_avg</span> <span class="o">=</span> <span class="n">sarsa</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">qlearning_avg</span> <span class="o">=</span> <span class="n">qlearning</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="c1"># Plotting the rolling average series</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sarsa_avg</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SARSA&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">qlearning_avg</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Q-Learning&#39;</span><span class="p">)</span>
-
-<span class="c1"># Adding labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Episode&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reward&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SARSA vs Q-Learning&#39;</span><span class="p">)</span>
-
-<span class="c1"># Adding legend</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-<span class="c1"># Displaying the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></p>
-</details>
-<ol>
-<li>Suponha uma seleção de ação gulosa (<em>greedy</em>) </li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="p">(</span>
-    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
-    <span class="n">gamma</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> 
-    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
-    <span class="n">epsilon_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
-    <span class="n">epsilon_dec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">episodes</span><span class="o">=</span><span class="mi">500</span>
-<span class="p">)</span>
-</code></pre></div>
-, qual seria a diferença entre os algoritmos <strong>Q-Learning</strong> e <strong>Sarsa</strong>? Os agentes treinados teriam o mesmo comportamento? As curvas de aprendizado também? </p>
 <h2 id="rubrica-de-avaliacao">Rubrica de avaliação</h2>
 <table>
 <thead>
@@ -761,8 +904,8 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 </tr>
 </tbody>
 </table>
-<h2 id="entrega">Entrega</h2>
-<p>Coloque todos os arquivos em um mesmo projeto e submeta-os para o <a href="https://classroom.github.com/a/hAhU4zU3">https://classroom.github.com/a/hAhU4zU3</a>. Esta atividade é individual e o <strong>prazo é 05/03/2024 23:30.</strong></p>
+<h2 id="entrega_1">Entrega</h2>
+<p>Coloque todos os arquivos em um mesmo projeto e submeta-os para o <a href="https://classroom.github.com/a/HFSo_Ma9">https://classroom.github.com/a/HFSo_Ma9</a>. Esta atividade é individual e o <strong>prazo é 20/02/2025 23:30.</strong></p>
 <!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
 <!-- usar o próprio livro do Sutton para comentar os resultados -->
 
@@ -785,7 +928,7 @@ Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 19, 2025</span>
   </span>
 
     

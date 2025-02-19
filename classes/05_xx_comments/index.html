@@ -457,6 +457,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_x_sarsa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algoritmo SARSA: abordagem on-policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -594,6 +616,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#analise-do-treinamento-dos-agentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise do treinamento dos agentes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -611,7 +642,6 @@
 
 
 <h1 id="comentarios-sobre-as-implementacoes-do-q-learning-e-sarsa">Comentários sobre as implementações do Q-Learning e Sarsa</h1>
-<p><a href="analise_treinamento.html">Análise dos treinamentos do Q-Learning e Sarsa</a></p>
 <p>Agente treinado com Q-Learning no ambiente CliffWalking:</p>
 <p><img src="figures/QLearning-Cliff.png" alt="Q-Learning in the Cliff walking world" style="height: 200px;"/></p>
 <p>Agente treinado com Sarsa no ambiente CliffWalking:</p>
@@ -629,6 +659,12 @@
 </ul>
 <div class="arithmatex">\[Q(S_t, A_t) = Q(S_t, A_t) + \alpha[R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t) ]\]</div>
 <p>Como é possível observar pela formula, o algorítimo SARSA aprende com uma política "quase ótima". Um agente treinado com o algorítimo SARSA interage com o ambiente atualizando <strong>q_table</strong> com base nas ações efetivamente tomadas. Quando o problema envolve achar a solução ótima ou quando o número mínimo de ações deve ser tomada na resolução do problema, o algorítimo SARSA pode não se apresentar como a melhor escolha.</p>
+<h2 id="analise-do-treinamento-dos-agentes">Análise do treinamento dos agentes</h2>
+<p>Nos links abaixo é possível ter uma visão mais detalhada do processo de treinamento dos agentes QLearning e Sarsa: </p>
+<ul>
+<li><a href="analise_treinamento.html">Análise dos treinamentos do Q-Learning e Sarsa</a></li>
+<li><a href="analise_treinamento_mais_robusto.html">Análise dos treinamentos com um número maior de treinos</a></li>
+</ul>
 
 
 
@@ -649,7 +685,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 6, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 19, 2025</span>
   </span>
 
     
