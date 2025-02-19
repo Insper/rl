@@ -27,10 +27,5 @@
       <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Policy Optimization Algorithms (PPO)</td>
       <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
     </tr>
-    <tr>
-      <td style = "background-color: #efdada;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">30-Abril</td>
-      <td style = "background-color: #efdada;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Reutilizando implementações de DDPG e PPO em projetos</td>
-      <td style = "background-color: #efdada;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Aula expositiva com roteiro de implementação.</td>
-    </tr>
   </tbody>
 </table></p>

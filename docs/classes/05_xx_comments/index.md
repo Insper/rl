@@ -1,7 +1,5 @@
 # Comentários sobre as implementações do Q-Learning e Sarsa
 
-[Análise dos treinamentos do Q-Learning e Sarsa](./analise_treinamento.html)
-
 Agente treinado com Q-Learning no ambiente CliffWalking:
 
 <img src="figures/QLearning-Cliff.png" alt="Q-Learning in the Cliff walking world" style="height: 200px;"/>
@@ -28,3 +26,9 @@ $$Q(S_t, A_t) = Q(S_t, A_t) + \alpha[R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_
 
 Como é possível observar pela formula, o algorítimo SARSA aprende com uma política "quase ótima". Um agente treinado com o algorítimo SARSA interage com o ambiente atualizando **q_table** com base nas ações efetivamente tomadas. Quando o problema envolve achar a solução ótima ou quando o número mínimo de ações deve ser tomada na resolução do problema, o algorítimo SARSA pode não se apresentar como a melhor escolha.
 
+## Análise do treinamento dos agentes
+
+Nos links abaixo é possível ter uma visão mais detalhada do processo de treinamento dos agentes QLearning e Sarsa: 
+
+* [Análise dos treinamentos do Q-Learning e Sarsa](./analise_treinamento.html)
+* [Análise dos treinamentos com um número maior de treinos](analise_treinamento_mais_robusto.html)
