@@ -37,13 +37,13 @@ Para responder as perguntas acima você deve treinar um agente capaz de atuar no
 
 Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo duas configurações de hiperparâmetros para cada algoritmo. Ou seja, você irá comparar a curva de aprendizagem de 4 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
 
-**Detalhe importante**: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na [aula anterior](../11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.
+<!-- **Detalhe importante**: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na [aula anterior](../11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.-->
 
 Após treinar os agentes você deve utilizar o agente com melhor desempenho e executar 100 vezes no ambiente $4 \times 4$ e calcular a quantidade de vezes que o agente chegou até o destino final sem cair no buraco.
 
 ## Artefatos que devem ser entregues
 
-Cada equipe deve entregar os seguintes artefatos: 
+Cada aluno deve entregar os seguintes artefatos: 
 
 * Relatório com os gráficos das curvas de aprendizado dos agentes treinados e dados sobre o desempenho do melhor agente no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).
 
@@ -51,7 +51,7 @@ Cada equipe deve entregar os seguintes artefatos:
 
 * Arquivo README.md descrevendo como executar o experimento. 
 
-A entrega deve ser feita através do [Github Classroom](https://classroom.github.com/a/inGUJX6C). O trabalho é em equipe com até 3 pessoas.
+A entrega deve ser feita através do [https://classroom.github.com/a/fayO19QB](https://classroom.github.com/a/fayO19QB). O trabalho é individual.
 
 ### Rubrica de avaliação
 
@@ -61,6 +61,6 @@ A entrega deve ser feita através do [Github Classroom](https://classroom.github
 
 * O README.md deve conter instruções claras sobre como executar o experimento.
 
-### Deadline
+### Prazo de entrega
 
-O deadline para a entrega desta atividade é 13 de março de 2023 às 23:30 horas. 
+O prazo para a entrega desta atividade é 24 de fevereiro de 2025. 

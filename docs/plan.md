@@ -17,7 +17,7 @@ O conteúdo associado a este bloco é [1](./classes/01_introduction/index.md)
 
 --8<-- "plano_aula_2.md"
 
-O conteúdo associado a este bloco é [2](./classes/04_toolings_envs/index.md), [3](./classes/05_q_learning/index.md), [4](./classes/05_x_hyperparameters/index.md), [5](./classes/05_xx_hyper_comments/index.md), [6](./classes/05_x_sarsa/index.md).
+O conteúdo associado a este bloco é [2](./classes/04_toolings_envs/index.md), [3](./classes/05_q_learning/index.md), [4](./classes/05_x_hyperparameters/index.md), [5](./classes/05_xx_hyper_comments/index.md), [6](./classes/05_x_sarsa/index.md), [7](./classes/05_xx_hyper_comments/index.md), [8](./classes/06_non_determ/index.md). 
 
 ## Deep Reinforcement Learning: value-based e policy gradient
 

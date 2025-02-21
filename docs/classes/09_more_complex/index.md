@@ -1,6 +1,6 @@
 # Implementando um agente para lidar com um ambiente um pouco mais complexo
 
-Até este momento, trabalhamos com diversos ambientes que tem uma quantidade razoavelmente pequena de estados e ações discretas. O objetivo deste exercício é mostrar o uso do Q-Learning em um cenário onde é necessário discretizar o espaço de estados. 
+Até este momento, trabalhamos com diversos ambientes que tem uma quantidade razoavelmente pequena de estados e ações discretas. O objetivo deste exercício é mostrar o uso de um método tabular (Q-Learning ou Sarsa) em um cenário onde é necessário discretizar o espaço de estados. 
 
 Para isto, vamos utilizar o ambiente [MountainCar-v0](https://gymnasium.farama.org/environments/classic_control/mountain_car/) da biblioteca Gymnasium. Neste ambiente temos que aprender a controlar um carro que precisar sair da base de uma montanha e chegar no topo da mesma.
 
@@ -73,7 +73,7 @@ state_adj = np.round(state_adj, 0).astype(int)
 
 ## Treinando o agente
 
-Para lidar com este ambiente, mesmo discretizando o espaço de estados, é necessário fazer algumas modificações no código do Q-Learning.
+Para lidar com este ambiente, mesmo discretizando o espaço de estados, é necessário fazer algumas modificações no código do Q-Learning ou Sarsa.
 
 ### Na inicialização da Q-table 
 
@@ -124,7 +124,7 @@ next_state, reward, done, truncated, _ = self.env.step(action)
 next_state_adj = self.transform_state(next_state)
 ```
 
-A implementação completa desta nova versão do algoritmo Q-Learning está disponível [aqui](./src/QLearningBox.py).
+<!--A implementação completa desta nova versão do algoritmo Q-Learning está disponível [aqui](./src/QLearningBox.py).
 
 ## Conectando o ambiente com o treinamento do agente
 
@@ -162,13 +162,19 @@ input("enter a key...")
 env.close()
 ```
 
-## Atividades propostas
+-->
+
+## Atividade proposta
+
+* Implemente uma versão de Q-Learning ou Sarsa que lide com o ambiente MountainCar-v0, implementando a discretização do espaço de estados definida acima. 
 
 * Defina os valores para os hiperparâmetros.
 
-* Execute o código acima e observe o comportamento do agente.
+* Execute o treinamento e observe o comportamento do agente.
 
-* Analise o gráfico gerado na pasta `results`. O aprendizado do agente converge rapidamente? Fica estável? 
+* O aprendizado do agente converge rapidamente? Fica estável? 
+
+* Que indicador é importante utilizar para avaliar se o agente está alcançando o objetivo?
 
 * Depois de treinado, o agente consegue chegar ao topo em todas as vezes? Quantas ações em média são necessárias? 
 
@@ -176,6 +182,6 @@ env.close()
 
 * Esta implementação não tem como usar a função `savetxt` do `numpy` para gravar a *Q-table* porque a Q-table neste caso é 3D. Implemente uma função que permite armazenar e ler uma *Q-table* 3D. 
 
-* Faça uma análise do aprendizado do agente mais robusta. Execute o treinamento do agente diversas vezes (por exemplo, 100 vezes) e analise a variabilidade do aprendizado. Faça um gráfico com a mesma estrutura que os gráficos apresentandos na [aula sobre avaliação](../11_evaluation/index.md#comentários-sobre-as-entregas-new).
+* Faça uma análise do aprendizado do agente mais robusta. Execute o treinamento do agente diversas vezes (por exemplo, 5 vezes) e analise a variabilidade do aprendizado.   
 
 * Teste diferentes hiperparâmetros e analise o impacto no aprendizado do agente. Faça um gráfico com várias curvas de aprendizado. 
