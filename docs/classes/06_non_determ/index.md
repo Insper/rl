@@ -35,7 +35,7 @@ Os estados terminais são o objetivo e os buracos. Mas se o agente fizer mais de
 
 Para responder as perguntas acima você deve treinar um agente capaz de atuar no ambiente do Frozen Lake e comparar a curva de aprendizagem do agente treinado com a curva de aprendizagem de outros agentes treinados com diferentes algoritmos e hiperparâmetros. 
 
-Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo duas configurações de hiperparâmetros para cada algoritmo. Ou seja, você irá comparar a curva de aprendizagem de 4 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
+Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo uma configuração de hiperparâmetro que deve ser aplicada em ambos os algoritmos. Ou seja, você irá comparar a curva de aprendizagem de 2 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
 
 <!-- **Detalhe importante**: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na [aula anterior](../11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.-->
 
@@ -63,4 +63,4 @@ A entrega deve ser feita através do [https://classroom.github.com/a/fayO19QB](h
 
 ### Prazo de entrega
 
-O prazo para a entrega desta atividade é 24 de fevereiro de 2025. 
+O prazo para a entrega desta atividade é 25 de fevereiro de 2025. 
