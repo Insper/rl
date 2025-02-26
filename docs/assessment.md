@@ -20,6 +20,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 | [Manipulando os hiperparâmetros do Q-Learning](./classes/05_x_hyperparameters/index.md) | 13/02/2025 |
 | [Implementação do SARSA](./classes/05_x_sarsa/index.md)                        | 20/02/2025 |
 | [Ambientes não determinísticos](./classes/06_non_determ/index.md)              | 24/02/2025 | 
+| [Implementação de agente para o ambiente Mountain Car](./classes/09_more_complex/index.md) | 27/02/2025 |
 
 ## Projetos
 

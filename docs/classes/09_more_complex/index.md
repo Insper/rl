@@ -185,3 +185,16 @@ env.close()
 * Faça uma análise do aprendizado do agente mais robusta. Execute o treinamento do agente diversas vezes (por exemplo, 5 vezes) e analise a variabilidade do aprendizado.   
 
 * Teste diferentes hiperparâmetros e analise o impacto no aprendizado do agente. Faça um gráfico com várias curvas de aprendizado. 
+
+## Rubrica
+
+| Conceito | Descrição |
+|----------|-----------|
+| I        | Entregou incompleto |
+| C        | Implementou o agente para o ambiente Mountain Car-v0, mas não fez uma análise robusta do aprendizado |
+| B        | Implementou o agente para o ambiente Mountain Car-v0 e fez uma análise robusta do aprendizado testando mais de uma configuração de hiperparâmetros |
+| A+        | Implementou o agente para o ambiente Mountain Car-v0 e fez uma análise robusta do aprendizado testando mais de uma configuração de hiperparâmetros e definiu uma forma para persistência da Q-table 3D |
+
+## Entrega
+
+O trabalho deve ser entregue no GitHub Classroom. O link para o repositório é [https://classroom.github.com/a/DT6edFQw](https://classroom.github.com/a/DT6edFQw). O trabalho é individual. O prazo para entrega é até o dia 27/02/2025. 
