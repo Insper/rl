@@ -33,8 +33,8 @@ nav:
       - 'classes/09_more_complex/index.md'
 ###    - 'classes/13_nn_review/index.md'
 ###    - 'classes/14_nn_policies/index.md'
-#    - 'Deep Q-Learning':
-#      - 'classes/15_deep_q_learning/index.md'
+    - 'Deep Q-Learning':
+      - 'classes/15_deep_q_learning/index.md'
 #      - 'classes/15_deep_q_learning_lunar_lander/index.md'
 ##      - 'classes/15_xx_comments/index.md'
 #      - 'classes/16_double_deep_q_learning/index.md'

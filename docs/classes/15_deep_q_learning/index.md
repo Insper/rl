@@ -215,7 +215,10 @@ este código está implementando esta equação:
 
 <img src="./figures/equacao.png" style="width:500px;"/>
 
+
+<!--
 As ações em um estado terminal tem todas valor zero. Quando implementamos o algoritmo Q-Learning, iniciamos a Q-table com zeros, desta forma não precisamos nos preocupar com os valores das ações em um estado terminal. No entanto, quando usamos uma rede neural, temos que garantir que as ações em um estado terminal tem valor zero.
+-->
 
 ### Loop de treinamento
 
@@ -298,3 +301,19 @@ Este script está disponível [aqui](./src/CartPole_trained.py).
 ## Implementação para o Mountain Car
 
 Que tal implementarmos uma solução para o ambiente `MountainCar` e compararmos os resultados com a solução usando Q-Learning? 
+
+Atividades sugeridas: 
+
+1. Treine o agente usando Q-Learning para o ambiente `MountainCar` usando os melhores hiperparâmetros encontrados na atividade anterior.
+1. Execute o treinamento $N$ vezes onde este $N$ precisa ser maior ou igual a 5.
+1. Colete todos os dados para criar a curva de aprendizado.
+1. Armazene os pesos da Q-table.
+1. Implemente o Deep Q-Learning para o ambiente `MountainCar`.
+1. Execute o treinamento $N$ vezes onde este $N$ precisa ser maior ou igual a 5.
+1. Encontre os melhores hiperparâmetros para o Deep Q-Learning.
+1. Colete todos os dados para criar a curva de aprendizado.
+1. Armazene os pesos da rede neural.
+1. Compare os resultados obtidos com o Q-Learning e o Deep Q-Learning usando um plot. Tente deixar claro no plot qual a meta de recompensa acumulada para o ambiente `MountainCar`.
+1. Crie outro gráfico que mostra o desempenho de ambos os agentes durante o processo de inferência, ou seja, quando o agente está atuando sem treinamento. 
+
+Todo o código necessário para esta atividade deve ser entrege no Github classroom [https://classroom.github.com/a/3cFWPdqG](https://classroom.github.com/a/3cFWPdqG) até o dia 11/03/2025. Esta é uma atividade individual. 
