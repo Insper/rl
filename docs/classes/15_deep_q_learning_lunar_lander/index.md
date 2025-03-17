@@ -12,7 +12,7 @@ Sugestão de atividades:
 
 * Faça a persistência da rede neural para que depois a mesma possa ser utilizada por um outro script para pousar o *lunar lander* de forma correta. Ou seja, no seu projeto, além do script para treinamento, você também deverá entregar o script que faz uso do modelo treinado. 
 
-* Para estes dois últimos itens você pode reutilizar o código existente em `DeepQLearning.py`. Apenas preste atenção na estrutura da rede neural e nos hiperparâmetros.
+* Para estes dois últimos itens você pode reutilizar o código de *Deep Q-Learning* implementado nas últimas aulas. Apenas preste atenção na estrutura da rede neural e nos hiperparâmetros.
 
 * Na documentação do projeto você precisa:
     * descrever brevemente qual é o problema, qual é o *action space* e *observation space*;
