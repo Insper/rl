@@ -11,10 +11,14 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning_lunar_lander/">
       
       
+        <link rel="prev" href="../15_deep_q_learning/">
+      
+      
+        <link rel="next" href="../../references/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -22,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
       
 
@@ -235,17 +239,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -260,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -645,17 +651,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -670,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             Deep Q-Learning
@@ -694,6 +702,96 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lunar Lander Project
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lunar Lander Project
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega básica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-avancada-com-dqn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega avançada com DQN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deadline
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -788,15 +886,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#exemplo-de-entrega-completa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemplo de entrega completa
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -849,7 +938,14 @@
 <li>Implementar a versão final do algoritmo <strong>Deep Q-networks (DQN)</strong> como apresentado no pseudo-código abaixo: </li>
 </ul>
 <p><img src="./figures/dqn_pseudo_codigo.png"  style="height:600px;"/> </p>
-<p>Preste atenção em alguns pontos: (i) Esta versão do algoritmo faz uso de duas redes (linha 1 e 2); (ii) Toda a escolha de ação acontece usando a <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 8); (iii) A recompença acumulada é calculada usando a <em>target network <span class="arithmatex">\(\overline{\theta}\)</span></em> (linha 15); (iv) O cálculo da função de perda é feito usando a <em>value network</em> (linha 16); O update dos parâmetros a cada episódio acontece somente na <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 17), e; (v) A <em>target network</em> é atualizada a cada <span class="arithmatex">\(C\)</span> episódios (linha 18) - esta atualização é uma simples cópia dos pesos (<span class="arithmatex">\(\overline{\theta} \leftarrow \theta\)</span>).</p>
+<p>Preste atenção em alguns pontos: </p>
+<ol>
+<li>Esta versão do algoritmo faz uso de duas redes (linha 1 e 2); </li>
+<li>Toda a escolha de ação acontece usando a <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 8); </li>
+<li>A recompença acumulada é calculada usando a <em>target network <span class="arithmatex">\(\overline{\theta}\)</span></em> (linha 15); </li>
+<li>O cálculo da função de perda é feito usando a <em>value network</em> (linha 16); O update dos parâmetros a cada episódio acontece somente na <em>value network <span class="arithmatex">\(\theta\)</span></em> (linha 17), e; </li>
+<li>A <em>target network</em> é atualizada a cada <span class="arithmatex">\(C\)</span> episódios (linha 18) - esta atualização é uma simples cópia dos pesos (<span class="arithmatex">\(\overline{\theta} \leftarrow \theta\)</span>).</li>
+</ol>
 <p>Espera-se que com o uso de duas redes neurais o aprendizado do agente seja mais estável. Ao utilizar apenas uma rede neural o aprendizado do agente pode ser instável porque a rede neural está estimando a função de valor e ao mesmo tempo está sendo atualizada.</p>
 <ul>
 <li>Comparar os resultados alcançados com o uso desta implementação versus a implementação de Deep Q-Learning que já temos disponível em termos de aprendizado do agente. </li>
@@ -857,11 +953,16 @@
 <li>No projeto você precisa adicionar os scripts que você implementou. </li>
 <li>Não esqueça de atualizar o arquivo de <code>requirements.txt</code>, se necessário. </li>
 </ul>
-<p>Você deve submeter o seu projeto neste link: <a href="https://classroom.github.com/a/Khj4RN1-">https://classroom.github.com/a/Khj4RN1-</a> do Github Classroom. </p>
+<p>Você deve submeter o seu projeto neste link: <a href="https://classroom.github.com/a/UNPTi8Dx">https://classroom.github.com/a/UNPTi8Dx</a> do Github Classroom. </p>
 <h2 id="deadline">Deadline</h2>
-<p>O deadline para a entrega desta atividade é <strong>24 de março de 2024</strong> (domingo) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.</p>
-<h2 id="exemplo-de-entrega-completa">Exemplo de entrega completa <img alt="🆕" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f195.svg" title=":new:" /></h2>
-<p>O projeto mais completo entregue em 2024/1 fois <a href="https://github.com/insper-classroom/08-lunar-lander-droneiros-de-cabreuva">este aqui</a>.</p>
+<p>O deadline para a entrega desta atividade é <strong>20 de março de 2024</strong> (quinta-feira) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.</p>
+<!--
+
+## Exemplo de entrega completa :new: 
+
+O projeto mais completo entregue em 2024/1 foi [este aqui](https://github.com/insper-classroom/08-lunar-lander-droneiros-de-cabreuva).
+
+-->
 
 
 
@@ -882,7 +983,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 7, 2024 17:51:23">May 7, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 13:35:39">March 17, 2025</span>
   </span>
 
     
