@@ -22,6 +22,8 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 | [Ambientes não determinísticos](./classes/06_non_determ/index.md)              | 24/02/2025 | 
 | [Implementação de agente para o ambiente Mountain Car](./classes/09_more_complex/index.md) | 27/02/2025 |
 | [Comparando Q-Learning e Deep Q-Learning](./classes/15_deep_q_learning/index.md) | 11/03/2025 |
+| [Lunar Lander Project](./classes/15_deep_q_learning_lunar_lander/index.md) | 20/03/2025 |
+| [Comparando DQN e A2C](./classes/17_a2c/index.md) | 03/04/2025 |
 
 ## Projetos
 

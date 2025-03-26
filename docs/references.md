@@ -39,9 +39,11 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 1. Shuo Sun, Rundong Wang, and Bo An. 2023. [Reinforcement Learning for Quantitative Trading](https://doi.org/10.1145/3582560). ACM Trans. Intell. Syst. Technol. 14, 3, Article 44 (June 2023), 29 pages. https://doi.org/10.1145/3582560
 
-* Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Acessado a última vez em 30 de abril de 2023. 
+1. Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Acessado a última vez em 30 de abril de 2023. 
 
-* Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research, 2021. [http://jmlr.org/papers/v22/20-1364.html](http://jmlr.org/papers/v22/20-1364.html).
+1. Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research, 2021. [http://jmlr.org/papers/v22/20-1364.html](http://jmlr.org/papers/v22/20-1364.html).
+
+1. Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. [Asynchronous methods for deep reinforcement learning](https://arxiv.org/abs/1602.01783). In Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.
 
 ## Implementações e tutoriais
 
