@@ -17,7 +17,7 @@ Para tanto, será utilizado este conjunto de slides para uma aula expositiva ini
 
 * Não esqueça de coletar os dados para avaliar a curva de aprendizagem do agente. 
 
-* Também não esqueça de salvar o modelo para depois executar **N** vezes sem precisar re-treinar o agente. 
+* Utilize os ambientes `MountainCar-v0`, `CartPole-v1` e `LunarLander-v3` para testar o algoritmo.
 
-* Utilize os ambientes `CartPole-v1` e `LunarLander-v2` para testar o algoritmo.
+* Compare os resultados obtidos com o `DQN` e `Double DQN`. 
 
