@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/17_a2c/">
       
       
+        <link rel="prev" href="../17_reinforce/">
+      
+      
+        <link rel="next" href="../../references/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -235,17 +239,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -260,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -795,6 +801,160 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Actor-Critic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Actor-Critic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    A2C: Advantage Actor-Critic
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    A2C: Advantage Actor-Critic
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vantagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências adicionais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -859,27 +1019,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a2c" class="md-nav__link">
+  <a href="#atividade" class="md-nav__link">
     <span class="md-ellipsis">
-      A2C
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sugestao-de-atividade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sugestão de atividade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#questoes-adicionais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questões adicionais
+      Atividade
     </span>
   </a>
   
@@ -889,6 +1031,24 @@
   <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
       Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências adicionais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
     </span>
   </a>
   
@@ -911,14 +1071,7 @@
 
 
 <h1 id="a2c-advantage-actor-critic">A2C: Advantage Actor-Critic</h1>
-<p>No artigo original de Mnih et al. (2016), os autores propõem um algoritmo de aprendizado por reforço chamado A2C (Advantage Actor-Critic). Os autores também propõe o conceito de vantagem, que é uma medida de quão melhor é uma ação em relação a outra. </p>
-<h2 id="vantagem">Vantagem</h2>
-<p>A vantagem é calculada como a diferença entre o retorno esperado de uma ação e o valor do estado atual. </p>
-<p><span class="arithmatex">\(Adv^{\pi}(s,a) = Q^{\pi}(s,a) - V^{\pi}(s)\)</span></p>
-<p>onde <span class="arithmatex">\(Q^{\pi}(s,a)\)</span> é o retorno esperado de uma ação <span class="arithmatex">\(a\)</span> em um estado <span class="arithmatex">\(s\)</span> seguindo uma política <span class="arithmatex">\(\pi\)</span>, e <span class="arithmatex">\(V^{\pi}(s)\)</span> é o valor do estado <span class="arithmatex">\(s\)</span> seguindo a política <span class="arithmatex">\(\pi\)</span>.</p>
-<p>A vantagem pode ser entendida como quantificar o quanto mais alto é o retorno esperado ao aplicar a ação específica <span class="arithmatex">\(a\)</span> em comparação com seguir a política <span class="arithmatex">\(\pi\)</span> no estado <span class="arithmatex">\(s\)</span>.</p>
-<p>A interpretação da vantagem pode ser usada para guiar a otimização da política. Para uma vantagem positiva, devemos aumentar a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span>; e devemos diminuir a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span> sempre que a vantagem for negativa.</p>
-<h2 id="a2c">A2C</h2>
+<p>No artigo original de <a href="https://arxiv.org/abs/1602.01783">Mnih et al. (2016)</a>, os autores propõem um algoritmo de aprendizado por reforço chamado A2C (Advantage Actor-Critic). </p>
 <p>O método de ator-critic é uma abordagem que combina um ator, que é responsável por escolher ações, e um crítico, que é responsável por avaliar as ações escolhidas. </p>
 <p><center>
 <img src="img/pseudo_a2c.png" alt="Pseudo código A2C" style="width:800px;"/>
@@ -928,8 +1081,19 @@
 <img src="img/diagrama_a2c.png" alt="Diagrama A2C" style="width:500px;"/>
 </center></p>
 <p>Onde <strong>Actor</strong> é do tipo <em>policy gradient</em> e <strong>Critic</strong> é do tipo <em>value function</em> ou <em>value based</em>.</p>
-<h2 id="sugestao-de-atividade">Sugestão de atividade</h2>
-<p>Utilize a implementação do A2C disponível na biblioteca <a href="https://pypi.org/project/stable-baselines3/">stable-baselines3</a> para treinar um agente que consegue atuar nos ambientes <a href="https://gymnasium.farama.org/environments/classic_control/cart_pole/">CartPole-v1</a> e <a href="https://gymnasium.farama.org/environments/box2d/lunar_lander/">LunarLander-v2</a>. </p>
+<p>Os autores também propõe o conceito de vantagem, que é uma medida de quão melhor é uma ação em relação a outra. O uso deste conceito cria um <em>baseline</em> para a atualização da política, o que se mostrou eficiente para a convergência do algoritmo. </p>
+<h2 id="vantagem">Vantagem</h2>
+<p>A vantagem é calculada como a diferença entre o retorno esperado de uma ação e o valor do estado atual. </p>
+<p><span class="arithmatex">\(Adv^{\pi}(s,a) = Q^{\pi}(s,a) - V^{\pi}(s)\)</span></p>
+<ul>
+<li>onde <span class="arithmatex">\(Q^{\pi}(s,a)\)</span> é o retorno esperado de uma ação <span class="arithmatex">\(a\)</span> em um estado <span class="arithmatex">\(s\)</span> seguindo uma política <span class="arithmatex">\(\pi\)</span>, </li>
+<li>e <span class="arithmatex">\(V^{\pi}(s)\)</span> é o valor do estado <span class="arithmatex">\(s\)</span> seguindo a política <span class="arithmatex">\(\pi\)</span>.</li>
+</ul>
+<p>A vantagem pode ser entendida como quantificar o quanto mais alto é o retorno esperado ao aplicar a ação específica <span class="arithmatex">\(a\)</span> em comparação com seguir a política <span class="arithmatex">\(\pi\)</span> no estado <span class="arithmatex">\(s\)</span>.</p>
+<p>A interpretação da vantagem pode ser usada para guiar a otimização da política. Para uma vantagem positiva, devemos aumentar a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span>; e devemos diminuir a probabilidade da política <span class="arithmatex">\(\pi\)</span> selecionar a ação <span class="arithmatex">\(a\)</span> no estado <span class="arithmatex">\(s\)</span> sempre que a vantagem for negativa.</p>
+<h2 id="atividade">Atividade</h2>
+<p>O objetivo desta atividade é compreender o funcionamento do algoritmo A2C e também praticar o uso de bibliotecas de aprendizado por reforço.</p>
+<p>Utilize a implementação do A2C disponível na biblioteca <a href="https://pypi.org/project/stable-baselines3/">stable-baselines3</a> para treinar um agente que consegue atuar nos ambientes <a href="https://gymnasium.farama.org/environments/classic_control/cart_pole/">CartPole-v1</a>, <a href="https://gymnasium.farama.org/environments/box2d/lunar_lander/">LunarLander-v3</a> e <a href="https://ale.farama.org/environments/breakout/">Breakout</a>. </p>
 <p>A implementação é direta. No entanto, exige alguns cuidados. A biblioteca stable-baseline3 possui o seu próprio ambiente. O escopo desta atividade não inclui o uso dos ambientes da biblioteca stable-baseline3. Você deve utilizar o ambiente Gymnasium para esta atividade.</p>
 <p>Segue exemplo de código</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">stable_baselines3</span><span class="w"> </span><span class="kn">import</span> <span class="n">PPO</span><span class="p">,</span> <span class="n">DQN</span><span class="p">,</span> <span class="n">A2C</span>
@@ -964,21 +1128,13 @@
 <li>Analise os logs gerados. É possível a partir deste log criar as curvas de aprendizado?</li>
 <li>O comportamento do agente treinado é adequado? </li>
 <li>Leia a documentação em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html">https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html</a> e tente modificar os hiperparâmetros do modelo para melhorar o desempenho do agente.</li>
-<li>A mesma biblioteca possui uma implementação de DQN. A documentação está disponível em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html">https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html</a>. Compare o desempenho do A2C com o DQN. Qual dos dois algoritmos é mais eficiente para resolver o problema do CartPole-v1? E para o LunarLander-v2?</li>
-</ul>
-<h2 id="questoes-adicionais">Questões adicionais</h2>
-<ul>
-<li>O ambiente que você escolheu para o projeto final da disciplina respeita a interface do Gymnasium? Se sim então é possível utilizar a biblioteca stable-baselines3 para treinar um agente para o seu ambiente.</li>
-</ul>
-<p>Outros ambientes com implementações já prontas que podem ser úteis são: </p>
-<ul>
-<li><a href="https://tianshou.org/en/stable/">https://tianshou.org/en/stable/</a></li>
-<li><a href="https://marllib.readthedocs.io/en/latest/">https://marllib.readthedocs.io/en/latest/</a></li>
+<li>A mesma biblioteca possui uma implementação de DQN. A documentação está disponível em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html">https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html</a>. Compare o desempenho do A2C com o DQN. Qual dos dois algoritmos é mais eficiente para resolver o problema do CartPole-v1, LunarLander-v2 e implementar um jogador para o Breakout?</li>
+<li>No caso do DQN, use os mesmos hiperparâmetros de trabalhos anteriores. Assim será possível comparar o desempenho de implementações diferentes do DQN. Será que existe diferença entre as implementações do DQN?</li>
 </ul>
 <h2 id="referencias">Referências</h2>
 <ul>
 <li>
-<p>Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. Asynchronous methods for deep reinforcement learning. In Proceedings of the 33<sup>rd</sup> International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.</p>
+<p>Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. <a href="https://arxiv.org/abs/1602.01783">Asynchronous methods for deep reinforcement learning</a>. In Proceedings of the 33<sup>rd</sup> International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.</p>
 </li>
 <li>
 <p>Antonin Raffin, Ashley Hill, Adam Gleave, Anssi Kanervisto, Maximilian Ernestus, and Noah Dormann. 2021. Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research 22, 268 (2021), 1–8. Retrieved from <a href="http://jmlr.org/papers/v22/20-1364.html">http://jmlr.org/papers/v22/20-1364.html</a></p>
@@ -987,6 +1143,23 @@
 <p>OpenAI Baselines: ACKTR &amp; A2C. Disponível em <a href="https://openai.com/research/openai-baselines-acktr-a2c">https://openai.com/research/openai-baselines-acktr-a2c</a>.</p>
 </li>
 </ul>
+<h2 id="referencias-adicionais">Referências adicionais</h2>
+<p>Outros ambientes com implementações já prontas que podem ser úteis na implementação de outros projetos: </p>
+<ul>
+<li><a href="https://tianshou.org/en/stable/">https://tianshou.org/en/stable/</a></li>
+<li><a href="https://marllib.readthedocs.io/en/latest/">https://marllib.readthedocs.io/en/latest/</a></li>
+</ul>
+<h2 id="entrega">Entrega</h2>
+<p>O trabalho deve ser entregue no GitHub Classroom. O link para o repositório é <a href="https://classroom.github.com/a/jBOTFJJA">https://classroom.github.com/a/jBOTFJJA</a>.</p>
+<p>Os artefatos que devem estar presentes no repositório são: </p>
+<ul>
+<li>o código fonte de todas as implementações (treinamento e uso do modelo), de preferência em um diretório único chamado <code>src</code>;</li>
+<li>os arquivos de <em>log gerados</em> durante o treinamento e que foram usados para gerar as curvas de aprendizado, de preferência em um diretório único chamado <code>logs</code>;</li>
+<li>um arquivo <code>requirements.txt</code> com as dependências do projeto;</li>
+<li>um arquivo README.md que sumariza os principais achados do trabalho na raiz do projeto, e;</li>
+<li>um diretório <code>models</code> com os modelos treinados.</li>
+</ul>
+<p>O deadline para a entrega desta atividade é 03 de abril de 2024 (quinta-feira) às 23:30 horas. Este trabalho deve ser feito em grupo com até 2 integrantes.</p>
 
 
 
@@ -1007,7 +1180,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 22, 2024 16:21:43">April 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2025 13:13:32">March 26, 2025</span>
   </span>
 
     
