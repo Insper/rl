@@ -41,7 +41,7 @@ A equipe pode escolher entre os seguintes ambientes:
 
 O objetivo deste projeto é treinar um agente ou um grupo de agentes para resolver o problema de CPP em um ambiente simulado. O ambiente simulado deve ser um ambiente 2D com dimensões variadas. O agente deve ser capaz de aprender a percorrer a área de forma eficiente, cobrindo toda a área e evitando obstáculos.
 
-Um exemplo de estudo é apresentado neste [artigo](./referencias/FUSION2025_anotado.pdf). 
+Um exemplo de estudo é apresentado em artigo que está no blackboard da disciplina. 
 
 ## Prazo para definição do tema
 
