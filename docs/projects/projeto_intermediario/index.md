@@ -1,43 +1,60 @@
 # Projeto intermediário
 
-Segundo a literatura, o Double DQN não super valoriza o valor dos estados futuros. De fato, fornece estimativas mais realistas dos valores de ação. Isto tem algum impacto no aprendizado do agente? O aprendizado converge mais rápido? O aprendizado é mais estável? 
+Neste semestre, o projeto intermediário da disciplina de Aprendizagem por Reforço terá dois tópicos possíveis:
 
-Sendo assim, a proposta desta atividade é **avaliar o impacto do Double DQN no aprendizado do agente**. Para tanto, cada equipe deverá treinar agentes usando os algoritmos DQN e Double DQN nos ambientes `LunarLander-v2` e `CartPole-v1` e comparar os resultados.
+1. **AWS DeepRacer**
+2. **Uso de Aprendizagem por Reforço em problemas de Coverage Path Planning**
 
-### Entrega básica
+Ambos os tópicos terão suas entregas finais na primeira semana de maio de 2025, mas as regras e orientações para cada um deles são diferentes.
 
-* Implementar o algoritmo Double Deep DQN e comparar os resultados com DQN nos ambientes `LunarLander-v2` e `CartPole-v1`.
-* Executar no mínimo 5 treinamentos para cada algoritmo.
-* No relatório apresentar: 
-    * a curva de aprendizado na forma de um gráfico.
-    * os hiperparâmetros utilizados.
-* Os artefatos que devem ser entregues são: o código fonte, o relatório (preferencialmente na forma de arquivo `README.md`), o arquivo `requirements.txt` e os modelos treinados.
+Abaixo é descrito o escopo de cada um dos tópicos.
 
-Ao fazer isto a equipe terá conceito **B**. 
+## AWS DeepRacer
 
-### Entrega avançada
+O AWS DeepRacer é uma plataforma de aprendizado por reforço que permite treinar e avaliar modelos de condução autônoma em um ambiente simulado. O objetivo do projeto é treinar um agente para dirigir um carro em uma pista, utilizando técnicas de aprendizado por reforço.
 
-Para obter conceito **A+** nesta atividade a equipe deve incluir o treinamento de um agente para o ambiente [Flappy Bird](https://github.com/markub3327/flappy-bird-gymnasium).
+Este ambiente é utilizado em competições de aprendizado por reforço, onde os participantes podem treinar seus modelos e competir em corridas virtuais. Neste ano, no congresso da SBC, haverá uma competição de AWS DeepRacer, e o projeto intermediário será uma preparação para essa competição.
 
-A mesma análise feita com os ambientes anteriores deve ser feita com o ambiente Flappy Bird. Para este ambiente a equipe deve prestar atenção especial no espaço de observação e consequentemente na arquitetura da rede neural.
+Mais informações sobre a competição podem ser encontradas no site oficial do evento: [AWS DeepRacer na SBC 2025](https://csbc.sbc.org.br/2025/aws-deepracer). 
 
-## Deadline
+Se o aluno optar por este tópico então ele deve se inscrever na competição e seguir as regras e orientações do evento. Neste caso, o projeto deverá ser individual pois esta é uma regra da competição.
 
-O deadline para a entrega desta atividade é **07 de abril de 2024** às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+Datas importantes:
 
-A entrega deve ser feita via Github Classroom: [https://classroom.github.com/a/Hw222fiZ](https://classroom.github.com/a/Hw222fiZ).
+* Workshop 1 – 28/02/2025 (sexta-feira) às 17h30;
+* Workshop 2 – 28/03/2025 (sexta-feira) às 10h;
+* Workshop 3 - 28/04/2025 (segunda-feira) às 15h;
+* Corrida virtual de classificação – 5 a 9 de maio;
+* Corridas físicas – 20 a 23 de julho.
 
-## Referências
+## Uso de Aprendizagem por Reforço em problemas de Coverage Path Planning
 
-* [Material sobre Double DQN](../../classes/16_double_deep_q_learning/index.md)
+Coverage Path Planning (CPP) é um problema de planejamento de trajetória em que um agente deve percorrer uma área de forma a cobrir completamente essa área. O objetivo do projeto é aplicar técnicas de aprendizado por reforço para resolver problemas de CPP, utilizando ambientes simulados.
 
-## Exemplos de projetos completos :new: 
+O projeto pode ser realizado em grupos de até 2 alunos.
 
-Aqui estão alguns exemplos de projetos completos que podem servir de inspiração:
+A equipe pode escolher entre os seguintes ambientes:
 
-* Este é o projeto mais completo entregue: [https://github.com/insper-classroom/projeto-intermediario-ornithopter](https://github.com/insper-classroom/projeto-intermediario-ornithopter). O relatório deste projeto está no arquivo README.md. 
+* [DSSE - coverage environment](https://pfeinsper.github.io/drone-swarm-search/Documentation/docsCoverage.html#about)
+* Criar um [ambiente customizado](https://gymnasium.farama.org/introduction/create_custom_env/) para esta tarefa.
+* Adaptar um ambiente já existente (https://github.com/zuoxingdong/mazelab).
 
-* Este projeto não considerou o ambiente Flappy Bird, mas o seu relatório também está muito bem feito e completo: [https://github.com/insper-classroom/projeto-intermediario-mileage](https://github.com/insper-classroom/projeto-intermediario-mileage). O relatório deste projeto está no arquivo README.md.
+O objetivo deste projeto é treinar um agente ou um grupo de agentes para resolver o problema de CPP em um ambiente simulado. O agente deve ser capaz de aprender a percorrer a área de forma eficiente, cobrindo toda a área e evitando obstáculos.
 
+Um exemplo de estudo é apresentado neste [artigo](./referencias/FUSION2025_anotado.pdf). 
 
+## Prazo para definição do tema
+
+O aluno deve escolher o tema do projeto até o dia 8 de abril de 2025. O aluno deve enviar um e-mail para o professor com o tema escolhido e a equipe (se houver) até essa data.
+
+## Relatório
+
+Para ambos os casos será necessário entregar um relatório técnico com o projeto finalizado. O relatório deve ter no máximo 2 páginas, em formato PDF, e deve ser enviado até 10 de maio de 2025, às 23h59. O relatório deve ser enviado pelo blackboard.
+
+O relatório deve conter os seguintes tópicos:
+* Contexto e objetivo do projeto;
+* Descrição do método utilizado, e;
+* Resultados obtidos.
+
+No dia 12 de maio de 2025 as equipes deverão fazer uma apresentação de 10 minutos sobre o projeto, com 5 minutos para perguntas. 
 

@@ -47,8 +47,8 @@ nav:
 #    - 'Projetos finais':
 #      - 'classes/19_projects/index.md'
 #
-#  - 'Projetos':
-#    - 'projects/projeto_intermediario/index.md'
+  - 'Projetos':
+    - 'projects/projeto_intermediario/index.md'
 #    - 'projects/projeto_final/index.md'
   
   - 'Referências': 'references.md'
