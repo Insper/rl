@@ -52,6 +52,7 @@ O aluno deve escolher o tema do projeto até o dia 8 de abril de 2025. O aluno d
 Para ambos os casos será necessário entregar um relatório técnico com o projeto finalizado. O relatório deve ter no máximo 2 páginas, em formato PDF, e deve ser enviado até 10 de maio de 2025, às 23h59. O relatório deve ser enviado pelo blackboard.
 
 O relatório deve conter os seguintes tópicos:
+
 * Contexto e objetivo do projeto;
 * Descrição do método utilizado, e;
 * Resultados obtidos.
