@@ -36,12 +36,12 @@ nav:
     - 'Deep Q-Learning':
       - 'classes/15_deep_q_learning/index.md'
       - 'classes/15_deep_q_learning_lunar_lander/index.md'
-##      - 'classes/15_xx_comments/index.md'
-#      - 'classes/16_double_deep_q_learning/index.md' --> vou ter que fazer em algum momento
+#      - 'classes/16_double_deep_q_learning/index.md' #--> vou ter que fazer em algum momento
     - 'Policy Optimization':
       - 'classes/17_reinforce/index.md'
     - 'Actor-Critic':
       - 'classes/17_a2c/index.md'
+      - 'classes/15_xx_comments/index.md'
 #      - 'classes/18_comparativo_algs_env/index.md'
 #      - 'classes/18_ppo/index.md'
 #    - 'Projetos finais':
