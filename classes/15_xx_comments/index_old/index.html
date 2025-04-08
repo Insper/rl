@@ -7,10 +7,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Fabricio Barth">
       
-      
-        <link rel="canonical" href="https://insper.github.io/rl/classes/01_introduction/subject_rules/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/15_xx_comments/index_old/">
       
       
       
@@ -20,7 +18,7 @@
     
     
       
-        <title>Reinforcement Learning - Aprendizagem por Reforço</title>
+        <title>Comments on Deep Q-Learning activities - Aprendizagem por Reforço</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-goals" class="md-skip">
+        <a href="#comments-on-deep-q-learning-activities" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reinforcement Learning
+              Comments on Deep Q-Learning activities
             
           </span>
         </div>
@@ -320,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../01_introduction/" class="md-nav__link">
         
   
   
@@ -895,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15_xx_comments/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1033,6 +1031,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1041,45 +1041,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-goals" class="md-nav__link">
+  <a href="#resultados-esperados-com-a-execucao-do-cartpole" class="md-nav__link">
     <span class="md-ellipsis">
-      Learning goals
+      Resultados esperados com a execução do CartPole
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#this-is-a-hands-on-subject" class="md-nav__link">
+  <a href="#resultados-esperados-com-o-lunar-lander" class="md-nav__link">
     <span class="md-ellipsis">
-      This is a hands-on subject!
+      Resultados esperados com o Lunar Lander
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#entrega-do-exercicio" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assignments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assignments
+      Entrega do exercício
     </span>
   </a>
   
@@ -1101,49 +1083,88 @@
 
 
 
-  <h1>Reinforcement Learning</h1>
-
-<h2 id="learning-goals">Learning goals</h2>
-<p>At the end of the course, the student should be able to:</p>
-<ol>
-<li><strong>build a Reinforcement Learning (RL) system</strong> for sequential decision-making;</li>
-<li>understand how to <strong>formalize their task as a Reinforcement Learning problem</strong>, and how to implement a solution;</li>
-<li>understand the space of <strong>RL algorithms</strong> (Sarsa, Q-learning, Policy Gradients, and more), and;</li>
-<li>understand how RL fits under the broader umbrella of <strong>machine learning</strong>, and how it complements supervised and unsupervised learning.</li>
-</ol>
-<h2 id="this-is-a-hands-on-subject">This is a hands-on subject!</h2>
-<ol>
-<li>In every class, we will implement something.</li>
-<li>We will read many papers and implement some techniques described in several of them. </li>
-<li>We will work with different tools. However, all tools will be <strong>python</strong> packages. </li>
-</ol>
-<h2 id="requirements">Requirements</h2>
-<ol>
-<li>You must <em>know</em> how to code in <strong>python</strong>! </li>
-<li>You must <em>enjoy</em> coding in <strong>python</strong>. </li>
-<li>You must know how to work with <strong>Github</strong>. </li>
-</ol>
-<h2 id="content">Content</h2>
-<ol>
-<li>Definition and key concepts of RL</li>
-<li>RL Tooling and Environments</li>
-<li>Q-Learning and Sarsa algorithms</li>
-<li>How to use RL in different environments (non-deterministic, deterministic and competitive environments)</li>
-<li>Deep Q-Learning, Double Deep Q-Learning and Policy Optimization Algorithms</li>
-</ol>
-<h2 id="assignments">Assignments</h2>
-<p>The grade for this subject is calculated as follows: </p>
-<ul>
-<li>
-<p>Several <strong>small implementations</strong> will be performed. This average grade will make up 30% of the final grade for the subject. </p>
-</li>
-<li>
-<p>There will be <strong>two major projects</strong>. The average grade of these projects will make up the other 50% of the final grade. </p>
-</li>
-<li>
-<p>The remaining 20% will be calculated from <strong>the final exam</strong>.</p>
-</li>
-</ul>
+<h1 id="comments-on-deep-q-learning-activities">Comments on Deep Q-Learning activities</h1>
+<p>Na última semana foram propostas a implementação de dois agentes <code>CartPole</code> e <code>LunarLander</code> usando o algoritmo Deep Q-Learning que é descrito neste <a href="../../15_deep_q_learning/">link</a>. Durante o treinamento destes dois agentes foram identificados alguns problemas. </p>
+<p>O primeiro problema está relacionado com o consumo de memória excessivo. Ao que tudo indica, com a nova versão do <code>tensorflow</code> o keras mantêm em memória alguma estrutura de dados toda vez que o <code>fit</code> é executado. Como no caso do algoritmo <code>DeepQLearning.py</code> o <code>fit</code> do keras é executado diversas vezes então temos um problema de <em>memory leak</em>.</p>
+<p>Para resolver este problema foi adicionado ao final do <code>while</code> as seguintes instruções: </p>
+<div class="highlight"><pre><span></span><code><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="n">keras</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+</code></pre></div>
+<p>Desta forma o consumo de memória fica estável. </p>
+<p>O segundo problema está relacionado com o critério de parada dos episódios. O código que foi disponibilizado levava em consideração uma versão antiga da biblioteca <code>gymnasium</code>, ainda quando ela se chamava <code>gym</code> e pertencia a OpenAI. Considerando a nova versão da biblioteca, a melhor definição para a condição de parada do episódio é esta: </p>
+<div class="highlight"><pre><span></span><code><span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">steps</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="n">next_state</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminal</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">terminal</span> <span class="ow">or</span> <span class="n">truncated</span> <span class="ow">or</span> <span class="p">(</span><span class="n">steps</span><span class="o">&gt;</span><span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span><span class="p">):</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="n">reward</span>
+    <span class="n">next_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">next_state</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">experience</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">terminal</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">experience_replay</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">terminal</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Episódio: </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">episodes</span><span class="si">}</span><span class="s1">. Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="n">keras</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+</code></pre></div>
+<p>Neste caso, deixamos de considerar apenas o <code>terminal</code> e passamos a considerar também o <code>truncated</code> e a quantidade de <code>steps</code> máximos. Este último dado é informado via parâmetro via a variável <code>max_steps</code>, visto que cada ambiente tem um número diferente de <code>steps</code> máximos.</p>
+<p>A nova versão do código está disponível em <a href="https://github.com/Insper/rl_code/tree/main/src/part_06">https://github.com/Insper/rl_code/tree/main/src/part_06</a>.</p>
+<h2 id="resultados-esperados-com-a-execucao-do-cartpole">Resultados esperados com a execução do CartPole</h2>
+<p>Ao treinar um agente para o ambiente <code>CartPole-v1</code> usando o algoritmo Deep Q-Learning com os seguintes hiperparâmetros: </p>
+<div class="highlight"><pre><span></span><code><span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.99</span> 
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">epsilon_dec</span> <span class="o">=</span> <span class="mf">0.99</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">max_steps</span> <span class="o">=</span> <span class="mi">500</span>
+</code></pre></div>
+<p>e com a seguinte rede neural: </p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">observation_space</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">linear</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">))</span>
+</code></pre></div>
+<p>tem-se uma curva de aprendizagem com a seguinte característica: </p>
+<p><center>
+<img src="./figures/cartpole_v1_qlearning.jpg" alt="CartPole learning curve" style="width:600px;"/>
+</center></p>
+<p>e um agente treinado com o seguinte comportamento: </p>
+<p><center>
+<img src="./figures/cart_pole.gif" alt="CartPole result" style="width:500px;"/>
+</center></p>
+<h2 id="resultados-esperados-com-o-lunar-lander">Resultados esperados com o Lunar Lander</h2>
+<p>Enquanto eu escrevia este documento e organizava os artefatos de código no repositório, eu deixei executando o treinamento do <code>LunarLander</code>. A estrutura da rede neural é a mesma da implementação do <code>CartPole</code>, exceto as camadas de entrada e saída - pois a forma como o estado é representado e a quantidade de ações neste caso é diferente. </p>
+<p>Os hiperparâmetros utilizados são estes: </p>
+<div class="highlight"><pre><span></span><code><span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.99</span> 
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">epsilon_dec</span> <span class="o">=</span> <span class="mf">0.99</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">500000</span><span class="p">)</span> 
+<span class="n">max_steps</span> <span class="o">=</span> <span class="mi">1500</span>
+</code></pre></div>
+<p>O script está executando a aproximadamente 4 horas e o estado atual é: </p>
+<div class="highlight"><pre><span></span><code>Episódio:<span class="w"> </span><span class="m">377</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">276</span>.2426303107534
+Episódio:<span class="w"> </span><span class="m">378</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">223</span>.08010026072068
+Episódio:<span class="w"> </span><span class="m">379</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">254</span>.1889026369425
+Episódio:<span class="w"> </span><span class="m">380</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">261</span>.51268858418007
+Episódio:<span class="w"> </span><span class="m">381</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">259</span>.86030828311556
+Episódio:<span class="w"> </span><span class="m">382</span>/1000.<span class="w"> </span>Score:<span class="w"> </span><span class="m">230</span>.00523837249335
+</code></pre></div>
+<p>Ou seja, ainda falta &#8532; dos episódios para terminar o treinamento. Mas, aparentemente é apenas uma questão de tempo <img alt="😊" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f60a.svg" title=":blush:" /> </p>
+<h2 id="entrega-do-exercicio">Entrega do exercício</h2>
+<p>O escopo do exercício continua sendo o mesmo. No entanto, a data de entrega mudou para <strong>13/04/2023</strong>. </p>
 
 
 
@@ -1164,7 +1185,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2024 22:22:06">February 2, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 8, 2025 22:28:16">April 8, 2025</span>
   </span>
 
     
