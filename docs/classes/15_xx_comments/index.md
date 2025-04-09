@@ -109,3 +109,10 @@ Foram utilizados os ambientes disponibilizados na biblioteca [https://gymnasium.
 O relatório final desta atividade pode ser visto neste [link](./analise_curva_aprendizado.html). O link para todo o repositório da atividade é [https://github.com/fbarth/rl_compare](https://github.com/fbarth/rl_compare).
 
 
+## Atividade proposta: análise subjetiva de um agente treinado
+
+Entre os repositórios disponíveis, 
+
+* identificar o melhor modelo para Breakout salvo e utilizar o mesmo para visualizar o que seria o comportamento esperado de um agente que sabe jogar Breakout. 
+* identificar um modelo de Breakout salvo qualquer e utilizar o mesmo para comparar o comportamento deste agente com um agente que teve um reward acumulado maior. 
+
