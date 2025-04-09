@@ -969,6 +969,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dqn-e-a2c-nos-ambientes-cartpole-v1-lunarlandar-v3-e-breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      DQN e A2C nos ambientes CartPole-v1, LunarLandar-v3 e Breakout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comparando-os-algoritmos-dqn-a2c-e-ppo" class="md-nav__link">
     <span class="md-ellipsis">
       Comparando os algoritmos DQN, A2C e PPO
@@ -1136,6 +1145,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dqn-e-a2c-nos-ambientes-cartpole-v1-lunarlandar-v3-e-breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      DQN e A2C nos ambientes CartPole-v1, LunarLandar-v3 e Breakout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comparando-os-algoritmos-dqn-a2c-e-ppo" class="md-nav__link">
     <span class="md-ellipsis">
       Comparando os algoritmos DQN, A2C e PPO
@@ -1163,18 +1181,20 @@
 <h1 id="comentarios-sobre-as-ultimas-implementacoes">Comentários sobre as últimas implementações</h1>
 <p>Nas últimas semanas foram feitas várias implementações que tinham como objetivos: </p>
 <ol>
-<li>compreender melhor como funcionam os algoritmos Deep Q-Learning (e suas variantes), Reinforce e A2C. </li>
+<li>compreender melhor como funcionam os algoritmos Deep Q-Learning e suas variantes, Reinforce e A2C. </li>
 <li>a dinâmica de treinamento de agentes em diferentes ambientes, tais como, Mountain Car, Cart Pole, Lunar Lander e Breakout.</li>
 <li>exercitar técnicas para avaliar algoritmos e o aprendizado de agentes.</li>
 <li>exercitar o uso de bibliotecas de algoritmos e ambientes. </li>
 </ol>
 <h2 id="uso-de-dqn-e-q-learning-no-ambiente-mountain-car">Uso de DQN e Q-Learning no ambiente Mountain Car</h2>
-<p>Nem todos os resultados foram iguais ao apresentado abaixo:</p>
+<p>Nem todos os resultados foram iguais aos apresentados abaixo:</p>
 <p><img alt="alt text" src="figures/mountaincar_dqn.png" /></p>
 <p><img alt="alt text" src="figures/mountaincar_dqn2.png" /></p>
 <p><img alt="alt text" src="figures/mountaincar_dqn3.png" /></p>
 <p><img alt="alt text" src="figures/mountaincar_dqn4.png" /></p>
 <p><img alt="alt text" src="figures/mountaincar_dqn5.png" /></p>
+<p>Mas, algo que pode-se perceber é que o algoritmo DQN tem um desempenho superior. </p>
+<p>Os parâmetros que geraram curvas com um aprendizado mais rápido foram: </p>
 <table>
 <thead>
 <tr>
@@ -1230,8 +1250,10 @@
 </tbody>
 </table>
 <h2 id="ddqn-no-ambiente-lunar-lander">DDQN no ambiente Lunar Lander</h2>
+<p>O objetivo desta atividade era comparar as diversas versões do algoritmo DQN no ambiente Lunar Lander. Abaixo são apresentados alguns resultados obtidos:</p>
 <p><img alt="alt text" src="figures/lunar_ddqn.png" /></p>
 <p><img alt="alt text" src="figures/lunar_ddqn2.png" /></p>
+<p>Os hiperparâmetros utilizados nos dois casos foram: </p>
 <div class="highlight"><pre><span></span><code><span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.99</span>
 <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
@@ -1244,6 +1266,7 @@
 <span class="n">reward_avg_tol</span> <span class="o">=</span> <span class="mi">250</span>
 <span class="n">copy_nn</span> <span class="o">=</span> <span class="mi">100</span>
 </code></pre></div>
+<p>A arquitetura da rede neural utilizada no primeiro caso foi: </p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DQNModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DQNModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1256,6 +1279,16 @@
         <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># No activation on output (equivalent to linear activation)</span>
 </code></pre></div>
+<p>Arquiteturas similares foram usadas em outras implementações. </p>
+<h2 id="dqn-e-a2c-nos-ambientes-cartpole-v1-lunarlandar-v3-e-breakout">DQN e A2C nos ambientes CartPole-v1, LunarLandar-v3 e Breakout</h2>
+<p>O objetivo desta atividade foi treinar agentes usando os algoritmos DQN e A2C para os ambientes CartPole-v1, LunarLandar-v3 e Breakout. </p>
+<p>Foram selecionados alguns repositórios que apresentaram uma implementação e análise mais completa: </p>
+<ul>
+<li><a href="https://github.com/insper-classroom/08-dqn-vs-a2c-super_j_schulman">https://github.com/insper-classroom/08-dqn-vs-a2c-super_j_schulman</a></li>
+<li><a href="https://github.com/insper-classroom/08-dqn-vs-a2c-p-j">https://github.com/insper-classroom/08-dqn-vs-a2c-p-j</a></li>
+<li><a href="https://github.com/insper-classroom/08-dqn-vs-a2c-fruto_devontade_divina">https://github.com/insper-classroom/08-dqn-vs-a2c-fruto_devontade_divina</a></li>
+<li><a href="https://github.com/insper-classroom/08-dqn-vs-a2c-catapimbas">https://github.com/insper-classroom/08-dqn-vs-a2c-catapimbas</a></li>
+</ul>
 <h2 id="comparando-os-algoritmos-dqn-a2c-e-ppo">Comparando os algoritmos DQN, A2C e PPO</h2>
 <p>No semestre passado foi feita uma atividade de comparação de algoritmos em diferentes ambientes. O objetivo desta atividade foi comparar o desempenho de diferentes algoritmos de reinforcement learning em diferentes ambientes. </p>
 <p>Os algoritmos comparados foram: </p>
@@ -1294,7 +1327,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 8, 2025 22:28:16">April 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 9, 2025 16:17:28">April 9, 2025</span>
   </span>
 
     
