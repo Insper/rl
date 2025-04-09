@@ -2,14 +2,14 @@
 
 Nas últimas semanas foram feitas várias implementações que tinham como objetivos: 
 
-1. compreender melhor como funcionam os algoritmos Deep Q-Learning (e suas variantes), Reinforce e A2C. 
+1. compreender melhor como funcionam os algoritmos Deep Q-Learning e suas variantes, Reinforce e A2C. 
 1. a dinâmica de treinamento de agentes em diferentes ambientes, tais como, Mountain Car, Cart Pole, Lunar Lander e Breakout.
 1. exercitar técnicas para avaliar algoritmos e o aprendizado de agentes.
 1. exercitar o uso de bibliotecas de algoritmos e ambientes. 
 
 ## Uso de DQN e Q-Learning no ambiente Mountain Car
 
-Nem todos os resultados foram iguais ao apresentado abaixo:
+Nem todos os resultados foram iguais aos apresentados abaixo:
 
 ![alt text](./figures/mountaincar_dqn.png)
 
@@ -21,6 +21,9 @@ Nem todos os resultados foram iguais ao apresentado abaixo:
 
 ![alt text](./figures/mountaincar_dqn5.png)
 
+Mas, algo que pode-se perceber é que o algoritmo DQN tem um desempenho superior. 
+
+Os parâmetros que geraram curvas com um aprendizado mais rápido foram: 
 
 | Modelos | Gamma | Epsilon | Epsilon mínimo | Epsilon decay | Episódios | Batch size | Learning rate | Memória de replay | Max steps |
 |---------|-------|---------|----------------|---------------|-----------|------------|---------------|-------------------|-----------|
@@ -31,9 +34,13 @@ Nem todos os resultados foram iguais ao apresentado abaixo:
 
 ## DDQN no ambiente Lunar Lander
 
+O objetivo desta atividade era comparar as diversas versões do algoritmo DQN no ambiente Lunar Lander. Abaixo são apresentados alguns resultados obtidos:
+
 ![alt text](./figures/lunar_ddqn.png)
 
 ![alt text](./figures/lunar_ddqn2.png)
+
+Os hiperparâmetros utilizados nos dois casos foram: 
 
 ```python
 gamma = 0.99
@@ -49,6 +56,8 @@ reward_avg_tol = 250
 copy_nn = 100
 ```
 
+A arquitetura da rede neural utilizada no primeiro caso foi: 
+
 ```python
 class DQNModel(nn.Module):
     def __init__(self, input_dim, output_dim):
@@ -63,7 +72,18 @@ class DQNModel(nn.Module):
         return self.fc3(x)  # No activation on output (equivalent to linear activation)
 ```
 
+Arquiteturas similares foram usadas em outras implementações. 
 
+## DQN e A2C nos ambientes CartPole-v1, LunarLandar-v3 e Breakout
+
+O objetivo desta atividade foi treinar agentes usando os algoritmos DQN e A2C para os ambientes CartPole-v1, LunarLandar-v3 e Breakout. 
+
+Foram selecionados alguns repositórios que apresentaram uma implementação e análise mais completa: 
+
+* [https://github.com/insper-classroom/08-dqn-vs-a2c-super_j_schulman](https://github.com/insper-classroom/08-dqn-vs-a2c-super_j_schulman)
+* [https://github.com/insper-classroom/08-dqn-vs-a2c-p-j](https://github.com/insper-classroom/08-dqn-vs-a2c-p-j)
+* [https://github.com/insper-classroom/08-dqn-vs-a2c-fruto_devontade_divina](https://github.com/insper-classroom/08-dqn-vs-a2c-fruto_devontade_divina)
+* [https://github.com/insper-classroom/08-dqn-vs-a2c-catapimbas](https://github.com/insper-classroom/08-dqn-vs-a2c-catapimbas)
 
 ## Comparando os algoritmos DQN, A2C e PPO
 

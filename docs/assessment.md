@@ -29,7 +29,7 @@ A avaliação dos estudantes será realizada através de **exercícios**, **proj
 
 | Descrição                                              | Prazo            |
 |:-----------------------------------------------------------|:-------------------:|
-| TBD   |   TBD   |
+| [AWS DeepRacer ou Coverage Path Planning](./projects/projeto_intermediario/index.md)   |   10/05/2025   |
 
 
 ## Conversão de conceito para valor numérico
