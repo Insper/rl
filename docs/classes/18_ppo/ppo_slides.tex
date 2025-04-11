@@ -16,7 +16,7 @@
 \title{Proximal Policy Optimization (PPO)} 
 \author{Fabrício Barth}
 \institute{Insper Instituto de Ensino e Pesquisa}
-\date{Abril de 2024}
+\date{Abril de 2025}
 	
 \maketitle
 
@@ -67,6 +67,9 @@
 	\begin{equation}
 		L^{PG}(\theta) = \hat{E} \left[ \log \pi_{\theta}(a_{t}|s_{t}).\hat{G}(s_{t},a_{t}) \right]
 	\end{equation}
+	
+	\footnote{Schulman, 2015 usa a segunda forma de anotação}
+	
 \end{frame}
 
 \begin{frame}{Estimador de vantagem}
@@ -86,6 +89,8 @@
 	\item $\hat{Q}(s_{t},a_{t})$ é o \textit{discounted rewards}, e;
 	\item $\hat{V}(s_{t})$ é a função baseline.
 \end{itemize}	
+
+\footnote{Mesmo conceito que é proposto em Mnih et al. (2016)}
 
 \end{frame}
 
@@ -124,7 +129,7 @@
 O algoritmo PPO define uma nova função objetivo que garante que a política nova não fique muito longe da política antiga:
 	
 	\begin{equation}
-	L^{CLIP}(\theta) = \hat{E} \left[ \min \left(r(\theta).\hat{A}(s_{t},a_{t}) , clip(r(\theta), 1 - \epsilon, 1 + \epsilon).\hat{A}(s_{t},a_{t}) \right) \right]		
+	L^{CLIP}(\theta) = \hat{E} \left[ \nonumber \min \left( \nonumber r(\theta).\hat{A}(s_{t},a_{t}), clip(r(\theta), 1 - \epsilon, 1 + \epsilon).\hat{A}(s_{t},a_{t}) \nonumber \right) \right]		
 	\end{equation}
 
 \begin{itemize}
