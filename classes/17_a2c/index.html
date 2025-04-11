@@ -1199,13 +1199,15 @@
 <h1 id="a2c-advantage-actor-critic">A2C: Advantage Actor-Critic</h1>
 <p>No artigo original de <a href="https://arxiv.org/abs/1602.01783">Mnih et al. (2016)</a>, os autores propõem um algoritmo de aprendizado por reforço chamado A2C (Advantage Actor-Critic). </p>
 <p>O método de ator-critic é uma abordagem que combina um ator, que é responsável por escolher ações, e um crítico, que é responsável por avaliar as ações escolhidas. </p>
-<p><center>
+<center>
 <img src="img/pseudo_a2c.png" alt="Pseudo código A2C" style="width:800px;"/>
-</center></p>
+</center>
+
 <p>Uma forma visual de entender o funcionamento do algoritmo é apresentada abaixo: </p>
-<p><center>
+<center>
 <img src="img/diagrama_a2c.png" alt="Diagrama A2C" style="width:500px;"/>
-</center></p>
+</center>
+
 <p>Onde <strong>Actor</strong> é do tipo <em>policy gradient</em> e <strong>Critic</strong> é do tipo <em>value function</em> ou <em>value based</em>.</p>
 <p>Os autores também propõe o conceito de vantagem, que é uma medida de quão melhor é uma ação em relação a outra. O uso deste conceito cria um <em>baseline</em> para a atualização da política, o que se mostrou eficiente para a convergência do algoritmo. </p>
 <h2 id="vantagem">Vantagem</h2>

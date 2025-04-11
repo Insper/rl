@@ -1135,13 +1135,15 @@
 <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">))</span>
 </code></pre></div>
 <p>tem-se uma curva de aprendizagem com a seguinte característica: </p>
-<p><center>
+<center>
 <img src="./figures/cartpole_v1_qlearning.jpg" alt="CartPole learning curve" style="width:600px;"/>
-</center></p>
+</center>
+
 <p>e um agente treinado com o seguinte comportamento: </p>
-<p><center>
+<center>
 <img src="./figures/cart_pole.gif" alt="CartPole result" style="width:500px;"/>
-</center></p>
+</center>
+
 <h2 id="resultados-esperados-com-o-lunar-lander">Resultados esperados com o Lunar Lander</h2>
 <p>Enquanto eu escrevia este documento e organizava os artefatos de código no repositório, eu deixei executando o treinamento do <code>LunarLander</code>. A estrutura da rede neural é a mesma da implementação do <code>CartPole</code>, exceto as camadas de entrada e saída - pois a forma como o estado é representado e a quantidade de ações neste caso é diferente. </p>
 <p>Os hiperparâmetros utilizados são estes: </p>
