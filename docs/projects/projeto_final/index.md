@@ -1,6 +1,6 @@
 # Projeto Final
 
-Este é o projeto final da disciplina. É um projeto que deverá ser entrega por um grupo de até **4 integrantes**. 
+Este é o projeto final da disciplina. É um projeto que deverá ser entrega por um grupo de até **2 integrantes**. 
 
 ## Objetivo
 
@@ -30,7 +30,7 @@ Para alcançar este objetivo, o grupo deverá:
 
 ## Submissão dos artefatos produzidos
 
-Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é [https://classroom.github.com/a/OtOzQGPE](https://classroom.github.com/a/OtOzQGPE).
+Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é []().
 
 
 Cada grupo deverá adicionar ao repositório do projeto: 
