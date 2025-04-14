@@ -980,6 +980,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Proposta de atividade prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questoes-desafio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questões desafio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade adicional
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1161,6 +1185,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Proposta de atividade prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questoes-desafio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questões desafio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atividade-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividade adicional
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1192,7 +1240,18 @@
 <p>Na primeira parte da aula vamos utilizar o conjunto de slides abaixo para entender o algoritmo PPO:</p>
 <p><embed src="ppo_slides.pdf" type="application/pdf" width="600" height="300"></p>
 <h2 id="proposta-de-atividade-pratica">Proposta de atividade prática</h2>
-<p>Utilize a implementação do algoritmo PPO existente em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html">https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html</a> para implementar diversos agentes para diferentes ambientes. Faça uma análise se a política encontrada é uma política ótima, se demorou muito para treinar o agente e se a curva de aprendizado do agente é estável. </p>
+<p>Utilize a implementação do algoritmo PPO existente em <a href="https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html">https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html</a> para treinar um agente capaz de atuar nos ambientes <code>MiniGrid-Empty-16x16-v0</code>, <code>MiniGrid-Empty-Random-6x6-v0</code> e <code>MiniGrid-DoorKey-*</code> disponíveis em <a href="https://minigrid.farama.org/">https://minigrid.farama.org/</a>.</p>
+<p>Sugestão: utilize o código <a href="src/ppo_empty_env.py">exemplo</a> como base para o treinamento dos agentes. </p>
+<h3 id="questoes-desafio">Questões desafio</h3>
+<ul>
+<li>
+<p>Será que ao utilizar os pesos da rede treinada para o ambiente <code>MiniGrid-Empty-16x16-v0</code> é possível acelerar o aprendizado no ambiente <code>MiniGrid-Empty-Random-6x6-v0</code>? </p>
+</li>
+<li>
+<p>Será que ao utilizar os pesos da rede treinada para um dos ambientes <code>`MiniGrid-Empty-*</code> é possível acelerar o aprendizado no ambiente <code>MiniGrid-DoorKey-*</code>? </p>
+</li>
+</ul>
+<h2 id="atividade-adicional">Atividade adicional</h2>
 <p>Para aqueles que querem aprofundar ainda mais o seu conhecimento sobre o algoritmo PPO, proponho implementar o seu próprio algoritmo utilizando as referências citadas abaixo. Em especial este documento: <a href="https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/">https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/</a>.</p>
 <h2 id="referencias">Referências</h2>
 <p>Para a produção deste material foram utilizadas as seguintes referências: </p>
@@ -1233,7 +1292,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 4, 2023 14:35:50">May 4, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 16:25:35">April 14, 2025</span>
   </span>
 
     
