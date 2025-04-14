@@ -6,7 +6,18 @@ Na primeira parte da aula vamos utilizar o conjunto de slides abaixo para entend
 
 ## Proposta de atividade prática
 
-Utilize a implementação do algoritmo PPO existente em [https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html](https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html) para implementar diversos agentes para diferentes ambientes. Faça uma análise se a política encontrada é uma política ótima, se demorou muito para treinar o agente e se a curva de aprendizado do agente é estável. 
+Utilize a implementação do algoritmo PPO existente em [https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html](https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html) para treinar um agente capaz de atuar nos ambientes `MiniGrid-Empty-16x16-v0`, `MiniGrid-Empty-Random-6x6-v0` e `MiniGrid-DoorKey-*` disponíveis em [https://minigrid.farama.org/](https://minigrid.farama.org/).
+
+Sugestão: utilize o código [exemplo](./src/ppo_empty_env.py) como base para o treinamento dos agentes. 
+
+### Questões desafio
+
+* Será que ao utilizar os pesos da rede treinada para o ambiente `MiniGrid-Empty-16x16-v0` é possível acelerar o aprendizado no ambiente `MiniGrid-Empty-Random-6x6-v0`? 
+
+* Será que ao utilizar os pesos da rede treinada para um dos ambientes ``MiniGrid-Empty-*` é possível acelerar o aprendizado no ambiente `MiniGrid-DoorKey-*`? 
+
+
+## Atividade adicional
 
 Para aqueles que querem aprofundar ainda mais o seu conhecimento sobre o algoritmo PPO, proponho implementar o seu próprio algoritmo utilizando as referências citadas abaixo. Em especial este documento: [https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/).
 
