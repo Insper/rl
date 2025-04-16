@@ -21,3 +21,13 @@ Para tanto, será utilizado este conjunto de slides para uma aula expositiva ini
 
 * Compare os resultados obtidos com o `DQN` e `Double DQN`. 
 
+## Exemplo de funcionamento do algoritmo Reinforce
+
+O código [reinforce_frozen_lake.py](./src/reinforce_frozen_lake.py) possui uma implementação do algoritmo Reinforce atuando no ambiente Frozen Lake determinístico. O objetivo deste código é mostrar o funcionamento do algoritmo Frozen Lake e algumas particularidades a utilização do modelo. 
+
+Para ser mais fácil a visualização, algumas alterações foram feitas no ambiente e no algoritmo, entre elas: 
+
+* alteração da função de reward;
+* configuração do ambiente em modo determinístico, e;
+* representação do estado como um vetor de tamanho 16. 
+

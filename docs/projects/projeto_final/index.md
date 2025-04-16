@@ -25,7 +25,7 @@ Para alcançar este objetivo, o grupo deverá:
 
 **14/05**: trata-se de um marco intermediário onde o professor da disciplina irá analisar os artefatos existentes no repositório do projeto e, consequentemente, o andamento do mesmo. 
 
-**19 e 21/05**: cada grupo terá 15 minutos para apresentar o projeto desenvolvido. **Importante**: todos os artefatos, inclusive qualquer material utilizado para a apresentação, devem estar prontos no dia **19/05**. A ordem das apresentações será definida posteriormente. 
+**19/05**: cada grupo terá 10 minutos para apresentar o projeto desenvolvido. **Importante**: todos os artefatos, inclusive qualquer material utilizado para a apresentação, devem estar prontos no dia **19/05**. 
 
 
 ## Submissão dos artefatos produzidos
@@ -63,7 +63,7 @@ Para conseguir a nota máxima é necessário:
 
 * **implementação**: precisa estar funcionando, bem organizada e código legível.
 * **relatório**: precisa ter todos os itens descritos acima. O texto precisa ser auto-contido, ter início, meio e fim. 
-* **apresentação**: a apresentação também precisa ser auto-contida, ter início, meio e fim. Não deve ultrapassar 15 minutos. Também não deve ter menos que 10 minutos. 
+* **apresentação**: a apresentação também precisa ser auto-contida, ter início, meio e fim. Não deve ultrapassar **10 minutos**.  
 
 ## Nota importante
 
