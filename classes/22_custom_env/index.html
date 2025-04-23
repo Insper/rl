@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/05_xx_hyper_comments/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/22_custom_env/">
       
       
-        <link rel="prev" href="../05_x_hyperparameters/">
+        <link rel="prev" href="../09_more_complex/">
       
       
-        <link rel="next" href="../05_x_sarsa/">
+        <link rel="next" href="../15_deep_q_learning/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Alguns comentários sobre as entregas - Aprendizagem por Reforço</title>
+        <title>Criação de ambientes customizados - Aprendizagem por Reforço</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alguns-comentarios-sobre-as-entregas" class="md-skip">
+        <a href="#criacao-de-ambientes-customizados" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alguns comentários sobre as entregas
+              Criação de ambientes customizados
             
           </span>
         </div>
@@ -375,20 +375,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -404,7 +402,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Q-Learning and Sarsa
@@ -461,32 +459,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Alguns comentários sobre as entregas
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_xx_hyper_comments/" class="md-nav__link">
         
   
   
@@ -497,53 +473,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-melhor-um-valor-de-alpha-muito-proximo-de-zero-ou-um-valor-de-alpha-muito-proximo-de-um" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é melhor? Um valor de \(\alpha\) muito próximo de zero ou um valor de \(\alpha\) muito próximo de um?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-melhor-um-valor-de-gamma-muito-proximo-de-zero-ou-um-valor-de-gamma-muito-proximo-de-um" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é melhor? Um valor de \(\gamma\) muito próximo de zero ou um valor de \(\gamma\) muito próximo de um?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qual-e-o-impacto-ao-escolher-uma-acao-sempre-de-forma-aleatoria-durante-o-treinamento-ou-sempre-considerando-a-q-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Qual é o impacto ao escolher uma ação sempre de forma aleatória durante o treinamento ou sempre considerando a Q-table?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -607,18 +536,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -634,7 +565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Ambientes e metodologias
@@ -737,10 +668,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../22_custom_env/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Criação de ambientes customizados
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -751,6 +704,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposta-de-atividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposta de atividade
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1164,27 +1146,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-melhor-um-valor-de-alpha-muito-proximo-de-zero-ou-um-valor-de-alpha-muito-proximo-de-um" class="md-nav__link">
+  <a href="#proposta-de-atividade" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é melhor? Um valor de \(\alpha\) muito próximo de zero ou um valor de \(\alpha\) muito próximo de um?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-melhor-um-valor-de-gamma-muito-proximo-de-zero-ou-um-valor-de-gamma-muito-proximo-de-um" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é melhor? Um valor de \(\gamma\) muito próximo de zero ou um valor de \(\gamma\) muito próximo de um?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qual-e-o-impacto-ao-escolher-uma-acao-sempre-de-forma-aleatoria-durante-o-treinamento-ou-sempre-considerando-a-q-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Qual é o impacto ao escolher uma ação sempre de forma aleatória durante o treinamento ou sempre considerando a Q-table?
+      Proposta de atividade
     </span>
   </a>
   
@@ -1206,80 +1170,22 @@
 
 
 
-<h1 id="alguns-comentarios-sobre-as-entregas">Alguns comentários sobre as entregas</h1>
-<h2 id="o-que-e-melhor-um-valor-de-alpha-muito-proximo-de-zero-ou-um-valor-de-alpha-muito-proximo-de-um">O que é melhor? Um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\alpha\)</span> muito próximo de um?</h2>
-<p>Na figura abaixo é apresentado a curva de aprendizado do agente considerando diferentes valores para o parâmetro <span class="arithmatex">\(\alpha\)</span>. </p>
-<p><img alt="alt text" src="img/alpha.png" /></p>
-<p>Na tabela abaixo são apresentadas as quantidades de ações média por episódio considerando diferentes valores para o parâmetro <span class="arithmatex">\(\alpha\)</span>. Para o cálculo destes valores foram executadas 100 simulações depois da Q-table preenchida. </p>
-<table>
-<thead>
-<tr>
-<th><span class="arithmatex">\(\alpha\)</span></th>
-<th>Ações média por episódio</th>
-<th>Desvio padrão</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0.9</td>
-<td>24.459</td>
-<td>74.62</td>
-</tr>
-<tr>
-<td>0.6</td>
-<td>28.195</td>
-<td>84.43</td>
-</tr>
-<tr>
-<td>0.1</td>
-<td>293.635</td>
-<td>241.517</td>
-</tr>
-<tr>
-<td>0.01</td>
-<td>500</td>
-<td>0.0</td>
-</tr>
-</tbody>
-</table>
-<p>Os valores apresentados acima são os valores referente a inferência do agente. Idealmente, um agente deveria gastar entre 11 e 17 ações por episódio neste ambiente. Os valores apresentados acima parecem altos. Isto indica que mesmo o modelo onde <span class="arithmatex">\(\alpha = 0.9\)</span> não está convergindo para o ótimo.</p>
-<details class="hint">
-<summary>O que podemos fazer?</summary>
-<p>Uma alternativa para melhorar a convergência do modelo é aumentar o número de episódios, por exemplo, para 10.000. </p>
-<p>Neste caso, o valor médio de ações por episódio é de 13.105 com um desvio padrão de 2.61.</p>
-</details>
-<h2 id="o-que-e-melhor-um-valor-de-gamma-muito-proximo-de-zero-ou-um-valor-de-gamma-muito-proximo-de-um">O que é melhor? Um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de zero ou um valor de <span class="arithmatex">\(\gamma\)</span> muito próximo de um?</h2>
-<p><img alt="alt text" src="img/gamma.png" /></p>
-<h2 id="qual-e-o-impacto-ao-escolher-uma-acao-sempre-de-forma-aleatoria-durante-o-treinamento-ou-sempre-considerando-a-q-table">Qual é o impacto ao escolher uma ação sempre de forma aleatória durante o treinamento ou sempre considerando a Q-table?</h2>
-<p>Na figura abaixo é apresentado a curva de aprendizado do agente considerando um cenário onde as ações são sempre escolhidas de forma aleatória durante o treinamento e um cenário onde as ações são sempre escolhidas considerando a Q-table.</p>
-<p><img alt="alt text" src="img/aleatorio.png" /></p>
-<p>Na tabela abaixo são apresentadas as quantidades de ações média por episódio considerando os diferentes cenários. </p>
-<table>
-<thead>
-<tr>
-<th>Escolha das ações</th>
-<th>Ações média por episódio</th>
-<th>Desvio padrão</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Aleatória</td>
-<td>13.051</td>
-<td>2.703</td>
-</tr>
-<tr>
-<td>Q-table</td>
-<td>13.219</td>
-<td>2.574</td>
-</tr>
-</tbody>
-</table>
-<details class="hint">
-<summary>Qual a explicação para os resultados apresentados?</summary>
-<p>Segundo a literatura, a forma como as ações são escolhidas durante o treinamento não impacta na convergência do modelo.</p>
-<p>A única implicação prática é o fato do treinamento ser mais rápido quando as ações são escolhidas usando exploration e exploitation.</p>
-</details>
+<h1 id="criacao-de-ambientes-customizados">Criação de ambientes customizados</h1>
+<p>Para que o treinamento de um agente aconteça utilizando <em>reinforcement learning</em> é necessário, no mínimo, dois (2) componentes de software: </p>
+<ul>
+<li>o agente ou o algoritmo de aprendizagem por reforço, e;</li>
+<li>o ambiente. </li>
+</ul>
+<p>O ambiente precisa ter a seguinte assinatura mínima: </p>
+<ul>
+<li><code>__init__</code> ou construtor; </li>
+<li><code>reset()</code> para a criação do estado inicial; </li>
+<li><code>step()</code> para a execução da ação. Basicamente, esta função step deve retonar o novo estado (consequência da execução da ação <span class="arithmatex">\(a\)</span> no estado atual), o <span class="arithmatex">\(reward\)</span> imediato e se o novo estado é terminal ou não; </li>
+<li>uma função de <code>reward</code> que é codificada como parte da função <code>step</code>.</li>
+</ul>
+<p>Existem diversas formas de se implementar um ambiente. Mas, talvez, a mais popular é usando o projeto <code>gymnasium</code>. </p>
+<h2 id="proposta-de-atividade">Proposta de atividade</h2>
+<p>Faça o clone do projeto <a href="https://github.com/fbarth/gym_custom_env">https://github.com/fbarth/gym_custom_env</a> e siga o roteiro que está descrito no arquivo README.md deste repositório. </p>
 
 
 
@@ -1300,7 +1206,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 18, 2025 22:11:17">February 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 23, 2025 14:09:05">April 23, 2025</span>
   </span>
 
     
