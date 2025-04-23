@@ -102,3 +102,9 @@ A definição do objetivo do trabalho deve acontecer até o dia **30/04/2023**. 
 
 * https://github.com/mikelma/craftium: ambientes estilo minicraft. 
 
+* https://github.com/rajcscw/nlp-gym: NLP Gym.
+
+* https://github.com/arvijj/rl-cpp: Ambiente para Coverage Path Planning.
+
+* https://github.com/omron-sinicx/ShinRL/: ambiente para avaliação de algoritmos de RL.
+
