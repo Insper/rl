@@ -30,8 +30,7 @@ Para alcançar este objetivo, o grupo deverá:
 
 ## Submissão dos artefatos produzidos
 
-Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é []().
-
+Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é [https://classroom.github.com/a/bFrIHgJ3](https://classroom.github.com/a/bFrIHgJ3).
 
 Cada grupo deverá adicionar ao repositório do projeto: 
 
@@ -68,3 +67,15 @@ Para conseguir a nota máxima é necessário:
 ## Nota importante
 
 A definição do objetivo do trabalho deve acontecer até o dia **30/04/2023**. Se esta definição não acontecer até este dia a nota máxima no projeto será 8. 
+
+## Sugestão de temas
+
+* Uso de Reinforcement Learning no dilema do prisioneiro iterado. Referência [https://www.youtube.com/watch?v=mScpHTIi-kM](https://www.youtube.com/watch?v=mScpHTIi-kM).
+
+* Algo usando o ambiente [Minigrid](https://minigrid.farama.org/). Sugestão: procurar por artigos que citam o artigo [https://arxiv.org/abs/2306.13831](https://arxiv.org/abs/2306.13831).
+
+* Algo relacionado com o artigo [https://arxiv.org/abs/1703.04908](https://arxiv.org/abs/1703.04908) e o ambiente [https://pettingzoo.farama.org/environments/mpe/](https://pettingzoo.farama.org/environments/mpe/).
+
+* HighWayEnv
+
+* 

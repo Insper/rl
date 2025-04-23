@@ -49,7 +49,7 @@ O aluno deve escolher o tema do projeto até o dia 8 de abril de 2025. O aluno d
 
 ## Relatório
 
-Para ambos os casos será necessário entregar um relatório técnico com o projeto finalizado. O relatório deve ter no máximo 2 páginas, em formato PDF, e deve ser enviado até 10 de maio de 2025, às 23h59. O relatório deve ser enviado pelo blackboard.
+Para ambos os casos será necessário entregar um relatório técnico com o projeto finalizado. O relatório deve ter no máximo 2 páginas, em formato PDF, e deve ser enviado até 10 de maio de 2025, às 23h59. O relatório deve ser submetido via Github Classroom no link [https://classroom.github.com/a/7dqEOHcz](https://classroom.github.com/a/7dqEOHcz) com os demais artefatos, se for o caso.
 
 O relatório deve conter os seguintes tópicos:
 
@@ -59,3 +59,10 @@ O relatório deve conter os seguintes tópicos:
 
 No dia 12 de maio de 2025 as equipes deverão fazer uma apresentação de 10 minutos sobre o projeto, com 5 minutos para perguntas. 
 
+## Considerações para quem escolheu o tópico CPP
+
+Existem dois caminhos para a execução deste projeto: 
+
+1. fazer uso da biblioteca DSSE. Neste caso, sugiro fortemente testar a instalação desta biblioteca o mais rápido possível pois ela tem inúmeras dependências que podem dar problemas; 
+
+2. utilizar um ambiente customizado. Neste caso, sugiro utilizar o roteiro disponível em [https://github.com/fbarth/gym_custom_env](https://github.com/fbarth/gym_custom_env). 
