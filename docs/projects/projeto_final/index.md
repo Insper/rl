@@ -76,6 +76,29 @@ A definição do objetivo do trabalho deve acontecer até o dia **30/04/2023**. 
 
 * Algo relacionado com o artigo [https://arxiv.org/abs/1703.04908](https://arxiv.org/abs/1703.04908) e o ambiente [https://pettingzoo.farama.org/environments/mpe/](https://pettingzoo.farama.org/environments/mpe/).
 
-* HighWayEnv
+### Sugestão de ambientes a serem utilizados
 
-* 
+* https://github.com/Farama-Foundation/HighwayEnv : simulação de autopistas
+
+* https://github.com/google-deepmind/lab : DeepMind Lab
+
+* https://github.com/deepdrive/deepdrive: Self-driving cars
+
+* https://github.com/Kinds-of-Intelligence-CFI/animal-ai : Animal AI
+
+* https://github.com/Farama-Foundation/ViZDoom : ViZDoom
+
+* https://github.com/Unity-Technologies/obstacle-tower-env : Ambiente com vários ambientes e desafios
+
+* https://github.com/upb-lea/gym-electric-motor : simulação de motores elétricos
+
+* https://github.com/icu-sepsis/icu-sepsis : simulação de ambiente médico
+
+* https://github.com/AI4Finance-Foundation/FinRL: Finanças e Reinforcement Learning
+
+* https://github.com/SimonHashtag/EconRL: Economics and Reinforcement Learning
+
+* Ambiente para simulação de carteiras: https://rlportfolio.readthedocs.io/en/latest/ , artigo: https://sol.sbc.org.br/index.php/eniac/article/view/33804/33595
+
+* https://github.com/mikelma/craftium: ambientes estilo minicraft. 
+
