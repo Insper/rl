@@ -59,6 +59,16 @@ O relatório deve conter os seguintes tópicos:
 
 No dia 12 de maio de 2025 as equipes deverão fazer uma apresentação de 10 minutos sobre o projeto, com 5 minutos para perguntas. 
 
+## Vídeo
+
+Cada equipe deverá gravar um vídeo de até 10 minutos apresentando os resultados do projeto. O vídeo deve ser colocado em alguma plataforma de vídeo (YouTube, Vimeo, etc.) e o link deve ser enviado junto com o relatório no repositório do projeto. De preferência, colocar o link para o vídeo no README do repositório. O vídeo deve conter os seguintes tópicos:
+
+* Contexto e objetivo do projeto;
+* Descrição do método utilizado;
+* Resultados obtidos;
+* Demonstração do funcionamento do agente.
+
+
 ## Considerações para quem escolheu o tópico CPP
 
 Existem dois caminhos para a execução deste projeto: 
