@@ -56,13 +56,22 @@ Cada projeto será avaliado considerando os itens listados na tabela abaixo.
 |:----|:-------------------------:|
 | Implementação | 30%             |
 | Relatório     | 40%             |
-| Apresentação final | 30%        |
+| Vídeo com a apresentação do projeto | 30%        |
 
 Para conseguir a nota máxima é necessário: 
 
 * **implementação**: precisa estar funcionando, bem organizada e código legível.
 * **relatório**: precisa ter todos os itens descritos acima. O texto precisa ser auto-contido, ter início, meio e fim. 
-* **apresentação**: a apresentação também precisa ser auto-contida, ter início, meio e fim. Não deve ultrapassar **10 minutos**.  
+* **vídeo**: o vídeo também precisa ser auto-contido, ter início, meio e fim. Não deve ultrapassar **10 minutos**.
+
+## Vídeo
+
+Cada equipe deverá gravar um vídeo de até 10 minutos apresentando os resultados do projeto. O vídeo deve ser colocado em alguma plataforma de vídeo (YouTube, Vimeo, etc.) e o link deve ser enviado junto com o relatório no repositório do projeto. De preferência, colocar o link para o vídeo no README do repositório. O vídeo deve conter os seguintes tópicos:
+
+* Contexto e objetivo do projeto;
+* Descrição do método utilizado;
+* Resultados obtidos;
+* Demonstração do funcionamento do agente.
 
 ## Nota importante
 
