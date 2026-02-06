@@ -11,22 +11,21 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/17_a2c/">
       
       
-        <link rel="prev" href="../17_reinforce/">
       
       
-        <link rel="next" href="../15_xx_comments/">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A2C: Advantage Actor-Critic - Aprendizagem por Reforço</title>
+        <title>A2C: Advantage Actor-Critic - Reinforcement Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -51,7 +50,6 @@
     
       
 
-    
     
     
   </head>
@@ -82,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Aprendizagem por Reforço" class="md-header__button md-logo" aria-label="Aprendizagem por Reforço" data-md-component="logo">
+    <a href="../.." title="Reinforcement Learning" class="md-header__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Aprendizagem por Reforço
+            Reinforcement Learning
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -140,13 +138,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Aprendizagem por Reforço" class="md-nav__button md-logo" aria-label="Aprendizagem por Reforço" data-md-component="logo">
+    <a href="../.." title="Reinforcement Learning" class="md-nav__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Aprendizagem por Reforço
+    Reinforcement Learning
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -163,9 +161,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -185,9 +188,14 @@
   
   
   <span class="md-ellipsis">
-    Ementa
+    
+  
+    Syllabus
+  
+
     
   </span>
+  
   
 
       </a>
@@ -207,9 +215,14 @@
   
   
   <span class="md-ellipsis">
-    Plano
+    
+  
+    Plan
+  
+
     
   </span>
+  
   
 
       </a>
@@ -229,9 +242,14 @@
   
   
   <span class="md-ellipsis">
-    Avaliação
+    
+  
+    Assessment
+  
+
     
   </span>
+  
   
 
       </a>
@@ -243,20 +261,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -264,18 +280,27 @@
   
   
   <span class="md-ellipsis">
-    Aulas
+    
+  
+    Classes
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Aulas
+            
+  
+    Classes
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -302,9 +327,14 @@
   
   
   <span class="md-ellipsis">
-    Introdução
+    
+  
+    Introduction
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -313,7 +343,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
-            Introdução
+            
+  
+    Introduction
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -329,9 +363,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Apresentação da disciplina
+  
+
     
   </span>
+  
   
 
       </a>
@@ -352,673 +391,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Ferramentas e ambientes para aprendizagem por reforço
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Q-Learning and Sarsa
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            Q-Learning and Sarsa
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_q_learning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Algoritmo Q-Learning
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_x_hyperparameters/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Hiperparâmetros em Q-Learning
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_xx_hyper_comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Alguns comentários sobre as entregas
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_x_sarsa/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Algoritmo SARSA: abordagem on-policy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_xx_comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comentários sobre as implementações do Q-Learning e Sarsa
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Ambientes e metodologias
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            Ambientes e metodologias
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../11_evaluation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Como avaliar o desempenho de um agente?
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06_non_determ/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ambientes não-determinísticos
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06_non_determ_comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comentários sobre as entregas referentes ao ambiente Frozen Lake.
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09_more_complex/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Implementando um agente para lidar com um ambiente um pouco mais complexo
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22_custom_env/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Criação de ambientes customizados
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Deep Q-Learning
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_4">
-            <span class="md-nav__icon md-icon"></span>
-            Deep Q-Learning
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15_deep_q_learning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deep Reinforcement Learning
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lunar Lander Project
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Policy Optimization e Actor-Critic
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_5">
-            <span class="md-nav__icon md-icon"></span>
-            Policy Optimization e Actor-Critic
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../17_reinforce/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Algoritmo Reinforce
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    A2C: Advantage Actor-Critic
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    A2C: Advantage Actor-Critic
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vantagem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vantagem
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#atividade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Atividade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referências
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referencias-adicionais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referências adicionais
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrega
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15_xx_comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comentários sobre as últimas implementações
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../18_ppo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Proximal Policy Optimization (PPO)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../21_historia_reinforce_ppo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Evolução do Reinforce ao PPO
-    
-  </span>
   
 
       </a>
@@ -1065,9 +445,14 @@
   
   
   <span class="md-ellipsis">
-    Projetos
+    
+  
+    Highlights
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1076,98 +461,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Projetos
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../projects/projeto_intermediario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Projeto intermediário
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../projects/projeto_final/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Projeto Final
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
-  
-  <span class="md-ellipsis">
-    Destaques
-    
-  </span>
+    Highlights
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Destaques
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1183,9 +481,14 @@
   
   
   <span class="md-ellipsis">
-    Projetos desenvolvidos em 2025
+    
+  
+    Highlights
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1213,9 +516,14 @@
   
   
   <span class="md-ellipsis">
-    Referências
+    
+  
+    References
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1252,7 +560,9 @@
         <li class="md-nav__item">
   <a href="#vantagem" class="md-nav__link">
     <span class="md-ellipsis">
-      Vantagem
+      
+        Vantagem
+      
     </span>
   </a>
   
@@ -1261,7 +571,9 @@
         <li class="md-nav__item">
   <a href="#atividade" class="md-nav__link">
     <span class="md-ellipsis">
-      Atividade
+      
+        Atividade
+      
     </span>
   </a>
   
@@ -1270,7 +582,9 @@
         <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      Referências
+      
+        Referências
+      
     </span>
   </a>
   
@@ -1279,7 +593,9 @@
         <li class="md-nav__item">
   <a href="#referencias-adicionais" class="md-nav__link">
     <span class="md-ellipsis">
-      Referências adicionais
+      
+        Referências adicionais
+      
     </span>
   </a>
   
@@ -1288,7 +604,9 @@
         <li class="md-nav__item">
   <a href="#entrega" class="md-nav__link">
     <span class="md-ellipsis">
-      Entrega
+      
+        Entrega
+      
     </span>
   </a>
   
@@ -1304,6 +622,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1471,10 +790,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
