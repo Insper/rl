@@ -4,6 +4,7 @@ This repository has the Reinforcement Learning subject material.
 
 ## Offerings
 
+* 2026/1 - Fabrício Barth
 * 2025/1 - Fabrício Barth
 * 2024/1 - Fabrício Barth
 * 2023/1 - Fabrício Barth

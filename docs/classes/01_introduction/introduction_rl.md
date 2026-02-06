@@ -1,9 +1,9 @@
 ---
 title: Introduction to Reinforcement Learning
-subtitle: February 2023
+subtitle: February 2026
 author: Fabricio Barth 
 institute: Reinforcement Learning
-date: 02/2023
+date: 02/2026
 theme: insper
 aspectratio: 169
 ...

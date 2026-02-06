@@ -1,9 +1,9 @@
 ---
-title: Reinforcement Learning
-subtitle: How this subject will work
+title: Reinforcement Learning - How this subject will work
+subtitle: February 2026
 author: Fabricio Barth 
 institute: Reinforcement Learning
-date: 02/2024
+date: 02/2026
 theme: insper
 aspectratio: 169
 ...
@@ -35,7 +35,7 @@ At the end of the course, the student should be able to:
 1. RL Tooling and Environments
 1. Q-Learning and Sarsa algorithms
 1. How to use RL in different environments (non-deterministic, deterministic and competitive environments)
-1. Deep Q-Learning, Double Deep Q-Learning and Policy Optimization Algorithms
+1. Deep Reinforcement Learning: Deep Q-Learning, Double Deep Q-Learning, Policy Optimization Algorithms, A2C, PPO, and more.
 
 ## Assignments 
 
@@ -43,6 +43,6 @@ The grade for this subject is calculated as follows:
 
 * Several **small implementations** will be performed. This average grade will make up 30% of the final grade for the subject. 
 
-* There will be **two major projects**. The average grade of these projects will make up the other 50% of the final grade. 
+* There will be **one major projects**. The grade for this project will make up 50% of the final grade for the subject. The project will be developed in pairs, and the grade will be the same for both students in the pair. The project will be evaluated based on the quality of the implementation, the results obtained, and the quality of the report. The students must deliver different artifacts for the project along the semester. 
 
 * The remaining 20% will be calculated from **the final exam**.

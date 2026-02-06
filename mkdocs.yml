@@ -17,7 +17,7 @@ nav:
   - 'Classes':
     - 'Introduction':
       - 'classes/01_introduction/index.md'
-      - 'classes/04_toolings_envs/index.md'
+#      - 'classes/04_toolings_envs/index.md'
 #    - 'Q-Learning and Sarsa':
 #      - 'classes/05_q_learning/index.md'
 #      - 'classes/05_x_hyperparameters/index.md'
