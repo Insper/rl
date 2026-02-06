@@ -1,25 +1,27 @@
-# Plano de aula
+# Lesson Plan
 
-O plano de aula desta disciplina está divido em **cinco** (5) blocos. Para cada bloco as seguintes atividades estão planejadas.
+The lesson plan for this course is divided into **five** (5) blocks. For each block the following activities are planned.
 
-??? "Atenção!"
+??? "Attention!"
 
-    O programa está sempre sujeito a alterações e adaptações conforme as disciplina é executada.
+    The schedule is always subject to changes and adaptations as the course is executed.
 
 
-## Introdução sobre Aprendizagem por Reforço e Revisão sobre Agentes Autônomos
+## Introduction to Reinforcement Learning and Review of Autonomous Agents
 
 --8<-- "plano_aula_1.md"
 
-O conteúdo associado a este bloco é [1](./classes/01_introduction/index.md)
+<!--The content associated with this block is [1](./classes/01_introduction/index.md)-->
 
-## Algoritmos Tabulares (Q-Learning e Sarsa)
+## Tabular Algorithms (Q-Learning and Sarsa)
 
 --8<-- "plano_aula_2.md"
 
-O conteúdo associado a este bloco é [2](./classes/04_toolings_envs/index.md), [3](./classes/05_q_learning/index.md), [4](./classes/05_x_hyperparameters/index.md), [5](./classes/05_xx_hyper_comments/index.md), [6](./classes/05_x_sarsa/index.md), [7](./classes/05_xx_hyper_comments/index.md), [8](./classes/06_non_determ/index.md). 
+<!--
+The content associated with this block is [2](./classes/04_toolings_envs/index.md), [3](./classes/05_q_learning/index.md), [4](./classes/05_x_hyperparameters/index.md), [5](./classes/05_xx_hyper_comments/index.md), [6](./classes/05_x_sarsa/index.md), [7](./classes/05_xx_hyper_comments/index.md), [8](./classes/06_non_determ/index.md). 
+-->
 
-## Deep Reinforcement Learning: value-based e policy gradient
+## Deep Reinforcement Learning: value-based and policy gradient
 
 --8<-- "plano_aula_3.md"
 
@@ -27,7 +29,7 @@ O conteúdo associado a este bloco é [2](./classes/04_toolings_envs/index.md), 
 
 --8<-- "plano_aula_4.md"
 
-## Projeto Final
+## Final Project
 
 --8<-- "plano_aula_5.md"
 

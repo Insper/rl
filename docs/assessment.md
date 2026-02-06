@@ -1,50 +1,42 @@
-# Avaliação dos estudantes
+# Student Assessment
 
-A avaliação dos estudantes será realizada através de **exercícios**, **projetos** e uma **avaliação final individual**.
+Student assessment will be conducted through **exercises**, **projects**, and an **individual final evaluation**.
 
-* Diversos **exercícios** serão realizadas ao longo do semestre. A média simples destas implementações define 30% da nota final da disciplina.
-* **Dois projetos** serão realizados. A média ponderada destes projetos define 50% da nota final da disciplina. O primeiro projeto tem peso 2 e o segundo projeto tem peso 3.
-* A **avaliação final individual** define 20% da nota final da disciplina.
+* Multiple **exercises** will be completed throughout the semester. The simple average of these implementations defines 30% of the final course grade.
+* **One project** will be completed. The grade of this project defines 50% of the final course grade. The project will be developed in pairs, and the grade will be the same for both students in the pair. The project will be evaluated based on the quality of the implementation, the results obtained, and the quality of the report. The students will delivery different artifacts for the project along the semester.
+* The **individual final evaluation** defines 20% of the final course grade.
 
-**O critério para aprovação é**:
+**The approval criteria are**:
 
-* nota final superior ou igual a cinco (5);
-* o conceito da avaliação final individual deve ser superior ou igual a **Básico (C)**;
-* e 75% de frequência mínima nas aulas.
+* final grade greater than or equal to five (5);
+* the concept of the individual final evaluation must be greater than or equal to **Basic (C)**;
+* and 75% minimum attendance in classes.
 
-## Exercícios
+## Exercises
 
-| Descrição                                                    | Prazo            |
+| Description                                                    | Deadline            |
 |:-------------------------------------------------------------|:-------------------:|
-| [Implementação do Q-Learning](./classes/05_q_learning/index.md)              | 10/02/2025 |
-| [Manipulando os hiperparâmetros do Q-Learning](./classes/05_x_hyperparameters/index.md) | 13/02/2025 |
-| [Implementação do SARSA](./classes/05_x_sarsa/index.md)                        | 20/02/2025 |
-| [Ambientes não determinísticos](./classes/06_non_determ/index.md)              | 24/02/2025 | 
-| [Implementação de agente para o ambiente Mountain Car](./classes/09_more_complex/index.md) | 27/02/2025 |
-| [Comparando Q-Learning e Deep Q-Learning](./classes/15_deep_q_learning/index.md) | 11/03/2025 |
-| [Lunar Lander Project](./classes/15_deep_q_learning_lunar_lander/index.md) | 20/03/2025 |
-| [Comparando DQN e A2C](./classes/17_a2c/index.md) | 03/04/2025 |
+| TBD | TBD |
 
-## Projetos
+## Project artifacts
 
-| Descrição                                              | Prazo            |
+| Description                                              | Deadline            |
 |:-----------------------------------------------------------|:-------------------:|
-| [AWS DeepRacer ou Coverage Path Planning](./projects/projeto_intermediario/index.md)   |   10/05/2025   |
-| [Projeto Final](./projects/projeto_final/index.md) | 21/05/2025 | 
+| TBD | TBD | 
 
 
-## Conversão de conceito para valor numérico
+## Concept to Numeric Value Conversion
 
-O resultado de algumas avaliações poderá adotar conceitos (A+, B,..., I) ao invés de um valor numérico. Para estes casos será utilizada a seguinte tabela de conversão:
+The result of some evaluations may adopt concepts (A+, B,..., I) instead of a numeric value. For these cases, the following conversion table will be used:
 
 | A+ | A | B | C | D | I |
 |----|---|---|---|---|---|
 | 10 | 9 | 7 | 5 | 4 | 2 |
 
-* **Insuficiente (I)**: não entregou, entregou algo que não exigiu esforço ou desviou do objetivo.
-* **Em Desenvolvimento (D)**: entregou algo que estava de acordo com o objetivo e exigiu algum esforço, mas possui problemas e limitações importantes. O mínimo aceitável não foi atingido.
-* **Básico (C)**: o mínimo aceitável do objetivo medido foi alcançado, mas o desempenho foi abaixo do esperado. É suficiente para aprovação.
-* **Esperado (B)**: atingiu o desempenho esperado.
-* **Avançado (A)**: o desempenho foi acima do esperado. É algo desejável, mas não é motivo de preocupação se não for alcançado.
+* **Insufficient (I)**: did not submit, submitted something that did not require effort, or deviated from the objective.
+* **In Development (D)**: submitted something that was in accordance with the objective and required some effort, but has important problems and limitations. The minimum acceptable standard was not met.
+* **Basic (C)**: the minimum acceptable standard for the measured objective was achieved, but the performance was below expected. It is sufficient for approval.
+* **Expected (B)**: achieved the expected performance.
+* **Advanced (A)**: performance was above expected. This is desirable, but is not a cause for concern if not achieved.
 
 

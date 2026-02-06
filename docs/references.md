@@ -1,8 +1,8 @@
-# Referências e ferramentas 
+# References and tools
 
-Nesta página estão listadas as principais referências e ferramentas utilizadas nesta disciplina.
+This page lists the main references and tools used in this course.
 
-## Livros
+## Books
 
 1. Sutton, R. S., & Barto, A. G. (2018). [Reinforcement learning: An introduction (2nd ed.)](https://mitpress.mit.edu/9780262039246/reinforcement-learning/). The MIT Press. 
 
@@ -12,7 +12,7 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 1. NORVIG, P.; RUSSELL, S., [Inteligência Artificial](https://aima.cs.berkeley.edu/), 3ª ed., Campus Elsevier, 2013
 
-## Artigos
+## Articles
 
 1. Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger. 2018. Deep reinforcement learning that matters. In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence and Thirtieth Innovative Applications of Artificial Intelligence Conference and Eighth AAAI Symposium on Educational Advances in Artificial Intelligence (AAAI'18/IAAI'18/EAAI'18). AAAI Press, Article 392, 3207–3214.
 
@@ -39,39 +39,39 @@ Nesta página estão listadas as principais referências e ferramentas utilizada
 
 1. Shuo Sun, Rundong Wang, and Bo An. 2023. [Reinforcement Learning for Quantitative Trading](https://doi.org/10.1145/3582560). ACM Trans. Intell. Syst. Technol. 14, 3, Article 44 (June 2023), 29 pages. https://doi.org/10.1145/3582560
 
-1. Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Acessado a última vez em 30 de abril de 2023. 
+1. Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Available at [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Last accessed April 30, 2023.
 
 1. Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann Stable-Baselines3: Reliable Reinforcement Learning Implementations. Journal of Machine Learning Research, 2021. [http://jmlr.org/papers/v22/20-1364.html](http://jmlr.org/papers/v22/20-1364.html).
 
 1. Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Tim Harley, Timothy P. Lillicrap, David Silver, and Koray Kavukcuoglu. 2016. [Asynchronous methods for deep reinforcement learning](https://arxiv.org/abs/1602.01783). In Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 (ICML'16). JMLR.org, 1928–1937.
 
-## Implementações e tutoriais
+## Implementations and tutorials
 
-1. Deep Reinforcement Learning from OpenAI. Disponível em [https://spinningup.openai.com/en/latest/index.html](https://spinningup.openai.com/en/latest/index.html). Acessado a última vez em 30 de abril de 2023.
+1. Deep Reinforcement Learning from OpenAI. Available at [https://spinningup.openai.com/en/latest/index.html](https://spinningup.openai.com/en/latest/index.html). Last accessed April 30, 2023.
 
 1. Brockman G, Cheung V, Pettersson L, Schneider J, Schulman J, Tang J, Zaremba W. [Openai gym](https://arxiv.org/abs/1606.01540). arXiv preprint arXiv:1606.01540. 2016 Jun 5.
 
 1. Raffin R., Hill A., Gleave A., Kanervisto A., Ernestus M., Dormann N. [Stable-Baselines3: Reliable Reinforcement Learning Implementations](http://jmlr.org/papers/v22/20-1364.html). Journal of Machine Learning Research, 2021. [http://jmlr.org/papers/v22/20-1364.html](http://jmlr.org/papers/v22/20-1364.html).
 
-1. Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Disponível em [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Acessado a última vez em 30 de abril de 2023.
+1. Andrej Karpathy. Deep Reinforcement Learning: Pong from Pixels. Available at [http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/). Last accessed April 30, 2023.
 
-1. Deep Reinforcement Learning from OpenAI. Disponível em [https://spinningup.openai.com/en/latest/index.html](https://spinningup.openai.com/en/latest/index.html). Acessado a última vez em 30 de abril de 2023.
+1. Deep Reinforcement Learning from OpenAI. Available at [https://spinningup.openai.com/en/latest/index.html](https://spinningup.openai.com/en/latest/index.html). Last accessed April 30, 2023.
 
-1. The 37 Implementation Details of Proximal Policy Optimization. Disponível [https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/). Último acesso em maio de 2023.
+1. The 37 Implementation Details of Proximal Policy Optimization. Available at [https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/). Last accessed May 2023.
 
-1. Understanding Proximal Policy Optimization (Schulman et al., 2017). Disponível [https://blog.tylertaewook.com/post/proximal-policy-optimization](https://blog.tylertaewook.com/post/proximal-policy-optimization). Último acesso em maio de 2023.
+1. Understanding Proximal Policy Optimization (Schulman et al., 2017). Available at [https://blog.tylertaewook.com/post/proximal-policy-optimization](https://blog.tylertaewook.com/post/proximal-policy-optimization). Last accessed May 2023.
 
-1. Simonini, T. Proximal Policy Optimization (PPO). Unit 8, of the Deep Reinforcement Learning Class with Hugging Face. Disponível em [https://huggingface.co/blog/deep-rl-ppo](https://huggingface.co/blog/deep-rl-ppo). Último acesso em maio de 2023.
+1. Simonini, T. Proximal Policy Optimization (PPO). Unit 8 of the Deep Reinforcement Learning Class with Hugging Face. Available at [https://huggingface.co/blog/deep-rl-ppo](https://huggingface.co/blog/deep-rl-ppo). Last accessed May 2023.
 
-1. Deep Reinforcement Learning Class with Hugging Face. Disponível em [https://huggingface.co/learn/deep-rl-course/unit0/introduction](https://huggingface.co/learn/deep-rl-course/unit0/introduction). Último acesso em fevereiro de 2024.
+1. Deep Reinforcement Learning Class with Hugging Face. Available at [https://huggingface.co/learn/deep-rl-course/unit0/introduction](https://huggingface.co/learn/deep-rl-course/unit0/introduction). Last accessed February 2024.
 
-## Ferramentas
+## Tools
 
 1. [The Farama Foundation](https://farama.org/): this group is responsible for maintaining the [Gymnasium](https://gymnasium.farama.org/) and [PettingZoo](https://pettingzoo.farama.org/) projects. 
 1. [Kaggle Environments Project](https://github.com/Kaggle/kaggle-environments).
 1. How to use [Gymnasium API](https://gymnasium.farama.org/): a Python library for single agent reinforcement learning.
 1. [SuperSuit](https://github.com/Farama-Foundation/SuperSuit): wrappers for RL environments. 
-1. [CleanRL](https://docs.cleanrl.dev/): site com diversas implementações de algoritmos de RL. 
+1. [CleanRL](https://docs.cleanrl.dev/): site with multiple implementations of RL algorithms.
 1. [Worldgen](https://openai.com/blog/emergent-tool-use/): Emergent tool use from multi-agent interaction.
 1. [Highway envs](http://highway-env.farama.org/).
 1. [Tianshou](https://tianshou.readthedocs.io/en/master/) is a reinforcement learning platform based on pure PyTorch.

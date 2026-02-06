@@ -1,23 +1,23 @@
-# Reinforcement Learning (Aprendizagem por Reforço) - 2025/1
+# Reinforcement Learning - 2025/1
 
-1. [Ementa da disciplina.](goals.md)
-2. [Plano aula-a-aula da disciplina.](plan.md)
-3. [Critérios de avaliação.](assessment.md)
+1. [Course syllabus.](goals.md)
+2. [Lesson-by-lesson plan.](plan.md)
+3. [Assessment criteria.](assessment.md)
 
-## Horário das aulas
+## Class Schedule
 
-Segundas e quartas das 13:30 até 15:30.
+Tuesdays and Thursdays from 7:30 AM to 9:30 AM.
 
-## Horário de atendimento
+## Office Hours
 
-Quartas das 10:00 até 11:30. 
+Thuesdays from 2:00 PM to 3:30 PM at my office.
 
-## Informações adicionais sobre os projetos e implementações
+## Additional Information about Projects and Implementations
 
-* Todas os projetos e implementações irão utilizar a linguagem de programação **Python**. Sendo assim, espera-se que os alunos desta disciplina tenham conhecimento de programação em Python. 
+* All projects and implementations will use the **Python** programming language. Therefore, students in this course are expected to have knowledge of Python programming.
 
-* As entregas dos projetos e exercícios serão via [Github Classroom](https://classroom.github.com/classrooms/66448216-insper-classroom-classroom-rl-2025).
+* Project and exercise submissions will be via [Github Classroom]().
 
-## Contato
+## Contact
 
-Em caso de dúvida ou comentários, favor encaminhar e-mail para fabriciojb@insper.edu.br. 
+If you have any questions or comments, please send an email to fabriciojb@insper.edu.br. 
