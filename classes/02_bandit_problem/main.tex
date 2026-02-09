@@ -1,0 +1,212 @@
+% Beamer slide deck: Multi-Armed Bandits
+% Adapted from Sutton & Barto (pp.25–36)
+% Tuned for a lecture: slides + speaker notes + pgfplots figures
+
+\documentclass[11pt]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{seagull}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\title[Multi-Armed Bandits]{Multi-Armed Bandits:\\Exploration vs Exploitation}
+\author{Fabricio Barth}
+\date{\today}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+  \titlepage
+  \note{Introduce bandits as the simplest reinforcement learning problem: no states, only actions and rewards.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Outline}
+  \tableofcontents
+  \note{Explain that the lecture will move from intuition to equations and then to algorithms.}
+\end{frame}
+
+%------------------------------------------------
+\section{Problem Statement}
+
+\begin{frame}{The Multi-Armed Bandit Problem}
+\begin{itemize}
+  \item A set of $k$ actions (arms): $a \in \{1,\dots,k\}$
+  \item At time $t$, choose action $A_t$
+  \item Observe a stochastic reward $R_t$
+  \item Each action has an unknown reward distribution
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Goal:} maximize cumulative reward
+\[
+\sum_{t=1}^{T} R_t
+\]
+
+\note{Use slot machines or clinical trials as intuition. Emphasize uncertainty.}
+\end{frame}
+
+\begin{frame}{The Multi-Armed Bandit Problem: example}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{bandits.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Clinical Trial Example}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{clinical_trial.png}
+\end{figure}  
+
+It could be you in a restaurant.
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Expected Reward of an Action}
+The true (unknown) value of action $a$ is
+\[
+q_*(a) = \mathbb{E}[R_t \mid A_t = a].
+\]
+
+\begin{itemize}
+  \item $q_*(a)$ is the expected outcome if we always choose $a$
+  \item The agent never observes $q_*(a)$ directly
+\end{itemize}
+
+\note{Stress that learning means estimating these expectations from data.}
+\end{frame}
+
+%------------------------------------------------
+\section{Estimating Action Values}
+
+\begin{frame}{Action-Value Estimates}
+Let $Q_t(a)$ denote the estimate of $q_*(a)$ at time $t$.
+
+Using sample averages:
+\[
+Q_t(a) = \frac{1}{N_t(a)} \sum_{i=1}^{N_t(a)} R_i^{(a)}
+\]
+
+where $N_t(a)$ is the number of times action $a$ has been selected.
+
+\note{Explain notation carefully; this is often confusing for students.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Incremental Update Rule}
+Instead of storing all rewards, we update incrementally:
+
+\[
+Q_{t+1}(a) = Q_t(a) + \frac{1}{N_t(a)}(R_t - Q_t(a))
+\]
+
+\note{This form reappears everywhere in RL—worth emphasizing.}
+\end{frame}
+
+\begin{frame}{Estimating the value of Q(a) for the Clinical Trial Example}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{estimating_clinical_trial.png}
+    \end{figure}
+\end{frame}
+
+%------------------------------------------------
+\section{Action Selection}
+
+\begin{frame}{Greedy Action Selection}
+If the true values were known:
+\[
+A_t = \arg\max_a q_*(a)
+\]
+
+In practice, we use estimates:
+\[
+A_t = \arg\max_a Q_t(a)
+\]
+
+\begin{itemize}
+  \item Exploits current knowledge
+  \item Can get stuck with a suboptimal action
+\end{itemize}
+
+\note{Give an unlucky-initial-samples example.}
+\end{frame}
+
+\begin{frame}{Explore vs Exploit}
+    \begin{itemize}
+        \item \textbf{Exploit}: choose the best estimated action
+        \item \textbf{Explore}: try actions with uncertain or lower estimates
+    \end{itemize}
+
+\vspace{1cm}
+
+Clinical trials must explore to discover better treatments, but also exploit to help current patients.
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{$\varepsilon$-Greedy Action Selection}
+
+With probability $1-\varepsilon$: choose greedy action  
+
+With probability $\varepsilon$: explore uniformly
+
+\[
+A =
+\begin{cases}
+\arg\max_a Q_t(a) & \text{with probability 1 - $\varepsilon$} \\
+\text{a random action} & \text{with probability $\varepsilon$}
+\end{cases}
+\]
+
+\note{Explain why even small $\varepsilon$ matters a lot.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Clinical Trials: Why $\varepsilon$-greedy?}
+\begin{itemize}
+  \item Avoids prematurely committing to a suboptimal treatment
+  \item Ensures all treatments are sampled
+  \item Simple and effective baseline method
+\end{itemize}
+
+\vspace{0.5cm}
+
+Common variants:
+\begin{itemize}
+  \item Decaying $\varepsilon_t$
+  \item Optimistic initialization
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What Did We Learn in This Class?}
+\begin{itemize}
+  \item The \textbf{multi-armed bandit} is the simplest reinforcement learning problem: no states, only actions and rewards
+  \item Real-world problems like \textbf{clinical trials} can be modeled as bandits
+  \item Each action has an unknown \textbf{expected reward}:
+  \[
+    q_*(a) = \mathbb{E}[R_t \mid A_t = a]
+  \]
+  \item We learn action values using data-driven estimates $Q_t(a)$ and incremental updates
+  \item Purely greedy decisions can fail due to early randomness
+  \item The core challenge is \textbf{exploration vs exploitation}
+  \item \textbf{$\varepsilon$-greedy} balances this trade-off by exploring with probability $\varepsilon$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\begin{itemize}
+  \item Sutton, R. S., \& Barto, A. G. (2018). \textit{Reinforcement Learning: An Introduction}, 2nd ed., pp. 25–36.
+\end{itemize}
+\end{frame}
+
+\end{document}

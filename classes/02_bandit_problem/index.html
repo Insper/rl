@@ -7,12 +7,14 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Fabricio Barth">
+      
+        <link rel="canonical" href="https://insper.github.io/rl/classes/02_bandit_problem/">
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/02_making_decisions/">
+        <link rel="prev" href="../01_introduction/">
       
       
+        <link rel="next" href="../../destaques/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Multi-Armed Bandits - Reinforcement Learning</title>
+        <title>The Bandit Problem - Reinforcement Learning</title>
       
     
     
@@ -66,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multi-armed-bandits" class="md-skip">
+        <a href="#the-bandit-problem" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multi-Armed Bandits
+              The Bandit Problem
             
           </span>
         </div>
@@ -263,18 +265,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -295,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -310,18 +314,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -342,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -376,6 +382,92 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Bandit Problem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Bandit Problem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -525,6 +617,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -540,109 +651,24 @@
 
 
 
-<h1 id="multi-armed-bandits">Multi-Armed Bandits</h1>
-<p><strong>Theme:</strong> Making decisions under uncertainty (clinical trials example)</p>
-<p><small>Based on the ideas from <em>Reinforcement Learning: An Introduction</em> (Sutton &amp; Barto), pp. 25–36.</small></p>
-<hr />
-<h1 id="agenda">Agenda</h1>
-<ul>
-<li>Bandit problem setup <!-- .element: class="fragment" --></li>
-<li>Clinical trials as a decision problem <!-- .element: class="fragment" --></li>
-<li>Action-value definition and expected reward <!-- .element: class="fragment" --></li>
-<li>Estimating action values <!-- .element: class="fragment" --></li>
-<li><span class="arithmatex">\(\varepsilon\)</span> - greedy action selection <!-- .element: class="fragment" --></li>
-</ul>
-<hr />
 <h1 id="the-bandit-problem">The Bandit Problem</h1>
-<p>You have <span class="arithmatex">\(k\)</span> actions (arms). Each action <span class="arithmatex">\(a\)</span> produces a reward <span class="arithmatex">\(R\)</span> drawn from an unknown distribution.</p>
-<p><span class="fragment">Goal: maximize cumulative reward by balancing exploration and exploitation.</span></p>
-<hr />
-<h1 id="clinical-trials-scenario">Clinical Trials Scenario</h1>
-<p>Imagine <span class="arithmatex">\(k\)</span> treatments for the same condition.</p>
+<p>The goal of this class is to introduce the <strong>multi-armed bandit problem</strong> as a fundamental model for <strong>decision-making under uncertainty</strong>, and to show how it captures the core ideas behind reinforcement learning.</p>
+<p>In this class, we aim to:</p>
 <ul>
-<li>Each patient is a trial <!-- .element: class="fragment" --></li>
-<li>A treatment is an action <!-- .element: class="fragment" --></li>
-<li>Observed outcome is a reward <!-- .element: class="fragment" --></li>
-<li>We must learn which treatment works best <!-- .element: class="fragment" --></li>
+<li>Understand how repeated decisions with uncertain outcomes can be formally modeled</li>
+<li>Learn how to <strong>estimate the value of actions</strong> from noisy reward observations</li>
+<li>Explore the central <strong>exploration vs. exploitation trade-off</strong></li>
+<li>Study simple and effective decision strategies, such as <strong>ε-greedy action selection</strong></li>
+<li>Connect theoretical concepts to <strong>real-world scenarios</strong>, including clinical trials and everyday choices</li>
 </ul>
-<hr />
-<h1 id="notation">Notation</h1>
+<p>By the end of the class, students should be able to:</p>
 <ul>
-<li><span class="arithmatex">\(A_t\)</span>: action chosen at time <span class="arithmatex">\(t\)</span> <!-- .element: class="fragment" --></li>
-<li><span class="arithmatex">\(R_t\)</span>: reward observed after choosing <span class="arithmatex">\(A_t\)</span> <!-- .element: class="fragment" --></li>
-<li><span class="arithmatex">\(q_*(a)\)</span>: true value of action <span class="arithmatex">\(a\)</span> <!-- .element: class="fragment" --></li>
+<li>Formulate a problem as a multi-armed bandit</li>
+<li>Explain why exploration is necessary for learning</li>
+<li>Describe how ε-greedy strategies balance learning and performance in practice</li>
 </ul>
-<hr />
-<h1 id="expected-reward-of-an-action">Expected Reward of an Action</h1>
-<p>The <strong>true action value</strong> is the expected reward of action <span class="arithmatex">\(a\)</span>:</p>
-<div class="arithmatex">\[
-q_*(a) = \mathbb{E}[R_t \mid A_t = a]
-\]</div>
-<p><span class="fragment">We do not know <span class="arithmatex">\(q_*(a)\)</span>, so we must estimate it from data.</span></p>
-<hr />
-<h1 id="action-value-estimate-sample-average">Action-Value Estimate (Sample Average)</h1>
-<p>Let <span class="arithmatex">\(N_t(a)\)</span> be the number of times action <span class="arithmatex">\(a\)</span> has been selected up to time <span class="arithmatex">\(t\)</span>.</p>
-<div class="arithmatex">\[
-\hat{q}_t(a) = \frac{1}{N_t(a)} \sum_{i=1}^{t} R_i \cdot \mathbb{1}\{A_i = a\}
-\]</div>
-<p><span class="fragment">This estimate converges to <span class="arithmatex">\(q_*(a)\)</span> as <span class="arithmatex">\(N_t(a)\to\infty\)</span>.</span></p>
-<hr />
-<h1 id="incremental-update-form">Incremental Update Form</h1>
-<p>Instead of storing all rewards, update online:</p>
-<div class="arithmatex">\[
-\hat{q}_{t+1}(A_t) = \hat{q}_t(A_t) + \frac{1}{N_t(A_t)}\left(R_t - \hat{q}_t(A_t)\right)
-\]</div>
-<p><span class="fragment">Only the selected action is updated each step.</span></p>
-<hr />
-<h1 id="explore-vs-exploit">Explore vs. Exploit</h1>
-<ul>
-<li><strong>Exploit</strong>: choose the best estimated action <!-- .element: class="fragment" --></li>
-<li><strong>Explore</strong>: try actions with uncertain or lower estimates <!-- .element: class="fragment" --></li>
-</ul>
-<p><span class="fragment">Clinical trials must explore to discover better treatments, but also exploit to help current patients.</span></p>
-<hr />
-<h1 id="varepsilon-greedy-action-selection"><span class="arithmatex">\(\varepsilon\)</span> - Greedy Action Selection</h1>
-<p>Choose:</p>
-<ul>
-<li>with probability <span class="arithmatex">\(\varepsilon\)</span>, a random action (explore) <!-- .element: class="fragment" --></li>
-<li>with probability <span class="arithmatex">\(1-\varepsilon\)</span>, the greedy action (exploit) <!-- .element: class="fragment" --></li>
-</ul>
-<div class="arithmatex">\[
-A_t =
-\begin{cases}
-    ext{random action}, &amp; \text{with prob. } \varepsilon \\
-\arg\max_a \hat{q}_t(a), &amp; \text{with prob. } 1-\varepsilon
-\end{cases}
-\]</div>
-<hr />
-<h1 id="what-does-varepsilon-control">What Does <span class="arithmatex">\(\varepsilon\)</span> Control?</h1>
-<ul>
-<li>Larger <span class="arithmatex">\(\varepsilon\)</span> $
-ightarrow$ more exploration <!-- .element: class="fragment" --></li>
-<li>Smaller <span class="arithmatex">\(\varepsilon\)</span> $
-ightarrow$ more exploitation <!-- .element: class="fragment" --></li>
-</ul>
-<p><span class="fragment">A common choice is <span class="arithmatex">\(\varepsilon = 0.1\)</span>, but it depends on the problem.</span></p>
-<hr />
-<h1 id="clinical-trials-why-varepsilon-greedy">Clinical Trials: Why <span class="arithmatex">\(\varepsilon\)</span> - Greedy?</h1>
-<ul>
-<li>Avoids prematurely committing to a suboptimal treatment <!-- .element: class="fragment" --></li>
-<li>Ensures all treatments are sampled <!-- .element: class="fragment" --></li>
-<li>Simple and effective baseline method <!-- .element: class="fragment" --></li>
-</ul>
-<hr />
-<h1 id="summary">Summary</h1>
-<ul>
-<li>Multi-armed bandits model decision-making with uncertainty</li>
-<li>Action value: <span class="arithmatex">\(q_*(a) = \mathbb{E}[R_t \mid A_t=a]\)</span></li>
-<li>Estimate values via sample averages or incremental updates</li>
-<li><span class="arithmatex">\(\varepsilon\)</span>-greedy balances exploration and exploitation</li>
-</ul>
-<hr />
-<h1 id="references">References</h1>
-<ul>
-<li>Sutton, R. S., &amp; Barto, A. G. <em>Reinforcement Learning: An Introduction</em>, 2<sup>nd</sup> ed., pp. 25–36.</li>
-</ul>
+<p><embed src="main.pdf" type="application/pdf" width="600" height="300"></p>
+<h2 id="exercises">Exercises</h2>
 
 
 
@@ -663,7 +689,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" --></li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 21:29:02 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 21:46:08 UTC">February 9, 2026</span>
   </span>
 
     
