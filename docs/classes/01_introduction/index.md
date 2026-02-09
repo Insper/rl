@@ -18,3 +18,7 @@
 
 <embed src="introduction_rl.pdf" type="application/pdf" width="600" height="300">
 
+## Homework
+
+Read the pages 25 to 36 of the book "Reinforcement Learning: An Introduction" by Sutton and Barto (2nd edition).
+
