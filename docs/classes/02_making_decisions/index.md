@@ -1,7 +1,8 @@
 ---
 title: Multi-Armed Bandits
 subtitle: Making Decisions Under Uncertainty
-author: Reinforcement Learning
+author: Fabricio Barth
+date: February, 2026
 ---
 
 # Multi-Armed Bandits
@@ -18,9 +19,7 @@ author: Reinforcement Learning
 - Clinical trials as a decision problem <!-- .element: class="fragment" -->
 - Action-value definition and expected reward <!-- .element: class="fragment" -->
 - Estimating action values <!-- .element: class="fragment" -->
-- $
-\varepsilon$
--greedy action selection <!-- .element: class="fragment" -->
+- $\varepsilon$ - greedy action selection <!-- .element: class="fragment" -->
 
 ---
 
@@ -96,9 +95,7 @@ $$
 
 ---
 
-# $
-\varepsilon$
--Greedy Action Selection
+# $\varepsilon$ - Greedy Action Selection
 
 Choose:
 
@@ -115,9 +112,7 @@ $$
 
 ---
 
-# What Does $
-\varepsilon$
- Control?
+# What Does $\varepsilon$ Control?
 
 - Larger $\varepsilon$ $
 ightarrow$ more exploration <!-- .element: class="fragment" -->
@@ -128,9 +123,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" -->
 
 ---
 
-# Clinical Trials: Why $
-\varepsilon$
--Greedy?
+# Clinical Trials: Why $\varepsilon$ - Greedy?
 
 - Avoids prematurely committing to a suboptimal treatment <!-- .element: class="fragment" -->
 - Ensures all treatments are sampled <!-- .element: class="fragment" -->
@@ -143,9 +136,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" -->
 - Multi-armed bandits model decision-making with uncertainty
 - Action value: $q_*(a) = \mathbb{E}[R_t \mid A_t=a]$
 - Estimate values via sample averages or incremental updates
-- $
-\varepsilon$
--greedy balances exploration and exploitation
+- $\varepsilon$-greedy balances exploration and exploitation
 
 ---
 
