@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Reinforcement Learning">
+        <meta name="author" content="Fabricio Barth">
       
       
         <link rel="canonical" href="https://insper.github.io/rl/classes/02_making_decisions/">
@@ -550,9 +550,7 @@
 <li>Clinical trials as a decision problem <!-- .element: class="fragment" --></li>
 <li>Action-value definition and expected reward <!-- .element: class="fragment" --></li>
 <li>Estimating action values <!-- .element: class="fragment" --></li>
-<li>$
-\varepsilon$
--greedy action selection <!-- .element: class="fragment" --></li>
+<li><span class="arithmatex">\(\varepsilon\)</span> - greedy action selection <!-- .element: class="fragment" --></li>
 </ul>
 <hr />
 <h1 id="the-bandit-problem">The Bandit Problem</h1>
@@ -603,9 +601,7 @@ q_*(a) = \mathbb{E}[R_t \mid A_t = a]
 </ul>
 <p><span class="fragment">Clinical trials must explore to discover better treatments, but also exploit to help current patients.</span></p>
 <hr />
-<h1 id="_1">$</h1>
-<p>\varepsilon$
--Greedy Action Selection</p>
+<h1 id="varepsilon-greedy-action-selection"><span class="arithmatex">\(\varepsilon\)</span> - Greedy Action Selection</h1>
 <p>Choose:</p>
 <ul>
 <li>with probability <span class="arithmatex">\(\varepsilon\)</span>, a random action (explore) <!-- .element: class="fragment" --></li>
@@ -619,9 +615,7 @@ A_t =
 \end{cases}
 \]</div>
 <hr />
-<h1 id="what-does">What Does $</h1>
-<p>\varepsilon$
- Control?</p>
+<h1 id="what-does-varepsilon-control">What Does <span class="arithmatex">\(\varepsilon\)</span> Control?</h1>
 <ul>
 <li>Larger <span class="arithmatex">\(\varepsilon\)</span> $
 ightarrow$ more exploration <!-- .element: class="fragment" --></li>
@@ -630,9 +624,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" --></li>
 </ul>
 <p><span class="fragment">A common choice is <span class="arithmatex">\(\varepsilon = 0.1\)</span>, but it depends on the problem.</span></p>
 <hr />
-<h1 id="clinical-trials-why">Clinical Trials: Why $</h1>
-<p>\varepsilon$
--Greedy?</p>
+<h1 id="clinical-trials-why-varepsilon-greedy">Clinical Trials: Why <span class="arithmatex">\(\varepsilon\)</span> - Greedy?</h1>
 <ul>
 <li>Avoids prematurely committing to a suboptimal treatment <!-- .element: class="fragment" --></li>
 <li>Ensures all treatments are sampled <!-- .element: class="fragment" --></li>
@@ -644,9 +636,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" --></li>
 <li>Multi-armed bandits model decision-making with uncertainty</li>
 <li>Action value: <span class="arithmatex">\(q_*(a) = \mathbb{E}[R_t \mid A_t=a]\)</span></li>
 <li>Estimate values via sample averages or incremental updates</li>
-<li>$
-\varepsilon$
--greedy balances exploration and exploitation</li>
+<li><span class="arithmatex">\(\varepsilon\)</span>-greedy balances exploration and exploitation</li>
 </ul>
 <hr />
 <h1 id="references">References</h1>
@@ -673,7 +663,7 @@ ightarrow$ more exploitation <!-- .element: class="fragment" --></li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 6, 2026 20:23:10 UTC">February 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 21:29:02 UTC">February 9, 2026</span>
   </span>
 
     
