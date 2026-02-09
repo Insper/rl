@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/17_reinforce/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/17_value_vs_policy/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Algoritmo Reinforce (policy-based method) - Reinforcement Learning</title>
+        <title>Value-based vs Policy-based Methods - Reinforcement Learning</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algoritmo-reinforce-policy-based-method" class="md-skip">
+        <a href="#value-based-vs-policy-based-methods" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algoritmo Reinforce (policy-based method)
+              Value-based vs Policy-based Methods
             
           </span>
         </div>
@@ -523,36 +523,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#implementacao-em-sala-de-aula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementação em sala de aula
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemplo-de-funcionamento-do-algoritmo-reinforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemplo de funcionamento do algoritmo Reinforce
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -568,38 +538,10 @@
 
 
 
-<h1 id="algoritmo-reinforce-policy-based-method">Algoritmo Reinforce (policy-based method)</h1>
-<p>O objetivo deste grupo de aulas é explorar uma categoria de algoritmos de Reinforcement Learning baseados em <em>policy optimization</em>. </p>
-<p>Esta aula está dividida em duas etapas: </p>
-<ul>
-<li>uma parte expositiva que irá utilizar o conjunto de slides abaixo, e;</li>
-<li>uma atividade onde o objetivo é implementar o algoritmo <em>Reinforce</em> ou uma versão do <em>Vanilla Policy Gradient</em>.</li>
-</ul>
-<p>Para tanto, será utilizado este conjunto de slides para uma aula expositiva inicial: </p>
-<p><embed src="reinforce_slides.pdf" type="application/pdf" width="600" height="300"></p>
-<h2 id="implementacao-em-sala-de-aula">Implementação em sala de aula</h2>
-<ul>
-<li>
-<p>Implemente uma versão do algoritmo Reinforce com base no pseudo-código deste material e com base nos trechos de códigos disponibilizados. </p>
-</li>
-<li>
-<p>Não esqueça de coletar os dados para avaliar a curva de aprendizagem do agente. </p>
-</li>
-<li>
-<p>Utilize os ambientes <code>MountainCar-v0</code>, <code>CartPole-v1</code> e <code>LunarLander-v3</code> para testar o algoritmo.</p>
-</li>
-<li>
-<p>Compare os resultados obtidos com o <code>DQN</code> e <code>Double DQN</code>. </p>
-</li>
-</ul>
-<h2 id="exemplo-de-funcionamento-do-algoritmo-reinforce">Exemplo de funcionamento do algoritmo Reinforce</h2>
-<p>O código <a href="src/reinforce_frozen_lake.py">reinforce_frozen_lake.py</a> possui uma implementação do algoritmo Reinforce atuando no ambiente Frozen Lake determinístico. O objetivo deste código é mostrar o funcionamento do algoritmo Frozen Lake e algumas particularidades a utilização do modelo. </p>
-<p>Para ser mais fácil a visualização, algumas alterações foram feitas no ambiente e no algoritmo, entre elas: </p>
-<ul>
-<li>alteração da função de reward;</li>
-<li>configuração do ambiente em modo determinístico, e;</li>
-<li>representação do estado como um vetor de tamanho 16. </li>
-</ul>
+<h1 id="value-based-vs-policy-based-methods">Value-based vs Policy-based Methods</h1>
+<p>Em aprendizagem por reforço (RL), as abordagens policy-based e value-based diferem no foco e no modo de aprender a estratégia ótima do agente. </p>
+<p>Nos métodos do tipo value-based, o agente aprende uma função de valor (ex.: <span class="arithmatex">\(𝑄(𝑠,𝑎)\)</span>) que estima “o quão bom” é estar em um estado ou tomar uma ação. A política é derivada indiretamente, escolhendo sempre a ação com maior valor estimado (<span class="arithmatex">\(policy = \arg\max_{a} Q(s,a)\)</span>). Exemplos de algoritmos que utilizam esta estratégia são Q-Learning e Deep Q-Learning (DQN). Esta abordagem é mais <em>sample-efficient</em> (aproveita melhor cada experiência) e funciona bem em espaço de ações discreto e pequeno. Em contrapartida, tem dificuldade com ações contínuas (o <span class="arithmatex">\(\arg\max\)</span> fica inviável) e também pode ficar instável ao aproximar funções de valor com redes neurais. </p>
+<p>Nos métodos do tipo policy-based, o agente aprende diretamente uma política (<span class="arithmatex">\(\pi_{\theta}(a|s)\)</span>). Dado um estado <span class="arithmatex">\(s\)</span>, a política <span class="arithmatex">\(\theta\)</span> fornece uma probabilidade maior para ações <span class="arithmatex">\(a\)</span> que levam a maiores recompensas. Ou seja, o agente mapeia estados para ações, sem a necessidade de uma função de valor intermediária. A política é geralmente parametrizada (ex.: por uma rede neural) e otimizada diretamente para maximizar a recompensa esperada. Exemplo de algoritmo que utiliza esta estratégia é o REINFORCE. Esta abordagem lida melhor com espaços de ação contínuos e pode aprender políticas estocásticas. No entanto, tende a ser menos <em>sample-efficient</em>.</p>
 
 
 
