@@ -1,4 +1,4 @@
-# Algoritmo Reinforce
+# Algoritmo Reinforce (policy-based method)
 
 O objetivo deste grupo de aulas é explorar uma categoria de algoritmos de Reinforcement Learning baseados em *policy optimization*. 
 

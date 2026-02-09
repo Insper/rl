@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning
+# Deep Reinforcement Learning (value-based method)
 
 Segundo [Mnih,2013](http://arxiv.org/abs/1312.5602), desenvolver agentes que aprendem a atuar em um ambiente de alta dimensionalidade sempre foi um desafio para soluções baseadas em aprendizagem por reforço. Até 2013, a maioria das aplicações de aprendizagem por reforço operavam nestes domínios com base em atributos determinados manualmente pelo projetista.
 
