@@ -20,4 +20,6 @@ By the end of the class, students should be able to:
 
 ## Exercises
 
+During the explanation of the bandit problem, we will work through several exercises to solidify our understanding. These exercises are available in the [bandit.ipynb](code/bandit.ipynb) notebook, which you can download and run locally. We also provide a [requirements.txt](code/requirements.txt) file to help you set up the necessary Python environment.
+
 

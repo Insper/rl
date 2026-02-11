@@ -1,0 +1,5 @@
+buffalo_gym
+gymnasium
+IPython
+matplotlib
+numpy
