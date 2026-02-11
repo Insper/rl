@@ -209,11 +209,72 @@ Execute the activity number 4: $\varepsilon$-Greedy Action Selection
 
 Common variants:
 \begin{itemize}
-  \item Decaying $\varepsilon_t$
   \item Optimistic initialization
+  \item Decaying $\varepsilon_t$
 \end{itemize}
 
 \end{frame}
+
+
+%\begin{frame}{Optimistic initialization}
+%\begin{itemize}
+%  \item Idea: start with \textbf{overly high} action-value estimates so a greedy policy explores.
+%  \item Initialize for all arms:
+%  \[
+%    Q_1(a) = Q_0 \quad \text{(choose } Q_0 \text{ larger than typical rewards)}
+%  \]
+%  \item Then act greedily as usual:
+%  \[
+%    A_t = \arg\max_a Q_t(a)
+%  \]
+%  \item Mechanism: after trying an arm, its estimate moves down toward its true value, so \textbf{untried arms look better} and get selected next.
+%\end{itemize}
+
+
+%\vspace{6pt}
+%\textbf{Example:} if rewards are roughly in $[0,1]$, set $Q_0=5$. A greedy agent will sample many arms early, then settle on the best as estimates become realistic.
+
+%\end{frame}
+
+%\begin{frame}{Code Activity}
+	
+%	Execute the activity number 5: Optimistic initialization
+	
+%\end{frame}
+
+%\begin{frame}{Decaying $\varepsilon_t$}
+%\begin{itemize}
+%  \item In $\varepsilon$-greedy, exploration can be reduced over time: start exploring a lot, then exploit more.
+%  \item Use a time-dependent exploration rate:
+%  \[
+%    \varepsilon_t \downarrow 0 \quad \text{as } t \to \infty
+%  \]
+%  \item Action selection becomes:
+%  \[
+%  A_t=
+%  \begin{cases}
+%  \arg\max_a Q_t(a) & \text{with probability } 1-\varepsilon_t \\
+%  \text{random action} & \text{with probability } \varepsilon_t
+%  \end{cases}
+%  \]
+%\end{itemize}
+%
+%\vspace{6pt}
+%\textbf{Common decay schedules (examples):}
+%\begin{itemize}
+%  \item Polynomial: $\varepsilon_t = \min\{1,\; c/\sqrt{t}\}$
+%  \item Harmonic: $\varepsilon_t = \frac{\varepsilon_0}{1 + \beta t}$
+%  \item Exponential: $\varepsilon_t = \varepsilon_0 \cdot \gamma^t$ \; with $0<\gamma<1$
+%\end{itemize}
+
+%\vspace{6pt}
+%\textbf{Practical notes:}
+%\begin{itemize}
+%  \item Often keep a floor $\varepsilon_{\min}>0$ to avoid stopping exploration completely.
+%  \item In \textbf{non-stationary} problems, decaying too fast can hurt because the best arm may change.
+%\end{itemize}
+%\end{frame}
+
 
 \begin{frame}{What Did We Learn in This Class?}
 \begin{itemize}
