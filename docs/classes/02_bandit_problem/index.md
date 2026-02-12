@@ -22,4 +22,9 @@ By the end of the class, students should be able to:
 
 During the explanation of the bandit problem, we will work through several exercises to solidify our understanding. These exercises are available in the [bandit.ipynb](code/bandit.ipynb) notebook, which you can download and run locally. We also provide a [requirements.txt](code/requirements.txt) file to help you set up the necessary Python environment.
 
+## References
+
+* Sutton, R. S., & Barto, A. G. (2018). Reinforcement learning: An introduction. MIT press, pages 25-36.
+* Arm Bandit environment [https://github.com/foreverska/buffalo-gym](https://github.com/foreverska/buffalo-gym).
+
 
