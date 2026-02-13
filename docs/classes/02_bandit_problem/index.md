@@ -27,4 +27,6 @@ During the explanation of the bandit problem, we will work through several exerc
 * Sutton, R. S., & Barto, A. G. (2018). Reinforcement learning: An introduction. MIT press, pages 25-36.
 * Arm Bandit environment [https://github.com/foreverska/buffalo-gym](https://github.com/foreverska/buffalo-gym).
 
+## Additional References
 
+* Real World Reinforcement Learning by John Langford [https://ailab.criteo.com/wp-content/uploads/2018/07/Langford-1.pdf](https://ailab.criteo.com/wp-content/uploads/2018/07/Langford-1.pdf). This deck provides a good overview about **Contextual Bandits** and their applications in the real world, including online advertising and recommendation systems.
