@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/17_value_vs_policy/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/03_non_stacionary_problems/">
       
       
+        <link rel="prev" href="../02_bandit_problem/">
+      
+      
+        <link rel="next" href="../../destaques/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Value-based vs Policy-based Methods - Reinforcement Learning</title>
+        <title>Tracking Non-Stationary Problems - Reinforcement Learning</title>
       
     
     
@@ -64,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#value-based-vs-policy-based-methods" class="md-skip">
+        <a href="#tracking-non-stationary-problems" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Value-based vs Policy-based Methods
+              Tracking Non-Stationary Problems
             
           </span>
         </div>
@@ -261,18 +265,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -293,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -308,18 +314,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -340,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -411,10 +419,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../03_non_stacionary_problems/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracking Non-Stationary Problems
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -430,6 +465,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-stationary-bandits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Stationary Bandits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -579,6 +656,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-stationary-bandits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Stationary Bandits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -594,10 +701,16 @@
 
 
 
-<h1 id="value-based-vs-policy-based-methods">Value-based vs Policy-based Methods</h1>
-<p>Em aprendizagem por reforço (RL), as abordagens policy-based e value-based diferem no foco e no modo de aprender a estratégia ótima do agente. </p>
-<p>Nos métodos do tipo value-based, o agente aprende uma função de valor (ex.: <span class="arithmatex">\(𝑄(𝑠,𝑎)\)</span>) que estima “o quão bom” é estar em um estado ou tomar uma ação. A política é derivada indiretamente, escolhendo sempre a ação com maior valor estimado (<span class="arithmatex">\(policy = \arg\max_{a} Q(s,a)\)</span>). Exemplos de algoritmos que utilizam esta estratégia são Q-Learning e Deep Q-Learning (DQN). Esta abordagem é mais <em>sample-efficient</em> (aproveita melhor cada experiência) e funciona bem em espaço de ações discreto e pequeno. Em contrapartida, tem dificuldade com ações contínuas (o <span class="arithmatex">\(\arg\max\)</span> fica inviável) e também pode ficar instável ao aproximar funções de valor com redes neurais. </p>
-<p>Nos métodos do tipo policy-based, o agente aprende diretamente uma política (<span class="arithmatex">\(\pi_{\theta}(a|s)\)</span>). Dado um estado <span class="arithmatex">\(s\)</span>, a política <span class="arithmatex">\(\theta\)</span> fornece uma probabilidade maior para ações <span class="arithmatex">\(a\)</span> que levam a maiores recompensas. Ou seja, o agente mapeia estados para ações, sem a necessidade de uma função de valor intermediária. A política é geralmente parametrizada (ex.: por uma rede neural) e otimizada diretamente para maximizar a recompensa esperada. Exemplo de algoritmo que utiliza esta estratégia é o REINFORCE. Esta abordagem lida melhor com espaços de ação contínuos e pode aprender políticas estocásticas. No entanto, tende a ser menos <em>sample-efficient</em>.</p>
+<h1 id="tracking-non-stationary-problems">Tracking Non-Stationary Problems</h1>
+<h2 id="pre-work">Pre-work</h2>
+<p>In the last class, we have implemented greedy and <span class="arithmatex">\(\epsilon\)</span>-greedy algorithms for the multi-armed bandit problem. Please, check the results in this <a href="bandit_answers.pdf">file</a> and try to review the code and results. If you have any questions, please, ask! </p>
+<h2 id="non-stationary-bandits">Non-Stationary Bandits</h2>
+<p>In the previous class, we have assumed that the reward distribution of each arm is stationary, i.e., it does not change over time. However, in many real-world applications, the reward distribution can change over time. For example, in a recommendation system, the user's preferences may change over time. In a stock trading application, the market conditions may change over time.</p>
+<details class="warning">
+<summary>Check this!</summary>
+<p>Check this <a href="non_stationary_bandits.ipynb">notebook</a> for an implementation of a non-stationary bandit problem and a simple algorithm to track the changing rewards.</p>
+</details>
+<p><embed src="main.pdf" type="application/pdf" width="750" height="400"></p>
 
 
 
@@ -618,7 +731,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 21:31:32 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 18, 2026 21:49:52 UTC">February 18, 2026</span>
   </span>
 
     
