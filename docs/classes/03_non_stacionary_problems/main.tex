@@ -1,0 +1,194 @@
+% Beamer slide deck: Tracking Non-Stationary Bandits
+% Reference: Sutton & Barto (2018), Reinforcement Learning: An Introduction, 2nd ed., Section 2.5
+% Tuned for a lecture: slides + speaker notes + pgfplots figures
+
+\documentclass[11pt]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{seagull}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\title[Non-Stationary Bandits]{Tracking Non-Stationary Problems: Bandits with Changing Rewards}
+\author{Fabricio Barth}
+\date{\today}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+  \titlepage
+  \note{Connect to the previous bandit lecture: same setting, but the world changes over time.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+%------------------------------------------------
+\section{Stationary vs Non-Stationary}
+
+\begin{frame}{Stationary vs Non-Stationary}
+\begin{itemize}
+  \item \textbf{Stationary bandit}: action values are constant
+  \[
+    q_*(a) = \mathbb{E}[R_t \mid A_t=a] \quad \text{(independent of } t\text{)}
+  \]
+  \item \textbf{Non-stationary bandit}: action values can change over time
+  \[
+    q_t(a) = \mathbb{E}[R_t \mid A_t=a]
+  \]
+  \item Examples: user preferences drift, ads saturate, treatment efficacy changes, markets shift
+\end{itemize}
+
+\note{Emphasize: in non-stationary problems, old data can become misleading.}
+\end{frame}
+
+\begin{frame}{Sample-Average Estimates Are Too Slow to Adapt}
+For the selected action $A_t$:
+\[
+Q_{t+1}(A_t) = Q_t(A_t) + \frac{1}{N_t(A_t)}\big(R_t - Q_t(A_t)\big)
+\]
+
+\begin{itemize}
+  \item Step-size is $\alpha_t = 1/N_t(A_t)$
+  \item As $N_t(A_t)$ grows, $\alpha_t$ shrinks $\Rightarrow$ updates become tiny
+  \item In a changing environment, this \textbf{locks in old information}
+\end{itemize}
+
+\note{Great for stationary problems (converges), but poor for tracking drift.}
+\end{frame}
+
+%------------------------------------------------
+\section{Constant Step-Size Update}
+
+\begin{frame}{Constant Step-Size Update}
+To track change, use a \textbf{constant} step-size $\alpha$:
+\[
+Q_{t+1}(A_t) = Q_t(A_t) + \alpha\big(R_t - Q_t(A_t)\big), \quad 0<\alpha\le 1
+\]
+
+\begin{itemize}
+  \item Recent rewards influence the estimate more than older rewards
+  \item Faster adaptation for larger $\alpha$ (but more variance)
+\end{itemize}
+
+\note{This is the key idea in Section 2.5: keep learning rate from vanishing.}
+\end{frame}
+
+%\begin{frame}{Exponential Recency-Weighted Average}
+%When an action is updated repeatedly, the constant step-size rule implies:
+%\[
+%Q_{t+1} = (1-\alpha)Q_t + \alpha R_t
+%\]
+%Unrolling shows exponentially decaying weights:
+%\[
+%Q_{t+1} = (1-\alpha)^t Q_1 + \sum_{i=1}^{t} \alpha(1-\alpha)^{t-i} R_i
+%\]
+%
+%\begin{itemize}
+%  \item Weights sum to (approximately) 1
+%  \item Older rewards get multiplied by $(1-\alpha)^{\Delta t}$ and quickly fade
+%\end{itemize}
+
+%\note{This makes the estimator responsive: it "forgets" the distant past.}
+%\end{frame}
+
+\begin{frame}{Choosing $\alpha$: Memory vs Noise}
+\begin{itemize}
+  \item Smaller $\alpha$:
+  \begin{itemize}
+    \item smoother estimates (less variance)
+    \item slower tracking (more lag)
+  \end{itemize}
+  \item Larger $\alpha$:
+  \begin{itemize}
+    \item faster tracking
+    \item noisier estimates
+  \end{itemize}
+\end{itemize}
+
+%\vspace{6pt}
+%Rule of thumb: effective memory length is on the order of $\approx 1/\alpha$ samples.
+
+\note{There is no universally best alpha; it depends on how fast the environment changes.}
+\end{frame}
+
+%------------------------------------------------
+\section{Exploration for Non-Stationary Problems}
+
+\begin{frame}{Key Point: Exploration Must Continue}
+In a non-stationary bandit:
+\begin{itemize}
+  \item The identity of the best arm can change
+  \item If exploration stops, the agent may never notice the change
+\end{itemize}
+
+\vspace{6pt}
+A simple baseline is \textbf{constant $\varepsilon$-greedy}:
+
+\[
+A =
+\begin{cases}
+	\arg\max_a Q_t(a) & \text{with probability 1 - $\varepsilon$} \\
+	\text{a random action} & \text{with probability $\varepsilon$}
+\end{cases}
+\]
+
+
+\note{This is often the simplest reliable fix: keep epsilon > 0.}
+\end{frame}
+
+\begin{frame}{Decaying $\varepsilon_t$: Use with Care}
+Sometimes we decrease exploration over time:
+\[
+\varepsilon_t \downarrow
+\]
+
+\begin{itemize}
+  \item Good intuition in \textbf{stationary} tasks: explore early, exploit later
+  \item Risk in \textbf{non-stationary} tasks: exploration may vanish while the world keeps changing
+\end{itemize}
+
+\vspace{6pt}
+Practical fix: decay to a \textbf{floor}:
+\[
+\varepsilon_t = \max\Big(\varepsilon_{\min},\; \frac{\varepsilon_0}{1+\beta t}\Big)
+\]
+
+\note{Highlight: epsilon-decay can still work if you keep epsilon_min > 0.}
+\end{frame}
+
+%------------------------------------------------
+\section{Optimistic Initial Values}
+
+\begin{frame}{Optimistic Initial Values}
+\begin{itemize}
+  \item Initialize action-value estimates high:
+  \[
+    Q_1(a) = Q_0 \quad \text{with } Q_0 \text{ above typical rewards}
+  \]
+  \item Then act greedily:
+  \[
+    A_t = \arg\max_a Q_t(a)
+  \]
+  \item Effect: encourages \textbf{initial exploration} because untried arms look best
+\end{itemize}
+
+\note{This is a neat trick: exploration without randomness (at the beginning).}
+\end{frame}
+
+
+\begin{frame}{References}
+\begin{itemize}
+  \item Sutton, R. S., \& Barto, A. G. (2018). \textit{Reinforcement Learning: An Introduction}, 2nd ed., Section 2.5.
+\end{itemize}
+\end{frame}
+
+\end{document}

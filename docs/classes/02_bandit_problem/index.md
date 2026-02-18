@@ -16,7 +16,7 @@ By the end of the class, students should be able to:
 - Explain why exploration is necessary for learning
 - Describe how ε-greedy strategies balance learning and performance in practice
 
-<embed src="main.pdf" type="application/pdf" width="600" height="300">
+<embed src="main.pdf" type="application/pdf" width="750" height="400">
 
 ## Exercises
 

@@ -8,7 +8,7 @@
 1. Content
 1. Assessment 
 
-<embed src="subject_rules.pdf" type="application/pdf" width="600" height="300">
+<embed src="subject_rules.pdf" type="application/pdf" width="750" height="400">
 
 ## Introduction to Reinforcement Learning
 
@@ -16,7 +16,7 @@
 1. Differences from other machine learning techniques
 1. Real-world application examples
 
-<embed src="introduction_rl.pdf" type="application/pdf" width="600" height="300">
+<embed src="introduction_rl.pdf" type="application/pdf" width="750" height="400">
 
 ## Homework
 
