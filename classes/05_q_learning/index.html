@@ -21,7 +21,7 @@
     
     
       
-        <title>Algoritmo Q-Learning - Reinforcement Learning</title>
+        <title>Q-Learning Algorithm - Reinforcement Learning</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algoritmo-q-learning" class="md-skip">
+        <a href="#q-learning-algorithm" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algoritmo Q-Learning
+              Q-Learning Algorithm
             
           </span>
         </div>
@@ -435,6 +435,117 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_mdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Decision Processes (MDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Q-Learning and Sarsa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Q-Learning and Sarsa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_toolings_envs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reinforcement Learning: Tools and Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -635,14 +746,14 @@
 
 
 
-<h1 id="algoritmo-q-learning">Algoritmo Q-Learning</h1>
+<h1 id="q-learning-algorithm">Q-Learning Algorithm</h1>
 <h2 id="definicoes-e-conceitos-chave">Definições e conceitos chave</h2>
 <p>Nesta aula vamos utilizar os slides abaixo:</p>
-<p><embed src="q_learning.pdf" type="application/pdf" width="800" height="400"></p>
+<p><embed src="q_learning_v2.pdf" type="application/pdf" width="800" height="400"></p>
 <h2 id="implementacao">Implementação</h2>
 <p>Depois de uma breve conversa sobre os principais conceitos, vamos implementar o primeiro agente utilizando aprendizado por reforço. Por favor, siga as instruções abaixo:</p>
 <ol>
-<li>Utilize como base o código que você implementou na <a href="../04_toolings_envs/">aula anterior</a>.</li>
+<li>Utilize como base o código que você implementou na <a href="../04_toolings_envs/index_pt/">aula anterior</a>.</li>
 <li>Considere apenas o ambiente do <em>Taxi Driver</em>.</li>
 <li>Na linha 8 <code>agent.update(action, state, reward)</code>, implemente a equação de Bellman para atualizar os valoes da Q-table. </li>
 <li>Implemente a linha 6 <code>action = agent.select_action(state)</code> para selecionar a ação com base na política epsilon-greedy.</li>
@@ -684,7 +795,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 6, 2025 11:25:42 UTC">February 6, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 02:52:40 UTC">February 24, 2026</span>
   </span>
 
     
