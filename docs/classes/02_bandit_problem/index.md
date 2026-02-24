@@ -1,5 +1,8 @@
 # The Bandit Problem
 
+??? warning "Pre-work"
+    The pre-work for this class includes reading the pages from 25 until 36 of Sutton, R. S., & Barto, A. G. (2018). Reinforcement learning: An introduction. MIT press.
+
 The goal of this class is to introduce the **multi-armed bandit problem** as a fundamental model for **decision-making under uncertainty**, and to show how it captures the core ideas behind reinforcement learning.
 
 In this class, we aim to:

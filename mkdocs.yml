@@ -19,8 +19,9 @@ nav:
       - 'classes/01_introduction/index.md'
       - 'classes/02_bandit_problem/index.md'
       - 'classes/03_non_stacionary_problems/index.md'
-#      - 'classes/04_toolings_envs/index.md'
-#    - 'Q-Learning and Sarsa':
+      - 'classes/04_mdp/index.md'
+    - 'Q-Learning and Sarsa':
+      - 'classes/04_toolings_envs/index.md'
 #      - 'classes/05_q_learning/index.md'
 #      - 'classes/05_x_hyperparameters/index.md'
 #      - 'classes/05_xx_hyper_comments/index.md'

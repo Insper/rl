@@ -1,16 +1,16 @@
-# Algoritmo Q-Learning
+# Q-Learning Algorithm
 
 ## Definições e conceitos chave    
 
 Nesta aula vamos utilizar os slides abaixo:
 
-<embed src="q_learning.pdf" type="application/pdf" width="800" height="400">
+<embed src="q_learning_v2.pdf" type="application/pdf" width="800" height="400">
 
 ## Implementação
 
 Depois de uma breve conversa sobre os principais conceitos, vamos implementar o primeiro agente utilizando aprendizado por reforço. Por favor, siga as instruções abaixo:
 
-1. Utilize como base o código que você implementou na [aula anterior](../04_toolings_envs/index.md).
+1. Utilize como base o código que você implementou na [aula anterior](../04_toolings_envs/index_pt.md).
 1. Considere apenas o ambiente do *Taxi Driver*.
 1. Na linha 8 `agent.update(action, state, reward)`, implemente a equação de Bellman para atualizar os valoes da Q-table. 
 1. Implemente a linha 6 `action = agent.select_action(state)` para selecionar a ação com base na política epsilon-greedy.
