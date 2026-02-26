@@ -165,24 +165,24 @@
 
 \end{frame}
 
-\begin{frame}{Algoritmo Q-Learning}
-
-	\begin{block}{}
-		Como é que o agente pode saber quais são as melhores ações em cada estado?
-	\end{block}
-
-\pause
-
-	\begin{itemize}
-		\item A ideia é fazer com que o agente aprenda a função de mapeamento $Q(S,A)$. 
-		Ou seja, que seja capaz de identificar qual é a melhor ação para cada estado 
-		através das suas \textbf{experiências}. 
-		\item \textit{Testando} \textbf{infinitas} vezes o ambiente. 
-		Ou seja, \textit{testando} \textbf{muitas} vezes as combinações entre 
-		\textbf{estados} ($S$) e \textbf{ações} ($A$). 
-	\end{itemize}
-
-\end{frame}
+%\begin{frame}{Algoritmo Q-Learning}
+%
+%	\begin{block}{}
+%		Como é que o agente pode saber quais são as melhores ações em cada estado?
+%	\end{block}
+%
+%\pause
+%
+%	\begin{itemize}
+%		\item A ideia é fazer com que o agente aprenda a função de mapeamento $Q(S,A)$. 
+%		Ou seja, que seja capaz de identificar qual é a melhor ação para cada estado 
+%		através das suas \textbf{experiências}. 
+%		\item \textit{Testando} \textbf{infinitas} vezes o ambiente. 
+%		Ou seja, \textit{testando} \textbf{muitas} vezes as combinações entre 
+%		\textbf{estados} ($S$) e \textbf{ações} ($A$). 
+%	\end{itemize}
+%
+%\end{frame}
 
 \begin{frame}{Algoritmo Q-Learning} 
 	\begin{algorithmic} 
@@ -198,7 +198,7 @@
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
-		\STATE \textbf{return} $Q(s, a)$
+		\STATE \textbf{return} $Q$
 	\end{algorithmic}
 
 \vspace{0.2cm}
@@ -222,7 +222,7 @@ Poderíamos simplesmente: $Q(s,a) \leftarrow r$. Será que funciona?
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
-		\STATE \textbf{return} $Q(s, a)$
+		\STATE \textbf{return} $Q$
 	\end{algorithmic}
 	
 	\vspace{0.2cm}
@@ -293,7 +293,7 @@ Poderíamos simplesmente: $Q(s,a) \leftarrow r$. Será que funciona?
 		\STATE$s  \leftarrow s'$
 		\UNTIL {$s$ ser um estado final}
 		\ENDFOR
-		\STATE \textbf{return} $Q(s, a)$
+		\STATE \textbf{return} $Q$
 	\end{algorithmic}
 \end{frame}
 
@@ -339,7 +339,7 @@ Poderíamos simplesmente: $Q(s,a) \leftarrow r$. Será que funciona?
 	
 	\begin{algorithmic} 
 		\STATE \textbf{function} escolha($s$): $a$
-		\STATE \hspace*{\algorithmicindent} \textbf{return} $\max_{a}{Q(s, a)}$
+		\STATE \hspace*{\algorithmicindent} \textbf{return} $\arg \max_{A}{Q(s, A)}$
 	\end{algorithmic}
 	
 	\vspace{0.3cm}
@@ -364,7 +364,7 @@ Poderíamos simplesmente: $Q(s,a) \leftarrow r$. Será que funciona?
 		\IF{$rv < \epsilon$}
 		\STATE \textbf{return} uma ação $\alpha$ aleatória em $A$
 		\ENDIF   
-		\STATE \textbf{return} $\max_{a}{Q(s, a)} $
+		\STATE \textbf{return} $\arg \max_{A}{Q(s, A)} $
 	\end{algorithmic}
 	
 	\vspace{0.3cm}
@@ -386,7 +386,7 @@ Poderíamos simplesmente: $Q(s,a) \leftarrow r$. Será que funciona?
 		\IF{$rv < \epsilon$}
 		\STATE \textbf{return} uma ação $\alpha$ aleatória em $A$
 		\ENDIF   
-		\STATE \textbf{return} $\max_{a}{Q(s, a)} $
+		\STATE \textbf{return} $\arg \max_{A}{Q(s, A)} $
 	\end{algorithmic}
 
 	\vspace{0.3cm}
