@@ -26,9 +26,9 @@ $$
 Q(s,a) \leftarrow Q(s,a) + \alpha [r +\gamma Q(s', a') - Q(s,a)]
 $$
 
-esta equação atualiza $Q(s,a)$ considerando a ação real executada pelo agente.
+esta equação atualiza $Q(s,a)$ considerando a ação real executada pelo agente ($Q(s', a')$).
 
-O algoritmo Sarsa é muito semelhante ao algoritmo Q-Learning:
+O algoritmo Sarsa é muito semelhante ao algoritmo Q-Learning. No entanto, é necessário fazer algumas mudanças na implementação do Q-Learning para implementar o Sarsa. A principal mudança é que, no Sarsa, a ação $a'$ deve ser selecionada antes de atualizar a *Q-table* e deve ser a ação real que o agente executará.
 
 <img src="figures/sarsa.png" alt="Sarsa algorithm" style="height: 400px;"/>
 
@@ -140,7 +140,7 @@ Crie um arquivo `README.md` e responda as seguintes perguntas:
 
 ## Entrega
 
-Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/HFSo_Ma9](https://classroom.github.com/a/HFSo_Ma9). Esta atividade é individual e o **prazo é 20/02/2025 23:30.**
+Coloque todos os arquivos em um mesmo projeto e submeta-os para o [https://classroom.github.com/a/PyH4mfnR](https://classroom.github.com/a/PyH4mfnRhttps://classroom.github.com/a/PyH4mfnR). Esta atividade é individual e o **prazo é 06/03/2026 23:30.**
 
 <!-- usar este texto https://www.baeldung.com/cs/q-learning-vs-sarsa para comentar os resultados do cliff walking e as diferencas entre os algoritmos -->
 <!-- usar o próprio livro do Sutton para comentar os resultados -->

@@ -1,4 +1,4 @@
-# Como avaliar o desempenho de um agente? 
+# How to evaluate the performance of an agent?
     
 O desempenho de um agente pode ser avaliado de diversas formas. A forma mais comum é através da curva de aprendizagem. A curva de aprendizagem mostra o desempenho do agente ao longo do tempo de treinamento. O desempenho pode ser medido em termos do objetivo de aprendizagem (e.g., retorno acumulado) bem como outras métricas secundárias.
 
