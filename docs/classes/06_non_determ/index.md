@@ -35,32 +35,36 @@ Os estados terminais são o objetivo e os buracos. Mas se o agente fizer mais de
 
 Para responder as perguntas acima você deve treinar um agente capaz de atuar no ambiente do Frozen Lake e comparar a curva de aprendizagem do agente treinado com a curva de aprendizagem de outros agentes treinados com diferentes algoritmos e hiperparâmetros. 
 
-Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo uma configuração de hiperparâmetro que deve ser aplicada em ambos os algoritmos. Ou seja, você irá comparar a curva de aprendizagem de 2 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
+Você deve treinar o agente com os algoritmos Q-Learning e SARSA escolhendo uma configuração de hiperparâmetro qualquer. Você pode usar a mesma configuração para ambos os algoritmos ou configurações distintas. Ou seja, você irá comparar a curva de aprendizagem de 2 agentes diferentes. Nesta atividade considere apenas o ambiente $4 \times 4$.
+
+Execute o treinamento de cada agente por N episódios, onde N é um número suficientemente grande para que o agente consiga aprender a atuar no ambiente. Você pode escolher o valor de N, mas ele deve ser o mesmo para ambos os agentes. Este treinamento deve acontecer 100 vezes para cada agente. A curva de aprendizagem de cada agente deve ser dada pela média de rewards obtidos em cada episódio ao longo dos 100 treinamentos. Existe um plot na biblioteca `seaborn` que pode ser utilizado para plotar a curva de aprendizagem de cada agente, não só a média, mas também a variância dos rewards obtidos em cada episódio ao longo dos 100 treinamentos.
 
 <!-- **Detalhe importante**: neste ambiente o reward é apenas 0 ou 1. Sendo assim, se você utilizar uma abordagem de medida como a exercitada na [aula anterior](../11_evaluation/index.md#exercício-comparar-q-learning-e-sarsa-no-ambiente-do-cliff-walking) provavelmente você não vai conseguir comparar os algoritmos. Nesta caso, a melhor abordagem é comparar a curva de aprendizagem dos agentes treinados usando uma média móvel dos rewards obtidos ao longo do treinamento.-->
 
-Após treinar os agentes você deve utilizar o agente com melhor desempenho e executar 100 vezes no ambiente $4 \times 4$ e calcular a quantidade de vezes que o agente chegou até o destino final sem cair no buraco.
+Após treinar os agentes você deve utilizar a q-table gerada por cada agente e executar 100 vezes no ambiente $4 \times 4$ e calcular a quantidade de vezes que o agente chegou até o destino final sem cair no buraco. O agente com melhor desempenho é aquele que conseguiu chegar mais vezes até o destino final sem cair no buraco.
 
 ## Artefatos que devem ser entregues
 
 Cada aluno deve entregar os seguintes artefatos: 
 
-* Relatório com os gráficos das curvas de aprendizado dos agentes treinados e dados sobre o desempenho do melhor agente no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).
+* Relatório no arquivo README.md com os gráficos das curvas de aprendizado dos agentes treinados e dados sobre o desempenho dos agentes no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).
 
 * Todos os códigos utilizados para executar os experimentos.
 
-* Arquivo README.md descrevendo como executar o experimento. 
+* O arquivo README.md deve conter uma seção especial sobre a interpretação do conteúdo da q-table gerada pelo melhor agente. *O aluno deve interpretar o conteúdo da q-table e explicar quais são as melhores ações para cada estado do ambiente*.
 
-A entrega deve ser feita através do [https://classroom.github.com/a/fayO19QB](https://classroom.github.com/a/fayO19QB). O trabalho é individual.
+A entrega deve ser feita através do [https://classroom.github.com/a/qNrLoPfv](https://classroom.github.com/a/qNrLoPfv). O trabalho é individual.
 
 ### Rubrica de avaliação
 
-* O relatório deve conter uma descrição detalhada dos experimentos realizados e uma discussão sobre os resultados obtidos.
+* O relatório (README.md) deve conter: 
+  
+  * Gráficos das curvas de aprendizagem dos agentes treinados plotados da forma como foi solicitado (*não usar rolling average do reward para plot da curva!*).
+  * Dados sobre o desempenho dos agentes no ambiente (quantidade de vezes que o agente chegou até o destino final sem cair no buraco).
+  * Interpretação do conteúdo da q-table gerada pelo melhor agente, explicando quais são as melhores ações para cada estado do ambiente.
 
 * O código deve estar bem organizado e documentado.
 
-* O README.md deve conter instruções claras sobre como executar o experimento.
-
 ### Prazo de entrega
 
-O prazo para a entrega desta atividade é 25 de fevereiro de 2025. 
+O prazo para a entrega desta atividade é 11 de março de 2026. 
