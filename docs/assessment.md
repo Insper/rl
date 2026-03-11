@@ -14,9 +14,12 @@ Student assessment will be conducted through **exercises**, **projects**, and an
 
 ## Exercises
 
-| Description                                                    | Deadline            |
-|:-------------------------------------------------------------|:-------------------:|
-| TBD | TBD |
+| Description                                                            |  Deadline  |
+| :--------------------------------------------------------------------- | :--------: |
+| [Implementando Q-Learning](classes/05_q_learning/index.md)             | 02/03/2026 |
+| [Implementando Sarsa](classes/05_x_sarsa/index.md)                     | 06/03/2026 |
+| [Ambientes não determinísticos](classes/06_non_determ/index.md)        | 11/03/2026 |
+| [Discretização de espaço de estados](classes/09_more_complex/index.md) | 15/03/2026 |
 
 ## Project artifacts
 
