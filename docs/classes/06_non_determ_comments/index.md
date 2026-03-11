@@ -58,6 +58,30 @@ média = 78.93, desvio padrão = 4.667451124543244
 ```
 
 
+## Algumas considerações sobre a apresentação da curva de aprendizagem
+
+O método correto para gerar e apresentar a curva de aprendizagem é treinar o agente várias vezes em *N* episódios, e para cada episódio, calcular a média de recompensa obtida em um número fixo de testes (por exemplo, 10 testes). No entanto, em alguns casos, a apresentação desta curva de aprendizagem pode não ficar tão boa, especialmente em ambientes onde o reward acumulado pode variar muito entre os episódios, como é o caso do Frozen Lake.
+
+Por exemplo, veja como fica a curva para um algoritmo Q-learning com alpha=0.1, gamma=0.99, epsilon=0.8, epsilon_min=0.0, **epsilon_dec=0.999**, episodes=10_000, tamanho=4x4:
+
+![alt text](img/image.png)
+
+E para um algoritmo Q-Learning com alpha=0.1, gamma=0.99, epsilon=0.8, epsilon_min=0.0, **epsilon_dec=0.99**, episodes=10_000, tamanho=4x4:
+
+![alt text](img/image2.png)
+
+Criar um plot com ambas as curvas para comparação iria gerar um gráfico muito poluído, o que não é interessante para a análise. 
+
+Neste caso, uma alternativa interessante é apresentar a curva de aprendizagem utilizando uma média móvel da média, o que ajuda a suavizar as variações e torna a curva mais legível.
+
+![alt text](img/image3.png)
+
+## Análise da política aprendida
+
+![alt text](img/image4.png)
+
+Imagem gerada pelo Matheus Raffaelle Nery Castellucci. 
+
 <!--
 
 ## Alguns hiperparâmetros utilizados e com bons resultados

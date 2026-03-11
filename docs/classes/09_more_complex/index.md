@@ -197,4 +197,4 @@ env.close()
 
 ## Entrega
 
-O trabalho deve ser entregue no GitHub Classroom. O link para o repositório é [https://classroom.github.com/a/DT6edFQw](https://classroom.github.com/a/DT6edFQw). O trabalho é individual. O prazo para entrega é até o dia 27/02/2025. 
+O trabalho deve ser entregue no GitHub Classroom. O link para o repositório é [https://classroom.github.com/a/irwg7krx](https://classroom.github.com/a/irwg7krx). O trabalho é individual. O prazo para entrega é até o dia 15/03/2026. 
