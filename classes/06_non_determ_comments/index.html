@@ -848,6 +848,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#algumas-consideracoes-sobre-a-apresentacao-da-curva-de-aprendizagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algumas considerações sobre a apresentação da curva de aprendizagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analise-da-politica-aprendida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise da política aprendida
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -872,34 +894,6 @@
     
   
     Implementando um agente para lidar com um ambiente um pouco mais complexo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22_custom_env/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Criação de ambientes customizados
   
 
     
@@ -1096,6 +1090,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#algumas-consideracoes-sobre-a-apresentacao-da-curva-de-aprendizagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algumas considerações sobre a apresentação da curva de aprendizagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analise-da-politica-aprendida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise da política aprendida
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1152,6 +1168,18 @@
 <p>Inclusive, o problema da segunda configuração está no valor de <span class="arithmatex">\(\epsilon_{dec}\)</span> que é muito alto. Se mudarmos o valor para 0.999, o resultado melhora:</p>
 <div class="highlight"><pre><span></span><code>média = 78.93, desvio padrão = 4.667451124543244
 </code></pre></div>
+<h2 id="algumas-consideracoes-sobre-a-apresentacao-da-curva-de-aprendizagem">Algumas considerações sobre a apresentação da curva de aprendizagem</h2>
+<p>O método correto para gerar e apresentar a curva de aprendizagem é treinar o agente várias vezes em <em>N</em> episódios, e para cada episódio, calcular a média de recompensa obtida em um número fixo de testes (por exemplo, 10 testes). No entanto, em alguns casos, a apresentação desta curva de aprendizagem pode não ficar tão boa, especialmente em ambientes onde o reward acumulado pode variar muito entre os episódios, como é o caso do Frozen Lake.</p>
+<p>Por exemplo, veja como fica a curva para um algoritmo Q-learning com alpha=0.1, gamma=0.99, epsilon=0.8, epsilon_min=0.0, <strong>epsilon_dec=0.999</strong>, episodes=10_000, tamanho=4x4:</p>
+<p><img alt="alt text" src="img/image.png" /></p>
+<p>E para um algoritmo Q-Learning com alpha=0.1, gamma=0.99, epsilon=0.8, epsilon_min=0.0, <strong>epsilon_dec=0.99</strong>, episodes=10_000, tamanho=4x4:</p>
+<p><img alt="alt text" src="img/image2.png" /></p>
+<p>Criar um plot com ambas as curvas para comparação iria gerar um gráfico muito poluído, o que não é interessante para a análise. </p>
+<p>Neste caso, uma alternativa interessante é apresentar a curva de aprendizagem utilizando uma média móvel da média, o que ajuda a suavizar as variações e torna a curva mais legível.</p>
+<p><img alt="alt text" src="img/image3.png" /></p>
+<h2 id="analise-da-politica-aprendida">Análise da política aprendida</h2>
+<p><img alt="alt text" src="img/image4.png" /></p>
+<p>Imagem gerada pelo Matheus Raffaelle Nery Castellucci. </p>
 <!--
 
 ## Alguns hiperparâmetros utilizados e com bons resultados
@@ -1187,7 +1215,7 @@ Estes valores foram obtidos pelos alunos Ricardo Rodrigues e Pedro Henrique no 1
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 26, 2025 14:54:49 UTC">February 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 11, 2026 23:51:09 UTC">March 11, 2026</span>
   </span>
 
     
