@@ -280,10 +280,9 @@ gamma = 0.99
 epsilon = 1.0
 epsilon_min = 0.01
 epsilon_dec = 0.99
-episodes = 200
-batch_size = 64
-learning_rate=0.001
-memory = deque(maxlen=10000)
+episodes = 200 # quantidade de episódios para o treinamento
+batch_size = 64 # quantidade de amostras escolhidas aleatóriamente do experience replay
+memory = deque(maxlen=10000) # quantidade máxima de experiências armazenadas no experience replay
 ```
 
 Para o problema do CartPole foi necessário adicionar mais uma condição de parada: caso o agente realize 500 episódios sem cair, o episódio é finalizado.
@@ -316,4 +315,4 @@ Atividades sugeridas:
 1. Compare os resultados obtidos com o Q-Learning e o Deep Q-Learning usando um plot. Tente deixar claro no plot qual a meta de recompensa acumulada para o ambiente `MountainCar`.
 1. Crie outro gráfico que mostra o desempenho de ambos os agentes durante o processo de inferência, ou seja, quando o agente está atuando sem treinamento. 
 
-Todo o código necessário para esta atividade deve ser entrege no Github classroom [https://classroom.github.com/a/3cFWPdqG](https://classroom.github.com/a/3cFWPdqG) até o dia 11/03/2025. Esta é uma atividade individual. 
+Todo o código necessário para esta atividade deve ser entrege no Github classroom [https://classroom.github.com/a/pbOSn58N](https://classroom.github.com/a/pbOSn58N) até o dia 20/03/2026 às 23:30. Esta é uma atividade individual. 
