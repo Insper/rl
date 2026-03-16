@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://insper.github.io/rl/classes/15_deep_q_learning/">
       
       
+        <link rel="prev" href="../09_more_complex/">
+      
+      
+        <link rel="next" href="../../destaques/">
       
       
         
@@ -261,18 +265,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -293,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -805,6 +811,238 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Q-Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deep Q-Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Reinforcement Learning (value-based method)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Reinforcement Learning (value-based method)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-Learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Reinforcement Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Reinforcement Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experience-replay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experience replay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-de-treinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop de treinamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-uso-cartpole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso: CartPole
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso: CartPole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sera-que-este-agente-conseguiu-aprender-a-controlar-o-cartpole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Será que este agente conseguiu aprender a controlar o CartPole?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao-para-o-mountain-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementação para o Mountain Car
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1271,10 +1509,9 @@ As ações em um estado terminal tem todas valor zero. Quando implementamos o al
 <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">epsilon_min</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="n">epsilon_dec</span> <span class="o">=</span> <span class="mf">0.99</span>
-<span class="n">episodes</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
-<span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span>
-<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1"># quantidade de episódios para o treinamento</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span> <span class="c1"># quantidade de amostras escolhidas aleatóriamente do experience replay</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span> <span class="c1"># quantidade máxima de experiências armazenadas no experience replay</span>
 </code></pre></div>
 <p>Para o problema do CartPole foi necessário adicionar mais uma condição de parada: caso o agente realize 500 episódios sem cair, o episódio é finalizado.</p>
 <h3 id="sera-que-este-agente-conseguiu-aprender-a-controlar-o-cartpole">Será que este agente conseguiu aprender a controlar o CartPole?</h3>
@@ -1298,7 +1535,7 @@ As ações em um estado terminal tem todas valor zero. Quando implementamos o al
 <li>Compare os resultados obtidos com o Q-Learning e o Deep Q-Learning usando um plot. Tente deixar claro no plot qual a meta de recompensa acumulada para o ambiente <code>MountainCar</code>.</li>
 <li>Crie outro gráfico que mostra o desempenho de ambos os agentes durante o processo de inferência, ou seja, quando o agente está atuando sem treinamento. </li>
 </ol>
-<p>Todo o código necessário para esta atividade deve ser entrege no Github classroom <a href="https://classroom.github.com/a/3cFWPdqG">https://classroom.github.com/a/3cFWPdqG</a> até o dia 11/03/2025. Esta é uma atividade individual. </p>
+<p>Todo o código necessário para esta atividade deve ser entrege no Github classroom <a href="https://classroom.github.com/a/pbOSn58N">https://classroom.github.com/a/pbOSn58N</a> até o dia 20/03/2026 às 23:30. Esta é uma atividade individual. </p>
 
 
 
@@ -1319,7 +1556,7 @@ As ações em um estado terminal tem todas valor zero. Quando implementamos o al
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 21:31:32 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 16, 2026 20:49:43 UTC">March 16, 2026</span>
   </span>
 
     
