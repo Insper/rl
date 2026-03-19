@@ -51,13 +51,8 @@ nav:
 ##    - 'Projetos finais':
 ##      - 'classes/19_projects/index.md'
 ##
-#  - 'Projects':
-#    - 'projects/projeto_intermediario/index.md'
-#    - 'projects/projeto_final/index.md'
-
-  - 'Highlights':
-    - 'destaques/index.md'
-  
+  - 'Capstone Project': 'projects/projeto_final/index.md'
+  - 'Highlights': 'destaques/index.md'
   - 'References': 'references.md'
 
 extra_javascript:
