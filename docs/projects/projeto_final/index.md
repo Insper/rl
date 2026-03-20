@@ -74,6 +74,8 @@ Cada equipe deverá gravar um vídeo de até 10 minutos apresentando os resultad
 
 ## Sugestão de temas
 
+* [Autonomous HVAC Control, A Reinforcement Learning Approach](./docs/autonomou_hvac_rl.pdf)
+
 * Uso de Reinforcement Learning no dilema do prisioneiro iterado. Referências: [https://www.youtube.com/watch?v=mScpHTIi-kM](https://www.youtube.com/watch?v=mScpHTIi-kM) e [https://www.youtube.com/watch?v=7vTK1-8NKrY](https://www.youtube.com/watch?v=7vTK1-8NKrY).
 
 * Algo usando o ambiente [Minigrid](https://minigrid.farama.org/). Sugestão: procurar por artigos que citam o artigo [https://arxiv.org/abs/2306.13831](https://arxiv.org/abs/2306.13831).
