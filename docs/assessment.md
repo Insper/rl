@@ -14,25 +14,26 @@ Student assessment will be conducted through **exercises**, **projects**, and an
 
 ## Exercises
 
-| Description                                                            |  Deadline  |
-| :--------------------------------------------------------------------- | :--------: |
-| [Implementando Q-Learning](classes/05_q_learning/index.md)             | 02/03/2026 |
-| [Implementando Sarsa](classes/05_x_sarsa/index.md)                     | 06/03/2026 |
-| [Ambientes não determinísticos](classes/06_non_determ/index.md)        | 11/03/2026 |
-| [Discretização de espaço de estados](classes/09_more_complex/index.md) | 15/03/2026 |
-| [Implementando DQN](classes/15_deep_q_learning/index.md)               | 20/03/2026 |
+| Description                                                             |  Deadline  |
+| :-----------------------------------------------------------------------| :--------: |
+| [Implementando Q-Learning](classes/05_q_learning/index.md)              | 02/03/2026 |
+| [Implementando Sarsa](classes/05_x_sarsa/index.md)                      | 06/03/2026 |
+| [Ambientes não determinísticos](classes/06_non_determ/index.md)         | 11/03/2026 |
+| [Discretização de espaço de estados](classes/09_more_complex/index.md)  | 15/03/2026 |
+| [Implementando DQN](classes/15_deep_q_learning/index.md)                | 20/03/2026 |
+| [Implementando um ambiente customizado](classes/22_custom_env/index.md) | 01/04/2026 |
 
 ## Project artifacts
 
 | Description                                              | Deadline            |
-|:-----------------------------------------------------------|:-------------------:|
-| Definição da área/problema a ser tratado | TBD |
-| Definição do escopo do projeto | TBD |
-| Definição do MDP | TBD |
-| Implementação do agente e ambiente | TBD |
-| Coleta e Análise dos resultados | TBD |
-| Entrega do relatório final | TBD |
-| Apresentação final do projeto | TBD |
+|:---------------------------------------------------------|:-------------------:|
+| Definição da área/problema a ser tratado                 | 24/03/2026 |
+| Definição do escopo do projeto                           | TBD |
+| Definição do MDP                                         | TBD |
+| Implementação do agente e ambiente                       | TBD |
+| Coleta e Análise dos resultados                          | TBD |
+| Entrega do relatório final                               | TBD |
+| Apresentação final do projeto                            | TBD |
 
 
 
