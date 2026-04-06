@@ -1,4 +1,4 @@
-# Lunar Lander Project
+# Lunar Lander Implementation
 
 Objetivo da atividade: implementar um agente capaz de controlar o *lunar lander* do ambiente `env = gym.make('LunarLander-v2')`. 
 
@@ -21,11 +21,11 @@ Sugestão de atividades:
 
 * Não esqueça de adicionar ao projeto o arquivo de `requirements.txt` com todas as bibliotecas necessárias para a execução do projeto. 
 
-Ao entregar estes itens você tem garantido um **B**. 
+Ao entregar estes itens você tem garantido um **C**. 
 
 ## Entrega avançada com DQN
 
-Para ter uma nota **A+** neste projeto você precisa: 
+Para ter uma nota **B** neste projeto você precisa: 
 
 * Implementar a versão final do algoritmo **Deep Q-networks (DQN)** como apresentado no pseudo-código abaixo: 
 
@@ -46,11 +46,17 @@ Espera-se que com o uso de duas redes neurais o aprendizado do agente seja mais 
 * No projeto você precisa adicionar os scripts que você implementou. 
 * Não esqueça de atualizar o arquivo de `requirements.txt`, se necessário. 
 
-Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/UNPTi8Dx](https://classroom.github.com/a/UNPTi8Dx) do Github Classroom. 
+## Conceito A+
+
+Para ter um conceito **A+** neste projeto, além de entregar os itens descritos para o conceito **B**, você precisa:
+
+* Variar os valores de $C$ (número de episódios para atualizar a *target network*) e comparar os resultados alcançados. Teste três valores diferentes para $C$ e apresente a análise dos resultados alcançados. Um dos valores precisa ser $C=1$ (ou seja, a *target network* é atualizada a cada episódio). Apresente os resultados alcançados via um gráfico comparando as curvas de aprendizado para os diferentes valores de $C$ e o **Deep Q-Learning** sem target network.
+
+Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/4lsG6TOM](https://classroom.github.com/a/4lsG6TOM) do Github Classroom. 
 
 ## Deadline
 
-O deadline para a entrega desta atividade é **20 de março de 2024** (quinta-feira) às 23:30 horas. Este trabalho deve ser feito em grupo com até 4 integrantes.
+O deadline para a entrega desta atividade é **10 de abril de 2026** (sexta-feira) às 23:30 horas. Este trabalho pode ser feito em grupo com até 3 integrantes.
 
 <!--
 
