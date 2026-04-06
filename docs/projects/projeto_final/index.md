@@ -10,8 +10,9 @@ O principal objetivo desta atividade é exercitar os conceitos vistos ao longo d
 Para alcançar este objetivo, o grupo deverá: 
 
 * Definição da área/problema a ser tratado: **24/03/2026**
-* Definição do escopo do projeto
-* Definição do MDP
+* Definição do escopo do projeto **10/04/2026**
+* Definição do MDP **10/04/2026**
+* Definição do ambiente **10/04/2026**
 * Implementação do agente e ambiente
 * Coleta e Análise dos resultados
 * Entrega do relatório final
