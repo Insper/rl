@@ -1,6 +1,6 @@
 # Lunar Lander Implementation
 
-Objetivo da atividade: implementar um agente capaz de controlar o *lunar lander* do ambiente `env = gym.make('LunarLander-v2')`. 
+Objetivo da atividade: implementar um agente capaz de controlar o *lunar lander* do ambiente `env = gym.make('LunarLander-v3')`. 
 
 ## Entrega básica
 
@@ -56,7 +56,7 @@ Você deve submeter o seu projeto neste link: [https://classroom.github.com/a/4l
 
 ## Deadline
 
-O deadline para a entrega desta atividade é **10 de abril de 2026** (sexta-feira) às 23:30 horas. Este trabalho pode ser feito em grupo com até 3 integrantes.
+O deadline para a entrega desta atividade é **13 de abril de 2026** (segunda-feira) às 08:00 horas. Este trabalho pode ser feito em grupo com até 3 integrantes.
 
 <!--
 
