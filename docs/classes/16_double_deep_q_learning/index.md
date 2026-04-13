@@ -14,7 +14,7 @@ As principais referências para esta atividade são:
 
 ## Pre-work
 
-Na [aula passada](../15_deep_q_learning_lunar_lander/index.md) implementamos uma versão simples do Deep Q-Learning para o ambiente `LunarLander-v2` e comparamos os resultados com a implementação do algoritmo DQN, também implementado em sala de aula. Ao comparar os resultados obtidos com DQN e Deep Q-Learning, esperamos uma curva de apresendizado similar a apresentada abaixo: 
+Na [aula passada](../15_deep_q_learning_lunar_lander/index.md) implementamos uma versão simples do Deep Q-Learning para o ambiente `LunarLander-v3` e comparamos os resultados com a implementação do algoritmo DQN, também implementado em sala de aula. Ao comparar os resultados obtidos com DQN e Deep Q-Learning, esperamos uma curva de apresendizado similar a apresentada abaixo: 
 
 <img src="./img/learning_curve.png"  style="height:600px;"/>
 
@@ -69,8 +69,12 @@ Estimativa de valor:
 
 $r^{t} + \gamma Q(s^{t+1}, bestA, \overline{\theta})$
 
+<!--
+
 ## Questões
 
 Segundo a literatura, o Double DQN não super valoriza o valor dos estados futuros. De fato, fornece estimativas mais realistas dos valores de ação. Isto tem algum impacto no aprendizado do agente? O aprendizado converge mais rápido? O aprendizado é mais estável? 
 
 [Ver enunciado do projeto intermediário](../../projects/projeto_intermediario/index.md).
+
+-->

@@ -11,6 +11,8 @@ Para tanto, será utilizado este conjunto de slides para uma aula expositiva ini
 
 <embed src="reinforce_slides.pdf" type="application/pdf" width="600" height="300">
 
+<!--
+
 ## Implementação em sala de aula
 
 * Implemente uma versão do algoritmo Reinforce com base no pseudo-código deste material e com base nos trechos de códigos disponibilizados. 
@@ -20,6 +22,8 @@ Para tanto, será utilizado este conjunto de slides para uma aula expositiva ini
 * Utilize os ambientes `MountainCar-v0`, `CartPole-v1` e `LunarLander-v3` para testar o algoritmo.
 
 * Compare os resultados obtidos com o `DQN` e `Double DQN`. 
+
+--> 
 
 ## Exemplo de funcionamento do algoritmo Reinforce
 
