@@ -1,3 +1,4 @@
+<!-- 
 # Double Deep Q-Learning
 
 Os objetivos desta seção são:
@@ -11,8 +12,9 @@ As principais referências para esta atividade são:
 * van Hasselt, H., Guez, A. and Silver, D. 2016. Deep Reinforcement Learning with Double Q-Learning. Proceedings of the AAAI Conference on Artificial Intelligence. 30, 1 (Mar. 2016). DOI: [https://doi.org/10.1609/aaai.v30i1.10295](https://doi.org/10.1609/aaai.v30i1.10295).
 
 * Seção 8.1.5 do livro [Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. Multi-Agent Reinforcement Learning: Foundations and Modern Approaches. MIT Press, 2024](https://www.marl-book.com/).
+--> 
 
-## Pre-work
+# Análise dos resultados obtidos com DQN
 
 Na [aula passada](../15_deep_q_learning_lunar_lander/index.md) implementamos uma versão simples do Deep Q-Learning para o ambiente `LunarLander-v3` e comparamos os resultados com a implementação do algoritmo DQN, também implementado em sala de aula. Ao comparar os resultados obtidos com DQN e Deep Q-Learning, esperamos uma curva de apresendizado similar a apresentada abaixo: 
 
@@ -49,6 +51,7 @@ O DQN é mais estável porque utiliza duas redes neurais: uma para estimar a fun
 
 <img src="./img/apenas_value_target_network.png"  style="height:600px;"/>
 
+<!--
 ## Double DQN
 
 O Double Deep Q-Learning proposto por [van Hasselt, Guez e Silver (2016)](https://doi.org/10.1609/aaai.v30i1.10295) é uma extensão do DQN que visa corrigir o problema de superestimação de valores de ação. Da mesma forma que o Q-Learning tradicional, o DQN também superestima os valores para os estados futuro através da equação: 
@@ -69,6 +72,7 @@ Estimativa de valor:
 
 $r^{t} + \gamma Q(s^{t+1}, bestA, \overline{\theta})$
 
+--> 
 <!--
 
 ## Questões
