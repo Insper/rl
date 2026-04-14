@@ -1,3 +1,5 @@
+# Análise dos resultados obtidos com DQN
+
 <!-- 
 # Double Deep Q-Learning
 
@@ -13,8 +15,6 @@ As principais referências para esta atividade são:
 
 * Seção 8.1.5 do livro [Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. Multi-Agent Reinforcement Learning: Foundations and Modern Approaches. MIT Press, 2024](https://www.marl-book.com/).
 --> 
-
-# Análise dos resultados obtidos com DQN
 
 Na [aula passada](../15_deep_q_learning_lunar_lander/index.md) implementamos uma versão simples do Deep Q-Learning para o ambiente `LunarLander-v3` e comparamos os resultados com a implementação do algoritmo DQN, também implementado em sala de aula. Ao comparar os resultados obtidos com DQN e Deep Q-Learning, esperamos uma curva de apresendizado similar a apresentada abaixo: 
 
