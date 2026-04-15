@@ -18,6 +18,25 @@ Onde **Actor** é do tipo *policy gradient* e **Critic** é do tipo *value funct
 
 Os autores também propõe o conceito de vantagem, que é uma medida de quão melhor é uma ação em relação a outra. O uso deste conceito cria um *baseline* para a atualização da política, o que se mostrou eficiente para a convergência do algoritmo. 
 
+## Rede Crítica
+
+O valor do estado $V(s)$ é estimado usando uma rede neural com a seguinte estrutura: 
+
+```python
+class Critic(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(state_dim, 128), # onde 128 pode ser substituído por outro valor, dependendo da complexidade do ambiente.
+            nn.ReLU(),
+            nn.Linear(128, 1)  # saída escalar
+        )
+
+    def forward(self, s):
+        return self.net(s)
+```
+
+<!--
 ## Vantagem
 
 A vantagem é calculada como a diferença entre o retorno esperado de uma ação e o valor do estado atual. 
@@ -30,8 +49,10 @@ $Adv^{\pi}(s,a) = Q^{\pi}(s,a) - V^{\pi}(s)$
 A vantagem pode ser entendida como quantificar o quanto mais alto é o retorno esperado ao aplicar a ação específica $a$ em comparação com seguir a política $\pi$ no estado $s$.
 
 A interpretação da vantagem pode ser usada para guiar a otimização da política. Para uma vantagem positiva, devemos aumentar a probabilidade da política $\pi$ selecionar a ação $a$ no estado $s$; e devemos diminuir a probabilidade da política $\pi$ selecionar a ação $a$ no estado $s$ sempre que a vantagem for negativa.
+-->
 
 
+<!--
 ## Atividade
 
 O objetivo desta atividade é compreender o funcionamento do algoritmo A2C e também praticar o uso de bibliotecas de aprendizado por reforço.
@@ -77,6 +98,7 @@ for i in range(1000):
 * Leia a documentação em [https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html) e tente modificar os hiperparâmetros do modelo para melhorar o desempenho do agente.
 * A mesma biblioteca possui uma implementação de DQN. A documentação está disponível em [https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html](https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html). Compare o desempenho do A2C com o DQN. Qual dos dois algoritmos é mais eficiente para resolver o problema do CartPole-v1, LunarLander-v2 e implementar um jogador para o Breakout?
 * No caso do DQN, use os mesmos hiperparâmetros de trabalhos anteriores. Assim será possível comparar o desempenho de implementações diferentes do DQN. Será que existe diferença entre as implementações do DQN?
+-->
 
 ## Referências
 
@@ -88,11 +110,13 @@ for i in range(1000):
 
 ## Referências adicionais
 
-Outros ambientes com implementações já prontas que podem ser úteis na implementação de outros projetos: 
+Outros ambientes com implementações já prontas que podem ser úteis na implementação de projetos: 
 
+* [stable-baselines3](https://pypi.org/project/stable-baselines3/)
 * [https://tianshou.org/en/stable/](https://tianshou.org/en/stable/)
 * [https://marllib.readthedocs.io/en/latest/](https://marllib.readthedocs.io/en/latest/)
 
+<!--
 ## Entrega
 
 O trabalho deve ser entregue no GitHub Classroom. O link para o repositório é [https://classroom.github.com/a/jBOTFJJA](https://classroom.github.com/a/jBOTFJJA).
@@ -106,3 +130,5 @@ Os artefatos que devem estar presentes no repositório são:
 * um diretório `models` com os modelos treinados.
 
 O deadline para a entrega desta atividade é 03 de abril de 2024 (quinta-feira) às 23:30 horas. Este trabalho deve ser feito em grupo com até 2 integrantes.
+
+-->

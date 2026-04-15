@@ -44,7 +44,7 @@ nav:
       - 'classes/16_double_deep_q_learning/index.md' #--> vou ter que fazer em algum momento
     - 'Policy Optimization and Actor-Critic':
       - 'classes/17_reinforce/index.md'
-#      - 'classes/17_a2c/index.md'
+      - 'classes/17_a2c/index.md'
 #      - 'classes/15_xx_comments/index.md'
 ##      - 'classes/18_comparativo_algs_env/index.md'
 #      - 'classes/18_ppo/index.md'
