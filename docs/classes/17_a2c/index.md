@@ -11,7 +11,7 @@ O método de ator-critic é uma abordagem que combina um ator, que é responsáv
 Uma forma visual de entender o funcionamento do algoritmo é apresentada abaixo: 
 
 <center>
-<img src="img/diagrama_a2c.png" alt="Diagrama A2C" style="width:500px;"/>
+<img src="img/diagrama_a2c_completo.png" alt="Diagrama A2C" />
 </center>
 
 Onde **Actor** é do tipo *policy gradient* e **Critic** é do tipo *value function* ou *value based*.
