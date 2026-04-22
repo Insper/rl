@@ -28,12 +28,13 @@ Student assessment will be conducted through **exercises**, **projects**, and an
 | Description                                              | Deadline            |
 |:---------------------------------------------------------|:-------------------:|
 | Definição da área/problema a ser tratado                 | 24/03/2026 |
-| Definição do escopo do projeto                           | TBD |
-| Definição do MDP                                         | TBD |
-| Implementação do agente e ambiente                       | TBD |
-| Coleta e Análise dos resultados                          | TBD |
-| Entrega do relatório final                               | TBD |
-| Apresentação final do projeto                            | TBD |
+| Definição do escopo do projeto                           | 23/04/2026 |
+| Definição do MDP                                         | 23/04/2026 |
+| Início da implementação do agente e ambiente             | 23/04/2026 |
+| Término Implementação do agente e ambiente               | 12/05/2026 (check point) |
+| Coleta e Análise dos resultados                          | 12/05/2026 (check point) |
+| Entrega do relatório final                               | 18/05/2026 |
+| Apresentação final do projeto                            | 19/05/2026 ou 21/05/2026 |
 
 
 
