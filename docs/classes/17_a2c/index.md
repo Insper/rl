@@ -11,7 +11,7 @@ O método de ator-critic é uma abordagem que combina um ator, que é responsáv
 Uma forma visual de entender o funcionamento do algoritmo é apresentada abaixo: 
 
 <center>
-<img src="img/diagrama_a2c.png" alt="Diagrama A2C" style="width:500px;"/>
+<img src="img/diagrama_a2c_completo.png" alt="Diagrama A2C" />
 </center>
 
 Onde **Actor** é do tipo *policy gradient* e **Critic** é do tipo *value function* ou *value based*.
@@ -51,8 +51,6 @@ A vantagem pode ser entendida como quantificar o quanto mais alto é o retorno e
 A interpretação da vantagem pode ser usada para guiar a otimização da política. Para uma vantagem positiva, devemos aumentar a probabilidade da política $\pi$ selecionar a ação $a$ no estado $s$; e devemos diminuir a probabilidade da política $\pi$ selecionar a ação $a$ no estado $s$ sempre que a vantagem for negativa.
 -->
 
-
-<!--
 ## Atividade
 
 O objetivo desta atividade é compreender o funcionamento do algoritmo A2C e também praticar o uso de bibliotecas de aprendizado por reforço.
@@ -98,7 +96,7 @@ for i in range(1000):
 * Leia a documentação em [https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html) e tente modificar os hiperparâmetros do modelo para melhorar o desempenho do agente.
 * A mesma biblioteca possui uma implementação de DQN. A documentação está disponível em [https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html](https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html). Compare o desempenho do A2C com o DQN. Qual dos dois algoritmos é mais eficiente para resolver o problema do CartPole-v1, LunarLander-v2 e implementar um jogador para o Breakout?
 * No caso do DQN, use os mesmos hiperparâmetros de trabalhos anteriores. Assim será possível comparar o desempenho de implementações diferentes do DQN. Será que existe diferença entre as implementações do DQN?
--->
+
 
 ## Referências
 
