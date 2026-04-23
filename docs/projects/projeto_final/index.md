@@ -13,12 +13,22 @@ Para alcançar este objetivo, o grupo deverá:
 * Definição do escopo do projeto **10/04/2026**
 * Definição do MDP **10/04/2026**
 * Definição do ambiente **10/04/2026**
-* Implementação do agente e ambiente
-* Coleta e Análise dos resultados
-* Entrega do relatório final
-* Apresentação final dos resultados do projeto 
+* Início da implementação do agente e ambiente **23/04/2026**
+* Término Implementação do agente e ambiente   **12/05/2026 (check point)**
+* Coleta e Análise dos resultados  **12/05/2026 (check point)**
+* Entrega do relatório final  **18/05/2026**
+* Apresentação final do projeto  **19/05/2026 ou 21/05/2026**
 
-Os itens acima serão entregues ao longo do semestre, e cada um deles terá uma data de entrega específica. A definição do objetivo do trabalho deve acontecer até o dia **24/03/2026**. Ao longo do semestre, as datas das demais entregas serão definidas e divulgadas. 
+## Template para o relatório final do projeto
+
+O relatório final do projeto deve ter a seguinte estrutura: 
+* contexto e objetivo do trabalho;
+* descrição do ambiente utilizado;
+* descrição do método;
+* resultados obtidos, e;
+* considerações finais.
+
+Neste [link](template_relatorio.pdf) você consegue visualizar um arquivo PDF gerado a partir de um template em $\LaTeX$ para o relatório. Você pode baixar o template em $\LaTeX$ para o relatório [aqui](template_latex.zip). O relatório final do projeto não deve ultrapassar 4 páginas.
 
 ## Submissão dos artefatos produzidos
 
