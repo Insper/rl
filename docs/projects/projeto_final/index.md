@@ -22,6 +22,7 @@ Para alcançar este objetivo, o grupo deverá:
 ## Template para o relatório final do projeto
 
 O relatório final do projeto deve ter a seguinte estrutura: 
+
 * contexto e objetivo do trabalho;
 * descrição do ambiente utilizado;
 * descrição do método;
