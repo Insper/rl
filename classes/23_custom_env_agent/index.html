@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://insper.github.io/rl/classes/17_reinforce/reinforce/">
+        <link rel="canonical" href="https://insper.github.io/rl/classes/23_custom_env_agent/">
       
       
+        <link rel="prev" href="../22_custom_env/">
+      
+      
+        <link rel="next" href="../15_deep_q_learning/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Algoritmo REINFORCE - Reinforcement Learning</title>
+        <title>Um problema mais próximo da realidade - Reinforcement Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -44,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algoritmo-reinforce" class="md-skip">
+        <a href="#um-problema-mais-proximo-da-realidade" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Reinforcement Learning" class="md-header__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
+    <a href="../.." title="Reinforcement Learning" class="md-header__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algoritmo REINFORCE
+              Um problema mais próximo da realidade
             
           </span>
         </div>
@@ -138,7 +142,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Reinforcement Learning" class="md-nav__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
+    <a href="../.." title="Reinforcement Learning" class="md-nav__button md-logo" aria-label="Reinforcement Learning" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -156,7 +160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -183,7 +187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../goals/" class="md-nav__link">
+      <a href="../../goals/" class="md-nav__link">
         
   
   
@@ -210,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plan/" class="md-nav__link">
+      <a href="../../plan/" class="md-nav__link">
         
   
   
@@ -237,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../assessment/" class="md-nav__link">
+      <a href="../../assessment/" class="md-nav__link">
         
   
   
@@ -261,18 +265,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -293,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -358,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01_introduction/" class="md-nav__link">
+      <a href="../01_introduction/" class="md-nav__link">
         
   
   
@@ -386,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_bandit_problem/" class="md-nav__link">
+      <a href="../02_bandit_problem/" class="md-nav__link">
         
   
   
@@ -414,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03_non_stacionary_problems/" class="md-nav__link">
+      <a href="../03_non_stacionary_problems/" class="md-nav__link">
         
   
   
@@ -442,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04_mdp/" class="md-nav__link">
+      <a href="../04_mdp/" class="md-nav__link">
         
   
   
@@ -525,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04_toolings_envs/" class="md-nav__link">
+      <a href="../04_toolings_envs/" class="md-nav__link">
         
   
   
@@ -553,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_q_learning/" class="md-nav__link">
+      <a href="../05_q_learning/" class="md-nav__link">
         
   
   
@@ -581,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_x_sarsa/" class="md-nav__link">
+      <a href="../05_x_sarsa/" class="md-nav__link">
         
   
   
@@ -609,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_xx_comments/" class="md-nav__link">
+      <a href="../05_xx_comments/" class="md-nav__link">
         
   
   
@@ -637,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06_non_determ/" class="md-nav__link">
+      <a href="../06_non_determ/" class="md-nav__link">
         
   
   
@@ -665,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06_non_determ_comments/" class="md-nav__link">
+      <a href="../06_non_determ_comments/" class="md-nav__link">
         
   
   
@@ -693,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09_more_complex/" class="md-nav__link">
+      <a href="../09_more_complex/" class="md-nav__link">
         
   
   
@@ -726,18 +732,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -758,7 +766,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -776,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../11_evaluation/" class="md-nav__link">
+      <a href="../11_evaluation/" class="md-nav__link">
         
   
   
@@ -804,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../22_custom_env/" class="md-nav__link">
+      <a href="../22_custom_env/" class="md-nav__link">
         
   
   
@@ -829,10 +837,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../23_custom_env_agent/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Um problema mais próximo da realidade
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -848,6 +883,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-falta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que falta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-necessario-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é necessário fazer?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -915,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15_deep_q_learning/" class="md-nav__link">
+      <a href="../15_deep_q_learning/" class="md-nav__link">
         
   
   
@@ -943,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15_deep_q_learning_comments/" class="md-nav__link">
+      <a href="../15_deep_q_learning_comments/" class="md-nav__link">
         
   
   
@@ -971,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15_deep_q_learning_lunar_lander/" class="md-nav__link">
+      <a href="../15_deep_q_learning_lunar_lander/" class="md-nav__link">
         
   
   
@@ -999,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../16_double_deep_q_learning/" class="md-nav__link">
+      <a href="../16_double_deep_q_learning/" class="md-nav__link">
         
   
   
@@ -1082,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../17_reinforce/" class="md-nav__link">
         
   
   
@@ -1110,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../17_a2c/" class="md-nav__link">
+      <a href="../17_a2c/" class="md-nav__link">
         
   
   
@@ -1153,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/projeto_final/" class="md-nav__link">
+      <a href="../../projects/projeto_final/" class="md-nav__link">
         
   
   
@@ -1180,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../destaques/" class="md-nav__link">
+      <a href="../../destaques/" class="md-nav__link">
         
   
   
@@ -1207,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   
@@ -1254,10 +1331,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#referencias" class="md-nav__link">
+  <a href="#o-que-falta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Referências
+        O que falta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-necessario-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é necessário fazer?
       
     </span>
   </a>
@@ -1281,26 +1369,65 @@
 
 
 
-<h1 id="algoritmo-reinforce">Algoritmo REINFORCE</h1>
-<p>O algoritmo REINFORCE <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> é um algoritmo que ao invés de definir uma <em>policy</em> em termos de <span class="arithmatex">\(\pi(s) = \arg \max_{a} Q(s,a)\)</span>, como é feito com o Q-Learning e Deep Q-Learning, ele define a <em>policy</em> no formato de uma distribuição: </p>
-<div class="arithmatex">\[
-a_{t} \sim \pi_{\theta}(a_{t} | s_{t})
-\]</div>
-<p>onde <span class="arithmatex">\(\theta\)</span> representa os parâmetros da <em>policy</em> e a ideia é atualizar estes parâmetros usando um gradiente ascendente para <strong>maximizar</strong> a expectativa de <em>reward</em> futuro. Em outras palavras, o que queremos aprender neste caso é uma distribuição que leva o agente para um cenário onde ele irá maximar o <em>reward</em> futuro. </p>
-<p>Por exemplo, considere o cenário abaixo:</p>
-<p><img src="img/state_action_reward.png" height="400"/></p>
-<p>Cada <em>policy</em> gera uma probabilidade de escolher uma ação em cada estado do ambiente: </p>
-<p><img src="img/policies.png"/></p>
-<p>O agente seleciona uma ação a partir desta distribuição de probabilidades. No fim de cada episódio, é conhecido o total de <em>rewards</em> que o agente pode conseguir se seguir aquela <em>policy</em>. O algoritmo de REINFORCE executa uma rotina de <em>backpropagation</em> pelo caminho que o agente escolheu para calcular o <em>reward esperado</em> em cada estado para uma política dada: </p>
-<h2 id="referencias">Referências</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Williams, R.J. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Mach Learn 8, 229–256 (1992). <a href="https://doi.org/10.1007/BF00992696">https://doi.org/10.1007/BF00992696</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h1 id="um-problema-mais-proximo-da-realidade">Um problema mais próximo da realidade</h1>
+<p>Na atividade no link <a href="../22_custom_env/">Custom Environment</a>, criamos um ambiente personalizado para o problema de Coverage Path Planning. Desde a última atividade, este ambiente sofreu algumas modificações, principalmente com relação a representação do estado. Agora, o estado é representado por uma estrutura de dados mais complexa, que inclui informações sobre a posição do agente, o mapa parcial do ambiente e o progresso da cobertura. </p>
+<p>Leia a última seção do arquivo README.md (Uso do ambiente GridWorld para problemas de Coverage Path Planning) do projeto <a href="https://github.com/fbarth/gym_custom_env">https://github.com/fbarth/gym_custom_env</a> para entender melhor as mudanças realizadas no ambiente.</p>
+<p>Neste mesmo projeto, existe um script chamado <code>train_grid_world_cpp.py</code> que treina um agente utilizando o algoritmo PPO. </p>
+<p>O agente, quando treinado para o ambiente 5x5 consegue aprender a realizar a cobertura completa do ambiente, mas não é capaz de generalizar para ambientes maiores, como o 10x10. Quando o agente, que é treinado no ambiente 5x5, é testado no ambiente 10x10, ele em várias situações fica preso em alguma parte do ambiente, sem conseguir realizar a cobertura completa.</p>
+<p>O que será que é necessário fazer para que o agente consiga generalizar melhor para ambientes maiores?</p>
+<h2 id="o-que-falta">O que falta?</h2>
+<ul>
+<li>Falta algo na representação do estado? Lembrete importante: a informação sobre o ambiente é parcial, ou seja, o agente não tem acesso ao mapa completo do ambiente, apenas a um mapa parcial baseado no que ele já explorou.</li>
+<li>A arquitetura da rede neural utilizada no treinamento não é adequada. A arquitetura que está configurada no script <code>train_grid_world_cpp.py</code> é do tipo <code>MultiInputPolicy</code>. A documentação sobre esta arquitetura está disponível neste <a href="https://stable-baselines3.readthedocs.io/en/master/guide/custom_policy.html">link</a>. </li>
+<li>Será que é necessário realizar alguma atividade de <em>transfer learning</em> para que o agente consiga generalizar melhor para ambientes maiores? Por exemplo, uma vez treinado no ambiente 5x5, o agente poderia ser treinado por mais algumas iterações no ambiente 10x10, utilizando o modelo treinado no ambiente 5x5 como ponto de partida. Para que isto aconteça é necessário configurar o script <code>train_grid_world_cpp.py</code> para que ele possa carregar um modelo pré-treinado e continuar o treinamento em um ambiente diferente. Isto é possível utilizando a função <code>load</code> da biblioteca Stable Baselines 3. </li>
+<li>Será que os hiperparâmetros utilizados no treinamento do agente não são adequados? </li>
+<li>Será que é necessário utilizar outro algoritmo de RL? </li>
+</ul>
+<p>A configuração utilizada no treinamento foi a seguinte:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># --- Hyperparameters ---</span>
+<span class="n">DIM</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#10, 20</span>
+<span class="n">OBSTACLES</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#12, 48 mudanco a dimensao, faz sentido mudar a quantidade de obstaculos</span>
+<span class="n">MAX_STEPS</span> <span class="o">=</span> <span class="mi">200</span><span class="c1">#400, 800 e o max_steps</span>
+<span class="n">TOTAL_TIMESTEPS</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+<span class="n">ENTROPY_COEF</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="c1"># -----------------------</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">PPO</span><span class="p">(</span><span class="s2">&quot;MultiInputPolicy&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ent_coef</span><span class="o">=</span><span class="n">ENTROPY_COEF</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Ao executar: </p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>train_grid_world_cpp.py<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>Os resultados para <em>Full Coverage Rate</em> no ambiente 5x5 são:</p>
+<div class="highlight"><pre><span></span><code>75/100
+78/100
+69/100
+79/100
+81/100
+</code></pre></div>
+<p>Ou seja, mesmo para o ambiente 5x5, o agente não consegue realizar a cobertura completa em todas as execuções.</p>
+<p>Usando o agente treinado no ambiente 5x5 para realizar a cobertura no ambiente 10x10, os resultados para <em>Full Coverage Rate</em> são:</p>
+<div class="highlight"><pre><span></span><code>66/100
+65/100
+60/100
+70/100
+59/100
+</code></pre></div>
+<p>Ou seja, o agente tem uma performance pior no ambiente 10x10 do que no ambiente 5x5, o que indica que ele não está generalizando bem para ambientes maiores.</p>
+<p>Pode-se fazer uma análise mais qualitativa do comportamento do agente executando: </p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>train_grid_world_cpp.py<span class="w"> </span>run
+</code></pre></div>
+<p><strong>O que é necessário fazer para que o agente consiga ter cobertura próxima de 100% no ambiente 5x5, 10x10 e, idealmente, em ambientes ainda maiores?</strong></p>
+<h2 id="o-que-e-necessario-fazer">O que é necessário fazer?</h2>
+<ul>
+<li>Faça fork ou clone do projeto <a href="https://github.com/fbarth/gym_custom_env">https://github.com/fbarth/gym_custom_env</a>.</li>
+<li>Defina uma estratégia, implemente a estratégia escolhida e teste a performance do agente no ambiente 5x5 e 10x10 no novo repositório.</li>
+<li>Crie um relatório descrevendo a estratégia escolhida e os resultados obtidos. O arquivo do relatório deve estar disponível no repositório do projeto. No arquivo README.md do projeto deve estar claro onde o relatório pode ser encontrado. </li>
+<li>Este trabalho é individual, ou seja, cada pessoa deve criar um repositório com a sua própria solução. O prazo para entrega é <strong>04/05/2026</strong>. O link para o repositório deve ser enviado no blackboard até a data de entrega.</li>
+<li>Este trabalho vale como uma APS, mas também será contabilizado como parte da avaliação final da disciplina. Este trabalho irá valer 2 pontos na avaliação final da disciplina.</li>
+<li>O relatório deve conter uma descrição clara da estratégia escolhida, os resultados obtidos e uma análise dos resultados. A estratégia escolhida deve ser justificada com base em conceitos de RL e na estrutura do ambiente. Os resultados devem ser apresentados de forma clara, utilizando gráficos e tabelas quando necessário. A análise dos resultados deve discutir o desempenho do agente, as limitações da estratégia escolhida e possíveis melhorias para futuras implementações.</li>
+<li>O desempenho do agente precisa ter cobertura próxima de 100% no ambiente 5x5 e 10x10. </li>
+<li>O agente precisa manter a visualização parcial do ambiente, ou seja, ele não pode ter acesso ao mapa completo do ambiente. O agente deve tomar decisões com base no mapa parcial que ele tem disponível e outras informações que ele poderá coletar ao longo do processo de exploração do ambiente.</li>
+</ul>
 
 
 
@@ -1321,7 +1448,7 @@ a_{t} \sim \pi_{\theta}(a_{t} | s_{t})
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2023 19:41:14 UTC">May 1, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 23:23:03 UTC">April 27, 2026</span>
   </span>
 
     
@@ -1371,16 +1498,16 @@ a_{t} \sim \pi_{\theta}(a_{t} | s_{t})
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
-        <script src="../../../js/markdown-enhancer.js"></script>
+        <script src="../../js/markdown-enhancer.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
