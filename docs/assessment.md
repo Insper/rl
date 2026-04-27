@@ -22,6 +22,7 @@ Student assessment will be conducted through **exercises**, **projects**, and an
 | [Discretização de espaço de estados](classes/09_more_complex/index.md)  | 15/03/2026 |
 | [Implementando DQN](classes/15_deep_q_learning/index.md)                | 20/03/2026 |
 | [Implementando um ambiente customizado](classes/22_custom_env/index.md) | 01/04/2026 |
+| [Um problema um pouco mais real](classes/23_custom_env_agent/index.md)  | 04/05/2026 |
 
 ## Project artifacts
 
