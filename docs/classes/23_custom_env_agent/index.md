@@ -75,10 +75,12 @@ python train_grid_world_cpp.py run
 * Faça fork ou clone do projeto [https://github.com/fbarth/gym_custom_env](https://github.com/fbarth/gym_custom_env).
 * Defina uma estratégia, implemente a estratégia escolhida e teste a performance do agente no ambiente 5x5 e 10x10 no novo repositório.
 * Crie um relatório descrevendo a estratégia escolhida e os resultados obtidos. O arquivo do relatório deve estar disponível no repositório do projeto. No arquivo README.md do projeto deve estar claro onde o relatório pode ser encontrado. 
-* Este trabalho é individual, ou seja, cada pessoa deve criar um repositório com a sua própria solução. O prazo para entrega é **04/05/2026**. O link para o repositório deve ser enviado no blackboard até a data de entrega.
-* Este trabalho vale como uma APS, mas também será contabilizado como parte da avaliação final da disciplina. Este trabalho irá valer 2 pontos na avaliação final da disciplina.
+* Este trabalho é individual, ou seja, cada pessoa deve criar um repositório com a sua própria solução. O prazo para entrega é **08/05/2026**. O link para o repositório deve ser enviado no blackboard até a data de entrega.
+* Este trabalho vale como uma APS, mas também será contabilizado como parte da avaliação final da disciplina. **Este trabalho irá valer 2 pontos na avaliação final da disciplina**. Ou seja, se você não fizer esta APS, você irá perder 2 pontos na avaliação final da disciplina.
 * O relatório deve conter uma descrição clara da estratégia escolhida, os resultados obtidos e uma análise dos resultados. A estratégia escolhida deve ser justificada com base em conceitos de RL e na estrutura do ambiente. Os resultados devem ser apresentados de forma clara, utilizando gráficos e tabelas quando necessário. A análise dos resultados deve discutir o desempenho do agente, as limitações da estratégia escolhida e possíveis melhorias para futuras implementações.
 * O desempenho do agente precisa ter cobertura próxima de 100% no ambiente 5x5 e 10x10. 
 * O agente precisa manter a visualização parcial do ambiente, ou seja, ele não pode ter acesso ao mapa completo do ambiente. O agente deve tomar decisões com base no mapa parcial que ele tem disponível e outras informações que ele poderá coletar ao longo do processo de exploração do ambiente.
 
+## Ponto extra
 
+Se a sua implementação conseguir ter cobertura próxima de 100% em ambiente 5x5, 10x10 e 20x20, você irá ganhar um ponto extra na avaliação final da disciplina.
