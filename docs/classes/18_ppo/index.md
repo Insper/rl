@@ -2,7 +2,7 @@
 
 Segue material utilizado na parte expositiva da aula sobre o algoritmo PPO: 
 
-<embed src="ppo_slides.pdf" type="application/pdf" width="600" height="300">
+<embed src="ppo_slides.pdf" type="application/pdf" width="750" height="400">
 
 
 ## Proposta de atividade prática
