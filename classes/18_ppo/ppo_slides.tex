@@ -16,7 +16,7 @@
 \title{Proximal Policy Optimization (PPO)} 
 \author{Fabrício Barth}
 \institute{Insper Instituto de Ensino e Pesquisa}
-\date{Abril de 2025}
+\date{Abril de 2026}
 	
 \maketitle
 
@@ -87,8 +87,12 @@
 
 \begin{itemize}
 	\item $\hat{Q}(s_{t},a_{t})$ é o \textit{discounted rewards}, e;
-	\item $\hat{V}(s_{t})$ é a função baseline.
+	\item $\hat{V}(s_{t}) = \sum_{a_{t} \in A} \pi (a_{t}|s_{t}).\hat{Q}(s_{t},a_{t})$ função baseline que é a média ponderada dos retornos de todas as ações possíveis a partir de $s_t$.
 \end{itemize}	
+
+\vspace{0.5cm}
+
+Isto reduz a variância do gradiente porque centra o sinal do aprendizado em torno de zero. 
 
 \footnote{Mesmo conceito que é proposto em Mnih et al. (2016)}
 
@@ -129,7 +133,7 @@
 O algoritmo PPO define uma nova função objetivo que garante que a política nova não fique muito longe da política antiga:
 	
 	\begin{equation}
-	L^{CLIP}(\theta) = \hat{E} \left[ \nonumber \min \left( \nonumber r(\theta).\hat{A}(s_{t},a_{t}), clip(r(\theta), 1 - \epsilon, 1 + \epsilon).\hat{A}(s_{t},a_{t}) \nonumber \right) \right]		
+	L^{CLIP}(\theta) = \hat{E} \left[ \nonumber \min \left( \nonumber \textcolor{blue}{r(\theta).\hat{A}(s_{t},a_{t})}, \textcolor{red}{clip}(\textcolor{green}{r(\theta)}, \textcolor{purple}{1 - \epsilon}, \textcolor{cyan}{1 + \epsilon})\textcolor{red}{.\hat{A}(s_{t},a_{t})} \nonumber \right) \right]		
 	\end{equation}
 
 \begin{itemize}
@@ -145,6 +149,26 @@ O algoritmo PPO define uma nova função objetivo que garante que a política no
 	\begin{center}
 		\includegraphics[width=1\textwidth]{img/clip.png}
 	\end{center}
+\end{frame}
+
+\begin{frame}{Revisando o $L^{CLIP}$}
+
+	\begin{equation}
+	L^{CLIP}(\theta) = \hat{E} \left[ \min \left( \textcolor{blue}{r(\theta).\hat{A}(s_{t},a_{t})}, \textcolor{red}{clip(r(\theta), 1 - \epsilon, 1 + \epsilon).\hat{A}(s_{t},a_{t})} \right) \right]
+	\end{equation}
+
+	onde:
+
+	\begin{eqnarray}
+		r(\theta) = \frac{\pi_{\theta}(a_{t}|s_{t})}{\pi_{\theta old}(a_{t}|s_{t})} \\
+		\hat{A}(s_{t},a_{t}) = \hat{Q}(s_{t},a_{t}) - \hat{V}(s_{t})
+	\end{eqnarray}
+
+	\begin{itemize}
+		\item $r(\theta)$: razão entre a política atual e a política antiga.
+		\item $\hat{A}(s_{t},a_{t})$: estimador de vantagem, quão melhor ou pior a ação $a_t$ foi em relação à média das ações possíveis no estado $s_t$.
+	\end{itemize}
+
 \end{frame}
 
 %\begin{frame}{Algoritmo PPO, estilo "Actor-Critic"}
@@ -183,8 +207,8 @@ O algoritmo PPO define uma nova função objetivo que garante que a política no
 Este algoritmo é dividido em duas threads: 
 
 \begin{itemize}
-	\item atores: responsáveis por gerar os episódios e calcular toda a sequência de $S, A, R, \hat{A}$ com base na policy vigente.
-	\item críticos: responsáveis por otimizar os valores da policy. 
+	\item \textcolor{blue}{atores}: responsáveis por gerar os episódios e calcular toda a sequência de $s_t, a_t, r_{t+1}, \hat{A}_{t+1}, \cdots$ com base na policy vigente.
+	\item \textcolor{red}{críticos}: responsáveis por otimizar os valores da policy. 
 \end{itemize}
 	
 \end{frame}
@@ -233,7 +257,7 @@ Este algoritmo é dividido em duas threads:
 	
 	\begin{itemize}
 		\item Tempos em tempos, a thread para atualização da policy dispara um Stochastic Gradient Descent sobre a função $L^{CLIP}(\theta)$. 
-		\item executar treinamentos usando minibatch e com $K$ épocas não é usual em Reinforcement Learning. No entanto, devido ao uso da função $L^{CLIP}$ isso é possível.  
+		\item executar treinamentos usando minibatch e com $K$ épocas não é usual em \textit{Reinforcement Learning}. No entanto, devido ao uso da função $L^{CLIP}$ isso é possível.  
 	\end{itemize}
 	
 \end{frame}
