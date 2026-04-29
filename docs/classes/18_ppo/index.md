@@ -1,9 +1,15 @@
 # Proximal Policy Optimization (PPO)
 
-Na primeira parte da aula vamos utilizar o conjunto de slides abaixo para entender o algoritmo PPO:
+Segue material utilizado na parte expositiva da aula sobre o algoritmo PPO: 
 
 <embed src="ppo_slides.pdf" type="application/pdf" width="600" height="300">
 
+
+## Proposta de atividade prática
+
+Continuar com a implementação da APS, cujo o enunciado esta disponível [aqui](../23_custom_env_agent/index.md), utilizando o algoritmo PPO para treinar o agente.
+
+<!--
 ## Proposta de atividade prática
 
 Utilize a implementação do algoritmo PPO existente em [https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html](https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html) para treinar um agente capaz de atuar nos ambientes `MiniGrid-Empty-16x16-v0`, `MiniGrid-Empty-Random-6x6-v0` e `MiniGrid-DoorKey-*` disponíveis em [https://minigrid.farama.org/](https://minigrid.farama.org/).
@@ -20,6 +26,8 @@ Sugestão: utilize o código [exemplo](./src/ppo_empty_env.py) como base para o 
 ## Atividade adicional
 
 Para aqueles que querem aprofundar ainda mais o seu conhecimento sobre o algoritmo PPO, proponho implementar o seu próprio algoritmo utilizando as referências citadas abaixo. Em especial este documento: [https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/).
+-->
+
 
 ## Referências
 
