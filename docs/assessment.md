@@ -34,7 +34,7 @@ Student assessment will be conducted through **exercises**, **projects**, and an
 | Início da implementação do agente e ambiente             | 23/04/2026 |
 | Término Implementação do agente e ambiente               | 12/05/2026 (check point) |
 | Coleta e Análise dos resultados                          | 12/05/2026 (check point) |
-| Entrega do relatório final                               | 18/05/2026 |
+| **Entrega do relatório final e do vídeo**                | **17/05/2026** |
 | Apresentação final do projeto                            | 19/05/2026 ou 21/05/2026 |
 
 

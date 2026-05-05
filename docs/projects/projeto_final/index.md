@@ -16,8 +16,12 @@ Para alcançar este objetivo, o grupo deverá:
 * Início da implementação do agente e ambiente **23/04/2026**
 * Término Implementação do agente e ambiente   **12/05/2026 (check point)**
 * Coleta e Análise dos resultados  **12/05/2026 (check point)**
-* Entrega do relatório final  **18/05/2026**
+* <span style="color:red">Entrega do relatório final e vídeo  **17/05/2026**</span>
 * Apresentação final do projeto  **19/05/2026 ou 21/05/2026**
+
+## Formato das equipes
+
+O projeto deve ser desenvolvido em equipes de **até 3 alunos**. 
 
 ## Template para o relatório final do projeto
 
@@ -35,43 +39,29 @@ Neste [link](template_relatorio.pdf) você consegue visualizar um arquivo PDF ge
 
 Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Github Classroom. O link para submissão é [https://classroom.github.com/a/UmMHJ_-K](https://classroom.github.com/a/UmMHJ_-K).
 
-## Formato das equipes
-
-O projeto deve ser desenvolvido em equipes de **até 3 alunos**. 
-
-<!-- 
-
 Cada grupo deverá adicionar ao repositório do projeto: 
 
 * todo código fonte necessário para a execução do mesmo;
 * um arquivo README.md que descreve a organização do repositório e como executar cada um dos principais scripts;
 * o relatório final do projeto. 
 
-O relatório final do projeto deve ter a seguinte estrutura: 
-
-* contexto e objetivo do trabalho;  
-* descrição do ambiente utilizado;
-* descrição do método;
-* resultados obtidos, e;
-* considerações finais. 
-
-E não ultrapassar 4 páginas. Você pode baixar um [template em $\LaTeX$ para o relatório aqui](template_latex.zip). Neste [outro link](template_relatorio.pdf) você consegue visualizar o arquivo PDF gerado a partir do template.
-
 ## Rubrica do projeto
 
 Cada projeto será avaliado considerando os itens listados na tabela abaixo. 
 
-|Item | Peso na composição da nota|
-|:----|:-------------------------:|
-| Implementação | 30%             |
-| Relatório     | 40%             |
-| Vídeo com a apresentação do projeto | 30%        |
+| Item                                | Peso na composição da nota |
+| :---------------------------------- | :------------------------: |
+| Implementação                       |            25%             |
+| Relatório                           |            25%             |
+| Vídeo com a apresentação do projeto |            25%             |
+| Apresentação final do projeto       |            25%             |
 
 Para conseguir a nota máxima é necessário: 
 
 * **implementação**: precisa estar funcionando, bem organizada e código legível.
 * **relatório**: precisa ter todos os itens descritos acima. O texto precisa ser auto-contido, ter início, meio e fim. 
 * **vídeo**: o vídeo também precisa ser auto-contido, ter início, meio e fim. Não deve ultrapassar **10 minutos**.
+* **apresentação final**: a apresentação deve ser clara, objetiva e conter os principais pontos do projeto. Não deve ultrapassar **10 minutos**. Na etapa de arguição, os alunos devem ser capazes de responder perguntas relacionadas ao projeto e defender as escolhas feitas ao longo do desenvolvimento do projeto.
 
 ## Vídeo
 
@@ -81,8 +71,6 @@ Cada equipe deverá gravar um vídeo de até 10 minutos apresentando os resultad
 * Descrição do método utilizado;
 * Resultados obtidos;
 * Demonstração do funcionamento do agente.
-
--->
 
 ## Sugestão de temas
 
