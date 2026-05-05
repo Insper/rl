@@ -42,7 +42,7 @@ Todos os artefatos produzidos ao longo do projeto deverão ser submitidos via Gi
 Cada grupo deverá adicionar ao repositório do projeto: 
 
 * todo código fonte necessário para a execução do mesmo;
-* um arquivo README.md que descreve a organização do repositório e como executar cada um dos principais scripts;
+* um arquivo README.md que descreve a organização do repositório e como executar cada um dos principais scripts. **Não esqueça de colocar no README.md o nome dos integrantes do grupo!**;
 * o relatório final do projeto. 
 
 ## Rubrica do projeto

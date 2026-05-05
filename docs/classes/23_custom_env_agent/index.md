@@ -81,6 +81,10 @@ python train_grid_world_cpp.py run
 * O desempenho do agente precisa ter cobertura próxima de 100% no ambiente 5x5 e 10x10. 
 * O agente precisa manter a visualização parcial do ambiente, ou seja, ele não pode ter acesso ao mapa completo do ambiente. O agente deve tomar decisões com base no mapa parcial que ele tem disponível e outras informações que ele poderá coletar ao longo do processo de exploração do ambiente.
 
+## Entrega
+
+Para a entrega da APS você deve informar o link do seu repositório no blackboard. No blackboard existe uma atividade cujo o deadline é 08/05/2026. 
+
 ## Ponto extra
 
 Se a sua implementação conseguir ter cobertura próxima de 100% em ambiente 5x5, 10x10 e 20x20, você irá ganhar um ponto extra na avaliação final da disciplina.
