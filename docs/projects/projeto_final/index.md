@@ -1,5 +1,7 @@
 # Capstone Project
 
+**Informação nova e importante: [agenda das apresentações](./apresentacoes.md)**.
+
 O principal objetivo desta atividade é exercitar os conceitos vistos ao longo do semestre. Este exercício pode ser feito de diversas maneiras: 
 
 * o grupo de alunos pode escolher um problema, de algum setor qualquer, e aplicar as técnicas de reinforcement learning vistas ao longo deste curso para resolver este problema;
