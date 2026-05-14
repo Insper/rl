@@ -18,7 +18,8 @@ Para alcançar este objetivo, o grupo deverá:
 * Início da implementação do agente e ambiente **23/04/2026**
 * Término Implementação do agente e ambiente   **12/05/2026 (check point)**
 * Coleta e Análise dos resultados  **12/05/2026 (check point)**
-* <span style="color:red">Entrega do relatório final e vídeo  **17/05/2026**</span>
+* <span style="color:red">Entrega do relatório final **17/05/2026**</span>
+* <span style="color:red">Entrega do vídeo **18/05/2026**</span>
 * Apresentação final do projeto  **19/05/2026 ou 21/05/2026**
 
 ## Formato das equipes
